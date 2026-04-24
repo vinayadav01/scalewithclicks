@@ -137,31 +137,56 @@ section{
   margin:auto;
 }
 
-/* SMALLER CARD GRID */
-.grid{
+/* PREMIUM GRID */
+.about-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,280px));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:24px;
-  justify-content:center;
 }
 
 /* CARDS */
 .card{
   border-radius:22px;
-  padding:26px;
+  padding:28px;
   color:#fff;
-  min-height:250px;
+  min-height:280px;
   box-shadow:0 12px 30px rgba(0,0,0,0.08);
-  transition:.35s;
+  transition:.35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  top:-40%;
+  right:-40%;
+  width:140px;
+  height:140px;
+  background:rgba(255,255,255,0.08);
+  border-radius:50%;
 }
 
 .card:hover{
-  transform:translateY(-8px);
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 20px 45px rgba(0,0,0,0.12);
+}
+
+.icon{
+  width:54px;
+  height:54px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.16);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  margin-bottom:18px;
 }
 
 .card h3{
   font-size:22px;
-  margin-bottom:14px;
+  margin-bottom:12px;
 }
 
 .card p{
@@ -170,21 +195,10 @@ section{
 }
 
 /* COLORS */
-.card1{
-  background:linear-gradient(135deg,#0ea5e9,#2563eb);
-}
-
-.card2{
-  background:linear-gradient(135deg,#10b981,#059669);
-}
-
-.card3{
-  background:linear-gradient(135deg,#8b5cf6,#7c3aed);
-}
-
-.card4{
-  background:linear-gradient(135deg,#f97316,#ea580c);
-}
+.card1{background:linear-gradient(135deg,#0ea5e9,#2563eb);}
+.card2{background:linear-gradient(135deg,#10b981,#059669);}
+.card3{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
+.card4{background:linear-gradient(135deg,#f97316,#ea580c);}
 
 /* CTA */
 .cta{
@@ -212,7 +226,7 @@ section{
   font-weight:600;
 }
 
-/* CONTACT SECTION */
+/* CONTACT */
 .contact-section{
   padding:0 20px 70px;
 }
@@ -252,13 +266,8 @@ section{
   font-weight:600;
 }
 
-.call-btn{
-  background:#10b981;
-}
-
-.email-btn{
-  background:#0ea5e9;
-}
+.call-btn{background:#10b981;}
+.email-btn{background:#0ea5e9;}
 
 /* FOOTER */
 .footer{
@@ -297,7 +306,6 @@ section{
   justify-content:center;
   font-size:26px;
   z-index:999;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 .sticky-cta{
@@ -310,15 +318,12 @@ section{
   border-radius:40px;
   font-weight:700;
   z-index:999;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* MOBILE */
 @media(max-width:768px){
 
-  .menu-btn{
-    display:block;
-  }
+  .menu-btn{display:block;}
 
   .nav-links{
     position:absolute;
@@ -337,19 +342,12 @@ section{
     display:flex;
   }
 
-  .hero h1{
-    font-size:34px;
-  }
-
+  .hero h1{font-size:34px;}
   .section-title h2,
   .cta h2,
-  .contact-box h2{
-    font-size:28px;
-  }
+  .contact-box h2{font-size:28px;}
 
-  .brand-logo{
-    height:74px;
-  }
+  .brand-logo{height:74px;}
 
   .sticky-cta{
     right:12px;
@@ -376,7 +374,7 @@ section{
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
     <nav class="nav-links" id="navMenu">
-      <a href="https://scalewithclicks.com/">Home</a>
+      <a href="index.html">Home</a>
       <a href="aboutus.html">About Us</a>
       <a href="services.html">Services</a>
       <a href="casestudy.html">Case Studies</a>
@@ -395,67 +393,73 @@ section{
   </p>
 </section>
 
-<!-- ABOUT CONTENT -->
+<!-- ABOUT SECTION -->
 <section>
   <div class="container">
 
     <div class="section-title">
       <h2>Why Businesses Choose Us</h2>
-      <p>We focus on revenue, ROI, and measurable business growth.</p>
+      <p>
+        Growth-focused strategies, transparent execution, and measurable
+        results built to scale your business profitably.
+      </p>
     </div>
 
-    <div class="grid">
+    <div class="about-grid">
 
       <div class="card card1">
+        <div class="icon">🚀</div>
         <h3>Who We Are</h3>
         <p>
-          Scale with Clicks is a growth-focused agency helping businesses scale
-          through Google Ads, Meta Ads, and paid acquisition systems.
+          A performance marketing agency helping businesses grow through
+          paid ads, conversion systems, and revenue-focused execution.
         </p>
       </div>
 
       <div class="card card2">
+        <div class="icon">📈</div>
         <h3>What We Do</h3>
         <p>
-          We create high-performing campaigns, landing pages, and tracking
-          systems that turn traffic into leads and customers.
+          We build Google Ads, Meta Ads, funnels, and landing pages that
+          turn traffic into qualified leads and customers.
         </p>
       </div>
 
       <div class="card card3">
+        <div class="icon">🎯</div>
         <h3>Our Mission</h3>
         <p>
-          Deliver transparent, profitable, and sustainable growth through smart
-          advertising and better conversion strategies.
+          Deliver profitable and sustainable growth with clear reporting,
+          faster optimization, and smart ad strategy.
         </p>
       </div>
 
       <div class="card card4">
+        <div class="icon">🏆</div>
         <h3>Why Choose Us</h3>
         <p>
-          ✔ ROI Focused Campaigns<br>
-          ✔ Faster Optimization<br>
-          ✔ Transparent Reporting<br>
-          ✔ Proven Case Studies<br>
-          ✔ Scalable Growth Systems
+          ROI-first campaigns, proven systems, transparent reporting,
+          and scalable growth frameworks.
         </p>
       </div>
 
       <div class="card card1">
-  <h3>Data Driven Strategy</h3>
-  <p>
-    Every campaign decision is backed by real data, testing insights,
-    and performance trends to maximize results.
-  </p>
-</div>
+        <div class="icon">📊</div>
+        <h3>Data Driven Strategy</h3>
+        <p>
+          Every decision is backed by analytics, user behavior,
+          testing insights, and conversion data.
+        </p>
+      </div>
 
-<div class="card card2">
-  <h3>Built for Scaling</h3>
-  <p>
-    From startup growth to aggressive scaling, our systems are designed
-    to grow with your business profitably.
-  </p>
-</div>
+      <div class="card card2">
+        <div class="icon">🌍</div>
+        <h3>Built for Scaling</h3>
+        <p>
+          Whether local growth or global expansion, campaigns are built
+          to scale efficiently with your business.
+        </p>
+      </div>
 
     </div>
 
@@ -491,16 +495,12 @@ section{
     <span>|</span>
     <a href="terms-conditions.html">Terms & Conditions</a>
   </div>
-
   <p>© 2026 Scale with Clicks</p>
 </footer>
 
 <!-- FLOAT BUTTONS -->
 <a href="https://wa.me/919589188668" target="_blank" class="whatsapp">💬</a>
-
-<a href="https://calendly.com/vinayyadav01992" target="_blank" class="sticky-cta">
-🚀 Free Plan
-</a>
+<a href="https://calendly.com/vinayyadav01992" target="_blank" class="sticky-cta">🚀 Free Plan</a>
 
 <script>
 function toggleMenu(){
