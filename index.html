@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Scale with Clicks | Performance Marketing Agency</title>
 <meta name="description" content="Scale with Clicks helps businesses grow with Google Ads, Meta Ads, lead generation, e-commerce growth, and conversion-focused performance marketing strategies.">
@@ -231,17 +231,15 @@ section{
 
 /* CARD */
 .card{
-  background:#fff;
-  border:1px solid #e2e8f0;
   border-radius:24px;
   padding:28px;
-  box-shadow:0 10px 30px rgba(15,23,42,0.04);
+  box-shadow:0 10px 30px rgba(15,23,42,0.06);
   transition:.35s;
 }
 
 .card:hover{
   transform:translateY(-8px);
-  box-shadow:0 18px 45px rgba(15,23,42,0.08);
+  box-shadow:0 18px 45px rgba(15,23,42,0.12);
 }
 
 .card h3{
@@ -249,15 +247,9 @@ section{
   margin-bottom:12px;
 }
 
-.card p{
-  color:#64748b;
-  line-height:1.8;
-}
-
 /* COLOR CARDS */
 .color-card{
   color:#fff;
-  border:none;
 }
 
 .color-card p,
@@ -287,12 +279,11 @@ section{
 
 .pink-card{
   background:linear-gradient(135deg,#ec4899,#db2777);
-}  
+}
 
-/* CASE STATS */
+/* STATS */
 .stats{
   margin-top:14px;
-  color:#334155;
   font-size:14px;
   line-height:1.8;
   font-weight:500;
@@ -315,7 +306,6 @@ section{
 .cta p{
   max-width:700px;
   margin:auto;
-  opacity:.95;
 }
 
 .cta .btn{
@@ -324,7 +314,7 @@ section{
   color:#0ea5e9;
 }
 
-/* CONTACT FIXED */
+/* CONTACT */
 .contact-section{
   background:#ffffff;
   padding:70px 20px 40px;
@@ -373,7 +363,7 @@ section{
   background:#0ea5e9;
 }
 
-/* FOOTER FIXED */
+/* FOOTER */
 .main-footer{
   background:#0f172a;
   text-align:center;
@@ -398,7 +388,7 @@ section{
   font-size:14px;
 }
 
-  /* FLOAT BUTTONS */
+/* FLOAT */
 .whatsapp{
   position:fixed;
   left:18px;
@@ -413,7 +403,6 @@ section{
   justify-content:center;
   font-size:26px;
   z-index:999;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 .sticky-cta{
@@ -426,25 +415,11 @@ section{
   border-radius:40px;
   font-weight:700;
   z-index:999;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* ANIMATION */
-.fade-up{
-  opacity:0;
-  transform:translateY(25px);
-  transition:all .8s ease;
-}
-
-.fade-up.show{
-  opacity:1;
-  transform:translateY(0);
 }
 
 /* MOBILE */
 @media(max-width:992px){
-  .hero-grid,
-  .grid-3{
+  .hero-grid,.grid-3{
     grid-template-columns:1fr;
   }
 
@@ -473,15 +448,10 @@ section{
     align-items:flex-start;
     padding:18px 20px;
     display:none;
-    border-top:1px solid #e2e8f0;
   }
 
   .nav-links.show{
     display:flex;
-  }
-
-  .hero{
-    padding:55px 0;
   }
 
   .hero h1{
@@ -491,255 +461,145 @@ section{
   .brand-logo{
     height:74px;
   }
-
-  .sticky-cta{
-    right:12px;
-    bottom:12px;
-    padding:12px 16px;
-  }
-
-  .whatsapp{
-    left:12px;
-    bottom:12px;
-  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
-  <div class="container nav-wrap">
-    <img src="logo.png" alt="Scale with Clicks Logo" class="brand-logo">
+<div class="container nav-wrap">
+<img src="logo.png" class="brand-logo">
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-    <nav class="nav-links" id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="aboutus.html">About Us</a>
-      <a href="services.html">Services</a>
-      <a href="casestudy.html">Case Studies</a>
-      <a href="contactus.html" class="nav-btn">Contact Us</a>
-    </nav>
-  </div>
+<nav class="nav-links" id="navMenu">
+<a href="index.html">Home</a>
+<a href="aboutus.html">About Us</a>
+<a href="services.html">Services</a>
+<a href="casestudy.html">Case Studies</a>
+<a href="contactus.html" class="nav-btn">Contact</a>
+</nav>
+</div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="container hero-grid">
+<div class="container hero-grid">
 
-    <div class="fade-up">
-      <div class="badge">🚀 ROI-Focused Growth Partner</div>
+<div>
+<div class="badge">🚀 ROI-Focused Growth Partner</div>
+<h1>Scale Revenue with <span>Performance Marketing</span></h1>
+<p>We help businesses generate high-quality leads, profitable sales, and measurable growth using Google Ads, Meta Ads, landing page optimization, and advanced conversion tracking.</p>
 
-      <h1>
-        Scale Revenue with
-        <span>Performance Marketing</span>
-      </h1>
+<div class="hero-actions">
+<a href="https://calendly.com/vinayyadav01992" class="btn btn-primary">Book Free Strategy Call</a>
+<a href="casestudy.html" class="btn btn-secondary">View Case Studies</a>
+</div>
+</div>
 
-      <p>
-        We help businesses generate high-quality leads, profitable sales,
-        and measurable growth using Google Ads, Meta Ads, landing page
-        optimization, and advanced conversion tracking.
-      </p>
+<div class="hero-card">
+<div class="metric">
+<div class="metric-box"><h3>₹5CR+</h3><p>Ad Spend Managed</p></div>
+<div class="metric-box"><h3>5000+</h3><p>Qualified Leads</p></div>
+<div class="metric-box"><h3>10X</h3><p>ROAS Achieved</p></div>
+<div class="metric-box"><h3>Global</h3><p>Clients Served</p></div>
+</div>
+</div>
 
-      <div class="hero-actions">
-        <a href="https://calendly.com/vinayyadav01992" target="_blank" class="btn btn-primary">
-          Book Free Strategy Call
-        </a>
-
-        <a href="casestudy.html" class="btn btn-secondary">
-          View Case Studies
-        </a>
-      </div>
-    </div>
-
-    <div class="hero-card fade-up">
-      <div class="metric">
-        <div class="metric-box">
-          <h3>₹5CR+</h3>
-          <p>Ad Spend Managed</p>
-        </div>
-
-        <div class="metric-box">
-          <h3>5000+</h3>
-          <p>Qualified Leads</p>
-        </div>
-
-        <div class="metric-box">
-          <h3>10X</h3>
-          <p>ROAS Achieved</p>
-        </div>
-
-        <div class="metric-box">
-          <h3>Global</h3>
-          <p>Clients Served</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
+</div>
 </section>
 
-<!-- SERVICES -->
 <section>
-  <div class="container">
+<div class="container">
+<div class="section-title">
+<h2>Growth Services</h2>
+<p>Performance marketing solutions designed to increase leads, sales, and ROAS.</p>
+</div>
 
-    <div class="section-title fade-up">
-      <h2>Growth Services</h2>
-      <p>Performance marketing solutions designed to increase leads, sales, and return on ad spend.</p>
-    </div>
-
-    <div class="grid-3">
-     <div class="card color-card blue-card fade-up">
-        <h3>🎯 Google Ads</h3>
-        <p>Search, Display, Shopping, YouTube & PMax campaigns built for growth.</p>
-      </div>
-
-     <div class="card color-card green-card fade-up">
-        <h3>📈 Lead Generation</h3>
-        <p>High-quality leads with funnels, landing pages, CRM flows, and optimization.</p>
-      </div>
-
-      <div class="card color-card purple-card fade-up">
-        <h3>🛒 E-commerce Growth</h3>
-        <p>Scale stores with ROAS-driven campaigns, audience targeting, and retention.</p>
-      </div>
-
-      <div class="card color-card orange-card fade-up">
-        <h3>📊 Conversion Tracking</h3>
-        <p>GA4, GTM, call tracking, enhanced conversions, and attribution setup.</p>
-      </div>
-
-     <div class="card color-card dark-card fade-up">
-       <h3>📣 Meta Ads</h3>
-        <p>Facebook & Instagram campaigns for leads, sales, and remarketing growth.</p>
-      </div>
-
-     <div class="card color-card pink-card fade-up">
-       <h3>🧪 CRO</h3>
-        <p>A/B testing, better UX, faster pages, and landing page improvements.</p>
-      </div>
-    </div>
-
-  </div>
+<div class="grid-3">
+<div class="card color-card blue-card"><h3>🎯 Google Ads</h3><p>Search, Display, Shopping, YouTube & PMax campaigns.</p></div>
+<div class="card color-card green-card"><h3>📈 Lead Generation</h3><p>Funnels, landing pages, CRM and quality lead systems.</p></div>
+<div class="card color-card purple-card"><h3>🛒 E-commerce Growth</h3><p>ROAS-focused scaling for online stores.</p></div>
+<div class="card color-card orange-card"><h3>📊 Conversion Tracking</h3><p>GA4, GTM, call tracking and attribution setup.</p></div>
+<div class="card color-card dark-card"><h3>📣 Meta Ads</h3><p>Facebook & Instagram growth campaigns.</p></div>
+<div class="card color-card pink-card"><h3>🧪 CRO</h3><p>Landing page optimization and A/B testing.</p></div>
+</div>
+</div>
 </section>
 
-<!-- CASE STUDIES -->
 <section>
-  <div class="container">
+<div class="container">
+<div class="section-title">
+<h2>Case Studies</h2>
+<p>Real campaign performance across industries.</p>
+</div>
 
-    <div class="section-title fade-up">
-      <h2>Case Studies</h2>
-      <p>Real campaign performance across industries.</p>
-    </div>
+<div class="grid-3">
+<div class="card color-card blue-card">
+<h3>🏥 Healthcare</h3>
+<p>Lead generation campaign for patient enquiries.</p>
+<div class="stats">✔ 148 Leads<br>✔ $21 CPL<br>✔ Better Quality</div>
+</div>
 
-    <div class="grid-3">
+<div class="card color-card green-card">
+<h3>🧴 Skincare</h3>
+<p>E-commerce scaling with purchase optimization.</p>
+<div class="stats">✔ 7.38X ROAS<br>✔ +53% Conversions<br>✔ +28% Revenue</div>
+</div>
 
-      <div class="card color-card blue-card fade-up">
-        <h3>🏥 Healthcare</h3>
-        <p>Lead generation campaign for patient enquiries.</p>
-        <div class="stats">
-          ✔ 148 Leads Generated<br>
-          ✔ $21 CPL<br>
-          ✔ Better Lead Quality
-        </div>
-      </div>
+<div class="card color-card purple-card">
+<h3>🏗️ Construction</h3>
+<p>High-intent campaigns for service enquiries.</p>
+<div class="stats">✔ 110 Conversions<br>✔ A$70 CPA<br>✔ Consistent Leads</div>
+</div>
+</div>
 
-     <div class="card color-card green-card fade-up">
-       <h3>🧴 Skincare</h3>
-        <p>E-commerce scaling with purchase optimization.</p>
-        <div class="stats">
-          ✔ 7.38X ROAS<br>
-          ✔ +53% Conversions<br>
-          ✔ +28% Revenue Growth
-        </div>
-      </div>
-
-     <div class="card color-card orange-card fade-up">
-       <h3>🏗️ Construction</h3>
-        <p>High-intent campaigns for service enquiries.</p>
-        <div class="stats">
-          ✔ 110 Conversions<br>
-          ✔ A$70 CPA<br>
-          ✔ Consistent Leads
-        </div>
-      </div>
-
-    </div>
-
-    <div style="text-align:center;margin-top:28px;">
-      <a href="casestudy.html" class="btn btn-primary">Show All Case Studies</a>
-    </div>
-
-  </div>
+<div style="text-align:center;margin-top:28px;">
+<a href="casestudy.html" class="btn btn-primary">Show All Case Studies</a>
+</div>
+</div>
 </section>
 
-<!-- CTA -->
 <section>
-  <div class="container">
-    <div class="cta fade-up">
-      <h2>Let’s Grow Your Business</h2>
-      <p>Book a free consultation and get a custom growth plan tailored to your goals.</p>
-
-      <a href="https://calendly.com/vinayyadav01992" target="_blank" class="btn">
-        Book Now
-      </a>
-    </div>
-  </div>
+<div class="container">
+<div class="cta">
+<h2>Let’s Grow Your Business</h2>
+<p>Book a free consultation and get a custom growth plan.</p>
+<a href="https://calendly.com/vinayyadav01992" class="btn">Book Now</a>
+</div>
+</div>
 </section>
 
-<!-- CONTACT SECTION -->
 <section class="contact-section">
-  <div class="container">
+<div class="container">
+<div class="contact-box">
+<h2>Get in Touch</h2>
+<p>Ready to grow your business? Contact us today.</p>
 
-    <div class="contact-box">
-      <h2>Get in Touch</h2>
-      <p>Ready to grow your business? Contact us today.</p>
-
-      <div class="contact-buttons">
-        <a href="tel:+919589188668" class="call-btn">📞 Call Now</a>
-        <a href="mailto:scalewithclicks@gmail.com" class="email-btn">📧 Email Us</a>
-      </div>
-    </div>
-
-  </div>
+<div class="contact-buttons">
+<a href="tel:+919589188668" class="call-btn">📞 Call Now</a>
+<a href="mailto:scalewithclicks@gmail.com" class="email-btn">📧 Email Us</a>
+</div>
+</div>
+</div>
 </section>
 
-<!-- FOOTER -->
 <footer class="main-footer">
-  <div class="footer-links">
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <span>|</span>
-    <a href="terms-conditions.html">Terms & Conditions</a>
-  </div>
-
-  <p>© 2026 Scale with Clicks</p>
+<div class="footer-links">
+<a href="privacy-policy.html">Privacy Policy</a>
+<span>|</span>
+<a href="terms-conditions.html">Terms & Conditions</a>
+</div>
+<p>© 2026 Scale with Clicks</p>
 </footer>
-  
-<!-- FLOATING BUTTONS -->
-<a href="https://wa.me/919589188668" target="_blank" class="whatsapp">💬</a>
 
-<a href="https://calendly.com/vinayyadav01992" target="_blank" class="sticky-cta">
-🚀 Free Plan
-</a>
+<a href="https://wa.me/919589188668" class="whatsapp">💬</a>
+<a href="https://calendly.com/vinayyadav01992" class="sticky-cta">🚀 Free Plan</a>
 
 <script>
 function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("show");
+document.getElementById("navMenu").classList.toggle("show");
 }
-
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-},{threshold:0.15});
-
-document.querySelectorAll('.fade-up').forEach(el=>{
-  observer.observe(el);
-});
 </script>
 
 </body>
