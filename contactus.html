@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | Scale with Clicks</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#ffffff;
+  color:#333;
+}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+  background:#ffffff;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,0.06);
+  z-index:999;
+}
+
+.navbar a{
+  color:#0f172a;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.navbar a:hover{
+  color:#38bdf8;
+}
+
+.brand-logo{
+  height:90px;
+  width:auto;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#0ea5e9,#38bdf8);
+  color:#fff;
+  text-align:center;
+  padding:90px 20px;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:18px;
+}
+
+/* SECTION */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.card{
+  background:#fff;
+  border-radius:18px;
+  padding:30px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+
+.card h2{
+  margin-bottom:18px;
+  color:#0ea5e9;
+}
+
+.card p{
+  line-height:1.8;
+  color:#555;
+  margin-bottom:12px;
+}
+
+/* FORM */
+form input,
+form select,
+form textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border:1px solid #dbe2ea;
+  border-radius:12px;
+  outline:none;
+  font-size:15px;
+}
+
+form textarea{
+  resize:vertical;
+  min-height:120px;
+}
+
+button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#0ea5e9;
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  background:#0284c7;
+}
+
+.note{
+  margin-top:14px;
+  font-size:13px;
+  color:#64748b;
+}
+
+/* CTA BOX */
+.highlight{
+  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+  color:#fff;
+}
+
+.highlight h2{
+  color:#fff;
+}
+
+.highlight p{
+  color:#eef6ff;
+}
+
+.info-list{
+  margin-top:15px;
+}
+
+.info-list div{
+  margin-bottom:14px;
+  padding-bottom:14px;
+  border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+/* FOOTER */
+.footer{
+  background:#0f172a;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+  margin-top:30px;
+}
+
+@media(max-width:900px){
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .navbar{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <img src="logo.png" alt="Scale with Clicks Logo" class="brand-logo">
+
+  <div>
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="casestudy.html">Case Studies</a>
+    <a href="contactus.html">Contact Us</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Contact Us</h1>
+  <p>Let’s discuss how we can grow your business with performance marketing.</p>
+</div>
+
+<!-- CONTACT SECTION -->
+<div class="section">
+  <div class="contact-grid">
+
+    <!-- FORM -->
+    <div class="card">
+      <h2>Get Free Strategy Call</h2>
+
+      <!-- Replace action with your Formspree / backend URL -->
+      <form action="https://formspree.io/f/yourformid" method="POST">
+
+        <input type="text" name="name" placeholder="Full Name" required>
+
+        <input type="email" name="email" placeholder="Email Address" required>
+
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <input type="text" name="company" placeholder="Business Name">
+
+        <select name="service" required>
+          <option value="">Select Service</option>
+          <option>Google Ads</option>
+          <option>Meta Ads</option>
+          <option>SEO Services</option>
+          <option>Lead Generation</option>
+          <option>E-commerce Growth</option>
+          <option>Conversion Tracking</option>
+          <option>Landing Page Optimization</option>
+        </select>
+
+        <textarea name="message" placeholder="Tell us about your goals"></textarea>
+
+        <button type="submit">Submit Inquiry</button>
+
+      </form>
+
+      <div class="note">
+        * Replace the form action URL with your preferred lead collection tool.
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="card highlight">
+      <h2>Why Contact Scale with Clicks?</h2>
+
+      <p>
+        We help businesses generate more leads, improve ROI, and scale profitably using data-driven paid marketing strategies.
+      </p>
+
+      <div class="info-list">
+        <div>
+          <strong>📞 Phone / WhatsApp</strong><br>
+          +91 9589188668
+        </div>
+
+        <div>
+          <strong>📧 Email</strong><br>
+          scalewithclicks@gmail.com
+        </div>
+
+        <div>
+          <strong>📅 Book Instantly</strong><br>
+          <a href="https://calendly.com/vinayyadav01992" target="_blank" style="color:#fff;text-decoration:underline;">Schedule on Calendly</a>
+        </div>
+
+        <div>
+          <strong>🌍 Services Available</strong><br>
+          India • USA • UK • Australia • Global Clients
+        </div>
+
+        <div>
+          <strong>⏰ Response Time</strong><br>
+          Usually within 24 hours
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 Scale with Clicks | Performance Marketing Agency
+</div>
+
+</body>
+</html>
