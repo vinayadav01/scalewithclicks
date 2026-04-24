@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pest Control Case Study</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#eef2f7;
+  color:#0f172a;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#0f172a;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.logo{
+  color:#fff;
+  font-size:22px;
+  font-weight:700;
+}
+
+.nav-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.nav-links a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.72)),
+  url('https://images.unsplash.com/photo-1581578731548-c64695cc6952');
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  text-align:center;
+  padding:100px 20px 80px;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:18px;
+  opacity:0.95;
+}
+
+/* MAIN */
+.container{
+  max-width:1150px;
+  margin:auto;
+  padding:50px 20px;
+}
+
+/* KPI */
+.kpi-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-top:-70px;
+}
+
+.stat-card{
+  background:#fff;
+  border-radius:18px;
+  padding:28px 20px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.stat-card h2{
+  color:#0ea5e9;
+  font-size:34px;
+  margin-bottom:8px;
+}
+
+/* SECTION */
+.section{
+  max-width:1150px;
+  margin:40px auto;
+  background:#fff;
+  padding:50px 25px;
+  border-radius:14px;
+  box-shadow:0 8px 22px rgba(0,0,0,0.05);
+}
+
+.section h2{
+  text-align:center;
+  margin-bottom:25px;
+  font-size:30px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#f8fbff;
+  border:1px solid #e5edf5;
+  border-radius:12px;
+  padding:22px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 25px rgba(14,165,233,0.08);
+}
+
+.card h3{
+  color:#0ea5e9;
+  margin-bottom:8px;
+}
+
+/* TABLE */
+table{
+  width:100%;
+  border-collapse:collapse;
+  overflow:hidden;
+  border-radius:12px;
+}
+
+th,td{
+  padding:14px;
+  border:1px solid #e2e8f0;
+  text-align:center;
+}
+
+th{
+  background:#0ea5e9;
+  color:#fff;
+}
+
+/* CTA */
+.cta{
+  max-width:1150px;
+  margin:50px auto;
+  padding:60px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  border-radius:14px;
+}
+
+.cta h2{
+  color:#000;
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.cta p{
+  color:#111827;
+  margin-bottom:20px;
+}
+
+.cta button{
+  padding:14px 28px;
+  background:#000;
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  font-size:16px;
+}
+
+/* FLOAT BUTTONS */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:#25D366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:22px;
+  z-index:999;
+}
+
+.sticky-btn{
+  position:fixed;
+  bottom:85px;
+  right:20px;
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  color:#000;
+  padding:12px 18px;
+  border:none;
+  border-radius:30px;
+  font-weight:700;
+  cursor:pointer;
+  z-index:999;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(14,165,233,0.5);}
+  70%{box-shadow:0 0 0 14px rgba(14,165,233,0);}
+}
+
+/* POPUP */
+.popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.popup-box{
+  background:#0f172a;
+  color:#fff;
+  padding:25px;
+  width:320px;
+  border-radius:12px;
+}
+
+.popup-box h2{
+  margin-bottom:15px;
+}
+
+.popup-box input{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border:none;
+  border-radius:8px;
+}
+
+.popup-box button{
+  width:100%;
+  margin-top:10px;
+  padding:12px;
+  border:none;
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* BACK BUTTON */
+.back-wrap{
+  text-align:center;
+  margin:35px 0 10px;
+}
+
+.back-btn{
+  display:inline-block;
+  padding:12px 26px;
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  color:#000;
+  font-weight:700;
+  text-decoration:none;
+  border-radius:8px;
+}
+
+/* FOOTER */
+.footer{
+  background:#0f172a;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+  margin-top:30px;
+}
+
+/* ANIMATION */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.8s;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+@media(max-width:768px){
+  .hero h1{font-size:32px;}
+  .section h2{font-size:26px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">Scale with Clicks</div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="healthcare.html">Healthcare</a>
+    <a href="lawyer.html">Lawyer</a>
+    <a href="packers-movers.html">Packers & Movers</a>
+    <a href="pestcontrol.html">Pest Control</a>
+    <a href="badges.html">Military Patches</a>
+    <a href="wool-e-commerce.html">Yarn Store</a>
+    <a href="skincare.html">Skincare</a>
+    <a href="pump-manufacturer.html">Pump Manufacturer</a>
+    <a href="construction.html">Construction Industry</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Pest Control Google Ads Case Study</h1>
+  <p>Generated 165 High-Intent Leads at Lowest CPL</p>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+
+<!-- KPI -->
+<div class="kpi-grid fade">
+  <div class="stat-card">
+    <h2>1,540</h2>
+    <p>Clicks</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>165</h2>
+    <p>Leads</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>10.7%</h2>
+    <p>Conversion Rate</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>$14</h2>
+    <p>CPL</p>
+  </div>
+</div>
+
+</div>
+
+<!-- OVERVIEW -->
+<div class="section fade">
+<h2>Client Overview</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Emergency Pest Control Service</h3>
+    <p>Local service business focused on urgent same-day call bookings.</p>
+  </div>
+</div>
+</div>
+
+<!-- CHALLENGES -->
+<div class="section fade">
+<h2>Challenges</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Urgent Demand</h3>
+    <p>Needed instant visibility for emergency searches.</p>
+  </div>
+
+  <div class="card">
+    <h3>Low Visibility</h3>
+    <p>Competitors dominated local search results.</p>
+  </div>
+
+  <div class="card">
+    <h3>Missed Calls</h3>
+    <p>Traffic was not converting fast enough.</p>
+  </div>
+
+  <div class="card">
+    <h3>Budget Waste</h3>
+    <p>Broad searches were consuming spend.</p>
+  </div>
+</div>
+</div>
+
+<!-- STRATEGY -->
+<div class="section fade">
+<h2>Strategy Implemented</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Emergency Keywords</h3>
+    <p>Focused on urgent buyer-intent searches.</p>
+  </div>
+
+  <div class="card">
+    <h3>Call Extensions</h3>
+    <p>Enabled one-click call bookings.</p>
+  </div>
+
+  <div class="card">
+    <h3>Location Targeting</h3>
+    <p>Served ads only in profitable service zones.</p>
+  </div>
+
+  <div class="card">
+    <h3>Negative Keywords</h3>
+    <p>Removed irrelevant clicks and lowered CPL.</p>
+  </div>
+</div>
+</div>
+
+<!-- RESULTS -->
+<div class="section fade">
+<h2>Results Achieved</h2>
+
+<table>
+<tr>
+<th>Metric</th>
+<th>Before</th>
+<th>After</th>
+</tr>
+
+<tr>
+<td>Leads</td>
+<td>60</td>
+<td><b>165</b></td>
+</tr>
+
+<tr>
+<td>Cost Per Lead</td>
+<td>$29</td>
+<td><b>$14</b></td>
+</tr>
+
+<tr>
+<td>Clicks</td>
+<td>710</td>
+<td><b>1,540</b></td>
+</tr>
+</table>
+</div>
+
+<!-- INSIGHTS -->
+<div class="section fade">
+<h2>Key Insights</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Intent = High ROI</h3>
+    <p>Urgent searches delivered best quality leads.</p>
+  </div>
+
+  <div class="card">
+    <h3>Call Ads Win</h3>
+    <p>Phone-first campaigns improved conversions.</p>
+  </div>
+
+  <div class="card">
+    <h3>Speed Matters</h3>
+    <p>Fast response increased booking rate.</p>
+  </div>
+
+  <div class="card">
+    <h3>Smart Filtering</h3>
+    <p>Negative keywords protected budget.</p>
+  </div>
+</div>
+</div>
+
+<!-- CTA -->
+<div class="cta fade">
+<h2>Need Emergency Leads?</h2>
+<p>Capture high-intent customers instantly with Google Ads.</p>
+<button onclick="openPopup()">Book Free Strategy Call</button>
+</div>
+
+<!-- BACK BUTTON -->
+<div class="back-wrap">
+<a href="index.html" class="back-btn">← Back to Case Studies</a>
+</div>
+
+<!-- FLOAT BUTTONS -->
+<a href="https://wa.me/9589188668" class="whatsapp">💬</a>
+<button class="sticky-btn" onclick="openPopup()">🚀 Get Free Leads Plan</button>
+
+<!-- POPUP -->
+<div id="leadPopup" class="popup">
+  <div class="popup-box">
+    <div style="text-align:right;cursor:pointer;font-size:24px;" onclick="closePopup()">×</div>
+    <h2>Get Free Strategy Call</h2>
+
+    <input placeholder="Your Name">
+    <input placeholder="Your Email">
+    <input placeholder="Your Phone">
+
+    <button onclick="openCalendly()">Book Call</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Vinay Yadav | Performance Marketing Consultant
+</div>
+
+<script>
+function openPopup(){
+  document.getElementById("leadPopup").style.display="flex";
+}
+
+function closePopup(){
+  document.getElementById("leadPopup").style.display="none";
+}
+
+function openCalendly(){
+  window.open("https://calendly.com/vinayyadav01992","_blank");
+}
+
+/* Auto Popup */
+setTimeout(openPopup,5000);
+
+/* Scroll Animation */
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".fade").forEach(el=>{
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
