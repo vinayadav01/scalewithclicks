@@ -26,7 +26,7 @@ body{
   line-height:1.6;
 }
 
-/* NAVBAR (UNIFIED) */
+/* NAVBAR (MATCHED SYSTEM) */
 .navbar{
   position:sticky;
   top:0;
@@ -68,7 +68,7 @@ body{
   color:#2563eb;
 }
 
-/* MAIN */
+/* CONTAINER */
 .container{
   max-width:1200px;
   margin:auto;
@@ -93,7 +93,7 @@ h2{
   margin-bottom:10px;
 }
 
-/* DIVIDER */
+/* DIVIDER (UNIFIED) */
 .divider{
   width:90px;
   height:4px;
@@ -109,7 +109,7 @@ h2{
   gap:22px;
 }
 
-/* CARD (UNIFIED) */
+/* CARD (UNIFIED LOOK) */
 .card{
   background:#fff;
   border:1px solid #e2e8f0;
@@ -166,8 +166,8 @@ h2{
   color:#2563eb;
 }
 
-/* CONTACT */
-.contact{
+/* CTA (MATCHED STYLE LIKE OTHER CASE STUDIES) */
+.cta{
   margin-top:80px;
   background:#fff;
   border:1px solid #e2e8f0;
@@ -177,22 +177,8 @@ h2{
   box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
-.contact p{
-  color:#64748b;
-}
-
-.contact input{
-  width:100%;
-  padding:14px;
-  margin:10px 0;
-  border:1px solid #cbd5e1;
-  border-radius:12px;
-  outline:none;
-}
-
-/* BUTTON */
-button,
-.btn{
+button{
+  margin-top:15px;
   background:linear-gradient(135deg,#0ea5e9,#2563eb);
   color:#fff;
   padding:14px 24px;
@@ -200,8 +186,6 @@ button,
   border-radius:12px;
   cursor:pointer;
   font-weight:700;
-  text-decoration:none;
-  display:inline-block;
 }
 
 /* WHATSAPP */
@@ -218,6 +202,23 @@ button,
   z-index:999;
 }
 
+/* BACK BUTTON */
+.back-btn{
+  display:inline-block;
+  margin-top:50px;
+  padding:12px 22px;
+  background:#e2e8f0;
+  border-radius:12px;
+  text-decoration:none;
+  color:#0f172a;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.back-btn:hover{
+  background:#cbd5e1;
+}
+
 /* FOOTER */
 .footer{
   text-align:center;
@@ -226,7 +227,7 @@ button,
   margin-top:40px;
 }
 
-/* ANIMATION */
+/* ANIMATION (UNIFIED) */
 .section{
   opacity:0;
   transform:translateY(20px);
@@ -382,24 +383,16 @@ button,
 </div>
 </div>
 
-<!-- CONTACT -->
-<div class="contact section">
+<!-- CTA -->
+<div class="cta section">
 <h2>💬 Get Similar Results</h2>
-<p>Book a free strategy call</p>
-
-<input placeholder="Your Name">
-<input placeholder="Your Email">
-<input placeholder="Your Phone">
-
-<br><br>
-
 <button onclick="window.open('https://calendly.com/vinayyadav01992')">
 Book Free Call
 </button>
 </div>
 
-<div style="text-align:center; margin-top:50px;">
-<a href="index.html" class="btn">← Back to Case Studies</a>
+<div style="text-align:center;">
+<a href="index.html" class="back-btn">← Back to Case Studies</a>
 </div>
 
 </div>
