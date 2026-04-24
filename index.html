@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scale with Clicks | Performance Marketing Agency</title>
+<meta name="description" content="Scale with Clicks helps businesses grow with Google Ads, Meta Ads, lead generation, and conversion-focused performance marketing strategies.">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  color:#0f172a;
+  background:#ffffff;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+}
+
+.container{
+  width:100%;
+  max-width:1180px;
+  margin:auto;
+  padding:0 20px;
+}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(15,23,42,0.06);
+}
+
+.nav-wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:800;
+  color:#0f172a;
+}
+
+.logo span{
+  color:#0ea5e9;
+}
+
+.nav-links{
+  display:flex;
+  gap:28px;
+  align-items:center;
+}
+
+.nav-links a{
+  color:#334155;
+  font-weight:600;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:#0ea5e9;
+}
+
+.nav-btn{
+  padding:12px 18px;
+  border-radius:12px;
+  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+  color:#fff !important;
+}
+
+/* HERO */
+.hero{
+  padding:90px 0 70px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:40px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-block;
+  padding:10px 14px;
+  background:#e0f2fe;
+  color:#0369a1;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:56px;
+  line-height:1.08;
+  font-weight:800;
+  margin-bottom:18px;
+}
+
+.hero h1 span{
+  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  font-size:18px;
+  color:#475569;
+  line-height:1.7;
+  max-width:620px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  margin-top:28px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:14px 22px;
+  border-radius:14px;
+  font-weight:700;
+  transition:.3s;
+  display:inline-block;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+  color:#fff;
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px);
+}
+
+.btn-secondary{
+  border:1px solid #cbd5e1;
+  color:#0f172a;
+}
+
+.hero-card{
+  background:linear-gradient(180deg,#eff6ff,#ffffff);
+  border:1px solid #e2e8f0;
+  border-radius:26px;
+  padding:28px;
+  box-shadow:0 25px 60px rgba(37,99,235,0.08);
+}
+
+.metric{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.metric-box{
+  background:#fff;
+  border-radius:18px;
+  padding:20px;
+  border:1px solid #e2e8f0;
+}
+
+.metric-box h3{
+  font-size:28px;
+  color:#2563eb;
+  margin-bottom:8px;
+}
+
+.metric-box p{
+  font-size:14px;
+  color:#64748b;
+}
+
+/* SECTION */
+section{
+  padding:75px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h2{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#64748b;
+  max-width:700px;
+  margin:auto;
+}
+
+/* SERVICES */
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:22px;
+  padding:26px;
+  transition:.35s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 45px rgba(15,23,42,0.08);
+}
+
+.icon{
+  font-size:28px;
+  margin-bottom:14px;
+}
+
+.card h3{
+  margin-bottom:10px;
+  font-size:22px;
+}
+
+.card p{
+  color:#64748b;
+  line-height:1.7;
+}
+
+/* CASE STUDIES */
+.case-card{
+  background:linear-gradient(180deg,#f8fafc,#ffffff);
+}
+
+/* ABOUT */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.about-box{
+  background:#0f172a;
+  color:#fff;
+  padding:34px;
+  border-radius:24px;
+}
+
+.about-box p{
+  color:#cbd5e1;
+  line-height:1.8;
+}
+
+/* CONTACT */
+.contact{
+  background:#f8fafc;
+  border-radius:28px;
+  padding:45px;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.contact-item{
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:18px;
+  padding:22px;
+}
+
+.footer{
+  padding:30px 0;
+  text-align:center;
+  color:#64748b;
+  border-top:1px solid #e2e8f0;
+}
+
+/* MOBILE */
+@media(max-width:992px){
+  .hero-grid,
+  .about,
+  .contact-grid,
+  .grid-3{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+}
+
+@media(max-width:768px){
+  .nav-links{
+    gap:16px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+  }
+
+  .hero{
+    padding-top:60px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .section-title h2{
+    font-size:30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-wrap">
+    <a href="#" class="logo">Scale <span>with Clicks</span></a>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#about">About Us</a>
+      <a href="#contact" class="nav-btn">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="badge">🚀 ROI-Focused Growth Partner</div>
+
+      <h1>Scale Revenue with <span>Performance Marketing</span></h1>
+
+      <p>
+        We help businesses generate high-quality leads and profitable sales using Google Ads, Meta Ads, landing page optimization, and advanced conversion tracking.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Book Free Strategy Call</a>
+        <a href="#cases" class="btn btn-secondary">View Case Studies</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="metric">
+        <div class="metric-box">
+          <h3>₹50L+</h3>
+          <p>Ad Spend Managed</p>
+        </div>
+
+        <div class="metric-box">
+          <h3>500+</h3>
+          <p>Qualified Leads</p>
+        </div>
+
+        <div class="metric-box">
+          <h3>10X</h3>
+          <p>ROAS Achieved</p>
+        </div>
+
+        <div class="metric-box">
+          <h3>Global</h3>
+          <p>Clients Served</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Growth Services</h2>
+      <p>Performance marketing solutions designed to increase leads, sales, and return on ad spend.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon">🎯</div>
+        <h3>Google Ads</h3>
+        <p>Search, Display, YouTube and Performance Max campaigns built for measurable growth.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Lead Generation</h3>
+        <p>Generate qualified leads with funnel strategy, ad testing, and conversion-focused landing pages.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🛒</div>
+        <h3>E-commerce Growth</h3>
+        <p>Scale online stores with ROAS-driven campaigns, audience targeting, and retention strategy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+  <div class="container">
+    <div class="section-title">
+      <h2>Case Studies</h2>
+      <p>Real campaign performance across lead generation and e-commerce brands.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card case-card">
+        <h3>🏥 Healthcare</h3>
+        <p>148 Leads generated at $21 CPL through Google Ads optimization.</p>
+      </div>
+
+      <div class="card case-card">
+        <h3>🧴 Skincare</h3>
+        <p>7.38X ROAS with improved conversion value and scalable campaign structure.</p>
+      </div>
+
+      <div class="card case-card">
+        <h3>🏗️ Construction</h3>
+        <p>110 conversions at A$70 CPA with high-intent lead acquisition campaigns.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container about">
+    <div>
+      <div class="section-title" style="text-align:left; margin-bottom:15px;">
+        <h2>About Us</h2>
+      </div>
+
+      <p style="color:#64748b; line-height:1.8;">
+        Scale with Clicks is a results-driven performance marketing agency helping brands grow through paid media, analytics, and conversion optimization. We focus on revenue, not vanity metrics.
+      </p>
+    </div>
+
+    <div class="about-box">
+      <h3 style="font-size:28px; margin-bottom:12px;">Why Brands Choose Us</h3>
+      <p>
+        ✔ ROI-first strategy<br><br>
+        ✔ Transparent reporting<br><br>
+        ✔ Faster optimization cycles<br><br>
+        ✔ Data-backed decisions<br><br>
+        ✔ Built to scale campaigns globally
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact">
+      <div class="section-title">
+        <h2>Let’s Grow Your Business</h2>
+        <p>Book a free consultation and get a custom growth plan for your business.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <h3>📞 Contact</h3>
+          <p style="margin-top:10px; color:#64748b;">WhatsApp: +91 9589188668</p>
+          <p style="margin-top:10px; color:#64748b;">Email: hello@scalewithclicks.com</p>
+        </div>
+
+        <div class="contact-item">
+          <h3>📅 Book a Call</h3>
+          <p style="margin-top:10px; color:#64748b;">Schedule your strategy session via Calendly.</p>
+          <a href="https://calendly.com/vinayyadav01992" target="_blank" class="btn btn-primary" style="margin-top:15px;">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  © 2026 Scale with Clicks | Performance Marketing Agency
+</footer>
+
+</body>
+</html>
