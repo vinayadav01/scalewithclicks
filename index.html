@@ -32,7 +32,7 @@ a{
   text-decoration:none;
 }
 
-/* NAVBAR (MATCHES ABOUT PAGE EXACTLY) */
+/* NAVBAR */
 .navbar{
   position:sticky;
   top:0;
@@ -73,10 +73,6 @@ a{
   border-radius:30px;
 }
 
-.nav-btn:hover{
-  background:#0284c7;
-}
-
 /* HERO */
 .hero{
   background:linear-gradient(135deg,#0ea5e9,#38bdf8);
@@ -102,7 +98,6 @@ a{
 .hero p{
   font-size:18px;
   line-height:1.8;
-  opacity:.95;
 }
 
 .hero-actions{
@@ -126,7 +121,7 @@ a{
 }
 
 .btn-secondary{
-  border:1px solid rgba(255,255,255,.6);
+  border:1px solid rgba(255,255,255,.7);
   color:#fff;
 }
 
@@ -201,7 +196,7 @@ a{
   border-radius:18px;
   padding:30px;
   color:#fff;
-  min-height:250px;
+  min-height:260px;
   box-shadow:0 12px 30px rgba(0,0,0,0.08);
   transition:.3s;
 }
@@ -221,29 +216,12 @@ a{
 }
 
 /* COLORS */
-.card1{
-  background:linear-gradient(135deg,#0ea5e9,#2563eb);
-}
-
-.card2{
-  background:linear-gradient(135deg,#10b981,#059669);
-}
-
-.card3{
-  background:linear-gradient(135deg,#8b5cf6,#7c3aed);
-}
-
-.card4{
-  background:linear-gradient(135deg,#f97316,#ea580c);
-}
-
-.card5{
-  background:linear-gradient(135deg,#ec4899,#db2777);
-}
-
-.card6{
-  background:linear-gradient(135deg,#14b8a6,#0f766e);
-}
+.card1{background:linear-gradient(135deg,#0ea5e9,#2563eb);}
+.card2{background:linear-gradient(135deg,#10b981,#059669);}
+.card3{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
+.card4{background:linear-gradient(135deg,#f97316,#ea580c);}
+.card5{background:linear-gradient(135deg,#ec4899,#db2777);}
+.card6{background:linear-gradient(135deg,#14b8a6,#0f766e);}
 
 /* CTA */
 .cta{
@@ -269,19 +247,23 @@ a{
   padding:14px 30px;
   border-radius:30px;
   font-weight:600;
-  transition:.3s;
-}
-
-.cta a:hover{
-  background:#0284c7;
 }
 
 /* FOOTER */
 .footer{
   background:#0f172a;
   color:#fff;
+  padding:35px 20px;
   text-align:center;
-  padding:20px;
+}
+
+.footer p{
+  margin:8px 0;
+  color:#cbd5e1;
+}
+
+.footer a{
+  color:#38bdf8;
 }
 
 /* MOBILE */
@@ -301,21 +283,17 @@ a{
     gap:12px;
   }
 
-  .hero{
-    padding:70px 20px;
-  }
-
   .hero h1{
     font-size:34px;
+  }
+
+  .brand-logo{
+    height:95px;
   }
 
   .section-title h2,
   .cta h2{
     font-size:28px;
-  }
-
-  .brand-logo{
-    height:95px;
   }
 }
 </style>
@@ -346,7 +324,7 @@ a{
       <p>
         We help businesses generate qualified leads, profitable sales,
         and measurable growth through Google Ads, Meta Ads,
-        landing pages, and conversion tracking systems.
+        landing pages, and advanced conversion tracking systems.
       </p>
 
       <div class="hero-actions">
@@ -389,43 +367,33 @@ a{
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- WHY US -->
 <section class="section">
   <div class="section-title">
     <h2>Why Scale with Clicks</h2>
-    <p>Performance marketing focused on business growth, not vanity metrics.</p>
+    <p>Performance marketing focused on real business growth.</p>
   </div>
 
   <div class="grid">
-
     <div class="card card1">
       <h3>ROI Focused</h3>
-      <p>
-        Every campaign is optimized for leads, revenue, and profitable growth.
-      </p>
+      <p>Every campaign is optimized for revenue, leads, and profitable growth.</p>
     </div>
 
     <div class="card card2">
       <h3>Transparent Reporting</h3>
-      <p>
-        Clear data, clean dashboards, and insights you can actually use.
-      </p>
+      <p>Simple reports, clean dashboards, and clear next steps.</p>
     </div>
 
     <div class="card card3">
       <h3>Fast Optimization</h3>
-      <p>
-        Continuous testing, quick decisions, and faster scaling opportunities.
-      </p>
+      <p>Continuous testing and faster decision-making to scale winners.</p>
     </div>
 
     <div class="card card4">
       <h3>Built to Scale</h3>
-      <p>
-        Growth systems designed for local brands and international clients.
-      </p>
+      <p>Systems designed for local businesses and global brands.</p>
     </div>
-
   </div>
 </section>
 
@@ -433,29 +401,50 @@ a{
 <section class="section">
   <div class="section-title">
     <h2>Our Services</h2>
-    <p>Growth solutions designed to increase leads, sales, and ROAS.</p>
+    <p>End-to-end paid growth services to increase leads, sales, and ROAS.</p>
   </div>
 
   <div class="grid">
 
     <div class="card card5">
-      <h3>Google Ads</h3>
+      <h3>🎯 Google Ads Management</h3>
       <p>
-        Search, Display, YouTube, and Performance Max campaigns.
+        Search, Display, YouTube, Shopping, and Performance Max campaigns built for measurable growth.
       </p>
     </div>
 
     <div class="card card6">
-      <h3>Lead Generation</h3>
+      <h3>📈 Lead Generation</h3>
       <p>
-        High-quality lead generation systems with landing pages & funnels.
+        Generate high-quality leads with funnel strategy, landing pages, CRM-ready forms, and optimization.
       </p>
     </div>
 
     <div class="card card1">
-      <h3>E-commerce Growth</h3>
+      <h3>🛒 E-commerce Growth</h3>
       <p>
-        Scale Shopify and online stores with profitable paid acquisition.
+        Scale Shopify and online stores with ROAS-focused campaigns, audience targeting, and retention strategy.
+      </p>
+    </div>
+
+    <div class="card card2">
+      <h3>📊 Conversion Tracking</h3>
+      <p>
+        Google Tag Manager, GA4, enhanced conversions, call tracking, and accurate attribution setup.
+      </p>
+    </div>
+
+    <div class="card card3">
+      <h3>🧪 Landing Page Optimization</h3>
+      <p>
+        Improve conversion rates with better messaging, UX improvements, and A/B testing ideas.
+      </p>
+    </div>
+
+    <div class="card card4">
+      <h3>📣 Meta Ads</h3>
+      <p>
+        Facebook & Instagram campaigns for lead generation, remarketing, and customer acquisition.
       </p>
     </div>
 
@@ -470,7 +459,6 @@ a{
   </div>
 
   <div class="grid">
-
     <div class="card card2">
       <h3>🏥 Healthcare</h3>
       <p>148 leads generated through Google Ads optimization.</p>
@@ -483,9 +471,8 @@ a{
 
     <div class="card card4">
       <h3>🏗️ Construction</h3>
-      <p>110 conversions through high-intent lead campaigns.</p>
+      <p>110 conversions through high-intent campaigns.</p>
     </div>
-
   </div>
 </section>
 
@@ -501,7 +488,11 @@ a{
 
 <!-- FOOTER -->
 <div class="footer">
-  © 2026 Scale with Clicks | Performance Marketing Agency
+  <h3>Scale with Clicks</h3>
+  <p>Performance Marketing Agency</p>
+  <p>📞 +91 9589188668</p>
+  <p>📧 <a href="mailto:scalewithclicks@gmail.com">scalewithclicks@gmail.com</a></p>
+  <p>© 2026 Scale with Clicks | All Rights Reserved</p>
 </div>
 
 </body>
