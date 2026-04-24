@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>About Us | Scale with Clicks</title>
+<meta name="description" content="Learn about Scale with Clicks - a results-driven performance marketing agency helping businesses grow with Google Ads, Meta Ads, conversion tracking and ROI-focused strategies.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -23,6 +24,7 @@ body{
   font-family:'Poppins',sans-serif;
   background:#ffffff;
   color:#0f172a;
+  overflow-x:hidden;
 }
 
 a{
@@ -34,8 +36,8 @@ img{
   display:block;
 }
 
-/* CONTAINER */
 .container{
+  width:100%;
   max-width:1250px;
   margin:auto;
   padding:0 20px;
@@ -45,17 +47,17 @@ img{
 .navbar{
   position:sticky;
   top:0;
-  z-index:999;
+  z-index:1000;
   background:rgba(255,255,255,0.96);
   backdrop-filter:blur(12px);
   box-shadow:0 4px 18px rgba(0,0,0,0.05);
 }
 
 .nav-wrap{
-  min-height:90px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  min-height:90px;
 }
 
 .brand-logo{
@@ -65,8 +67,8 @@ img{
 
 .nav-links{
   display:flex;
-  gap:18px;
   align-items:center;
+  gap:18px;
   flex-wrap:wrap;
 }
 
@@ -92,37 +94,71 @@ img{
   background:linear-gradient(135deg,#0ea5e9,#38bdf8);
   color:#fff;
   text-align:center;
-  padding:100px 20px;
+  padding:90px 20px;
+}
+
+.badge{
+  display:inline-block;
+  background:rgba(255,255,255,0.18);
+  padding:8px 16px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:16px;
 }
 
 .hero h1{
-  font-size:44px;
-  margin-bottom:10px;
+  font-size:50px;
+  margin-bottom:12px;
 }
 
 .hero p{
+  max-width:760px;
+  margin:auto;
   font-size:18px;
+  line-height:1.8;
   opacity:.95;
 }
 
 /* SECTION */
-.section{
-  padding:70px 0;
+section{
+  padding:75px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#64748b;
+  max-width:760px;
+  margin:auto;
 }
 
 /* GRID */
-.grid{
+.grid-2{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+
+.grid-4{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
   gap:24px;
 }
 
 /* CARD */
 .card{
-  border-radius:22px;
+  border-radius:24px;
   padding:30px;
   color:#fff;
-  min-height:280px;
   box-shadow:0 12px 30px rgba(0,0,0,0.08);
   transition:.35s;
 }
@@ -133,72 +169,106 @@ img{
 
 .card h3{
   font-size:24px;
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
 .card p{
-  line-height:1.8;
   font-size:15px;
+  line-height:1.8;
 }
 
-/* CARD COLORS */
-.card1{
+/* COLORS */
+.blue{
   background:linear-gradient(135deg,#0ea5e9,#2563eb);
 }
 
-.card2{
+.green{
   background:linear-gradient(135deg,#10b981,#059669);
 }
 
-.card3{
+.purple{
   background:linear-gradient(135deg,#8b5cf6,#7c3aed);
 }
 
-.card4{
+.orange{
   background:linear-gradient(135deg,#f97316,#ea580c);
 }
 
-/* CTA */
-.cta{
+/* STATS */
+.stats{
   background:#f8fafc;
+}
+
+.stat-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+.stat-box{
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:22px;
+  padding:26px;
   text-align:center;
-  padding:70px 20px;
+  box-shadow:0 8px 24px rgba(15,23,42,0.04);
 }
 
-.cta h2{
-  font-size:36px;
-  margin-bottom:12px;
+.stat-box h3{
+  color:#2563eb;
+  font-size:34px;
+  margin-bottom:8px;
 }
 
-.cta p{
+.stat-box p{
   color:#64748b;
 }
 
-.cta a{
-  display:inline-block;
-  margin-top:20px;
+/* CTA */
+.cta-wrap{
   background:linear-gradient(135deg,#0ea5e9,#2563eb);
   color:#fff;
-  padding:14px 30px;
+  text-align:center;
+  padding:55px 25px;
+  border-radius:28px;
+}
+
+.cta-wrap h2{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.cta-wrap p{
+  max-width:700px;
+  margin:auto;
+  opacity:.95;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:22px;
+  padding:14px 26px;
   border-radius:30px;
-  font-weight:600;
+  font-weight:700;
+  transition:.3s;
+}
+
+.btn-white{
+  background:#fff;
+  color:#0ea5e9;
+}
+
+.btn-white:hover{
+  transform:translateY(-2px);
 }
 
 /* CONTACT */
-.contact-section{
-  background:#ffffff;
-  padding:0 20px 70px;
-}
-
 .contact-box{
-  max-width:1000px;
-  margin:auto;
   background:#f8fafc;
   border:1px solid #e2e8f0;
-  border-radius:24px;
+  border-radius:26px;
   padding:45px 25px;
   text-align:center;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
 .contact-box h2{
@@ -208,20 +278,18 @@ img{
 
 .contact-box p{
   color:#64748b;
-  margin-bottom:25px;
 }
 
-.contact-buttons{
-  display:flex;
-  gap:14px;
-  justify-content:center;
-  flex-wrap:wrap;
+.contact-links{
+  margin-top:24px;
 }
 
-.contact-buttons a{
+.contact-links a{
+  display:inline-block;
+  margin:8px;
   padding:14px 24px;
   border-radius:30px;
-  font-weight:600;
+  font-weight:700;
   color:#fff;
 }
 
@@ -229,15 +297,15 @@ img{
   background:#10b981;
 }
 
-.email-btn{
+.mail-btn{
   background:#0ea5e9;
 }
 
 /* FOOTER */
-.main-footer{
+.footer{
   background:#0f172a;
   text-align:center;
-  padding:22px 20px;
+  padding:24px 20px;
 }
 
 .footer-links{
@@ -246,19 +314,19 @@ img{
 
 .footer-links a{
   color:#38bdf8;
-  margin:0 8px;
+  margin:0 10px;
 }
 
-.footer-links span{
-  color:#94a3b8;
+.footer span{
+  color:#64748b;
 }
 
-.main-footer p{
+.footer p{
   color:#cbd5e1;
   font-size:14px;
 }
 
-/* FLOAT BUTTONS */
+/* FLOAT */
 .whatsapp{
   position:fixed;
   left:18px;
@@ -290,6 +358,24 @@ img{
 }
 
 /* MOBILE */
+@media(max-width:992px){
+  .grid-2,
+  .grid-4,
+  .stat-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .section-title h2,
+  .cta-wrap h2,
+  .contact-box h2{
+    font-size:32px;
+  }
+}
+
 @media(max-width:768px){
   .nav-wrap{
     flex-direction:column;
@@ -298,19 +384,25 @@ img{
 
   .nav-links{
     justify-content:center;
+    gap:14px;
   }
 
   .brand-logo{
     height:74px;
   }
 
-  .hero h1{
-    font-size:34px;
+  .grid-2,
+  .grid-4,
+  .stat-grid{
+    grid-template-columns:1fr;
   }
 
-  .cta h2,
-  .contact-box h2{
-    font-size:28px;
+  .hero{
+    padding:70px 20px;
+  }
+
+  .hero h1{
+    font-size:34px;
   }
 
   .whatsapp{
@@ -348,46 +440,94 @@ img{
 
 <!-- HERO -->
 <section class="hero">
+  <div class="badge">🚀 Growth Driven Agency</div>
   <h1>About Scale with Clicks</h1>
-  <p>Performance Marketing That Drives Real Business Growth</p>
+  <p>
+    We help businesses generate more leads, more sales, and stronger ROI through
+    performance marketing strategies built around measurable growth.
+  </p>
 </section>
 
-<!-- CONTENT -->
-<section class="section">
+<!-- ABOUT CARDS -->
+<section>
   <div class="container">
 
-    <div class="grid">
+    <div class="section-title">
+      <h2>Who We Are</h2>
+      <p>Built for businesses that care about revenue, not vanity metrics.</p>
+    </div>
 
-      <div class="card card1">
-        <h3>Who We Are</h3>
+    <div class="grid-2">
+
+      <div class="card blue">
+        <h3>Our Story</h3>
         <p>
-          Scale with Clicks is a growth-focused performance marketing agency helping businesses generate leads, increase sales, and scale profitably through paid advertising.
+          Scale with Clicks was created to help brands grow profitably using
+          paid advertising, better tracking, and conversion-focused strategy.
         </p>
       </div>
 
-      <div class="card card2">
+      <div class="card green">
         <h3>What We Do</h3>
         <p>
-          We run Google Ads, Meta Ads, landing page optimization, and conversion tracking systems designed to maximize return on ad spend and business growth.
+          We manage Google Ads, Meta Ads, remarketing, CRO, landing pages,
+          and analytics systems that improve results month after month.
         </p>
       </div>
 
-      <div class="card card3">
+      <div class="card purple">
         <h3>Our Mission</h3>
         <p>
-          Our mission is to deliver measurable results with transparent strategies, data-backed decisions, and campaigns focused on revenue—not vanity metrics.
+          Deliver transparent, scalable and data-backed marketing campaigns
+          that create real business growth.
         </p>
       </div>
 
-      <div class="card card4">
-        <h3>Why Choose Us</h3>
+      <div class="card orange">
+        <h3>Why Clients Choose Us</h3>
         <p>
-          ✔ ROI Focused Campaigns<br>
+          ✔ ROI First Strategy<br>
           ✔ Transparent Reporting<br>
-          ✔ Faster Optimization<br>
-          ✔ Proven Case Studies<br>
-          ✔ Scalable Growth Systems
+          ✔ Fast Optimization Cycles<br>
+          ✔ Proven Results<br>
+          ✔ Built to Scale
         </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Results That Matter</h2>
+      <p>Performance metrics across multiple industries and campaigns.</p>
+    </div>
+
+    <div class="stat-grid">
+
+      <div class="stat-box">
+        <h3>₹5CR+</h3>
+        <p>Ad Spend Managed</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>5000+</h3>
+        <p>Qualified Leads</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>10X</h3>
+        <p>ROAS Achieved</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>Global</h3>
+        <p>Clients Served</p>
       </div>
 
     </div>
@@ -396,32 +536,42 @@ img{
 </section>
 
 <!-- CTA -->
-<section class="cta">
-  <h2>Ready to Scale Your Business?</h2>
-  <p>Book a free strategy call and get a custom growth plan.</p>
+<section>
+  <div class="container">
 
-  <a href="https://calendly.com/vinayyadav01992" target="_blank">
-    Book Free Strategy Call
-  </a>
+    <div class="cta-wrap">
+      <h2>Ready to Scale Your Business?</h2>
+      <p>
+        Book a free strategy call and get a custom growth plan designed for your goals.
+      </p>
+
+      <a href="https://calendly.com/vinayyadav01992" target="_blank" class="btn btn-white">
+        Book Free Strategy Call
+      </a>
+    </div>
+
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact-section">
-  <div class="contact-box">
+<section>
+  <div class="container">
 
-    <h2>Get in Touch</h2>
-    <p>Ready to grow your business? Contact us today.</p>
+    <div class="contact-box">
+      <h2>Get in Touch</h2>
+      <p>Ready to grow your business? Let’s talk.</p>
 
-    <div class="contact-buttons">
-      <a href="tel:+919589188668" class="call-btn">📞 Call Now</a>
-      <a href="mailto:scalewithclicks@gmail.com" class="email-btn">📧 Email Us</a>
+      <div class="contact-links">
+        <a href="tel:+919589188668" class="call-btn">📞 Call Now</a>
+        <a href="mailto:scalewithclicks@gmail.com" class="mail-btn">📧 Email Us</a>
+      </div>
     </div>
 
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="main-footer">
+<footer class="footer">
 
   <div class="footer-links">
     <a href="privacy-policy.html">Privacy Policy</a>
@@ -433,7 +583,7 @@ img{
 
 </footer>
 
-<!-- FLOAT BUTTONS -->
+<!-- FLOATING -->
 <a href="https://wa.me/919589188668" target="_blank" class="whatsapp">💬</a>
 
 <a href="https://calendly.com/vinayyadav01992" target="_blank" class="sticky-cta">
