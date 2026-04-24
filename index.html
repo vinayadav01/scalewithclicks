@@ -289,49 +289,81 @@ section{
   color:#0ea5e9;
 }
 
-/* CONTACT */
-.contact-bar{
-  text-align:center;
+/* CONTACT FIXED */
+.contact-section{
+  background:#ffffff;
+  padding:70px 20px 40px;
+}
+
+.contact-box{
+  max-width:900px;
+  margin:auto;
   background:#f8fafc;
-  border-top:1px solid #e2e8f0;
+  border:1px solid #e2e8f0;
+  border-radius:24px;
+  padding:45px 25px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
-.contact-links{
-  margin-top:18px;
+.contact-box h2{
+  font-size:34px;
+  margin-bottom:10px;
 }
 
-.contact-links a{
-  display:inline-block;
-  margin:8px;
-  padding:14px 22px;
+.contact-box p{
+  color:#64748b;
+  margin-bottom:25px;
+}
+
+.contact-buttons{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.contact-buttons a{
+  padding:14px 24px;
   border-radius:30px;
-  font-weight:700;
+  font-weight:600;
+  color:#fff;
 }
 
 .call-btn{
   background:#10b981;
-  color:#fff;
 }
 
-.mail-btn{
-  background:#0f172a;
-  color:#fff;
+.email-btn{
+  background:#0ea5e9;
 }
 
-/* FOOTER */
-.footer{
+/* FOOTER FIXED */
+.main-footer{
   background:#0f172a;
-  color:#cbd5e1;
   text-align:center;
   padding:22px 20px;
 }
 
-.footer a{
-  color:#38bdf8;
-  margin:0 10px;
+.footer-links{
+  margin-bottom:10px;
 }
 
-/* FLOAT BUTTONS */
+.footer-links a{
+  color:#38bdf8;
+  margin:0 8px;
+}
+
+.footer-links span{
+  color:#94a3b8;
+}
+
+.main-footer p{
+  color:#cbd5e1;
+  font-size:14px;
+}
+
+  /* FLOAT BUTTONS */
 .whatsapp{
   position:fixed;
   left:18px;
@@ -623,75 +655,33 @@ section{
 </section>
 
 <!-- CONTACT SECTION -->
-<section style="background:#ffffff;padding:70px 20px;border-top:1px solid #e5e7eb;">
-  <div style="max-width:1100px;margin:auto;">
+<section class="contact-section">
+  <div class="container">
 
-    <div style="
-      background:#f8fafc;
-      border:1px solid #e2e8f0;
-      border-radius:24px;
-      padding:45px 25px;
-      text-align:center;
-      box-shadow:0 10px 25px rgba(0,0,0,0.05);
-    ">
+    <div class="contact-box">
+      <h2>Get in Touch</h2>
+      <p>Ready to grow your business? Contact us today.</p>
 
-      <h2 style="font-size:34px;color:#0f172a;margin-bottom:10px;">
-        Get in Touch
-      </h2>
-
-      <p style="color:#64748b;margin-bottom:25px;">
-        Ready to grow your business? Contact us today.
-      </p>
-
-      <a href="tel:+919589188668"
-         style="
-         display:inline-block;
-         margin:8px;
-         padding:14px 24px;
-         background:#10b981;
-         color:#fff;
-         border-radius:30px;
-         font-weight:600;">
-         📞 Call Now
-      </a>
-
-      <a href="mailto:scalewithclicks@gmail.com"
-         style="
-         display:inline-block;
-         margin:8px;
-         padding:14px 24px;
-         background:#0ea5e9;
-         color:#fff;
-         border-radius:30px;
-         font-weight:600;">
-         📧 Email Us
-      </a>
-
+      <div class="contact-buttons">
+        <a href="tel:+919589188668" class="call-btn">📞 Call Now</a>
+        <a href="mailto:scalewithclicks@gmail.com" class="email-btn">📧 Email Us</a>
+      </div>
     </div>
 
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer style="
-background:#0f172a;
-color:#cbd5e1;
-text-align:center;
-padding:20px;
-margin-top:0;
-">
-  <a href="privacy-policy.html" style="color:#38bdf8;margin:0 10px;">
-    Privacy Policy
-  </a>
-  |
-  <a href="terms-conditions.html" style="color:#38bdf8;margin:0 10px;">
-    Terms & Conditions
-  </a>
-
-  <div style="margin-top:10px;font-size:14px;">
-    © 2026 Scale with Clicks
+<footer class="main-footer">
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <span>|</span>
+    <a href="terms-conditions.html">Terms & Conditions</a>
   </div>
+
+  <p>© 2026 Scale with Clicks</p>
 </footer>
+  
 <!-- FLOATING BUTTONS -->
 <a href="https://wa.me/919589188668" target="_blank" class="whatsapp">💬</a>
 
