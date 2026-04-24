@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Lawyer Case Study</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,20 +17,20 @@
 
 body{
   font-family:'Poppins',sans-serif;
-  background:linear-gradient(135deg,#020617,#0f172a,#111827);
-  color:#ffffff;
+  background:#f8fafc;
+  color:#0f172a;
   overflow-x:hidden;
 }
 
 /* NAVBAR */
 .navbar{
   width:100%;
-  background:rgba(15,23,42,.88);
+  background:rgba(255,255,255,.92);
   backdrop-filter:blur(12px);
   position:sticky;
   top:0;
   z-index:999;
-  border-bottom:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(15,23,42,.08);
 }
 
 .nav-container{
@@ -47,7 +46,7 @@ body{
 .logo{
   font-size:22px;
   font-weight:800;
-  background:linear-gradient(90deg,#60a5fa,#22c55e);
+  background:linear-gradient(90deg,#2563eb,#22c55e);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -60,7 +59,7 @@ body{
 
 .nav-links a{
   text-decoration:none;
-  color:#cbd5e1;
+  color:#334155;
   font-size:14px;
   padding:8px 12px;
   border-radius:10px;
@@ -68,9 +67,8 @@ body{
 }
 
 .nav-links a:hover{
-  background:#1e293b;
-  color:#fff;
-  transform:translateY(-2px);
+  background:#e2e8f0;
+  color:#0f172a;
 }
 
 /* CONTAINER */
@@ -83,43 +81,19 @@ body{
 
 /* HERO */
 .hero{
-  position:relative;
-  overflow:hidden;
   text-align:center;
   padding:90px 25px;
   border-radius:26px;
   background:linear-gradient(135deg,#2563eb,#7c3aed,#06b6d4);
-  box-shadow:0 20px 60px rgba(0,0,0,.35);
-  animation:fadeUp 1s ease;
-}
-
-.hero:before,
-.hero:after{
-  content:"";
-  position:absolute;
-  border-radius:50%;
-  background:rgba(255,255,255,.12);
-}
-
-.hero:before{
-  width:220px;
-  height:220px;
-  top:-60px;
-  left:-50px;
-}
-
-.hero:after{
-  width:280px;
-  height:280px;
-  bottom:-100px;
-  right:-70px;
+  color:#fff;
+  box-shadow:0 20px 50px rgba(15,23,42,.15);
 }
 
 .badge{
   display:inline-block;
   padding:8px 16px;
   border-radius:50px;
-  background:#ffffff;
+  background:#fff;
   color:#111827;
   font-size:13px;
   font-weight:700;
@@ -127,7 +101,7 @@ body{
 }
 
 .hero h1{
-  font-size:48px;
+  font-size:46px;
   line-height:1.2;
   margin-bottom:14px;
 }
@@ -135,8 +109,6 @@ body{
 .hero p{
   font-size:18px;
   color:#e2e8f0;
-  max-width:760px;
-  margin:auto;
 }
 
 /* SECTION */
@@ -147,13 +119,13 @@ body{
 .section-title{
   font-size:34px;
   margin-bottom:8px;
-  background:linear-gradient(90deg,#60a5fa,#22c55e);
+  background:linear-gradient(90deg,#2563eb,#22c55e);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
 .section-sub{
-  color:#94a3b8;
+  color:#64748b;
   margin-bottom:18px;
 }
 
@@ -166,42 +138,62 @@ body{
 
 /* CARD */
 .card{
-  background:rgba(30,41,59,.88);
-  border:1px solid rgba(255,255,255,.06);
+  background:#ffffff;
+  border:1px solid #e2e8f0;
   padding:26px;
   border-radius:22px;
-  box-shadow:0 15px 30px rgba(0,0,0,.22);
+  box-shadow:0 10px 25px rgba(15,23,42,.08);
   transition:.35s;
-  animation:fadeUp .9s ease;
 }
 
 .card:hover{
-  transform:translateY(-10px) scale(1.02);
-  box-shadow:0 22px 40px rgba(0,0,0,.32);
+  transform:translateY(-8px);
+  box-shadow:0 18px 35px rgba(15,23,42,.12);
 }
 
 .card h3{
   font-size:16px;
-  color:#94a3b8;
+  color:#334155;
   margin-bottom:10px;
-}
-
-.card .big{
-  font-size:30px;
-  font-weight:800;
-  color:#22c55e;
 }
 
 .card p{
   font-size:15px;
-  color:#cbd5e1;
+  color:#475569;
   line-height:1.7;
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+  margin-top:35px;
+}
+
+.stat-card{
+  background:#ffffff;
+  border:1px solid #e2e8f0;
+  border-radius:22px;
+  padding:26px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(15,23,42,.08);
+}
+
+.stat-card h2{
+  font-size:34px;
+  color:#22c55e;
+  margin-bottom:8px;
+}
+
+.stat-card p{
+  color:#64748b;
 }
 
 /* TABLE */
 .table-wrap{
-  background:rgba(30,41,59,.88);
-  border:1px solid rgba(255,255,255,.06);
+  background:#ffffff;
+  border:1px solid #e2e8f0;
   border-radius:22px;
   overflow:hidden;
 }
@@ -212,20 +204,16 @@ table{
 }
 
 th{
-  background:#1e293b;
-  color:#ffffff;
+  background:#f1f5f9;
+  color:#0f172a;
   text-align:left;
   padding:16px;
 }
 
 td{
   padding:16px;
-  color:#cbd5e1;
-  border-top:1px solid rgba(255,255,255,.06);
-}
-
-tr:hover{
-  background:rgba(255,255,255,.03);
+  color:#475569;
+  border-top:1px solid #e2e8f0;
 }
 
 /* CTA */
@@ -236,7 +224,6 @@ tr:hover{
   border-radius:26px;
   background:linear-gradient(135deg,#22c55e,#06b6d4);
   color:#06121a;
-  box-shadow:0 20px 50px rgba(0,0,0,.25);
 }
 
 .cta h2{
@@ -245,7 +232,6 @@ tr:hover{
 }
 
 .cta p{
-  font-size:16px;
   margin-bottom:20px;
 }
 
@@ -253,15 +239,10 @@ tr:hover{
   padding:14px 26px;
   border:none;
   border-radius:14px;
+  background:#0f172a;
+  color:#fff;
   font-weight:700;
   cursor:pointer;
-  background:#0f172a;
-  color:#ffffff;
-  transition:.3s;
-}
-
-.cta button:hover{
-  transform:translateY(-3px);
 }
 
 /* FLOAT BUTTONS */
@@ -289,19 +270,18 @@ tr:hover{
   padding:14px 18px;
   border:none;
   border-radius:30px;
-  background:linear-gradient(135deg,#60a5fa,#22c55e);
-  color:#06121a;
+  background:linear-gradient(135deg,#2563eb,#22c55e);
+  color:#fff;
   font-weight:700;
   cursor:pointer;
   z-index:999;
-  animation:pulse 2s infinite;
 }
 
-/* POPUP */
+/* POPUP FORM - UNCHANGED STYLE */
 .popup{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.70);
+  background:rgba(0,0,0,.65);
   display:none;
   justify-content:center;
   align-items:center;
@@ -310,15 +290,10 @@ tr:hover{
 
 .popup-box{
   width:340px;
-  background:#0f172a;
+  background:#020617;
+  color:#fff;
   padding:28px;
-  border-radius:20px;
-  border:1px solid rgba(255,255,255,.08);
-  animation:fadeUp .4s ease;
-}
-
-.popup-box h2{
-  margin-bottom:15px;
+  border-radius:18px;
 }
 
 .popup-box input{
@@ -327,17 +302,17 @@ tr:hover{
   margin:8px 0;
   border:none;
   border-radius:10px;
-  background:#1e293b;
+  background:#0f172a;
   color:#fff;
 }
 
 .popup-box button{
   width:100%;
-  margin-top:10px;
   padding:12px;
+  margin-top:10px;
   border:none;
   border-radius:10px;
-  background:linear-gradient(135deg,#60a5fa,#22c55e);
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
   font-weight:700;
   cursor:pointer;
 }
@@ -353,33 +328,12 @@ tr:hover{
   text-align:center;
   margin-top:70px;
   padding:25px;
-  color:#94a3b8;
-  border-top:1px solid rgba(255,255,255,.08);
+  color:#64748b;
+  border-top:1px solid #e2e8f0;
 }
 
-/* ANIMATION */
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(30px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(34,197,94,.45);}
-  70%{box-shadow:0 0 0 15px rgba(34,197,94,0);}
-}
-
-/* MOBILE */
 @media(max-width:768px){
-
-  .hero h1{
-    font-size:34px;
-  }
+  .hero h1{font-size:34px;}
 
   .nav-container{
     flex-direction:column;
@@ -390,10 +344,6 @@ tr:hover{
     max-height:220px;
     overflow:auto;
   }
-
-  .cta h2{
-    font-size:28px;
-  }
 }
 </style>
 </head>
@@ -402,187 +352,177 @@ tr:hover{
 
 <!-- NAVBAR -->
 <div class="navbar">
-  <div class="nav-container">
+<div class="nav-container">
 
-    <div class="logo">Scale with Clicks</div>
+<div class="logo">Scale with Clicks</div>
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="healthcare.html">Healthcare</a>
-      <a href="lawyer.html">Lawyer</a>
-      <a href="packers-movers.html">Packers & Movers</a>
-      <a href="pestcontrol.html">Pest Control</a>
-      <a href="Badges.html">Military Patches</a>
-      <a href="wool-e-commerce.html">Yarn Store</a>
-      <a href="skincare.html">Skincare</a>
-      <a href="pump-manufacturer.html">Pump Manufacturer</a>
-      <a href="construction.html">Construction Industry</a>
-    </div>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="healthcare.html">Healthcare</a>
+<a href="lawyer.html">Lawyer</a>
+<a href="packers-movers.html">Packers & Movers</a>
+<a href="pestcontrol.html">Pest Control</a>
+<a href="Badges.html">Military Patches</a>
+<a href="wool-e-commerce.html">Yarn Store</a>
+<a href="skincare.html">Skincare</a>
+<a href="pump-manufacturer.html">Pump Manufacturer</a>
+<a href="construction.html">Construction Industry</a>
+</div>
 
-  </div>
+</div>
 </div>
 
 <div class="container">
 
 <!-- HERO -->
 <div class="hero">
-  <div class="badge">Google Ads Case Study</div>
-  <h1>Generated High-Quality Legal Leads at 40% Lower CPL</h1>
-  <p>Local law firm scaling consultation bookings</p>
+<div class="badge">Google Ads Case Study</div>
+<h1>Generated High-Quality Legal Leads at 40% Lower CPL</h1>
+<p>Local law firm scaling consultation bookings</p>
+
+<div class="stats">
+
+<div class="stat-card">
+<h2>980</h2>
+<p>Clicks</p>
 </div>
 
-<!-- STATS -->
-<div class="section">
-  <div class="grid">
+<div class="stat-card">
+<h2>92</h2>
+<p>Leads</p>
+</div>
 
-    <div class="card">
-      <h3>Clicks</h3>
-      <div class="big">980</div>
-    </div>
+<div class="stat-card">
+<h2>9.4%</h2>
+<p>Conversion Rate</p>
+</div>
 
-    <div class="card">
-      <h3>Leads</h3>
-      <div class="big">92</div>
-    </div>
+<div class="stat-card">
+<h2>$34</h2>
+<p>CPL (-40%)</p>
+</div>
 
-    <div class="card">
-      <h3>Conversion Rate</h3>
-      <div class="big">9.4%</div>
-    </div>
-
-    <div class="card">
-      <h3>CPL (-40%)</h3>
-      <div class="big">$34</div>
-    </div>
-
-  </div>
+</div>
 </div>
 
 <!-- OVERVIEW -->
 <div class="section">
-  <div class="section-title">Client Overview</div>
-  <div class="section-sub">Who we helped</div>
+<div class="section-title">Client Overview</div>
+<div class="section-sub">Who we helped</div>
 
-  <div class="card">
-    <p>Local legal firm specializing in personal injury & consultation services.</p>
-  </div>
+<div class="card">
+<p>Local legal firm specializing in personal injury & consultation services.</p>
+</div>
 </div>
 
 <!-- CHALLENGES -->
 <div class="section">
-  <div class="section-title">Challenges</div>
-  <div class="section-sub">What was blocking growth</div>
+<div class="section-title">Challenges</div>
+<div class="section-sub">Growth blockers before optimization</div>
 
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <h3>High CPC</h3>
-      <p>Competitive legal keywords driving costs.</p>
-    </div>
+<div class="card">
+<h3>High CPC</h3>
+<p>Competitive legal keywords driving costs.</p>
+</div>
 
-    <div class="card">
-      <h3>Low Conversion</h3>
-      <p>Visitors not converting into calls.</p>
-    </div>
+<div class="card">
+<h3>Low Conversion</h3>
+<p>Visitors not converting into calls.</p>
+</div>
 
-    <div class="card">
-      <h3>Unqualified Leads</h3>
-      <p>Irrelevant inquiries.</p>
-    </div>
+<div class="card">
+<h3>Unqualified Leads</h3>
+<p>Irrelevant inquiries.</p>
+</div>
 
-  </div>
+</div>
 </div>
 
 <!-- STRATEGY -->
 <div class="section">
-  <div class="section-title">Strategy</div>
-  <div class="section-sub">What was implemented</div>
+<div class="section-title">Strategy</div>
+<div class="section-sub">What was implemented</div>
 
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <h3>Call-Only Ads</h3>
-      <p>Focused on direct calls.</p>
-    </div>
+<div class="card">
+<h3>Call-Only Ads</h3>
+<p>Focused on direct calls.</p>
+</div>
 
-    <div class="card">
-      <h3>Keyword Filtering</h3>
-      <p>High intent legal queries.</p>
-    </div>
+<div class="card">
+<h3>Keyword Filtering</h3>
+<p>High intent legal queries.</p>
+</div>
 
-    <div class="card">
-      <h3>Ad Copy</h3>
-      <p>Trust-focused messaging.</p>
-    </div>
+<div class="card">
+<h3>Ad Copy</h3>
+<p>Trust-focused messaging.</p>
+</div>
 
-  </div>
+</div>
 </div>
 
 <!-- RESULTS -->
 <div class="section">
-  <div class="section-title">Results</div>
-  <div class="section-sub">Performance after optimization</div>
+<div class="section-title">Results</div>
+<div class="section-sub">Before vs After</div>
 
-  <div class="table-wrap">
-    <table>
-      <tr>
-        <th>Metric</th>
-        <th>Before</th>
-        <th>After</th>
-      </tr>
+<div class="table-wrap">
+<table>
+<tr>
+<th>Metric</th>
+<th>Before</th>
+<th>After</th>
+</tr>
 
-      <tr>
-        <td>Leads</td>
-        <td>40</td>
-        <td><b>92</b></td>
-      </tr>
+<tr>
+<td>Leads</td>
+<td>40</td>
+<td><b>92</b></td>
+</tr>
 
-      <tr>
-        <td>CPL</td>
-        <td>$58</td>
-        <td><b>$34</b></td>
-      </tr>
-    </table>
-  </div>
+<tr>
+<td>CPL</td>
+<td>$58</td>
+<td><b>$34</b></td>
+</tr>
+</table>
+</div>
 </div>
 
 <!-- INSIGHTS -->
 <div class="section">
-  <div class="section-title">Key Insights</div>
-  <div class="section-sub">What worked best</div>
+<div class="section-title">Key Insights</div>
+<div class="section-sub">What worked best</div>
 
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <h3>Call Ads Work</h3>
-      <p>Higher intent users.</p>
-    </div>
+<div class="card">
+<h3>Call Ads Work</h3>
+<p>Higher intent users.</p>
+</div>
 
-    <div class="card">
-      <h3>Trust Messaging</h3>
-      <p>Boosted conversions.</p>
-    </div>
+<div class="card">
+<h3>Trust Messaging</h3>
+<p>Boosted conversions.</p>
+</div>
 
-  </div>
+</div>
 </div>
 
 <!-- CTA -->
 <div class="cta">
-  <h2>Need Legal Leads?</h2>
-  <p>Scale your law firm with Google Ads</p>
-  <button onclick="window.open('https://wa.me/9589188668')">Book Free Consultation</button>
-</div>
-
-<!-- BACK BUTTON -->
-<div style="text-align:center;margin-top:30px;">
-  <a href="index.html" style="display:inline-block;padding:12px 24px;background:linear-gradient(135deg,#60a5fa,#22c55e);color:#06121a;text-decoration:none;border-radius:12px;font-weight:700;">
-    ← Back to Case Studies
-  </a>
+<h2>Need Legal Leads?</h2>
+<p>Scale your law firm with Google Ads</p>
+<button onclick="window.open('https://wa.me/9589188668')">Book Free Consultation</button>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-  © 2026 Vinay Yadav | Performance Marketing Consultant
+© 2026 Vinay Yadav | Performance Marketing Consultant
 </div>
 
 </div>
@@ -591,24 +531,24 @@ tr:hover{
 <a href="https://wa.me/9589188668" class="whatsapp">💬</a>
 
 <button class="sticky-cta" onclick="openPopup()">
-  🚀 Get Free Leads Plan
+🚀 Get Free Leads Plan
 </button>
 
-<!-- POPUP -->
+<!-- BOTTOM FORM KEPT -->
 <div class="popup" id="leadPopup">
-  <div class="popup-box">
+<div class="popup-box">
 
-    <span class="close" onclick="closePopup()">×</span>
+<span class="close" onclick="closePopup()">×</span>
 
-    <h2>Get Free Strategy Call</h2>
+<h2>Get Free Strategy Call</h2>
 
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <input type="text" placeholder="Your Phone">
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<input type="text" placeholder="Your Phone">
 
-    <button onclick="openCalendly()">Book Call</button>
+<button onclick="openCalendly()">Book Call</button>
 
-  </div>
+</div>
 </div>
 
 <script>
