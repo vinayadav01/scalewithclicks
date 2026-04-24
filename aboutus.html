@@ -1,98 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About Us | Scale with Clicks</title>
-<meta name="description" content="Learn about Scale with Clicks - a performance marketing agency focused on Google Ads, Meta Ads, lead generation, and measurable business growth.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
+  font-family:'Poppins',sans-serif;
 }
 
 body{
-  font-family:'Poppins',sans-serif;
   background:#ffffff;
-  color:#0f172a;
-}
-
-a{
-  text-decoration:none;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-.container{
-  width:100%;
-  max-width:1200px;
-  margin:auto;
-  padding:0 20px;
+  color:#333;
 }
 
 /* NAVBAR */
 .navbar{
   position:sticky;
   top:0;
-  z-index:1000;
-  background:rgba(255,255,255,0.96);
-  backdrop-filter:blur(12px);
-  box-shadow:0 4px 18px rgba(0,0,0,0.05);
-}
-
-.nav-wrap{
+  background:#ffffff;
+  padding:15px 30px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  min-height:90px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.06);
+  z-index:999;
+}
+
+.navbar a{
+  color:#0f172a;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.navbar a:hover{
+  color:#38bdf8;
 }
 
 .brand-logo{
-  height:88px;
+  height:120px;
   width:auto;
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:18px;
-}
-
-.nav-links a{
-  color:#0f172a;
-  font-weight:500;
-  transition:.3s;
-}
-
-.nav-links a:hover{
-  color:#0ea5e9;
-}
-
-.nav-btn{
-  background:linear-gradient(135deg,#0ea5e9,#2563eb);
-  color:#fff !important;
-  padding:12px 18px;
-  border-radius:30px;
-}
-
-.menu-btn{
-  display:none;
-  font-size:28px;
-  cursor:pointer;
-  border:none;
-  background:none;
 }
 
 /* HERO */
@@ -100,93 +45,49 @@ img{
   background:linear-gradient(135deg,#0ea5e9,#38bdf8);
   color:#fff;
   text-align:center;
-  padding:90px 20px;
+  padding:100px 20px;
 }
 
 .hero h1{
-  font-size:48px;
-  margin-bottom:12px;
-  font-weight:800;
+  font-size:42px;
+  margin-bottom:10px;
 }
 
 .hero p{
   font-size:18px;
-  max-width:760px;
-  margin:auto;
-  line-height:1.8;
 }
 
 /* SECTION */
-section{
-  padding:70px 0;
-}
-
-.section-title{
-  text-align:center;
-  margin-bottom:35px;
-}
-
-.section-title h2{
-  font-size:38px;
-  margin-bottom:10px;
-}
-
-.section-title p{
-  color:#64748b;
-  max-width:720px;
+.section{
+  max-width:1200px;
   margin:auto;
+  padding:70px 20px;
 }
 
-/* PREMIUM GRID */
-.about-grid{
+/* EXACT 3 CARDS PER ROW */
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
-/* CARDS */
+/* CARD */
 .card{
-  border-radius:22px;
-  padding:28px;
+  border-radius:18px;
+  padding:30px;
   color:#fff;
-  min-height:280px;
+  min-height:260px;
   box-shadow:0 12px 30px rgba(0,0,0,0.08);
-  transition:.35s ease;
-  position:relative;
-  overflow:hidden;
-}
-
-.card::before{
-  content:"";
-  position:absolute;
-  top:-40%;
-  right:-40%;
-  width:140px;
-  height:140px;
-  background:rgba(255,255,255,0.08);
-  border-radius:50%;
+  transition:.3s;
 }
 
 .card:hover{
-  transform:translateY(-10px) scale(1.02);
-  box-shadow:0 20px 45px rgba(0,0,0,0.12);
-}
-
-.icon{
-  width:54px;
-  height:54px;
-  border-radius:16px;
-  background:rgba(255,255,255,0.16);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:24px;
-  margin-bottom:18px;
+  transform:translateY(-8px);
 }
 
 .card h3{
-  font-size:22px;
-  margin-bottom:12px;
+  font-size:24px;
+  margin-bottom:15px;
 }
 
 .card p{
@@ -194,86 +95,80 @@ section{
   font-size:15px;
 }
 
-/* COLORS */
+/* CARD COLORS */
 .card1{background:linear-gradient(135deg,#0ea5e9,#2563eb);}
 .card2{background:linear-gradient(135deg,#10b981,#059669);}
 .card3{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
 .card4{background:linear-gradient(135deg,#f97316,#ea580c);}
+.card5{background:linear-gradient(135deg,#ef4444,#dc2626);}
+.card6{background:linear-gradient(135deg,#14b8a6,#0f766e);}
 
 /* CTA */
 .cta{
-  background:#f8fafc;
   text-align:center;
   padding:70px 20px;
+  background:#f8fafc;
 }
 
 .cta h2{
-  font-size:36px;
-  margin-bottom:10px;
+  font-size:34px;
+  margin-bottom:12px;
 }
 
 .cta p{
   color:#64748b;
 }
 
-.btn{
+.cta a{
   display:inline-block;
-  margin-top:22px;
-  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+  margin-top:20px;
+  background:#0ea5e9;
   color:#fff;
-  padding:14px 28px;
+  padding:14px 30px;
   border-radius:30px;
+  text-decoration:none;
   font-weight:600;
 }
 
 /* CONTACT */
 .contact-section{
-  padding:0 20px 70px;
+  background:#ffffff;
+  padding:70px 20px 40px;
 }
 
 .contact-box{
-  max-width:950px;
+  max-width:900px;
   margin:auto;
-  background:#ffffff;
+  background:#f8fafc;
   border:1px solid #e2e8f0;
-  border-radius:26px;
+  border-radius:24px;
   padding:45px 25px;
   text-align:center;
-  box-shadow:0 12px 28px rgba(0,0,0,0.05);
-}
-
-.contact-box h2{
-  font-size:34px;
-  margin-bottom:10px;
-}
-
-.contact-box p{
-  color:#64748b;
-  margin-bottom:24px;
 }
 
 .contact-buttons{
   display:flex;
-  justify-content:center;
   gap:14px;
+  justify-content:center;
   flex-wrap:wrap;
+  margin-top:20px;
 }
 
 .contact-buttons a{
   padding:14px 24px;
   border-radius:30px;
-  color:#fff;
   font-weight:600;
+  color:#fff;
 }
 
 .call-btn{background:#10b981;}
 .email-btn{background:#0ea5e9;}
 
 /* FOOTER */
-.footer{
+.main-footer{
   background:#0f172a;
   text-align:center;
-  padding:24px 20px;
+  padding:22px 20px;
 }
 
 .footer-links{
@@ -285,228 +180,34 @@ section{
   margin:0 8px;
 }
 
-.footer span,
-.footer p{
+.main-footer p{
   color:#cbd5e1;
   font-size:14px;
 }
 
-/* FLOAT BUTTONS */
-.whatsapp{
-  position:fixed;
-  left:18px;
-  bottom:18px;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#25D366;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:26px;
-  z-index:999;
-}
-
-.sticky-cta{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  background:linear-gradient(135deg,#0ea5e9,#2563eb);
-  color:#fff;
-  padding:14px 20px;
-  border-radius:40px;
-  font-weight:700;
-  z-index:999;
-}
-
 /* MOBILE */
+@media(max-width:992px){
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
 @media(max-width:768px){
-
-  .menu-btn{display:block;}
-
-  .nav-links{
-    position:absolute;
-    top:90px;
-    left:0;
-    width:100%;
-    background:#fff;
+  .navbar{
     flex-direction:column;
-    align-items:flex-start;
-    padding:18px 20px;
-    display:none;
-    border-top:1px solid #e2e8f0;
+    gap:12px;
   }
 
-  .nav-links.show{
-    display:flex;
+  .hero h1{
+    font-size:34px;
   }
 
-  .hero h1{font-size:34px;}
-  .section-title h2,
-  .cta h2,
-  .contact-box h2{font-size:28px;}
-
-  .brand-logo{height:74px;}
-
-  .sticky-cta{
-    right:12px;
-    bottom:12px;
-    padding:12px 16px;
+  .grid{
+    grid-template-columns:1fr;
   }
 
-  .whatsapp{
-    left:12px;
-    bottom:12px;
+  .brand-logo{
+    height:90px;
   }
 }
 </style>
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="container nav-wrap">
-
-    <img src="logo.png" alt="Scale with Clicks Logo" class="brand-logo">
-
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-    <nav class="nav-links" id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="aboutus.html">About Us</a>
-      <a href="services.html">Services</a>
-      <a href="casestudy.html">Case Studies</a>
-      <a href="contactus.html" class="nav-btn">Contact Us</a>
-    </nav>
-
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <h1>About Scale with Clicks</h1>
-  <p>
-    Performance marketing agency focused on generating quality leads,
-    increasing sales, and scaling brands with data-driven strategies.
-  </p>
-</section>
-
-<!-- ABOUT SECTION -->
-<section>
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Why Businesses Choose Us</h2>
-      <p>
-        Growth-focused strategies, transparent execution, and measurable
-        results built to scale your business profitably.
-      </p>
-    </div>
-
-    <div class="about-grid">
-
-      <div class="card card1">
-        <div class="icon">🚀</div>
-        <h3>Who We Are</h3>
-        <p>
-          A performance marketing agency helping businesses grow through
-          paid ads, conversion systems, and revenue-focused execution.
-        </p>
-      </div>
-
-      <div class="card card2">
-        <div class="icon">📈</div>
-        <h3>What We Do</h3>
-        <p>
-          We build Google Ads, Meta Ads, funnels, and landing pages that
-          turn traffic into qualified leads and customers.
-        </p>
-      </div>
-
-      <div class="card card3">
-        <div class="icon">🎯</div>
-        <h3>Our Mission</h3>
-        <p>
-          Deliver profitable and sustainable growth with clear reporting,
-          faster optimization, and smart ad strategy.
-        </p>
-      </div>
-
-      <div class="card card4">
-        <div class="icon">🏆</div>
-        <h3>Why Choose Us</h3>
-        <p>
-          ROI-first campaigns, proven systems, transparent reporting,
-          and scalable growth frameworks.
-        </p>
-      </div>
-
-      <div class="card card1">
-        <div class="icon">📊</div>
-        <h3>Data Driven Strategy</h3>
-        <p>
-          Every decision is backed by analytics, user behavior,
-          testing insights, and conversion data.
-        </p>
-      </div>
-
-      <div class="card card2">
-        <div class="icon">🌍</div>
-        <h3>Built for Scaling</h3>
-        <p>
-          Whether local growth or global expansion, campaigns are built
-          to scale efficiently with your business.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <h2>Ready to Scale Your Business?</h2>
-  <p>Book a free strategy call and get a custom growth plan.</p>
-  <a href="https://calendly.com/vinayyadav01992" target="_blank" class="btn">
-    Book Free Strategy Call
-  </a>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-section">
-  <div class="contact-box">
-    <h2>Get in Touch</h2>
-    <p>Ready to grow your business? Contact us today.</p>
-
-    <div class="contact-buttons">
-      <a href="tel:+919589188668" class="call-btn">📞 Call Now</a>
-      <a href="mailto:scalewithclicks@gmail.com" class="email-btn">📧 Email Us</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-links">
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <span>|</span>
-    <a href="terms-conditions.html">Terms & Conditions</a>
-  </div>
-  <p>© 2026 Scale with Clicks</p>
-</footer>
-
-<!-- FLOAT BUTTONS -->
-<a href="https://wa.me/919589188668" target="_blank" class="whatsapp">💬</a>
-<a href="https://calendly.com/vinayyadav01992" target="_blank" class="sticky-cta">🚀 Free Plan</a>
-
-<script>
-function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("show");
-}
-</script>
-
-</body>
-</html>
