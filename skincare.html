@@ -21,25 +21,24 @@ html{
 
 body{
   font-family:'Inter',sans-serif;
-  background:#f1f5f9;
+  background:#f8fafc;
   color:#0f172a;
   line-height:1.6;
 }
 
-/* NAVBAR (MATCHED SYSTEM) */
+/* NAVBAR (LAWYER/HEALTHCARE STYLE) */
 .navbar{
   position:sticky;
   top:0;
   z-index:1000;
-  background:#fff;
+  background:#ffffff;
   border-bottom:1px solid #e2e8f0;
-  box-shadow:0 4px 12px rgba(0,0,0,0.04);
 }
 
 .nav-container{
   max-width:1200px;
   margin:auto;
-  padding:14px 20px;
+  padding:16px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -47,8 +46,9 @@ body{
 }
 
 .brand{
-  font-size:18px;
+  font-size:20px;
   font-weight:800;
+  color:#0f172a;
 }
 
 .nav-links{
@@ -68,7 +68,7 @@ body{
   color:#2563eb;
 }
 
-/* CONTAINER */
+/* HERO */
 .container{
   max-width:1200px;
   margin:auto;
@@ -76,7 +76,7 @@ body{
 }
 
 h1{
-  font-size:42px;
+  font-size:44px;
   text-align:center;
   margin-bottom:10px;
 }
@@ -87,45 +87,47 @@ h1{
   margin-bottom:40px;
 }
 
-h2{
+/* SECTION TITLE */
+.section-title{
   text-align:center;
-  margin-top:60px;
-  margin-bottom:10px;
+  font-size:26px;
+  font-weight:800;
+  margin-top:70px;
 }
 
-/* DIVIDER (UNIFIED) */
 .divider{
   width:90px;
   height:4px;
   margin:18px auto 40px;
-  border-radius:20px;
+  border-radius:10px;
   background:linear-gradient(135deg,#0ea5e9,#2563eb);
 }
 
 /* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:22px;
 }
 
-/* CARD (UNIFIED LOOK) */
+/* CARD (HEALTHCARE STYLE STRONG SHADOW) */
 .card{
-  background:#fff;
+  background:#ffffff;
   border:1px solid #e2e8f0;
-  border-radius:18px;
-  padding:22px;
+  border-radius:16px;
+  padding:24px;
   text-align:center;
-  box-shadow:0 10px 25px rgba(0,0,0,0.04);
-  transition:0.35s ease;
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+  transition:0.3s ease;
 }
 
 .card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 18px 40px rgba(0,0,0,0.08);
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.12);
 }
 
 .card h3{
+  font-size:18px;
   margin-bottom:10px;
 }
 
@@ -162,28 +164,35 @@ h2{
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  font-weight:700;
+  font-weight:800;
   color:#2563eb;
 }
 
-/* CTA (MATCHED STYLE LIKE OTHER CASE STUDIES) */
+/* OBJECT TEXT BELOW CARDS */
+.mini{
+  margin-top:8px;
+  color:#475569;
+  font-size:14px;
+}
+
+/* CTA (SAME AS LAWYER STYLE) */
 .cta{
   margin-top:80px;
-  background:#fff;
+  background:#ffffff;
   border:1px solid #e2e8f0;
-  border-radius:20px;
+  border-radius:18px;
   padding:40px;
   text-align:center;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
 button{
   margin-top:15px;
   background:linear-gradient(135deg,#0ea5e9,#2563eb);
   color:#fff;
-  padding:14px 24px;
+  padding:14px 26px;
   border:none;
-  border-radius:12px;
+  border-radius:10px;
   cursor:pointer;
   font-weight:700;
 }
@@ -208,15 +217,10 @@ button{
   margin-top:50px;
   padding:12px 22px;
   background:#e2e8f0;
-  border-radius:12px;
+  border-radius:10px;
   text-decoration:none;
   color:#0f172a;
   font-weight:600;
-  transition:0.3s;
-}
-
-.back-btn:hover{
-  background:#cbd5e1;
 }
 
 /* FOOTER */
@@ -227,7 +231,7 @@ button{
   margin-top:40px;
 }
 
-/* ANIMATION (UNIFIED) */
+/* ANIMATION */
 .section{
   opacity:0;
   transform:translateY(20px);
@@ -271,7 +275,7 @@ button{
 <h1>🚀 Google Ads Case Study</h1>
 <p class="subtitle">Scaling Revenue for Skincare Brand</p>
 
-<h2>📊 Results Overview</h2>
+<div class="section-title">📊 Results Overview</div>
 <div class="divider"></div>
 
 <div class="grid section">
@@ -285,8 +289,7 @@ button{
 </svg>
 <div class="progress-text" data-target="53">0%</div>
 </div>
-<p>48 → 74</p>
-<div>+53%</div>
+<div class="mini">48 → 74 (+53%)</div>
 </div>
 
 <div class="card">
@@ -298,8 +301,7 @@ button{
 </svg>
 <div class="progress-text" data-target="14">0%</div>
 </div>
-<p>1512 → 1723</p>
-<div>+14%</div>
+<div class="mini">1512 → 1723 (+14%)</div>
 </div>
 
 <div class="card">
@@ -311,8 +313,7 @@ button{
 </svg>
 <div class="progress-text" data-target="30">0%</div>
 </div>
-<p>5.6x → 7.3x</p>
-<div>+30%</div>
+<div class="mini">5.6x → 7.3x (+30%)</div>
 </div>
 
 <div class="card">
@@ -324,15 +325,14 @@ button{
 </svg>
 <div class="progress-text" data-target="28">0%</div>
 </div>
-<p>5095 → 6527</p>
-<div>+28%</div>
+<div class="mini">5095 → 6527 (+28%)</div>
 </div>
 
 </div>
 
 <!-- OBJECTIVES -->
 <div class="section">
-<h2>🎯 Objectives</h2>
+<div class="section-title">🎯 Objectives</div>
 <div class="divider"></div>
 
 <div class="grid">
@@ -345,47 +345,46 @@ button{
 
 <!-- STRATEGY -->
 <div class="section">
-<h2>🧠 Strategy</h2>
+<div class="section-title">🧠 Strategy</div>
 <div class="divider"></div>
 
 <div class="grid">
-<div class="card">Focused on high-intent skincare keywords</div>
-<div class="card">Used remarketing & audience layering</div>
-<div class="card">Improved ad copy and creatives</div>
-<div class="card">Optimized bidding for purchases</div>
-<div class="card">Shifted spend to winning campaigns</div>
+<div class="card">High-intent skincare keywords</div>
+<div class="card">Remarketing & audience layering</div>
+<div class="card">Ad copy optimization</div>
+<div class="card">Smart bidding for purchases</div>
 </div>
 </div>
 
 <!-- CHALLENGES -->
 <div class="section">
-<h2>⚠️ Challenges</h2>
+<div class="section-title">⚠️ Challenges</div>
 <div class="divider"></div>
 
 <div class="grid">
 <div class="card">Low conversion efficiency</div>
 <div class="card">Poor targeting quality</div>
 <div class="card">Budget wastage</div>
-<div class="card">Underperforming keywords</div>
+<div class="card">Weak keyword performance</div>
 </div>
 </div>
 
 <!-- OUTCOME -->
 <div class="section">
-<h2>🏆 Final Outcome</h2>
+<div class="section-title">🏆 Final Outcome</div>
 <div class="divider"></div>
 
 <div class="grid">
 <div class="card">53% more conversions</div>
 <div class="card">30% higher ROAS</div>
 <div class="card">28% revenue growth</div>
-<div class="card">Scalable growth system built</div>
+<div class="card">Scalable system built</div>
 </div>
 </div>
 
 <!-- CTA -->
 <div class="cta section">
-<h2>💬 Get Similar Results</h2>
+<h2>💬 Want Similar Results?</h2>
 <button onclick="window.open('https://calendly.com/vinayyadav01992')">
 Book Free Call
 </button>
@@ -405,7 +404,6 @@ Book Free Call
 
 <script>
 document.querySelectorAll('.progress-circle').forEach(el=>{
-
 const percent = parseFloat(el.dataset.percent);
 const circle = el.querySelector('.progress');
 const text = el.querySelector('.progress-text');
@@ -421,18 +419,13 @@ let count = 0;
 const step = target / 50;
 
 const counter = setInterval(()=>{
-
 count += step;
-
 if(count >= target){
 count = target;
 clearInterval(counter);
 }
-
 text.innerText = Math.round(count) + "%";
-
 },20);
-
 });
 
 /* scroll animation */
