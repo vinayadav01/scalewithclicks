@@ -32,40 +32,42 @@ a{
   text-decoration:none;
 }
 
+/* GLOBAL CONTAINER (UNIFIED ACROSS ALL PAGES) */
 .container{
   width:100%;
-  max-width:1280px;
+  max-width:1200px;
   margin:auto;
-  padding:0 12px;
+  padding:0 20px;
 }
 
-/* LOGO */
-.brand-logo{
-  height:100px;
-  width:auto;
-  display:block;
-}
-
-/* NAVBAR */
+/* NAVBAR (MATCHED WITH OTHER PAGES) */
 .navbar{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,0.95);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(15,23,42,0.06);
+  background:#ffffff;
+  border-bottom:1px solid rgba(15,23,42,0.08);
 }
 
+/* FIXED ALIGNMENT ROW */
 .nav-wrap{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px 0;
+  height:72px;
 }
 
+/* LOGO FIX (CONSISTENT ACROSS SITE) */
+.brand-logo{
+  height:48px;
+  width:auto;
+  display:block;
+}
+
+/* NAV LINKS */
 .nav-links{
   display:flex;
-  gap:18px;
+  gap:20px;
   align-items:center;
   flex-wrap:wrap;
 }
@@ -73,6 +75,7 @@ a{
 .nav-links a{
   color:#334155;
   font-weight:600;
+  font-size:14px;
   transition:.3s;
 }
 
@@ -80,16 +83,17 @@ a{
   color:#0ea5e9;
 }
 
+/* CTA BUTTON */
 .nav-btn{
-  padding:12px 18px;
-  border-radius:12px;
+  padding:10px 16px;
+  border-radius:10px;
   background:linear-gradient(135deg,#0ea5e9,#2563eb);
   color:#fff !important;
 }
 
 /* HERO */
 .hero{
-  padding:40px 0 50px;
+  padding:70px 0 60px;
 }
 
 .hero-grid{
@@ -159,6 +163,7 @@ a{
   transform:translateY(-2px);
 }
 
+/* HERO CARD */
 .hero-card{
   background:linear-gradient(180deg,#eff6ff,#ffffff);
   border:1px solid #e2e8f0;
@@ -192,7 +197,7 @@ a{
 
 /* SECTION */
 section{
-  padding:55px 0;
+  padding:60px 0;
 }
 
 .section-title{
@@ -281,6 +286,7 @@ section{
   padding:22px;
 }
 
+/* FOOTER */
 .footer{
   padding:25px 0;
   text-align:center;
@@ -313,15 +319,7 @@ section{
   }
 
   .brand-logo{
-    height:78px;
-  }
-
-  .nav-links{
-    justify-content:flex-end;
-  }
-
-  .section-title h2{
-    font-size:28px;
+    height:42px;
   }
 }
 </style>
@@ -329,7 +327,7 @@ section{
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVBAR (FIXED ALIGNMENT) -->
 <header class="navbar">
   <div class="container nav-wrap">
 
@@ -404,8 +402,7 @@ section{
   <div class="container about">
 
     <div>
-      <h2 style="margin-bottom:12px;">About Us</h2>
-
+      <h2>About Us</h2>
       <p style="color:#64748b;line-height:1.8;">
         Scale with Clicks is a results-driven performance marketing agency
         helping brands grow through paid media, analytics, and conversion
@@ -414,8 +411,7 @@ section{
     </div>
 
     <div class="about-box">
-      <h3 style="font-size:28px;margin-bottom:12px;">Why Brands Choose Us</h3>
-
+      <h3 style="font-size:24px;margin-bottom:12px;">Why Brands Choose Us</h3>
       <p>
         ✔ ROI-first strategy<br><br>
         ✔ Transparent reporting<br><br>
@@ -434,39 +430,28 @@ section{
 
     <div class="section-title">
       <h2>Growth Services</h2>
-      <p>
-        Performance marketing solutions designed to increase leads,
-        sales, and return on ad spend.
-      </p>
+      <p>Performance marketing solutions designed to increase leads, sales, and ROAS.</p>
     </div>
 
     <div class="grid-3">
 
       <div class="card">
         <h3>🎯 Google Ads</h3>
-        <p>
-          Search, Display, YouTube and Performance Max campaigns built
-          for measurable growth.
-        </p>
+        <p>Search, Display, YouTube & PMax campaigns for measurable growth.</p>
       </div>
 
       <div class="card">
         <h3>📈 Lead Generation</h3>
-        <p>
-          Generate qualified leads with funnel strategy, ad testing,
-          and landing pages.
-        </p>
+        <p>Funnels, ads & landing pages to generate qualified leads.</p>
       </div>
 
       <div class="card">
         <h3>🛒 E-commerce Growth</h3>
-        <p>
-          Scale stores with ROAS-driven campaigns, audience targeting,
-          and retention strategy.
-        </p>
+        <p>Scale stores with ROAS-focused campaigns & retention strategy.</p>
       </div>
 
     </div>
+
   </div>
 </section>
 
@@ -488,21 +473,18 @@ section{
 
       <div class="card">
         <h3>🧴 Skincare</h3>
-        <p>7.38X ROAS with improved conversion value and scalable campaigns.</p>
+        <p>7.38X ROAS with optimized conversion campaigns.</p>
       </div>
 
       <div class="card">
         <h3>🏗️ Construction</h3>
-        <p>110 conversions at A$70 CPA with high-intent campaigns.</p>
+        <p>110 conversions at optimized CPA with high-intent traffic.</p>
       </div>
 
     </div>
 
-    <!-- SHOW ALL BUTTON -->
     <div class="center-btn">
-      <a href="casestudy.html" class="btn btn-primary">
-        Show All Case Studies
-      </a>
+      <a href="casestudy.html" class="btn btn-primary">Show All Case Studies</a>
     </div>
 
   </div>
@@ -510,44 +492,26 @@ section{
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="container">
+  <div class="container contact">
 
-    <div class="contact">
+    <div class="section-title">
+      <h2>Let’s Grow Your Business</h2>
+      <p>Book a free strategy session and get a custom growth plan.</p>
+    </div>
 
-      <div class="section-title">
-        <h2>Let’s Grow Your Business</h2>
-        <p>
-          Book a free consultation and get a custom growth plan
-          for your business.
-        </p>
+    <div class="contact-grid">
+
+      <div class="contact-item">
+        <h3>📞 Contact</h3>
+        <p>WhatsApp: +91 9589188668</p>
+        <p>Email: scalewithclicks@gmail.com</p>
       </div>
 
-      <div class="contact-grid">
-
-        <div class="contact-item">
-          <h3>📞 Contact</h3>
-          <p style="margin-top:10px;color:#64748b;">
-            WhatsApp: +91 9589188668
-          </p>
-          <p style="margin-top:10px;color:#64748b;">
-            Email: scalewithclicks@gmail.com
-          </p>
-        </div>
-
-        <div class="contact-item">
-          <h3>📅 Book a Call</h3>
-          <p style="margin-top:10px;color:#64748b;">
-            Schedule your strategy session via Calendly.
-          </p>
-
-          <a href="https://calendly.com/vinayyadav01992"
-             target="_blank"
-             class="btn btn-primary"
-             style="margin-top:15px;">
-             Book Now
-          </a>
-        </div>
-
+      <div class="contact-item">
+        <h3>📅 Book a Call</h3>
+        <a href="https://calendly.com/vinayyadav01992" target="_blank" class="btn btn-primary">
+          Book Now
+        </a>
       </div>
 
     </div>
