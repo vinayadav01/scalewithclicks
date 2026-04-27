@@ -44,6 +44,7 @@ body{
   padding:14px 0;
 }
 
+/* ✅ FIXED LOGO PATH */
 .brand-logo{height:88px;}
 
 .nav-links{
@@ -135,6 +136,57 @@ a:hover{text-decoration:underline;}
   color:#2563eb;
 }
 
+/* =========================
+   ✅ FIXED CONTACT SECTION
+========================= */
+
+.contact-section{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:60px 20px;
+}
+
+.contact-box{
+  width:100%;
+  max-width:800px;
+  background:#f1f5f9;
+  padding:50px 20px;
+  border-radius:20px;
+  text-align:center;
+}
+
+.contact-box h2{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.contact-buttons{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+/* BUTTONS LIKE HOMEPAGE */
+.call-btn{
+  background:#10b981;
+  color:#fff;
+  padding:12px 26px;
+  border-radius:30px;
+  font-weight:600;
+}
+
+.email-btn{
+  background:#2563eb;
+  color:#fff;
+  padding:12px 26px;
+  border-radius:30px;
+  font-weight:600;
+}
+
 /* FOOTER */
 .main-footer{
   background:#0f172a;
@@ -166,10 +218,11 @@ a:hover{text-decoration:underline;}
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="container nav-wrap">
-    <img src="logo.png" class="brand-logo">
+    <!-- ✅ FIX LOGO PATH -->
+    <img src="../logo.png" class="brand-logo">
 
     <nav class="nav-links">
-      <a href="/index.html">Home</a>
+      <a href="https://scalewithclicks.com/">Home</a>
       <a href="/aboutus.html">About</a>
       <a href="/services.html">Services</a>
       <a href="/casestudy.html">Case Studies</a>
@@ -287,27 +340,21 @@ Looking to improve your overall marketing performance?
 <h2>Frequently Asked Questions</h2>
 
 <ul class="faq-list">
-  <li>
-    <strong>How long does it take to see results from Meta Ads?</strong><br>
-    Most campaigns start generating data within days, with optimized results in a few weeks.
-  </li>
+  <li><strong>How long does it take to see results from Meta Ads?</strong><br>
+  Most campaigns start generating data within days, with optimized results in a few weeks.</li>
 
-  <li>
-    <strong>What budget do I need for Facebook & Instagram Ads?</strong><br>
-    Budgets vary based on industry and goals, but we help you maximize ROI at any level.
-  </li>
+  <li><strong>What budget do I need for Facebook & Instagram Ads?</strong><br>
+  Budgets vary based on industry and goals, but we help you maximize ROI at any level.</li>
 
-  <li>
-    <strong>Do you create ad creatives?</strong><br>
-    Yes, we guide creative strategy and help test high-performing ad variations.
-  </li>
+  <li><strong>Do you create ad creatives?</strong><br>
+  Yes, we guide creative strategy and help test high-performing ad variations.</li>
 
-  <li>
-    <strong>Do you work with international clients?</strong><br>
-    Yes, we work with clients across US, UK, Europe, and Australia.
-  </li>
+  <li><strong>Do you work with international clients?</strong><br>
+  Yes, we work with clients across US, UK, Europe, and Australia.</li>
 </ul>
+
 </div>
+
 <!-- CTA -->
 <div class="cta">
 <h2>Ready to Scale with Meta Ads?</h2>
@@ -323,7 +370,6 @@ Stop wasting money on ads that don’t convert. Let’s build a strategy that dr
 
 <!-- CONTACT -->
 <section class="contact-section">
-    <div class="container">
   <div class="contact-box">
     <h2>Get in Touch</h2>
     <p>Ready to grow your business? Contact us today.</p>
