@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Performance Marketing Agency | Scale with Clicks</title>
-<meta name="description" content="Scale your business with Google Ads, Meta Ads, SEO & conversion tracking. ROI-focused performance marketing agency.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
   font-family:'Poppins',sans-serif;
   color:#0f172a;
-  background:#f8fafc;
-  line-height:1.6;
+  background:#fff;
 }
 
 .container{
@@ -25,14 +25,11 @@ body{
   padding:0 20px;
 }
 
-a{text-decoration:none;}
-
 /* NAV */
 .navbar{
   position:sticky;
   top:0;
   background:#fff;
-  z-index:1000;
   border-bottom:1px solid #eee;
 }
 
@@ -43,44 +40,26 @@ a{text-decoration:none;}
   padding:16px 0;
 }
 
-.brand-logo{height:60px;}
-
 .nav-links{
   display:flex;
   gap:20px;
-  align-items:center;
 }
 
 .nav-btn{
   background:#2563eb;
-  color:#fff !important;
+  color:#fff;
   padding:10px 18px;
   border-radius:30px;
 }
 
-.menu-btn{
-  display:none;
-  background:none;
-  border:none;
-  font-size:24px;
-  cursor:pointer;
-}
-
 /* HERO */
 .hero{
-  padding:80px 0;
+  padding:70px 0 50px;
   background:linear-gradient(135deg,#eef6ff,#ffffff);
 }
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:40px;
-  align-items:center;
-}
-
 .hero h1{
-  font-size:48px;
+  font-size:44px;
   font-weight:800;
 }
 
@@ -88,253 +67,158 @@ a{text-decoration:none;}
 
 .hero p{
   margin-top:15px;
-  font-size:18px;
   color:#475569;
 }
 
 .hero-actions{
-  margin-top:25px;
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+  margin-top:20px;
 }
 
 .btn{
-  padding:14px 22px;
-  border-radius:12px;
-  font-weight:600;
+  padding:12px 22px;
+  border-radius:10px;
+  background:#2563eb;
+  color:#fff;
   display:inline-block;
 }
 
-.btn-primary{
-  background:#2563eb;
-  color:#fff;
-}
-
-.btn-secondary{
-  border:1px solid #cbd5e1;
-  color:#0f172a;
-}
-
-/* HERO CARD */
-.hero-card{
-  background:#fff;
-  padding:25px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
-}
-
-.metric{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-}
-
-.metric-box{
-  background:#f8fafc;
-  padding:18px;
-  border-radius:12px;
-  text-align:center;
-}
-
-/* SECTION BASE */
+/* SECTION */
 section{
-  padding:70px 0;
+  padding:60px 0;
 }
 
-/* ALTERNATING BACKGROUNDS (SaaS FEEL) */
 .section-light{
-  background:#ffffff;
-}
-
-.section-soft{
-  background:#f1f5f9;
-}
-
-/* TITLES */
-.section-title{
-  text-align:center;
-  margin-bottom:40px;
-}
-
-.section-title h2{
-  font-size:34px;
-}
-
-.section-title p{
-  color:#64748b;
+  background:#f8fafc;
+  padding:50px 0;
 }
 
 /* GRID */
 .grid-3{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
 
-/* PREMIUM CARDS */
-/* PREMIUM CARD BASE */
+/* CARDS */
 .card{
-  padding:22px;
+  padding:25px;
   border-radius:16px;
   color:#fff;
-  transition:.3s;
 }
 
-.card:hover{
-  transform:translateY(-6px);
-}
-
-/* GRADIENT COLORS (LIKE ABOUT PAGE) */
+/* GRADIENT CARDS */
 .card1{background:linear-gradient(135deg,#0ea5e9,#2563eb);}
 .card2{background:linear-gradient(135deg,#10b981,#059669);}
 .card3{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
-.card4{background:linear-gradient(135deg,#f97316,#ea580c);}
-.card5{background:linear-gradient(135deg,#ef4444,#dc2626);}
-.card6{background:linear-gradient(135deg,#14b8a6,#0f766e);}
 
-/* TEXT INSIDE COLORED CARDS */
-.card p{
-  color:rgba(255,255,255,0.9);
+.card p{opacity:0.9;}
+
+/* SERVICES */
+.service-card{
+  background:#fff;
+  color:#0f172a;
+  padding:25px;
+  border-radius:14px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
-  
+
 /* CTA */
 .cta{
   background:linear-gradient(135deg,#0ea5e9,#2563eb);
   color:#fff;
+  padding:40px;
+  border-radius:20px;
   text-align:center;
-  padding:50px 25px;
-  border-radius:24px;
-  margin:30px 0 10px; /* 🔥 FIX spacing */
+  margin-top:20px;
 }
 
-.cta p{
-  margin:10px 0 20px;
+.cta a{
+  margin-top:15px;
+  display:inline-block;
+  background:#fff;
+  color:#2563eb;
+  padding:10px 20px;
+  border-radius:25px;
 }
 
 /* CONTACT */
 .contact-box{
-  max-width:800px;
-  margin:20px auto 0; /* 🔥 FIX */
-  background:#ffffff;
-  border:1px solid #e2e8f0;
-  padding:35px 20px;
+  margin-top:30px;
+  background:#f8fafc;
+  padding:35px;
   border-radius:20px;
   text-align:center;
 }
 
-/* FOOTER */
-.main-footer{
-  background:#0f172a;
-  color:#cbd5e1;
-  text-align:center;
-  padding:20px;
+.contact-box a{
+  margin-top:15px;
+  display:inline-block;
+  background:#2563eb;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:25px;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-
-  .menu-btn{display:block;}
-
-  .nav-links{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    background:#fff;
-    padding:20px;
-  }
-
-  .nav-links.show{display:flex;}
-
-  .hero-grid{
-    grid-template-columns:1fr;
-  }
-
-  .hero h1{font-size:30px;}
-}
 </style>
 </head>
 
 <body>
 
-<header class="navbar">
-<div class="container nav-wrap">
-<img src="logo.png" class="brand-logo">
-
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-<nav class="nav-links" id="navMenu">
-<a href="/">Home</a>
-<a href="aboutus.html">About</a>
-<a href="services.html">Services</a>
-<a href="casestudy.html">Case Studies</a>
-<a href="contactus.html" class="nav-btn">Contact</a>
-</nav>
-</div>
-</header>
-
 <!-- HERO -->
 <section class="hero">
-<div class="container hero-grid">
-
-<div>
+<div class="container">
 <h1>Scale Revenue with <span>Performance Marketing</span></h1>
-
-<p>
-We help businesses grow with Google Ads, Meta Ads, SEO and conversion tracking to drive measurable ROI.
-</p>
+<p>Grow with Google Ads, Meta Ads, SEO & conversion tracking.</p>
 
 <div class="hero-actions">
-<a href="https://calendly.com/vinayyadav01992" class="btn btn-primary">Book Free Strategy Call</a>
-<a href="casestudy.html" class="btn btn-secondary">View Case Studies</a>
+<a href="#" class="btn">Book Free Strategy Call</a>
 </div>
-
-</div>
-
-<div class="hero-card">
-<div class="metric">
-<div class="metric-box"><h3>₹5CR+</h3><p>Ad Spend</p></div>
-<div class="metric-box"><h3>5000+</h3><p>Leads</p></div>
-<div class="metric-box"><h3>10X</h3><p>ROAS</p></div>
-<div class="metric-box"><h3>Global</h3><p>Clients</p></div>
-</div>
-</div>
-
 </div>
 </section>
 
-<!-- PROBLEM -->
-<section class="section-soft">
+<!-- PROBLEM FIXED -->
+<section class="section-light">
 <div class="container">
-<div class="section-title">
-<h2>Struggling to Get Consistent Leads & ROI?</h2>
-<p>We fix what’s actually broken in your marketing funnel.</p>
-</div>
 
 <div class="grid-3">
-<div class="card color-card color-card1"><h3>💸 High Spend</h3><p>Wasted ad budget without ROI</p></div>
-<div class="card color-card color-card2"><h3>📉 Low Conversion</h3><p>Traffic that doesn’t convert</p></div>
-<div class="card color-card color-card3"><h3>📊 No Tracking</h3><p>No clarity on what’s working</p></div>
+
+<div class="card card1">
+<h3>💸 High Spend</h3>
+<p>Wasted ad budget without ROI</p>
 </div>
+
+<div class="card card2">
+<h3>📉 Low Conversion</h3>
+<p>Traffic that doesn’t convert</p>
+</div>
+
+<div class="card card3">
+<h3>📊 No Tracking</h3>
+<p>No clarity on what’s working</p>
+</div>
+
+</div>
+
 </div>
 </section>
 
 <!-- SERVICES -->
-<section class="section-light">
+<section>
 <div class="container">
-<div class="section-title">
-<h2>Our Services</h2>
-<p>Performance marketing solutions designed to scale revenue</p>
-</div>
+
+<h2 style="text-align:center;margin-bottom:10px;">Our Services</h2>
+<p style="text-align:center;color:#64748b;margin-bottom:30px;">
+Performance marketing solutions designed to scale revenue
+</p>
 
 <div class="grid-3">
-<div class="card"><h3><a href="/services/google-ads-agency.html">Google Ads</a></h3></div>
-<div class="card"><h3><a href="/services/meta-ads-agency.html">Meta Ads</a></h3></div>
-<div class="card"><h3><a href="/services/seo-services.html">SEO Services</a></h3></div>
+
+<div class="service-card">Google Ads</div>
+<div class="service-card">Meta Ads</div>
+<div class="service-card">SEO Services</div>
+
 </div>
+
 </div>
 </section>
 
@@ -344,7 +228,7 @@ We help businesses grow with Google Ads, Meta Ads, SEO and conversion tracking t
 <div class="cta">
 <h2>Ready to Scale Your Revenue?</h2>
 <p>Book a free strategy call and get a custom growth plan.</p>
-<a href="https://calendly.com/vinayyadav01992" class="btn btn-secondary">Book Now</a>
+<a href="#">Book Now</a>
 </div>
 </div>
 </section>
@@ -355,20 +239,10 @@ We help businesses grow with Google Ads, Meta Ads, SEO and conversion tracking t
 <div class="contact-box">
 <h2>Get in Touch</h2>
 <p>Let’s grow your business with performance marketing.</p>
-<a href="tel:+919589188668" class="btn btn-primary">Call Now</a>
+<a href="tel:+919589188668">Call Now</a>
 </div>
 </div>
 </section>
-
-<footer class="main-footer">
-<p>© 2026 Scale with Clicks</p>
-</footer>
-
-<script>
-function toggleMenu(){
-document.getElementById("navMenu").classList.toggle("show");
-}
-</script>
 
 </body>
 </html>
