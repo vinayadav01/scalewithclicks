@@ -109,6 +109,49 @@ a{text-decoration:none;color:inherit;}
   margin:60px auto;
 }
 
+/* 🔥 CONTACT CTA (FIXED) */
+.contact-section{
+  background:#f1f5f9;
+  padding:60px 20px;
+}
+
+.contact-container{
+  max-width:800px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.contact-container h2{
+  margin-top:0;
+}
+
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.contact-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 28px;
+  border-radius:40px;
+  font-weight:600;
+}
+
+.call-btn{
+  background:#10b981;
+  color:#fff;
+}
+
+.email-btn{
+  background:#2563eb;
+  color:#fff;
+}
+
 /* FOOTER */
 .main-footer{
   background:#0f172a;
@@ -280,17 +323,18 @@ Stop wasting money on underperforming campaigns. Let’s build a strategy that a
 
 </div>
 
-<!-- CONTACT -->
+<!-- ✅ CONTACT FIXED -->
 <section class="contact-section">
-   <div class="container"> 
-  <div class="contact-box">
+  <div class="contact-container">
+
     <h2>Get in Touch</h2>
     <p>Ready to grow your business? Contact us today.</p>
 
     <div class="contact-buttons">
-      <a href="tel:+919589188668" class="call-btn">📞 Call Now</a>
-      <a href="mailto:scalewithclicks@gmail.com" class="email-btn">📧 Email Us</a>
+      <a href="tel:+919589188668" class="contact-btn call-btn">📞 Call Now</a>
+      <a href="mailto:scalewithclicks@gmail.com" class="contact-btn email-btn">📧 Email Us</a>
     </div>
+
   </div>
 </section>
 
@@ -303,17 +347,5 @@ Stop wasting money on underperforming campaigns. Let’s build a strategy that a
   <p>© 2026 Scale with Clicks</p>
 </footer>
 
-<script>
-async function loadComponent(id, file){
-  const res = await fetch(file);
-  const data = await res.text();
-  document.getElementById(id).innerHTML = data;
-}
-
-loadComponent("header", "/components/header.html");
-loadComponent("cta", "/components/cta.html");
-loadComponent("footer", "/components/footer.html");
-</script>  
-  
 </body>
 </html>
