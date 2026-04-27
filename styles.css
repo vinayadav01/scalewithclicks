@@ -348,3 +348,49 @@ section{
   font-weight:600;
   color:#fff;
 }
+
+/* CONTACT BUTTONS FIX */
+.contact-buttons{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+/* CALL BUTTON */
+.call-btn{
+  background:#10b981;
+  color:#fff;
+  padding:14px 28px;
+  border-radius:30px;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:0.3s;
+}
+
+.call-btn:hover{
+  background:#059669;
+  transform:translateY(-2px);
+}
+
+/* EMAIL BUTTON */
+.email-btn{
+  background:#2563eb;
+  color:#fff;
+  padding:14px 28px;
+  border-radius:30px;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:0.3s;
+}
+
+.email-btn:hover{
+  background:#1e40af;
+  transform:translateY(-2px);
+}
