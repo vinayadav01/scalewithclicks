@@ -9,10 +9,12 @@ body{
   font-family:'Poppins',sans-serif;
   color:#0f172a;
   background:#ffffff;
+  line-height:1.6;
 }
 
 a{
   text-decoration:none;
+  color:inherit;
 }
 
 /* CONTAINER */
@@ -49,9 +51,18 @@ a{
   align-items:center;
 }
 
+.nav-links a{
+  font-weight:500;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:#2563eb;
+}
+
 .nav-btn{
   background:#2563eb;
-  color:#fff;
+  color:#fff !important;
   padding:10px 18px;
   border-radius:30px;
 }
@@ -108,6 +119,7 @@ a{
   border-radius:12px;
   font-weight:600;
   display:inline-block;
+  transition:.3s;
 }
 
 .btn-primary{
@@ -118,6 +130,10 @@ a{
 .btn-secondary{
   border:1px solid #cbd5e1;
   color:#0f172a;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 /* HERO CARD */
@@ -151,6 +167,11 @@ section{
   padding:80px 0;
 }
 
+/* Add spacing between sections for better flow */
+section + section{
+  margin-top:10px;
+}
+
 .section-title{
   text-align:center;
   margin-bottom:40px;
@@ -172,16 +193,27 @@ section{
   gap:25px;
 }
 
+/* CLICKABLE CARDS FIX */
+.grid-3 a,
+.services-grid a{
+  display:block;
+  text-decoration:none;
+  color:inherit;
+}
+
+/* CARDS */
 .card{
   padding:25px;
   border-radius:16px;
   background:#fff;
   box-shadow:0 8px 25px rgba(0,0,0,0.05);
   transition:.3s;
+  height:100%;
 }
 
 .card:hover{
   transform:translateY(-6px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
 }
 
 /* CTA */
@@ -191,7 +223,7 @@ section{
   text-align:center;
   padding:50px 25px;
   border-radius:28px;
-  margin:60px 0; /* FIXED OVERLAP */
+  margin:60px 0;
 }
 
 .cta h2{
@@ -207,7 +239,7 @@ section{
 /* CONTACT */
 .contact-box{
   max-width:900px;
-  margin:40px auto 0; /* FIXED OVERLAP */
+  margin:40px auto 0;
   background:#f8fafc;
   border-radius:24px;
   padding:45px 25px;
@@ -249,6 +281,7 @@ section{
     width:100%;
     background:#fff;
     padding:20px;
+    border-top:1px solid #eee;
   }
 
   .nav-links.show{
@@ -274,5 +307,9 @@ section{
 
   .metric{
     grid-template-columns:1fr;
+  }
+
+  .cta{
+    padding:40px 20px;
   }
 }
