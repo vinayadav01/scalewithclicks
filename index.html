@@ -173,20 +173,31 @@ section{
 }
 
 /* PREMIUM CARDS */
+/* PREMIUM CARD BASE */
 .card{
   padding:22px;
   border-radius:16px;
-  background:#ffffff;
-  border:1px solid #e2e8f0;
-  box-shadow:0 6px 20px rgba(0,0,0,0.04);
+  color:#fff;
   transition:.3s;
 }
 
 .card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  transform:translateY(-6px);
 }
 
+/* GRADIENT COLORS (LIKE ABOUT PAGE) */
+.card1{background:linear-gradient(135deg,#0ea5e9,#2563eb);}
+.card2{background:linear-gradient(135deg,#10b981,#059669);}
+.card3{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
+.card4{background:linear-gradient(135deg,#f97316,#ea580c);}
+.card5{background:linear-gradient(135deg,#ef4444,#dc2626);}
+.card6{background:linear-gradient(135deg,#14b8a6,#0f766e);}
+
+/* TEXT INSIDE COLORED CARDS */
+.card p{
+  color:rgba(255,255,255,0.9);
+}
+  
 /* CTA */
 .cta{
   background:linear-gradient(135deg,#0ea5e9,#2563eb);
