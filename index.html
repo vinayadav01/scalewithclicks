@@ -22,6 +22,7 @@ body{
 
 a{text-decoration:none;color:inherit;}
 
+/* CONTAINER */
 .container{
   max-width:1150px;
   margin:auto;
@@ -119,7 +120,7 @@ a{text-decoration:none;color:inherit;}
 
 .metric-box h3{color:#2563eb;}
 
-/* SECTIONS */
+/* SECTION */
 section{padding:50px 0;}
 
 /* GRID */
@@ -147,14 +148,15 @@ section{padding:50px 0;}
 .card5{background:linear-gradient(135deg,#ef4444,#dc2626);}
 .card6{background:linear-gradient(135deg,#14b8a6,#0f766e);}
 
-/* CARD LIST */
+/* LIST FIX */
 .card ul{
   margin-top:10px;
   padding-left:18px;
 }
 
-.card ul li{
-  margin-bottom:6px;
+.card li{
+  margin-bottom:5px;
+  font-size:14px;
 }
 
 /* SECTION TITLE */
@@ -190,10 +192,10 @@ section{padding:50px 0;}
 /* CONTACT */
 .contact-box{
   background:#f8fafc;
-  padding:40px;
-  border-radius:20px;
+  padding:40px 20px;
+  border-radius:18px;
   text-align:center;
-  max-width:700px;
+  max-width:800px;
   margin:auto;
 }
 
@@ -201,12 +203,13 @@ section{padding:50px 0;}
   margin-top:20px;
   display:flex;
   justify-content:center;
-  gap:20px;
+  gap:15px;
   flex-wrap:wrap;
 }
 
+/* BUTTONS */
 .call-btn{
-  background:linear-gradient(135deg,#10b981,#059669);
+  background:#10b981;
   color:#fff;
   padding:14px 28px;
   border-radius:30px;
@@ -214,7 +217,7 @@ section{padding:50px 0;}
 }
 
 .email-btn{
-  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+  background:#2563eb;
   color:#fff;
   padding:14px 28px;
   border-radius:30px;
@@ -233,7 +236,7 @@ section{padding:50px 0;}
   margin-bottom:10px;
 }
 
-/* FLOAT BUTTONS */
+/* FLOAT */
 .floating-contact{
   position:fixed;
   bottom:20px;
@@ -241,6 +244,7 @@ section{padding:50px 0;}
   display:flex;
   flex-direction:column;
   gap:12px;
+  z-index:9999;
 }
 
 .float-btn{
@@ -259,7 +263,8 @@ section{padding:50px 0;}
 
 /* MOBILE */
 @media(max-width:900px){
-  .grid-3,.metrics{grid-template-columns:1fr;}
+  .grid-3{grid-template-columns:1fr;}
+  .metrics{grid-template-columns:1fr;}
   .hero h1{font-size:30px;}
 }
 
@@ -268,6 +273,7 @@ section{padding:50px 0;}
 
 <body>
 
+<!-- NAV -->
 <header class="navbar">
 <div class="container nav-wrap">
 <img src="logo.png" class="brand-logo">
@@ -311,17 +317,17 @@ section{padding:50px 0;}
 
 <div class="card card1">
 <h3>💸 High Spend</h3>
-<p>Spending heavily on ads but not getting profitable ROI.</p>
+<p>Spending heavily on ads but not getting profitable results or consistent ROI.</p>
 </div>
 
 <div class="card card2">
 <h3>📉 Low Conversion</h3>
-<p>Traffic comes but doesn’t convert into leads or sales.</p>
+<p>Traffic is coming but not converting into leads or sales due to poor funnel.</p>
 </div>
 
 <div class="card card3">
 <h3>📊 No Tracking</h3>
-<p>Lack of tracking leads to bad decisions and wasted budget.</p>
+<p>Lack of proper tracking leads to bad decisions and wasted budget.</p>
 </div>
 
 </div>
@@ -337,26 +343,78 @@ section{padding:50px 0;}
 </div>
 
 <div class="grid-3">
+<a href="/services/google-ads-agency.html" class="card card4"><h3>Google Ads</h3></a>
+<a href="/services/meta-ads-agency.html" class="card card5"><h3>Meta Ads</h3></a>
+<a href="/services/seo-services.html" class="card card6"><h3>SEO Services</h3></a>
+<a href="/services/conversion-tracking.html" class="card card1"><h3>Conversion Tracking</h3></a>
+</div>
 
-<a href="/services/google-ads-agency.html" class="card card4">
-<h3>Google Ads</h3>
-<p>High-converting campaigns for leads and sales.</p>
-</a>
+</div>
+</section>
 
-<a href="/services/meta-ads-agency.html" class="card card5">
-<h3>Meta Ads</h3>
-<p>Facebook & Instagram ads that scale revenue.</p>
-</a>
+<!-- CASE STUDIES -->
+<section>
+<div class="container">
 
-<a href="/services/seo-services.html" class="card card6">
-<h3>SEO Services</h3>
-<p>Rank higher and generate organic leads.</p>
-</a>
+<div class="section-title">
+<h2>Real Results We’ve Delivered</h2>
+</div>
 
-<a href="/services/conversion-tracking.html" class="card card1">
-<h3>Conversion Tracking</h3>
-<p>Track performance and scale smarter.</p>
-</a>
+<div class="grid-3">
+
+<div class="card card1">
+<h3>Healthcare</h3>
+<ul>
+<li>145+ Leads</li>
+<li>$21 CPL</li>
+</ul>
+<a href="https://scalewithclicks.com/healthcare.html" target="_blank">View →</a>
+</div>
+
+<div class="card card2">
+<h3>Law Firm</h3>
+<ul>
+<li>90+ Leads</li>
+<li>40–60% Lower CPL</li>
+</ul>
+<a href="https://scalewithclicks.com/lawyer.html" target="_blank">View →</a>
+</div>
+
+<div class="card card3">
+<h3>Wool Ecommerce</h3>
+<ul>
+<li>15.2X ROAS</li>
+<li>$56000 Revenue</li>
+</ul>
+<a href="https://scalewithclicks.com/wool-e-commerce.html" target="_blank">View →</a>
+</div>
+
+<div class="card card4">
+<h3>Pump Manufacturer</h3>
+<ul>
+<li>80+ Leads</li>
+<li>35% Lower CPL</li>
+</ul>
+<a href="https://scalewithclicks.com/pump-manufacturer.html" target="_blank">View →</a>
+</div>
+
+<div class="card card5">
+<h3>Military Badges</h3>
+<ul>
+<li>66.8X ROAS</li>
+<li>$35000 Revenue</li>
+</ul>
+<a href="https://scalewithclicks.com/badges.html" target="_blank">View →</a>
+</div>
+
+<div class="card card6">
+<h3>Clothing Brand</h3>
+<ul>
+<li>9.86X ROAS</li>
+<li>$9860 Revenue</li>
+</ul>
+<a href="https://scalewithclicks.com/clothing.html" target="_blank">View →</a>
+</div>
 
 </div>
 
@@ -393,7 +451,7 @@ section{padding:50px 0;}
 <p>© 2026 Scale with Clicks</p>
 </footer>
 
-<!-- FLOAT BUTTONS -->
+<!-- FLOAT -->
 <div class="floating-contact">
 <a href="https://wa.me/919589188668" target="_blank" class="float-btn whatsapp">💬</a>
 <a href="tel:+919589188668" class="float-btn call">📞</a>
