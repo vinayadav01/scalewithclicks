@@ -564,3 +564,38 @@ section{
   background:#1d4ed8;
   transform:translateY(-2px);
 }
+
+/* CTA SYSTEM */
+.contact-section{
+  background:#f1f5f9;
+  padding:60px 20px;
+}
+
+.contact-container{
+  max-width:800px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.contact-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 28px;
+  border-radius:40px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.call-btn{background:#10b981;color:#fff;}
+.email-btn{background:#2563eb;color:#fff;}
+
+.call-btn:hover{background:#059669;}
+.email-btn:hover{background:#1d4ed8;}
