@@ -394,3 +394,53 @@ section{
   background:#1e40af;
   transform:translateY(-2px);
 }
+
+/* CONTACT SECTION FIX */
+.contact-section{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.contact-box{
+  max-width:600px;
+  margin:auto;
+  text-align:center;
+}
+
+/* BUTTON ALIGNMENT FIX */
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin-top:20px;
+  flex-wrap:wrap;
+}
+
+/* BUTTON STYLE (if not applied properly) */
+.call-btn,
+.email-btn{
+  padding:14px 28px;
+  border-radius:30px;
+  font-weight:600;
+  color:#fff;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:0.3s;
+}
+
+.call-btn{
+  background:#10b981;
+}
+
+.email-btn{
+  background:#2563eb;
+}
+
+.call-btn:hover,
+.email-btn:hover{
+  transform:translateY(-3px);
+  opacity:0.9;
+}
