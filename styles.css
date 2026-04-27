@@ -80,24 +80,37 @@ section{padding:50px 0;}
 
 /* CARDS */
 /* PREMIUM CARD BASE */
+/* DEFAULT CARD (USED EVERYWHERE SAFE) */
 .card{
-  padding:22px;
+  padding:25px;
   border-radius:16px;
-  color:#fff;
+  background:#fff;
+  color:#0f172a;
+  box-shadow:0 8px 25px rgba(0,0,0,0.05);
   transition:.3s;
 }
 
 .card:hover{
   transform:translateY(-6px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
 }
 
-/* GRADIENT COLORS (LIKE ABOUT PAGE) */
-.card1{background:linear-gradient(135deg,#0ea5e9,#2563eb);}
-.card2{background:linear-gradient(135deg,#10b981,#059669);}
-.card3{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
-.card4{background:linear-gradient(135deg,#f97316,#ea580c);}
-.card5{background:linear-gradient(135deg,#ef4444,#dc2626);}
-.card6{background:linear-gradient(135deg,#14b8a6,#0f766e);}
+/* COLORED CARDS (ONLY WHERE NEEDED) */
+.color-card{
+  color:#fff;
+  box-shadow:none;
+}
+
+.color-card1{background:linear-gradient(135deg,#0ea5e9,#2563eb);}
+.color-card2{background:linear-gradient(135deg,#10b981,#059669);}
+.color-card3{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
+.color-card4{background:linear-gradient(135deg,#f97316,#ea580c);}
+.color-card5{background:linear-gradient(135deg,#ef4444,#dc2626);}
+.color-card6{background:linear-gradient(135deg,#14b8a6,#0f766e);}
+
+.color-card p{
+  color:rgba(255,255,255,0.9);
+}
 
 /* TEXT INSIDE COLORED CARDS */
 .card p{
