@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4K2DXZK');</script>
+<!-- End Google Tag Manager -->
+  
+<title>Concrete Case Study</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#f8fafc;
+  color:#0f172a;
+  line-height:1.6;
+}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #e2e8f0;
+}
+
+.nav-container{
+  max-width:1280px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.brand{
+  font-size:24px;
+  font-weight:800;
+}
+
+.brand span{
+  color:#2563eb;
+}
+
+.nav-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#334155;
+  font-size:14px;
+  font-weight:600;
+  padding:8px 10px;
+  border-radius:10px;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  background:#eff6ff;
+  color:#2563eb;
+}
+
+/* CONTAINER */
+.container{
+  width:100%;
+  max-width:1280px;
+  margin:auto;
+  padding:40px 20px 70px;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:75px 30px;
+  border-radius:28px;
+  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+  color:#fff;
+  box-shadow:0 25px 60px rgba(37,99,235,0.18);
+}
+
+.hero h1{
+  font-size:46px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:18px;
+  color:#dbeafe;
+}
+
+/* KPI */
+.kpi-section{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
+  margin-top:35px;
+}
+
+.progress{
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:24px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(15,23,42,0.04);
+}
+
+.progress svg{
+  transform:rotate(-90deg);
+}
+
+.progress circle{
+  fill:none;
+  stroke-width:10;
+}
+
+.bg{
+  stroke:#e2e8f0;
+}
+
+.meter{
+  stroke:#2563eb;
+  stroke-linecap:round;
+  stroke-dasharray:440;
+  stroke-dashoffset:440;
+  transition:1.5s ease;
+}
+
+.number{
+  margin-top:-115px;
+  margin-bottom:45px;
+}
+
+.number h2{
+  color:#2563eb;
+  font-size:28px;
+}
+
+/* SECTION */
+.section{
+  margin-top:70px;
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:24px;
+  padding:35px;
+  box-shadow:0 10px 30px rgba(15,23,42,0.04);
+}
+
+.section h2{
+  font-size:32px;
+  margin-bottom:18px;
+  text-align:center;
+}
+
+.section p{
+  color:#475569;
+  text-align:center;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+
+.card{
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  border-radius:18px;
+  padding:22px;
+  text-align:center;
+  color:#334155;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 14px 35px rgba(15,23,42,0.06);
+}
+
+.result-card{
+  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+  color:#fff;
+  border:none;
+  font-weight:700;
+}
+
+/* CTA */
+.cta{
+  margin-top:70px;
+  text-align:center;
+  padding:60px 25px;
+  border-radius:28px;
+  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+  color:#fff;
+}
+
+.cta h2{
+  font-size:36px;
+  margin-bottom:20px;
+}
+
+.cta button{
+  padding:14px 26px;
+  border:none;
+  border-radius:14px;
+  background:#fff;
+  color:#2563eb;
+  font-weight:800;
+  cursor:pointer;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  margin-top:70px;
+  padding:30px 20px;
+  color:#64748b;
+  border-top:1px solid #e2e8f0;
+}
+
+/* ANIMATION */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:.8s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-container{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .section h2{
+    font-size:28px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4K2DXZK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-container">
+
+    <div class="brand">
+      Scale with <span>Clicks</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="healthcare.html">Healthcare</a>
+      <a href="lawyer.html">Lawyer</a>
+      <a href="packers-movers.html">Packers & Movers</a>
+      <a href="pestcontrol.html">Pest Control</a>
+      <a href="Badges.html">Military Patches</a>
+      <a href="wool-e-commerce.html">Yarn Store</a>
+      <a href="skincare.html">Skincare</a>
+      <a href="pump-manufacturer.html">Pump Manufacturer</a>
+      <a href="construction.html">Construction Industry</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Concrete Remedial Case Study</h1>
+  <p>Melbourne Lead Generation</p>
+</div>
+
+<!-- KPI -->
+<div class="kpi-section">
+
+<div class="progress" data-value="85">
+<svg width="160" height="160">
+<circle cx="80" cy="80" r="70" class="bg"/>
+<circle cx="80" cy="80" r="70" class="meter"/>
+</svg>
+<div class="number">
+<h2>110</h2>
+<p>Leads</p>
+</div>
+</div>
+
+<div class="progress" data-value="72">
+<svg width="160" height="160">
+<circle cx="80" cy="80" r="70" class="bg"/>
+<circle cx="80" cy="80" r="70" class="meter"/>
+</svg>
+<div class="number">
+<h2>$72</h2>
+<p>CPL</p>
+</div>
+</div>
+
+<div class="progress" data-value="70">
+<svg width="160" height="160">
+<circle cx="80" cy="80" r="70" class="bg"/>
+<circle cx="80" cy="80" r="70" class="meter"/>
+</svg>
+<div class="number">
+<h2>7%</h2>
+<p>Conv Rate</p>
+</div>
+</div>
+
+<div class="progress" data-value="90">
+<svg width="160" height="160">
+<circle cx="80" cy="80" r="70" class="bg"/>
+<circle cx="80" cy="80" r="70" class="meter"/>
+</svg>
+<div class="number">
+<h2>$8000</h2>
+<p>Ad Spend</p>
+</div>
+</div>
+
+</div>
+
+<!-- OVERVIEW -->
+<div class="section fade">
+<h2>Overview</h2>
+<p>
+A Melbourne-based concrete remedial company needed consistent,
+high-quality B2B leads from builders and developers. We implemented
+a full-funnel Google Ads strategy to drive qualified inquiries.
+</p>
+</div>
+
+<!-- CHALLENGES -->
+<div class="section fade">
+<h2>Challenges</h2>
+
+<div class="grid">
+<div class="card">High CPC in construction niche</div>
+<div class="card">Low keyword search volume</div>
+<div class="card">Unqualified residential traffic</div>
+<div class="card">No prior conversion tracking setup</div>
+</div>
+</div>
+
+<!-- STRATEGY -->
+<div class="section fade">
+<h2>Strategy Implemented</h2>
+
+<div class="grid">
+<div class="card">Focused on high-intent keywords</div>
+<div class="card">Created optimized landing pages</div>
+<div class="card">Implemented call & form tracking</div>
+<div class="card">Launched remarketing campaigns</div>
+</div>
+</div>
+
+<!-- INSIGHTS -->
+<div class="section fade">
+<h2>Key Insights</h2>
+
+<div class="grid">
+<div class="card">Long-tail keywords drove best ROI</div>
+<div class="card">Call extensions improved conversion rate</div>
+<div class="card">Remarketing improved lead quality</div>
+<div class="card">Landing page optimization boosted CVR</div>
+</div>
+</div>
+
+<!-- RESULTS -->
+<div class="section fade">
+<h2>Results Overview</h2>
+
+<div class="grid">
+<div class="card result-card">110 Qualified Leads / Month</div>
+<div class="card result-card">$72 Cost Per Lead</div>
+<div class="card result-card">7% Conversion Rate</div>
+<div class="card result-card">Consistent Lead Flow</div>
+</div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+<h2>Want Similar Results?</h2>
+
+<button onclick="window.open('https://wa.me/9589188668')">
+Book Call
+</button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Vinay Yadav | Performance Marketing Consultant
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll('.progress').forEach(el=>{
+let value=el.getAttribute('data-value');
+let circle=el.querySelector('.meter');
+let r=70;
+let c=2*Math.PI*r;
+
+circle.style.strokeDasharray=c;
+
+let offset=c-(value/100)*c;
+
+setTimeout(()=>{
+circle.style.strokeDashoffset=offset;
+},300);
+});
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
+
+document.querySelectorAll('.fade').forEach(el=>{
+observer.observe(el);
+});
+</script>
+
+</body>
+</html>
