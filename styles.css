@@ -395,33 +395,41 @@ section{
   transform:translateY(-2px);
 }
 
-/* CONTACT SECTION FIX */
+/* CONTACT SECTION */
 .contact-section{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+  padding:60px 20px;
 }
 
+/* CENTER CONTENT */
 .contact-box{
-  max-width:600px;
-  margin:auto;
+  max-width:650px;
+  margin:0 auto;              /* 🔥 THIS centers horizontally */
   text-align:center;
 }
 
-/* BUTTON ALIGNMENT FIX */
+/* TEXT */
+.contact-box h2{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.contact-box p{
+  color:#64748b;
+}
+
+/* BUTTONS */
 .contact-buttons{
   display:flex;
   justify-content:center;
   gap:15px;
-  margin-top:20px;
+  margin-top:25px;
   flex-wrap:wrap;
 }
 
-/* BUTTON STYLE (if not applied properly) */
+/* BUTTON STYLE */
 .call-btn,
 .email-btn{
-  padding:14px 28px;
+  padding:14px 26px;
   border-radius:30px;
   font-weight:600;
   color:#fff;
@@ -431,14 +439,11 @@ section{
   transition:0.3s;
 }
 
-.call-btn{
-  background:#10b981;
-}
+/* COLORS */
+.call-btn{ background:#10b981; }
+.email-btn{ background:#2563eb; }
 
-.email-btn{
-  background:#2563eb;
-}
-
+/* HOVER */
 .call-btn:hover,
 .email-btn:hover{
   transform:translateY(-3px);
