@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4K2DXZK');</script>
+<!-- End Google Tag Manager -->
+  
+<title>Healthcare Case Study</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8fafc;
+  color:#0f172a;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+.navbar{
+  width:100%;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(12px);
+  position:sticky;
+  top:0;
+  z-index:999;
+  border-bottom:1px solid rgba(15,23,42,.08);
+}
+
+.nav-container{
+  max-width:1400px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:800;
+  background:linear-gradient(90deg,#2563eb,#22c55e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.nav-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#334155;
+  font-size:14px;
+  padding:8px 12px;
+  border-radius:10px;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  background:#e2e8f0;
+  color:#0f172a;
+}
+
+/* CONTAINER */
+.container{
+  width:92%;
+  max-width:1350px;
+  margin:auto;
+  padding:35px 0 70px;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:90px 25px;
+  border-radius:26px;
+  background:linear-gradient(135deg,#2563eb,#7c3aed,#06b6d4);
+  color:#fff;
+  box-shadow:0 20px 50px rgba(15,23,42,.15);
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:50px;
+  background:#fff;
+  color:#111827;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:16px;
+}
+
+.hero h1{
+  font-size:46px;
+  line-height:1.2;
+  margin-bottom:14px;
+}
+
+.hero p{
+  font-size:18px;
+  color:#e2e8f0;
+}
+
+/* SECTION */
+.section{
+  margin-top:65px;
+}
+
+.section-title{
+  font-size:34px;
+  margin-bottom:8px;
+  background:linear-gradient(90deg,#2563eb,#22c55e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.section-sub{
+  color:#64748b;
+  margin-bottom:18px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+
+/* CARD */
+.card{
+  background:#ffffff;
+  border:1px solid #e2e8f0;
+  padding:26px;
+  border-radius:22px;
+  box-shadow:0 10px 25px rgba(15,23,42,.08);
+  transition:.35s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 35px rgba(15,23,42,.12);
+}
+
+.card h3{
+  font-size:16px;
+  color:#334155;
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:15px;
+  color:#475569;
+  line-height:1.7;
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+  margin-top:35px;
+}
+
+.stat-card{
+  background:#ffffff;
+  border:1px solid #e2e8f0;
+  border-radius:22px;
+  padding:26px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(15,23,42,.08);
+}
+
+.stat-card h2{
+  font-size:34px;
+  color:#22c55e;
+  margin-bottom:8px;
+}
+
+.stat-card p{
+  color:#64748b;
+}
+
+/* TABLE */
+.table-wrap{
+  background:#ffffff;
+  border:1px solid #e2e8f0;
+  border-radius:22px;
+  overflow:hidden;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th{
+  background:#f1f5f9;
+  color:#0f172a;
+  text-align:left;
+  padding:16px;
+}
+
+td{
+  padding:16px;
+  color:#475569;
+  border-top:1px solid #e2e8f0;
+}
+
+/* CTA */
+.cta{
+  margin-top:70px;
+  text-align:center;
+  padding:55px 25px;
+  border-radius:26px;
+  background:linear-gradient(135deg,#22c55e,#06b6d4);
+  color:#06121a;
+}
+
+.cta h2{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.cta p{
+  margin-bottom:20px;
+}
+
+.cta button{
+  padding:14px 26px;
+  border:none;
+  border-radius:14px;
+  background:#0f172a;
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* FLOAT BUTTONS */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#25D366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:24px;
+}
+
+.sticky-cta{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  padding:14px 18px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#2563eb,#22c55e);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  margin-top:70px;
+  padding:25px;
+  color:#64748b;
+  border-top:1px solid #e2e8f0;
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size:34px;
+  }
+
+  .nav-container{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .nav-links{
+    max-height:220px;
+    overflow:auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4K2DXZK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="nav-container">
+
+<div class="logo">Scale with Clicks</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="healthcare.html">Healthcare</a>
+<a href="lawyer.html">Lawyer</a>
+<a href="packers-movers.html">Packers</a>
+<a href="pestcontrol.html">Pest Control</a>
+<a href="badges.html">Military Badges</a>
+<a href="wool-e-commerce.html">Yarn Store</a>
+<a href="skincare.html">Skincare</a>
+<a href="pump-manufacturer.html">Pump Manufacturer</a>
+<a href="construction.html">Construction Industry</a>
+</div>
+
+</div>
+</div>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+<div class="badge">Google Ads Case Study</div>
+<h1>Scaled Healthcare Leads by 95% While Reducing CPL by 38%</h1>
+<p>Multi-location healthcare brand generating consistent patient appointments</p>
+
+<div class="stats">
+
+<div class="stat-card">
+<h2>1320</h2>
+<p>Clicks (+110%)</p>
+</div>
+
+<div class="stat-card">
+<h2>148</h2>
+<p>Conversions (+95%)</p>
+</div>
+
+<div class="stat-card">
+<h2>11.2</h2>
+<p>Conversion Rate</p>
+</div>
+
+<div class="stat-card">
+<h2>$21</h2>
+<p>Cost Per Lead</p>
+</div>
+
+</div>
+</div>
+
+<!-- CLIENT OVERVIEW -->
+<div class="section">
+<div class="section-title">Client Overview</div>
+<div class="section-sub">Who we helped</div>
+
+<div class="card">
+<h3>Healthcare Brand</h3>
+<p>Multi-location healthcare provider aiming to increase patient leads while maintaining profitability.</p>
+</div>
+</div>
+
+<!-- CHALLENGES -->
+<div class="section">
+<div class="section-title">Challenges</div>
+<div class="section-sub">Growth blockers before optimization</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Low Lead Volume</h3>
+<p>Inconsistent patient inquiries across locations.</p>
+</div>
+
+<div class="card">
+<h3>Poor Targeting</h3>
+<p>Broad keywords bringing irrelevant traffic.</p>
+</div>
+
+<div class="card">
+<h3>No Tracking</h3>
+<p>Missing call & form attribution.</p>
+</div>
+
+<div class="card">
+<h3>High CPL</h3>
+<p>Unoptimized campaigns increasing costs.</p>
+</div>
+
+</div>
+</div>
+
+<!-- STRATEGY -->
+<div class="section">
+<div class="section-title">Strategy</div>
+<div class="section-sub">What was implemented</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Location Campaigns</h3>
+<p>Separate campaigns for each clinic location.</p>
+</div>
+
+<div class="card">
+<h3>High Intent Keywords</h3>
+<p>Focused only on treatment-based searches.</p>
+</div>
+
+<div class="card">
+<h3>Negative Keywords</h3>
+<p>Eliminated wasted spend.</p>
+</div>
+
+<div class="card">
+<h3>Landing Optimization</h3>
+<p>Improved booking conversion rate.</p>
+</div>
+
+<div class="card">
+<h3>Call Tracking</h3>
+<p>Tracked real lead sources.</p>
+</div>
+
+</div>
+</div>
+
+<!-- FUNNEL -->
+<div class="section">
+<div class="section-title">Funnel Strategy</div>
+<div class="section-sub">How leads were generated</div>
+
+<div class="card">
+<h3>Patient Journey</h3>
+<p>Google Search → Landing Page → Call/Form Conversion (Mobile-first optimized)</p>
+</div>
+</div>
+
+<!-- RESULTS -->
+<div class="section">
+<div class="section-title">Results Achieved</div>
+<div class="section-sub">Before vs After</div>
+
+<div class="table-wrap">
+<table>
+
+<tr>
+<th>Metric</th>
+<th>Before</th>
+<th>After</th>
+</tr>
+
+<tr>
+<td>Clicks</td>
+<td>620</td>
+<td><b>1,320</b></td>
+</tr>
+
+<tr>
+<td>Conversions</td>
+<td>76</td>
+<td><b>148</b></td>
+</tr>
+
+<tr>
+<td>Conversion Rate</td>
+<td>9.8%</td>
+<td><b>11.2%</b></td>
+</tr>
+
+<tr>
+<td>Cost / Lead</td>
+<td>$34.80</td>
+<td><b>$21.40</b></td>
+</tr>
+
+</table>
+</div>
+</div>
+
+<!-- INSIGHTS -->
+<div class="section">
+<div class="section-title">Key Insights</div>
+<div class="section-sub">What drove success</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Mobile Dominance</h3>
+<p>70% conversions came from mobile users.</p>
+</div>
+
+<div class="card">
+<h3>Keyword Intent</h3>
+<p>High-intent keywords drove best ROI.</p>
+</div>
+
+<div class="card">
+<h3>Landing Pages</h3>
+<p>Improved conversion rates significantly.</p>
+</div>
+
+<div class="card">
+<h3>Geo Targeting</h3>
+<p>Boosted lead quality.</p>
+</div>
+
+</div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+<h2>Want More Patient Leads?</h2>
+<p>I help healthcare brands scale using Google Ads.</p>
+<button onclick="window.open('https://wa.me/9589188668')">Book Free Consultation</button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Vinay Yadav | Performance Marketing Consultant
+</div>
+
+</div>
+
+<a href="https://wa.me/9589188668" class="whatsapp">💬</a>
+
+<button class="sticky-cta" onclick="window.open('https://calendly.com/vinayyadav01992')">
+🚀 Free Leads Plan
+</button>
+
+</body>
+</html>
