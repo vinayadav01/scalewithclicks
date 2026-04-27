@@ -21,7 +21,7 @@ body{
 
 /* CONTAINER */
 .container{
-  max-width:1200px;
+  max-width:1150px;
   margin:auto;
   padding:0 20px;
 }
@@ -39,7 +39,7 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 0;
+  padding:14px 0;
 }
 
 .brand-logo{height:55px;}
@@ -50,9 +50,7 @@ body{
   align-items:center;
 }
 
-.nav-links a{
-  font-weight:500;
-}
+.nav-links a{font-weight:500;}
 
 .nav-btn{
   background:#2563eb;
@@ -63,31 +61,31 @@ body{
 
 /* HERO */
 .hero{
-  padding:70px 0 50px;
+  padding:60px 0 40px;
   background:linear-gradient(135deg,#eef6ff,#ffffff);
 }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
+  grid-template-columns:1.2fr .8fr;
+  gap:35px;
   align-items:center;
 }
 
 .hero h1{
-  font-size:48px;
+  font-size:44px;
   font-weight:800;
 }
 
 .hero span{color:#2563eb;}
 
 .hero p{
-  margin-top:15px;
+  margin-top:12px;
   color:#475569;
 }
 
 .hero-actions{
-  margin-top:20px;
+  margin-top:18px;
   display:flex;
   gap:12px;
   flex-wrap:wrap;
@@ -105,33 +103,30 @@ body{
 }
 
 .btn-secondary{
-  border:1px solid #ccc;
+  border:1px solid #cbd5e1;
 }
 
-/* HERO CARD */
+/* HERO METRIC CARD */
 .hero-card{
   background:#fff;
-  padding:25px;
+  padding:22px;
   border-radius:16px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.hero-card p{
+  margin-bottom:10px;
+  font-weight:500;
 }
 
 /* SECTION */
-section{padding:60px 0;}
-
-.section-title{
-  text-align:center;
-  margin-bottom:35px;
-}
-
-.section-title h2{font-size:32px;}
-.section-title p{color:#64748b;}
+section{padding:50px 0;}
 
 /* GRID */
 .grid-3{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  gap:18px;
 }
 
 /* COLORED CARDS */
@@ -139,39 +134,53 @@ section{padding:60px 0;}
   padding:20px;
   border-radius:14px;
   color:#fff;
+  transition:.3s;
 }
+
+.card:hover{transform:translateY(-4px);}
 
 .card1{background:linear-gradient(135deg,#0ea5e9,#2563eb);}
 .card2{background:linear-gradient(135deg,#10b981,#059669);}
 .card3{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
+.card4{background:linear-gradient(135deg,#f97316,#ea580c);}
+.card5{background:linear-gradient(135deg,#ef4444,#dc2626);}
+.card6{background:linear-gradient(135deg,#14b8a6,#0f766e);}
 
-/* SERVICES WHITE CARDS */
-.service-card{
-  background:#fff;
-  padding:20px;
-  border-radius:14px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+/* SECTION TITLE */
+.section-title{
   text-align:center;
-  font-weight:600;
+  margin-bottom:25px;
 }
+
+.section-title h2{font-size:30px;}
+.section-title p{color:#64748b;}
 
 /* CTA */
 .cta{
   background:linear-gradient(135deg,#0ea5e9,#2563eb);
   color:#fff;
   text-align:center;
-  padding:40px;
-  border-radius:20px;
-  margin:40px 0;
+  padding:35px 20px;
+  border-radius:18px;
+  margin:30px 0; /* FIXED spacing */
+}
+
+.cta a{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 20px;
+  border-radius:25px;
+  background:#fff;
+  color:#2563eb;
+  font-weight:600;
 }
 
 /* CONTACT */
 .contact-box{
   background:#f8fafc;
-  padding:40px;
-  border-radius:20px;
+  padding:30px;
+  border-radius:18px;
   text-align:center;
-  margin-top:20px;
 }
 
 /* FOOTER */
@@ -189,7 +198,7 @@ section{padding:60px 0;}
     grid-template-columns:1fr;
   }
 
-  .hero h1{font-size:32px;}
+  .hero h1{font-size:30px;}
 }
 
 </style>
@@ -225,7 +234,6 @@ section{padding:60px 0;}
 <a href="https://calendly.com/vinayyadav01992" class="btn btn-primary">Book Free Strategy Call</a>
 <a href="casestudy.html" class="btn btn-secondary">View Case Studies</a>
 </div>
-
 </div>
 
 <div class="hero-card">
@@ -239,12 +247,21 @@ section{padding:60px 0;}
 
 <!-- PROBLEM -->
 <section>
-<div class="container">
+<div class="container grid-3">
 
-<div class="grid-3">
-<div class="card card1"><h3>💸 High Spend</h3><p>Wasted ad budget without ROI</p></div>
-<div class="card card2"><h3>📉 Low Conversion</h3><p>Traffic that doesn’t convert</p></div>
-<div class="card card3"><h3>📊 No Tracking</h3><p>No clarity on what’s working</p></div>
+<div class="card card1">
+<h3>💸 High Spend</h3>
+<p>Wasted ad budget without ROI</p>
+</div>
+
+<div class="card card2">
+<h3>📉 Low Conversion</h3>
+<p>Traffic that doesn’t convert</p>
+</div>
+
+<div class="card card3">
+<h3>📊 No Tracking</h3>
+<p>No clarity on what’s working</p>
 </div>
 
 </div>
@@ -253,15 +270,16 @@ section{padding:60px 0;}
 <!-- SERVICES -->
 <section>
 <div class="container">
+
 <div class="section-title">
 <h2>Our Services</h2>
 <p>Performance marketing solutions designed to scale revenue</p>
 </div>
 
 <div class="grid-3">
-<div class="service-card"><a href="#">Google Ads</a></div>
-<div class="service-card"><a href="#">Meta Ads</a></div>
-<div class="service-card"><a href="#">SEO Services</a></div>
+<div class="card card4"><h3>Google Ads</h3></div>
+<div class="card card5"><h3>Meta Ads</h3></div>
+<div class="card card6"><h3>SEO Services</h3></div>
 </div>
 
 </div>
@@ -273,7 +291,7 @@ section{padding:60px 0;}
 <div class="cta">
 <h2>Ready to Scale Your Revenue?</h2>
 <p>Book a free strategy call and get a custom growth plan.</p>
-<a href="https://calendly.com/vinayyadav01992" class="btn btn-secondary">Book Now</a>
+<a href="https://calendly.com/vinayyadav01992">Book Now</a>
 </div>
 </div>
 </section>
