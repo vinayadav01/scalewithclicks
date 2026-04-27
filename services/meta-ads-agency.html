@@ -10,23 +10,179 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-body{font-family:'Poppins',sans-serif;margin:0;color:#0f172a;}
-.container{max-width:1100px;margin:auto;padding:20px;}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Poppins',sans-serif;
+  color:#0f172a;
+  background:#f8fafc;
+  line-height:1.6;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+  background:#fff;
+  border-bottom:1px solid #eee;
+  z-index:1000;
+}
+
+.nav-wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 0;
+}
+
+.brand-logo{height:88px;}
+
+.nav-links{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#0f172a;
+  font-weight:500;
+}
+
+.nav-btn{
+  background:#2563eb;
+  color:#fff;
+  padding:10px 18px;
+  border-radius:25px;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#eef6ff,#ffffff);
+  padding:60px 20px;
+  border-radius:16px;
+  margin-top:20px;
+}
+
+/* TYPOGRAPHY */
 h1{font-size:42px;margin-bottom:15px;}
-h2{margin-top:50px;font-size:30px;}
-p{line-height:1.7;color:#475569;}
-.btn{display:inline-block;margin-top:20px;padding:14px 22px;background:#2563eb;color:#fff;border-radius:10px;font-weight:600;}
-.section{margin-top:60px;}
-.box{background:#f8fafc;padding:20px;border-radius:12px;margin-top:20px;}
-.highlight{color:#2563eb;font-weight:600;}
+h2{margin-top:50px;font-size:28px;}
+p{color:#475569;}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 24px;
+  background:#2563eb;
+  color:#fff;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(37,99,235,0.3);
+}
+
+/* SECTIONS */
+.section{
+  margin-top:60px;
+}
+
+/* BOX */
+.box{
+  background:#fff;
+  padding:22px;
+  border-radius:14px;
+  margin-top:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* HIGHLIGHT */
+.highlight{
+  color:#2563eb;
+  font-weight:600;
+}
+
+/* LINKS */
+a{color:#2563eb; text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+  color:#fff;
+  text-align:center;
+  padding:45px 20px;
+  border-radius:18px;
+  margin-top:60px;
+}
+
+.cta a{
+  background:#fff;
+  color:#2563eb;
+}
+
+/* FOOTER */
+.main-footer{
+  background:#0f172a;
+  color:#cbd5e1;
+  text-align:center;
+  padding:25px;
+  margin-top:50px;
+}
+
+.footer-links{
+  margin-bottom:10px;
+}
+
+.footer-links a{
+  color:#cbd5e1;
+  margin:0 8px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  h1{font-size:28px;}
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-wrap">
+    <img src="logo.png" class="brand-logo">
+
+    <nav class="nav-links">
+      <a href="/index.html">Home</a>
+      <a href="/aboutus.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/casestudy.html">Case Studies</a>
+      <a href="/contactus.html" class="nav-btn">Contact</a>
+    </nav>
+  </div>
+</header>
+
 <div class="container">
 
 <!-- HERO -->
+<div class="hero">
+
 <h1>Meta Ads Agency That Drives Leads & Sales</h1>
 
 <p>
@@ -36,6 +192,8 @@ We help businesses scale using high-converting
 </p>
 
 <a href="https://calendly.com/vinayyadav01992" class="btn">Book Free Strategy Call</a>
+
+</div>
 
 <!-- PROBLEM -->
 <div class="section">
@@ -142,7 +300,7 @@ Yes, we work with clients across US, UK, Europe, and Australia.</p>
 </div>
 
 <!-- CTA -->
-<div class="section">
+<div class="cta">
 <h2>Ready to Scale with Meta Ads?</h2>
 
 <p>
@@ -153,6 +311,28 @@ Stop wasting money on ads that don’t convert. Let’s build a strategy that dr
 </div>
 
 </div>
+
+<!-- CONTACT -->
+<section class="contact-section">
+  <div class="contact-box">
+    <h2>Get in Touch</h2>
+    <p>Ready to grow your business? Contact us today.</p>
+
+    <div class="contact-buttons">
+      <a href="tel:+919589188668" class="call-btn">📞 Call Now</a>
+      <a href="mailto:scalewithclicks@gmail.com" class="email-btn">📧 Email Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="terms-conditions.html">Terms & Conditions</a>
+  </div>
+  <p>© 2026 Scale with Clicks</p>
+</footer>
 
 </body>
 </html>
