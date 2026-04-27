@@ -7,328 +7,142 @@
 <title>Performance Marketing Services | Scale with Clicks</title>
 <meta name="description" content="ROI-focused performance marketing services including Google Ads, Meta Ads, SEO, and conversion tracking to scale your business.">
 
+<link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;color:#0f172a;background:#fff;}
-a{text-decoration:none;color:inherit;}
-.container{max-width:1200px;margin:auto;padding:0 20px;}
-
-/* NAVBAR */
-.navbar{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#fff;
-  border-bottom:1px solid #eee;
-}
-.nav-wrap{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:16px 0;
-}
-.brand-logo{height:60px;}
-
-.nav-links{
-  display:flex;
-  gap:20px;
-  align-items:center;
-}
-.nav-btn{
-  background:#2563eb;
-  color:#fff;
-  padding:10px 18px;
-  border-radius:30px;
-}
-
-/* MOBILE MENU */
-.menu-btn{
-  display:none;
-  font-size:24px;
-  border:none;
-  background:none;
-  cursor:pointer;
-}
-
-/* HERO */
-.hero{
-  padding:80px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#0ea5e9,#2563eb);
-  color:#fff;
-}
-.hero h1{font-size:42px;margin-bottom:10px;}
-.hero p{max-width:700px;margin:auto;line-height:1.6;}
-
-/* SECTIONS */
-section{padding:80px 0;}
-
-.section-title{text-align:center;margin-bottom:40px;}
-.section-title h2{font-size:36px;}
-.section-title p{color:#64748b;margin-top:10px;}
-
-/* SERVICES GRID */
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-}
-
-.services-grid a{
-  display:block;
-}
-
-/* CARDS */
-.card{
-  border-radius:18px;
-  padding:28px;
-  color:#fff;
-  min-height:240px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  transition:.3s;
-}
-.card:hover{
-  transform:translateY(-8px);
-}
-
-.icon{
-  font-size:28px;
-  margin-bottom:15px;
-}
-
-.card h3{margin-bottom:10px;}
-.card p{font-size:14px;line-height:1.6;}
-
-/* COLORS */
-.card1{background:linear-gradient(135deg,#0ea5e9,#2563eb);}
-.card2{background:linear-gradient(135deg,#10b981,#059669);}
-.card3{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
-.card4{background:linear-gradient(135deg,#f97316,#ea580c);}
-.card5{background:linear-gradient(135deg,#ef4444,#dc2626);}
-.card6{background:linear-gradient(135deg,#14b8a6,#0f766e);}
-
-/* GRID 3 */
-.grid-3{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-}
-
-.grid-3 .card{
-  background:#fff;
-  color:#0f172a;
-}
-
-/* CTA */
-.cta{
-  background:#2563eb;
-  color:#fff;
-  text-align:center;
-  padding:60px 20px;
-  border-radius:20px;
-  margin:60px auto;
-}
-.cta h2{margin-bottom:10px;}
-.cta a{
-  display:inline-block;
-  margin-top:20px;
-  background:#fff;
-  color:#2563eb;
-  padding:12px 24px;
-  border-radius:30px;
-  font-weight:600;
-}
-
-/* CONTACT */
-.contact-box{
-  background:#f8fafc;
-  padding:40px;
-  border-radius:20px;
-  text-align:center;
-  max-width:800px;
-  margin:auto;
-}
-
-/* FOOTER */
-.footer{
-  background:#0f172a;
-  color:#cbd5e1;
-  text-align:center;
-  padding:25px;
-}
-
-/* MOBILE */
-@media(max-width:992px){
-  .services-grid,
-  .grid-3{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:768px){
-
-  .menu-btn{display:block;}
-
-  .nav-links{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    background:#fff;
-    padding:20px;
-  }
-
-  .nav-links.show{display:flex;}
-
-  .hero h1{font-size:28px;}
-}
-
-</style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 <header class="navbar">
-<div class="container nav-wrap">
-<img src="logo.png" class="brand-logo">
+  <div class="container nav-wrap">
+    <img src="logo.png" class="brand-logo">
 
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-<nav class="nav-links" id="navMenu">
-<a href="index.html">Home</a>
-<a href="aboutus.html">About</a>
-<a href="services.html">Services</a>
-<a href="casestudy.html">Case Studies</a>
-<a href="contactus.html" class="nav-btn">Contact</a>
-</nav>
-</div>
+    <nav class="nav-links" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="casestudy.html">Case Studies</a>
+      <a href="contactus.html" class="nav-btn">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-<h1>Performance Marketing Services That Drive Results</h1>
-<p>ROI-focused Google Ads, Meta Ads, SEO & conversion tracking services.</p>
+  <div class="container">
+    <h1>Performance Marketing Services That Drive Results</h1>
+    <p>ROI-focused Google Ads, Meta Ads, SEO & conversion tracking services.</p>
+  </div>
 </section>
 
-<!-- SERVICES INTRO -->
+<!-- SERVICES -->
 <section>
-<div class="container">
-<div class="section-title">
-<h2>Performance Marketing Services That Drive Real Results</h2>
-<p>We provide ROI-focused services including Google Ads, Meta Ads, SEO, and conversion tracking.</p>
-</div>
-</div>
-</section>
+  <div class="container">
 
-<!-- SERVICES GRID -->
-<section>
-<div class="container">
+    <div class="section-title">
+      <h2>Services That Drive Growth</h2>
+      <p>Strategic marketing solutions to attract customers and scale revenue.</p>
+    </div>
 
-<div class="section-title">
-<h2>Services That Drive Growth</h2>
-</div>
+    <div class="services-grid">
 
-<div class="services-grid">
+      <a href="/services/google-ads-agency.html">
+        <div class="card card1">
+          <div class="icon">🎯</div>
+          <h3>Google Ads</h3>
+          <p>High-converting campaigns for leads and sales.</p>
+        </div>
+      </a>
 
-<a href="/services/google-ads-agency.html">
-<div class="card card1">
-<div class="icon">🎯</div>
-<h3>Google Ads</h3>
-<p>High-converting campaigns for leads and sales.</p>
-</div>
-</a>
+      <a href="/services/meta-ads-agency.html">
+        <div class="card card2">
+          <div class="icon">📣</div>
+          <h3>Meta Ads</h3>
+          <p>Facebook & Instagram growth campaigns.</p>
+        </div>
+      </a>
 
-<a href="/services/meta-ads-agency.html">
-<div class="card card2">
-<div class="icon">📣</div>
-<h3>Meta Ads</h3>
-<p>Facebook & Instagram growth campaigns.</p>
-</div>
-</a>
+      <a href="/services/seo-services.html">
+        <div class="card card3">
+          <div class="icon">🔍</div>
+          <h3>SEO Services</h3>
+          <p>Rank higher and generate organic leads.</p>
+        </div>
+      </a>
 
-<a href="/services/seo-services.html">
-<div class="card card3">
-<div class="icon">🔍</div>
-<h3>SEO Services</h3>
-<p>Rank higher and generate organic leads.</p>
-</div>
-</a>
+      <a href="/services/conversion-tracking.html">
+        <div class="card card6">
+          <div class="icon">📊</div>
+          <h3>Conversion Tracking</h3>
+          <p>Accurate tracking for better decisions.</p>
+        </div>
+      </a>
 
-<a href="/services/conversion-tracking.html">
-<div class="card card6">
-<div class="icon">📊</div>
-<h3>Conversion Tracking</h3>
-<p>Accurate tracking for better decisions.</p>
-</div>
-</a>
+    </div>
 
-</div>
-
-</div>
+  </div>
 </section>
 
 <!-- WHY -->
 <section>
-<div class="container">
-<div class="section-title">
-<h2>Why Choose Us?</h2>
-</div>
+  <div class="container">
 
-<div class="grid-3">
+    <div class="section-title">
+      <h2>Why Choose Us?</h2>
+    </div>
 
-<div class="card">
-<<h3>📊 Data-Driven Strategy</h3>
-<p>We use analytics, tracking, and real-time data to continuously improve campaign performance and maximize ROI.</p>
-</div>
+    <div class="grid-3">
 
-<div class="card">
-<h3>🎯 ROI-Focused Execution</h3>
-<p>Our focus is on revenue, leads, and actual business growth — not vanity metrics like clicks or impressions.</p>
-</div>
+      <div class="card">
+        <h3>📊 Data-Driven Strategy</h3>
+        <p>We use real data, tracking, and testing to continuously improve campaigns.</p>
+      </div>
 
-<div class="card">
-<h3>🌍 Global Experience</h3>
-<p>We have worked with clients across US, UK, Australia, and Europe delivering consistent results across industries.</p>
-</div>
+      <div class="card">
+        <h3>🎯 ROI Focus</h3>
+        <p>We focus on revenue, not vanity metrics like clicks or impressions.</p>
+      </div>
 
-</div>
-</div>
+      <div class="card">
+        <h3>🌍 Global Clients</h3>
+        <p>Experience working with businesses across multiple international markets.</p>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
 <!-- CTA -->
 <section>
-<div class="container">
-<div class="cta">
-<h2>Ready to Scale?</h2>
-<a href="https://calendly.com/vinayyadav01992">Book Free Call</a>
-</div>
-</div>
+  <div class="container">
+    <div class="cta">
+      <h2>Ready to Scale Your Business?</h2>
+      <a href="https://calendly.com/vinayyadav01992">Book Free Call</a>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section>
-<div class="container">
-<div class="contact-box">
-<h2>Get in Touch</h2>
-<p>Let’s grow your business.</p>
-</div>
-</div>
+  <div class="container">
+    <div class="contact-box">
+      <h2>Get in Touch</h2>
+      <p>Let’s grow your business.</p>
+    </div>
+  </div>
 </section>
 
-<footer class="footer">
-<p>© 2026 Scale with Clicks</p>
+<footer class="main-footer">
+  <p>© 2026 Scale with Clicks</p>
 </footer>
 
 <script>
 function toggleMenu(){
-document.getElementById("navMenu").classList.toggle("show");
+  document.getElementById("navMenu").classList.toggle("show");
 }
 </script>
 
