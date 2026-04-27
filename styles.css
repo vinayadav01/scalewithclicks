@@ -166,3 +166,41 @@ section{padding:50px 0;}
 
   .hero h1{font-size:26px;}
 }
+
+/* CONTACT BUTTON GROUP */
+.contact-actions{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+/* COMMON BUTTON */
+.contact-btn{
+  display:inline-block;
+  padding:12px 24px;
+  border-radius:30px;
+  font-weight:600;
+  transition:.3s;
+}
+
+/* PRIMARY CTA */
+.contact-btn{
+  background:#2563eb;
+  color:#fff;
+}
+
+.contact-btn:hover{
+  background:#1e40af;
+  transform:translateY(-2px);
+}
+
+/* CALL BUTTON (SECONDARY STYLE) */
+.call-btn{
+  background:#10b981;
+}
+
+.call-btn:hover{
+  background:#059669;
+}
