@@ -449,3 +449,43 @@ section{
   transform:translateY(-3px);
   opacity:0.9;
 }
+
+.contact-section{
+  display:flex;
+  justify-content:center;
+}
+
+.contact-box{
+  background:#f8fafc;
+  padding:40px;
+  border-radius:18px;
+  text-align:center;
+  max-width:700px;
+  width:100%;
+  margin:auto;
+}
+
+.contact-buttons{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+/* BUTTONS */
+.call-btn{
+  background:#10b981;
+  color:#fff;
+  padding:12px 24px;
+  border-radius:30px;
+  font-weight:600;
+}
+
+.email-btn{
+  background:#0ea5e9;
+  color:#fff;
+  padding:12px 24px;
+  border-radius:30px;
+  font-weight:600;
+}
