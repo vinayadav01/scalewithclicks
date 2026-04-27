@@ -22,7 +22,6 @@ body{
 
 a{text-decoration:none;color:inherit;}
 
-/* CONTAINER */
 .container{
   max-width:1150px;
   margin:auto;
@@ -79,7 +78,6 @@ a{text-decoration:none;color:inherit;}
   color:#475569;
 }
 
-/* BUTTONS */
 .hero-actions{
   margin-top:18px;
   display:flex;
@@ -149,6 +147,16 @@ section{padding:50px 0;}
 .card5{background:linear-gradient(135deg,#ef4444,#dc2626);}
 .card6{background:linear-gradient(135deg,#14b8a6,#0f766e);}
 
+/* CARD LIST */
+.card ul{
+  margin-top:10px;
+  padding-left:18px;
+}
+
+.card ul li{
+  margin-bottom:6px;
+}
+
 /* SECTION TITLE */
 .section-title{
   text-align:center;
@@ -165,7 +173,8 @@ section{padding:50px 0;}
   text-align:center;
   padding:45px 25px;
   border-radius:20px;
-  margin:40px 0;
+  margin:40px auto;
+  max-width:900px;
 }
 
 .cta a{
@@ -181,18 +190,36 @@ section{padding:50px 0;}
 /* CONTACT */
 .contact-box{
   background:#f8fafc;
-  padding:30px;
-  border-radius:18px;
+  padding:40px;
+  border-radius:20px;
   text-align:center;
+  max-width:700px;
+  margin:auto;
 }
 
-/* CONTACT DETAILS */
-.contact-details{
-  text-align:center;
-  margin-top:10px;
+.contact-buttons{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
-.contact-details p{margin:6px 0;}
+.call-btn{
+  background:linear-gradient(135deg,#10b981,#059669);
+  color:#fff;
+  padding:14px 28px;
+  border-radius:30px;
+  font-weight:600;
+}
+
+.email-btn{
+  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+  color:#fff;
+  padding:14px 28px;
+  border-radius:30px;
+  font-weight:600;
+}
 
 /* FOOTER */
 .main-footer{
@@ -203,13 +230,10 @@ section{padding:50px 0;}
 }
 
 .footer-links{
-  margin-top:10px;
-  display:flex;
-  justify-content:center;
-  gap:20px;
+  margin-bottom:10px;
 }
 
-/* FLOATING BUTTONS */
+/* FLOAT BUTTONS */
 .floating-contact{
   position:fixed;
   bottom:20px;
@@ -217,7 +241,6 @@ section{padding:50px 0;}
   display:flex;
   flex-direction:column;
   gap:12px;
-  z-index:9999;
 }
 
 .float-btn{
@@ -288,17 +311,17 @@ section{padding:50px 0;}
 
 <div class="card card1">
 <h3>💸 High Spend</h3>
-<p>Spending heavily on ads but not getting profitable results or consistent ROI.</p>
+<p>Spending heavily on ads but not getting profitable ROI.</p>
 </div>
 
 <div class="card card2">
 <h3>📉 Low Conversion</h3>
-<p>Traffic is coming but not converting into leads or sales due to poor funnel.</p>
+<p>Traffic comes but doesn’t convert into leads or sales.</p>
 </div>
 
 <div class="card card3">
 <h3>📊 No Tracking</h3>
-<p>Lack of proper tracking leads to bad decisions and wasted budget.</p>
+<p>Lack of tracking leads to bad decisions and wasted budget.</p>
 </div>
 
 </div>
@@ -317,158 +340,57 @@ section{padding:50px 0;}
 
 <a href="/services/google-ads-agency.html" class="card card4">
 <h3>Google Ads</h3>
-<p>High-converting campaigns for leads, sales and maximum ROI.</p>
+<p>High-converting campaigns for leads and sales.</p>
 </a>
 
 <a href="/services/meta-ads-agency.html" class="card card5">
 <h3>Meta Ads</h3>
-<p>Facebook & Instagram ads that scale revenue with precision targeting.</p>
+<p>Facebook & Instagram ads that scale revenue.</p>
 </a>
 
 <a href="/services/seo-services.html" class="card card6">
 <h3>SEO Services</h3>
-<p>Rank higher on Google and generate consistent organic leads.</p>
+<p>Rank higher and generate organic leads.</p>
 </a>
 
 <a href="/services/conversion-tracking.html" class="card card1">
 <h3>Conversion Tracking</h3>
-<p>Accurate data tracking to measure performance and scale campaigns.</p>
+<p>Track performance and scale smarter.</p>
 </a>
 
 </div>
 
 </div>
 </section>
-
- <!-- CASE STUDIES -->
-<section>
-<div class="container">
-
-<div class="section-title">
-<h2>Real Results We’ve Delivered</h2>
-<p>Proven performance across healthcare, legal, ecommerce & manufacturing</p>
-</div>
-
-<div class="grid-3">
-
-<!-- HEALTHCARE -->
-<div class="card card1">
-<h3>Healthcare Lead Generation</h3>
-<p>Google Ads strategy for patient acquisition</p>
-
-<ul>
-<li>📈 300+ Leads Generated</li>
-<li>💸 ₹150–₹300 CPL</li>
-<li>📊 3X–5X ROI</li>
-</ul>
-
-<a href="https://scalewithclicks.com/healthcare.html" target="_blank">View Case Study →</a>
-</div>
-
-<!-- LAWYER -->
-<div class="card card2">
-<h3>Law Firm Lead Generation</h3>
-<p>High-intent legal leads via Meta + Google Ads</p>
-
-<ul>
-<li>📈 250+ Leads Generated</li>
-<li>💰 40–60% Lower CPL</li>
-<li>📊 High Quality Conversions</li>
-</ul>
-
-<a href="https://scalewithclicks.com/lawyer.html" target="_blank">View Case Study →</a>
-</div>
-
-<!-- WOOL ECOMMERCE -->
-<div class="card card3">
-<h3>Wool E-commerce Brand</h3>
-<p>Revenue scaling with performance marketing</p>
-
-<ul>
-<li>📈 4X ROAS</li>
-<li>💰 ₹8L+ Revenue Generated</li>
-<li>📊 Consistent Sales Growth</li>
-</ul>
-
-<a href="https://scalewithclicks.com/wool-e-commerce.html" target="_blank">View Case Study →</a>
-</div>
-
-<!-- MANUFACTURING -->
-<div class="card card4">
-<h3>Pump Manufacturer (B2B)</h3>
-<p>High-ticket industrial lead generation</p>
-
-<ul>
-<li>📈 120+ Qualified Leads</li>
-<li>💸 Reduced CPL by 35%</li>
-<li>📊 Strong Sales Pipeline</li>
-</ul>
-
-<a href="https://scalewithclicks.com/pump-manufacturer.html" target="_blank">View Case Study →</a>
-</div>
-
-<!-- BADGES / MULTI -->
-<div class="card card5">
-<h3>Multi-Industry Campaigns</h3>
-<p>Cross-industry performance marketing success</p>
-
-<ul>
-<li>📊 Google Ads + Meta Ads</li>
-<li>📊 SEO + Conversion Tracking</li>
-<li>📊 ROI-Focused Campaigns</li>
-</ul>
-
-<a href="https://scalewithclicks.com/badges.html" target="_blank">View All →</a>
-</div>
-
-<!-- CLOTHING BRAND -->
-<div class="card card6">
-<h3>Clothing Brand Growth</h3>
-<p>Scaled D2C fashion brand using Meta + Google Ads</p>
-
-<ul>
-<li>📈 3X–4X ROAS</li>
-<li>💰 ₹5L+ Revenue Generated</li>
-<li>📊 Consistent Purchase Growth</li>
-</ul>
-
-<a href="https://scalewithclicks.com/clothing.html" target="_blank">
-View Case Study →
-</a>
-</div>
-  
-</div>
-
-</div>
-</section> 
 
 <!-- CTA -->
 <section class="cta">
-  <h2>Ready to Scale Your Business?</h2>
-  <p>Book a free strategy call and get a custom growth plan.</p>
-  <a href="https://calendly.com/vinayyadav01992" target="_blank">Book Free Strategy Call</a>
+<h2>Ready to Scale Your Business?</h2>
+<p>Book a free strategy call and get a custom growth plan.</p>
+<a href="https://calendly.com/vinayyadav01992">Book Free Strategy Call</a>
 </section>
 
 <!-- CONTACT -->
-<section class="contact-section">
-  <div class="contact-box">
-    <h2>Get in Touch</h2>
-    <p>Ready to grow your business? Contact us today.</p>
+<section>
+<div class="contact-box">
+<h2>Get in Touch</h2>
+<p>Ready to grow your business? Contact us today.</p>
 
-    <div class="contact-buttons">
-      <a href="tel:+919589188668" class="call-btn">📞 Call Now</a>
-      <a href="mailto:scalewithclicks@gmail.com" class="email-btn">📧 Email Us</a>
-    </div>
-  </div>
+<div class="contact-buttons">
+<a href="tel:+919589188668" class="call-btn">📞 Call Now</a>
+<a href="mailto:scalewithclicks@gmail.com" class="email-btn">📧 Email Us</a>
+</div>
+
+</div>
 </section>
 
 <!-- FOOTER -->
 <footer class="main-footer">
-  <div class="footer-links">
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="terms-conditions.html">Terms & Conditions</a>
-  </div>
-  <p>© 2026 Scale with Clicks</p>
+<div class="footer-links">
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms-conditions.html">Terms & Conditions</a>
+</div>
+<p>© 2026 Scale with Clicks</p>
 </footer>
 
 <!-- FLOAT BUTTONS -->
