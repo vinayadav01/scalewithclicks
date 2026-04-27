@@ -599,3 +599,32 @@ section{
 
 .call-btn:hover{background:#059669;}
 .email-btn:hover{background:#1d4ed8;}
+
+/* FORCE CENTER FIX - OVERRIDES EVERYTHING */
+.contact-section{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center !important;
+}
+
+.contact-container{
+  width:100%;
+  max-width:800px;
+  margin:0 auto !important;
+  text-align:center !important;
+}
+
+.contact-container h2,
+.contact-container p{
+  text-align:center !important;
+}
+
+.contact-buttons{
+  display:flex;
+  justify-content:center !important;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
