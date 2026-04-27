@@ -15,7 +15,7 @@
 body{
   font-family:'Poppins',sans-serif;
   color:#0f172a;
-  background:#fff;
+  background:#f8fafc;
   line-height:1.6;
 }
 
@@ -51,11 +51,6 @@ a{text-decoration:none;}
   align-items:center;
 }
 
-.nav-links a{
-  color:#0f172a;
-  font-weight:500;
-}
-
 .nav-btn{
   background:#2563eb;
   color:#fff !important;
@@ -73,7 +68,7 @@ a{text-decoration:none;}
 
 /* HERO */
 .hero{
-  padding:70px 0;
+  padding:80px 0;
   background:linear-gradient(135deg,#eef6ff,#ffffff);
 }
 
@@ -86,7 +81,6 @@ a{text-decoration:none;}
 
 .hero h1{
   font-size:48px;
-  line-height:1.15;
   font-weight:800;
 }
 
@@ -96,23 +90,20 @@ a{text-decoration:none;}
   margin-top:15px;
   font-size:18px;
   color:#475569;
-  max-width:520px;
 }
 
 .hero-actions{
-  margin-top:20px;
+  margin-top:25px;
   display:flex;
   gap:12px;
   flex-wrap:wrap;
 }
 
-/* BUTTONS */
 .btn{
-  padding:12px 20px;
+  padding:14px 22px;
   border-radius:12px;
   font-weight:600;
   display:inline-block;
-  transition:.3s;
 }
 
 .btn-primary{
@@ -121,18 +112,8 @@ a{text-decoration:none;}
 }
 
 .btn-secondary{
-  border:1px solid #fff;
-  color:#fff;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-}
-
-.trust{
-  margin-top:12px;
-  font-size:14px;
-  color:#64748b;
+  border:1px solid #cbd5e1;
+  color:#0f172a;
 }
 
 /* HERO CARD */
@@ -151,48 +132,37 @@ a{text-decoration:none;}
 
 .metric-box{
   background:#f8fafc;
-  padding:16px;
+  padding:18px;
   border-radius:12px;
   text-align:center;
 }
 
-.metric-box h3{
-  color:#2563eb;
-  font-size:24px;
-}
-
-/* SECTION SPACING */
+/* SECTION BASE */
 section{
-  padding:60px 0;
+  padding:70px 0;
 }
 
-section + section{
-  margin-top:0;
-}
-
-/* BACKGROUND SECTIONS */
-.problem-section{
-  background:#f8fafc;
-}
-
-.services-section{
+/* ALTERNATING BACKGROUNDS (SaaS FEEL) */
+.section-light{
   background:#ffffff;
+}
+
+.section-soft{
+  background:#f1f5f9;
 }
 
 /* TITLES */
 .section-title{
   text-align:center;
-  margin-bottom:30px;
+  margin-bottom:40px;
 }
 
 .section-title h2{
   font-size:34px;
-  font-weight:700;
 }
 
 .section-title p{
   color:#64748b;
-  margin-top:8px;
 }
 
 /* GRID */
@@ -202,20 +172,19 @@ section + section{
   gap:20px;
 }
 
-/* CARDS */
+/* PREMIUM CARDS */
 .card{
   padding:22px;
   border-radius:16px;
-  background:#fff;
-  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+  background:#ffffff;
+  border:1px solid #e2e8f0;
+  box-shadow:0 6px 20px rgba(0,0,0,0.04);
   transition:.3s;
-  border:1px solid #f1f5f9;
 }
 
 .card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 14px 30px rgba(0,0,0,0.08);
-  background:#f8fafc;
+  transform:translateY(-5px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
 
 /* CTA */
@@ -223,27 +192,21 @@ section + section{
   background:linear-gradient(135deg,#0ea5e9,#2563eb);
   color:#fff;
   text-align:center;
-  padding:45px 20px;
+  padding:50px 25px;
   border-radius:24px;
-
-  margin:60px 0 80px; /* FIXED GAP */
-}
-
-.cta h2{
-  font-size:28px;
-  margin-bottom:10px;
+  margin:30px 0 10px; /* 🔥 FIX spacing */
 }
 
 .cta p{
-  max-width:600px;
-  margin:auto;
+  margin:10px 0 20px;
 }
 
 /* CONTACT */
 .contact-box{
   max-width:800px;
-  margin:40px auto 0;
-  background:#f8fafc;
+  margin:20px auto 0; /* 🔥 FIX */
+  background:#ffffff;
+  border:1px solid #e2e8f0;
   padding:35px 20px;
   border-radius:20px;
   text-align:center;
@@ -258,17 +221,6 @@ section + section{
 }
 
 /* MOBILE */
-@media(max-width:992px){
-  .hero-grid,
-  .grid-3{
-    grid-template-columns:1fr;
-  }
-
-  .hero h1{
-    font-size:36px;
-  }
-}
-
 @media(max-width:768px){
 
   .menu-btn{display:block;}
@@ -286,20 +238,11 @@ section + section{
 
   .nav-links.show{display:flex;}
 
-  .hero{padding:50px 0;}
-
-  .hero h1{font-size:28px;}
-
-  .hero p{font-size:16px;}
-
-  .btn{
-    width:100%;
-    text-align:center;
-  }
-
-  .metric{
+  .hero-grid{
     grid-template-columns:1fr;
   }
+
+  .hero h1{font-size:30px;}
 }
 </style>
 </head>
@@ -338,9 +281,6 @@ We help businesses grow with Google Ads, Meta Ads, SEO and conversion tracking t
 <a href="casestudy.html" class="btn btn-secondary">View Case Studies</a>
 </div>
 
-<div class="trust">
-Trusted by global clients across US, UK & Australia
-</div>
 </div>
 
 <div class="hero-card">
@@ -356,7 +296,7 @@ Trusted by global clients across US, UK & Australia
 </section>
 
 <!-- PROBLEM -->
-<section class="problem-section">
+<section class="section-soft">
 <div class="container">
 <div class="section-title">
 <h2>Struggling to Get Consistent Leads & ROI?</h2>
@@ -372,7 +312,7 @@ Trusted by global clients across US, UK & Australia
 </section>
 
 <!-- SERVICES -->
-<section class="services-section">
+<section class="section-light">
 <div class="container">
 <div class="section-title">
 <h2>Our Services</h2>
