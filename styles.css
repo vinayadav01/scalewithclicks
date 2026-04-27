@@ -71,16 +71,15 @@ section{padding:50px 0;}
 .section-title h2{font-size:30px;}
 .section-title p{color:#64748b;margin-top:5px;}
 
-/* SERVICES GRID */
-.services-grid{
+/* GRID */
+.services-grid,
+.grid-3{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
 
-/* CARDS */
-/* PREMIUM CARD BASE */
-/* DEFAULT CARD (USED EVERYWHERE SAFE) */
+/* DEFAULT CARD (SAFE FOR ALL PAGES) */
 .card{
   padding:25px;
   border-radius:16px;
@@ -95,7 +94,18 @@ section{padding:50px 0;}
   box-shadow:0 15px 35px rgba(0,0,0,0.08);
 }
 
-/* COLORED CARDS (ONLY WHERE NEEDED) */
+/* DEFAULT TEXT */
+.card p{
+  color:#475569;
+}
+
+/* ICON */
+.icon{
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+/* 🎯 COLORED CARDS (ONLY USE WHERE NEEDED) */
 .color-card{
   color:#fff;
   box-shadow:none;
@@ -112,45 +122,22 @@ section{padding:50px 0;}
   color:rgba(255,255,255,0.9);
 }
 
-/* TEXT INSIDE COLORED CARDS */
-.card p{
-  color:rgba(255,255,255,0.9);
-}
-
-/* ICON */
-.icon{
-  font-size:24px;
-  margin-bottom:10px;
-}
-
-/* COLORS */
-.card1{background:#2563eb;color:#fff;}
-.card2{background:#059669;color:#fff;}
-.card3{background:#7c3aed;color:#fff;}
-.card6{background:#0f766e;color:#fff;}
-
-/* WHY GRID */
-.grid-3{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
 /* CTA */
 .cta{
   text-align:center;
   background:#2563eb;
   color:#fff;
-  padding:35px 20px;
+  padding:40px 20px;
   border-radius:16px;
+  margin-top:30px;
 }
 
 .cta a{
   display:inline-block;
-  margin-top:15px;
+  margin-top:18px;
   background:#fff;
   color:#2563eb;
-  padding:10px 20px;
+  padding:12px 24px;
   border-radius:25px;
   font-weight:600;
 }
@@ -158,9 +145,41 @@ section{padding:50px 0;}
 /* CONTACT */
 .contact-box{
   background:#f8fafc;
-  padding:30px;
+  padding:35px;
   border-radius:16px;
   text-align:center;
+  margin-top:30px;
+}
+
+/* CONTACT BUTTONS */
+.contact-actions{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.contact-btn{
+  padding:12px 24px;
+  border-radius:30px;
+  font-weight:600;
+  background:#2563eb;
+  color:#fff;
+  transition:.3s;
+}
+
+.contact-btn:hover{
+  background:#1e40af;
+  transform:translateY(-2px);
+}
+
+.call-btn{
+  background:#10b981;
+}
+
+.call-btn:hover{
+  background:#059669;
 }
 
 /* FOOTER */
@@ -192,42 +211,4 @@ section{padding:50px 0;}
   .nav-links.show{display:flex;}
 
   .hero h1{font-size:26px;}
-}
-
-/* CONTACT BUTTON GROUP */
-.contact-actions{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:20px;
-}
-
-/* COMMON BUTTON */
-.contact-btn{
-  display:inline-block;
-  padding:12px 24px;
-  border-radius:30px;
-  font-weight:600;
-  transition:.3s;
-}
-
-/* PRIMARY CTA */
-.contact-btn{
-  background:#2563eb;
-  color:#fff;
-}
-
-.contact-btn:hover{
-  background:#1e40af;
-  transform:translateY(-2px);
-}
-
-/* CALL BUTTON (SECONDARY STYLE) */
-.call-btn{
-  background:#10b981;
-}
-
-.call-btn:hover{
-  background:#059669;
 }
