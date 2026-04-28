@@ -24,20 +24,26 @@ export default function Footer() {
           <h3 className="text-[18px] font-semibold mb-5">Services</h3>
           <ul className="space-y-3 text-[#94A3B8] text-[15px]">
             <li>
-              <Link href="/services/google-ads" className="hover:text-white transition-colors duration-200">
+              <Link href="/services/google-ads-agency.html" className="hover:text-white transition-colors duration-200">
                 Google Ads
               </Link>
             </li>
             <li>
-              <Link href="/services/meta-ads" className="hover:text-white transition-colors duration-200">
+              <Link href="/services/meta-ads-agency.html" className="hover:text-white transition-colors duration-200">
                 Meta Ads
               </Link>
             </li>
             <li>
-              <Link href="/services/seo" className="hover:text-white transition-colors duration-200">
+              <Link href="/services/seo-services.html" className="hover:text-white transition-colors duration-200">
                 SEO
               </Link>
             </li>
+             <li>
+              <Link href="/services/conversion-tracking.html" className="hover:text-white transition-colors duration-200">
+                Conversion Tracking
+              </Link>
+            </li>
+
           </ul>
         </div>
 
@@ -46,27 +52,27 @@ export default function Footer() {
           <h3 className="text-[18px] font-semibold mb-5">Resources</h3>
           <ul className="space-y-3 text-[#94A3B8] text-[15px]">
             <li>
-              <Link href="/" className="hover:text-white transition-colors duration-200">
+              <Link href="https://scalewithclicks.com/" className="hover:text-white transition-colors duration-200">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-white transition-colors duration-200">
+              <Link href="/aboutus.html" className="hover:text-white transition-colors duration-200">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="hover:text-white transition-colors duration-200">
+              <Link href="blog.scalewithclicks.com" className="hover:text-white transition-colors duration-200">
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/case-studies" className="hover:text-white transition-colors duration-200">
+              <Link href="/casestudy.html" className="hover:text-white transition-colors duration-200">
                 Case Studies
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-white transition-colors duration-200">
+              <Link href="/contactus.html" className="hover:text-white transition-colors duration-200">
                 Contact Us
               </Link>
             </li>
@@ -78,12 +84,12 @@ export default function Footer() {
           <h3 className="text-[18px] font-semibold mb-5">Legal</h3>
           <ul className="space-y-3 text-[#94A3B8] text-[15px]">
             <li>
-              <Link href="/privacy-policy" className="hover:text-white transition-colors duration-200">
+              <Link href="/privacy-policy.html" className="hover:text-white transition-colors duration-200">
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link href="/terms" className="hover:text-white transition-colors duration-200">
+              <Link href="/terms-conditions.html" className="hover:text-white transition-colors duration-200">
                 Terms
               </Link>
             </li>
