@@ -42,22 +42,50 @@ a{text-decoration:none;color:inherit;}
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:14px 0;
+  padding:12px 0;
+  position:relative;
 }
 
-.brand-logo{height:88px;}
+.brand-logo{height:60px;}
 
+/* NAV LINKS */
 .nav-links{
   display:flex;
   gap:22px;
   align-items:center;
 }
 
-.nav-btn{
-  background:#2563eb;
-  color:#fff;
-  padding:10px 18px;
-  border-radius:25px;
+/* MOBILE MENU BUTTON */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* MOBILE FIX */
+@media(max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#fff;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    padding:20px 0;
+    display:none;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
 }
 
 /* HERO */
@@ -224,7 +252,7 @@ section{padding:50px 0;}
   font-weight:600;
 }
 
-/* ===== NEW FOOTER ===== */
+/* FOOTER */
 .footer{
   background:#020617;
   color:#94A3B8;
@@ -265,8 +293,6 @@ section{padding:50px 0;}
 
 .footer a{
   color:#94A3B8;
-  font-size:15px;
-  transition:.2s;
 }
 
 .footer a:hover{
@@ -277,7 +303,6 @@ section{padding:50px 0;}
   text-align:center;
   border-top:1px solid #1E293B;
   padding:18px;
-  font-size:14px;
 }
 
 /* FLOAT */
@@ -288,7 +313,6 @@ section{padding:50px 0;}
   display:flex;
   flex-direction:column;
   gap:12px;
-  z-index:9999;
 }
 
 .float-btn{
@@ -299,7 +323,6 @@ section{padding:50px 0;}
   justify-content:center;
   border-radius:50%;
   color:#fff;
-  font-size:22px;
 }
 
 .whatsapp{background:#25D366;}
@@ -318,21 +341,24 @@ section{padding:50px 0;}
 
 <body>
 
-<!-- NAV -->
 <header class="navbar">
 <div class="container nav-wrap">
+
 <img src="logo.png" class="brand-logo">
 
-<nav class="nav-links">
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav class="nav-links" id="navLinks">
 <a href="https://scalewithclicks.com/">Home</a>
 <a href="aboutus.html">About</a>
 <a href="services.html">Services</a>
 <a href="casestudy.html">Case Studies</a>
-<a href="contactus.html" class="nav-btn">Contact</a>
+<a href="contactus.html">Contact</a>
 </nav>
+
 </div>
 </header>
-
+  
 <!-- HERO -->
 <section class="hero">
 <div class="container">
@@ -540,6 +566,29 @@ section{padding:50px 0;}
 <a href="https://wa.me/919589188668" target="_blank" class="float-btn whatsapp">💬</a>
 <a href="tel:+919589188668" class="float-btn call">📞</a>
 </div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+// CLOSE MENU ON LINK CLICK
+document.querySelectorAll("#navLinks a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navLinks").classList.remove("active");
+  });
+});
+
+// CLOSE MENU ON OUTSIDE CLICK
+document.addEventListener("click", function(e){
+  const nav = document.getElementById("navLinks");
+  const toggle = document.querySelector(".menu-toggle");
+
+  if(!nav.contains(e.target) && !toggle.contains(e.target)){
+    nav.classList.remove("active");
+  }
+});
+</script>
 
 </body>
 </html>
