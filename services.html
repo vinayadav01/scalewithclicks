@@ -9,6 +9,48 @@
 
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+/* MOBILE NAV FIX */
+.menu-btn{
+  display:none;
+  font-size:28px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#fff;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    padding:20px 0;
+    display:none;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+}
+  <script>
+document.querySelectorAll("#navMenu a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navMenu").classList.remove("active");
+  });
+});
+</script>
+
 </head>
 
 <body>
@@ -162,7 +204,7 @@
       <ul>
         <li><a href="https://scalewithclicks.com/">Home</a></li>
         <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="blog.scalewithclicks.com">Blog</a></li>
         <li><a href="casestudy.html">Case Studies</a></li>
         <li><a href="contactus.html">Contact Us</a></li>
       </ul>
@@ -190,5 +232,11 @@
 <a href="tel:+919589188668" class="float-btn call">📞</a>
 </div>
 
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+  
 </body>
 </html>
