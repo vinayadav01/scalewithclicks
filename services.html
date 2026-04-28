@@ -10,7 +10,8 @@
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-/* MOBILE NAV FIX */
+<style>
+/* ===== MOBILE NAV FIX ===== */
 .menu-btn{
   display:none;
   font-size:28px;
@@ -25,6 +26,10 @@
     display:block;
   }
 
+  .nav-wrap{
+    position:relative;
+  }
+
   .nav-links{
     position:absolute;
     top:100%;
@@ -37,19 +42,14 @@
     padding:20px 0;
     display:none;
     box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    z-index:999;
   }
 
   .nav-links.active{
     display:flex;
   }
 }
-  <script>
-document.querySelectorAll("#navMenu a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.getElementById("navMenu").classList.remove("active");
-  });
-});
-</script>
+</style>
 
 </head>
 
@@ -236,6 +236,15 @@ document.querySelectorAll("#navMenu a").forEach(link => {
 function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("active");
 }
+
+// CLOSE MENU AFTER CLICK (safe load)
+window.addEventListener("DOMContentLoaded", function(){
+  document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+      document.getElementById("navMenu").classList.remove("active");
+    });
+  });
+});
 </script>
   
 </body>
