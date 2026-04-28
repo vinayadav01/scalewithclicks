@@ -228,13 +228,68 @@ section{
 }
 
 /* FOOTER */
-.main-footer{
-  background:#0f172a;
-  color:#cbd5e1;
-  text-align:center;
-  padding:20px;
+/* FOOTER */
+.footer{
+  background:#020617;
+  color:#94A3B8;
+  margin-top:60px;
 }
 
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+  padding:60px 20px;
+}
+
+.footer-logo{
+  color:#fff;
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.footer-text{
+  max-width:260px;
+  line-height:1.7;
+}
+
+.footer h3{
+  color:#fff;
+  font-size:18px;
+  margin-bottom:15px;
+}
+
+.footer ul{
+  list-style:none;
+}
+
+.footer ul li{
+  margin-bottom:10px;
+}
+
+.footer a{
+  color:#94A3B8;
+  font-size:15px;
+  transition:.2s;
+}
+
+.footer a:hover{
+  color:#fff;
+}
+
+.footer-bottom{
+  text-align:center;
+  border-top:1px solid #1E293B;
+  padding:18px;
+  font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+}
 /* FLOATING BUTTONS (FIXED) */
 .floating-contact{
   position:fixed;
