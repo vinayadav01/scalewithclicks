@@ -11,6 +11,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-M4K2DXZK');</script>
 <!-- End Google Tag Manager -->
+
+<link rel="canonical" href="https://scalewithclicks.com/aboutus.html">
   
 <title>About Us | Scale with Clicks</title>
 <meta name="description" content="Learn about Scale with Clicks - a performance marketing agency helping businesses grow with Google Ads, Meta Ads, SEO, lead generation and ROI focused strategies.">
@@ -48,6 +50,10 @@ a{
   background:#ffffff;
   box-shadow:0 4px 18px rgba(0,0,0,0.05);
 }
+
+.nav-links{
+  z-index:999;
+}  
 
 .nav-wrap{
   display:flex;
@@ -315,6 +321,117 @@ a{
     margin-bottom:8px;
   }
 }
+
+/* ===== MOBILE NAV FIX ===== */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#fff;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    padding:20px 0;
+    display:none;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+}
+
+/* ===== GRID MOBILE FIX ===== */
+@media(max-width:992px){
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ===== HERO MOBILE ===== */
+@media(max-width:768px){
+  .hero h1{
+    font-size:28px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+}
+
+/* ===== CARD MOBILE SPACING ===== */
+@media(max-width:768px){
+  .card{
+    padding:22px;
+  }
+}
+
+/* ===== CONTACT BUTTON FIX ===== */
+@media(max-width:768px){
+  .contact-buttons{
+    flex-direction:column;
+  }
+
+  .contact-buttons a{
+    width:100%;
+    text-align:center;
+  }
+}
+
+@media(max-width:768px){
+  .nav-wrap{
+    min-height:70px;
+  }
+
+  .brand-logo{
+    height:60px;
+  }
+}  
+
+/* FLOATING BUTTONS FIX */
+.floating-contact{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  z-index:9999;
+}
+
+.float-btn{
+  width:55px;
+  height:55px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:#fff;
+  font-size:22px;
+}
+
+.whatsapp{background:#25D366;}
+.call{background:#2563eb;}  
+  
 </style>
 </head>
 
@@ -328,9 +445,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="container nav-wrap">
-    <img src="logo.png" alt="Scale with Clicks Logo" class="brand-logo">
+   <img src="logo.png" alt="Scale With Clicks Performance Marketing Agency Logo">
 
-    <nav class="nav-links">
+   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav class="nav-links" id="navLinks">
       <a href="https://scalewithclicks.com/">Home</a>
       <a href="aboutus.html">About Us</a>
       <a href="services.html">Services</a>
@@ -440,7 +559,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul>
         <li><a href="https://scalewithclicks.com/">Home</a></li>
         <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="blog.scalewithclicks.html">Blog</a></li>
+        <li><a href="blog.scalewithclicks.com">Blog</a></li>
         <li><a href="casestudy.html">Case Studies</a></li>
         <li><a href="contactus.html">Contact Us</a></li>
       </ul>
@@ -469,5 +588,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="tel:+919589188668" class="float-btn call">📞</a>
 </div>
 
+<script>
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+// CLOSE MENU AFTER CLICK
+document.querySelectorAll("#navLinks a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navLinks").classList.remove("active");
+  });
+});
+</script>
+  
 </body>
 </html>
