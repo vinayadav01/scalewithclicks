@@ -59,14 +59,16 @@ a{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  min-height:90px;
+  min-height:70px;
 }
 
 .brand-logo{
-  height:88px;
+  height:60px;
+  width:auto;
+  object-fit:contain;
+  display:block;
 }
-
-.nav-links{
+  .nav-links{
   display:flex;
   gap:18px;
   align-items:center;
@@ -402,6 +404,12 @@ a{
     min-height:70px;
   }
 
+@media(max-width:768px){
+  .brand-logo{
+    height:45px;
+  }
+}
+  
   .brand-logo{
     height:60px;
   }
