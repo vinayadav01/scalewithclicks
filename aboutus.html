@@ -230,7 +230,7 @@ a{
 .email-btn{background:#0ea5e9;}
 
 /* FOOTER */
-/* ===== NEW FOOTER ===== */
+/* ===== BETTER MOBILE FOOTER ===== */
 .footer{
   background:#020617;
   color:#94A3B8;
@@ -263,6 +263,7 @@ a{
 
 .footer ul{
   list-style:none;
+  padding:0;
 }
 
 .footer ul li{
@@ -286,20 +287,33 @@ a{
   font-size:14px;
 }
 
-/* MOBILE */
+/* ===== TABLET ===== */
 @media(max-width:992px){
-  .grid{
+  .footer-grid{
     grid-template-columns:repeat(2,1fr);
   }
 }
 
+/* ===== MOBILE FIX (IMPORTANT) ===== */
 @media(max-width:768px){
-  .footer-grid{grid-template-columns:1fr;}
-  .nav-wrap{flex-direction:column;padding:15px 0;}
-  .nav-links{flex-wrap:wrap;justify-content:center;margin-top:10px;}
-  .hero h1{font-size:32px;}
-  .grid{grid-template-columns:1fr;}
-  .brand-logo{height:74px;}
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+    padding:40px 20px;
+    text-align:left;
+  }
+
+  .footer-text{
+    max-width:100%;
+  }
+
+  .footer h3{
+    margin-top:10px;
+  }
+
+  .footer ul li{
+    margin-bottom:8px;
+  }
 }
 </style>
 </head>
