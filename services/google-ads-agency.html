@@ -168,6 +168,7 @@ p{color:#475569;}
 .email-btn{background:#2563eb;color:#fff;}
 
 /* FULL WIDTH FOOTER (CLEAN FIX) */
+/* FULL WIDTH BACKGROUND */
 .footer{
   background:#020617;
   color:#94A3B8;
@@ -175,30 +176,31 @@ p{color:#475569;}
   width:100%;
 }
 
-.footer-grid{
+/* THIS CONTROLS CONTENT WIDTH (like homepage container) */
+.footer-inner{
   max-width:1150px;
   margin:auto;
-  display:grid;
-
-  /* 🔥 FIX: equal + balanced columns */
-  grid-template-columns: 1.2fr 1fr 1fr 1fr;
-
-  gap:60px;
   padding:60px 20px;
-
-  /* 🔥 FIX: align everything from top */
-  align-items:start;
 }
 
-/* LOGO COLUMN */
+/* GRID */
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+  align-items:flex-start;
+}
+
+/* LOGO */
 .footer-logo{
   color:#fff;
   font-size:22px;
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
+/* TEXT FIX (your black text issue) */
 .footer-text{
-  max-width:260px;
+  color:#94A3B8;
   line-height:1.7;
 }
 
@@ -448,7 +450,8 @@ Yes, we work with businesses across US, UK, Europe, and Australia.</p>
 </section>
 
 <footer class="footer">
-  <div class="container footer-grid">
+  <div class="footer-inner">
+    <div class="footer-grid">
 
     <div>
       <h2 class="footer-logo">ScaleWithClicks</h2>
