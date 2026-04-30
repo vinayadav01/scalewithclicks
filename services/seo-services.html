@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4K2DXZK');</script>
+<!-- End Google Tag Manager -->
+  
 <title>SEO Services | SEO Agency for Organic Traffic & Lead Generation</title>
 <meta name="description" content="Looking for SEO services? We help businesses rank on Google, increase organic traffic, and generate leads with data-driven SEO strategies. Book a free strategy call.">
 
@@ -23,7 +31,7 @@ body{
 
 /* CONTAINER */
 .container{
-  max-width:1100px;
+  max-width:1150px;
   margin:auto;
   padding:20px;
 }
@@ -177,24 +185,61 @@ p{color:#475569;}
   font-weight:600;
 }
 
-/* FOOTER */
-.main-footer{
-  background:#0f172a;
-  color:#cbd5e1;
-  text-align:center;
-  padding:25px;
-  margin-top:50px;
+.footer{
+  background:#020617;
+  color:#94A3B8;
+  width:100%;
 }
 
-.footer-links{
+.footer-grid{
+  max-width:1150px; /* match container */
+  margin:0 auto;
+  padding:60px 20px;
+
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:40px;
+}
+
+.footer-logo{
+  color:#fff;
   margin-bottom:10px;
 }
 
-.footer-links a{
-  color:#cbd5e1;
-  margin:0 8px;
+.footer-text{
+  max-width:280px;
+  line-height:1.7;
 }
 
+.footer h3{
+  color:#fff;
+  margin-bottom:12px;
+}
+
+.footer ul{
+  list-style:none;
+  padding:0;
+}
+
+.footer ul li{
+  margin-bottom:10px;
+}
+
+.footer a{
+  color:#94A3B8;
+  text-decoration:none;
+}
+
+.footer a:hover{
+  color:#fff;
+}
+
+.footer-bottom{
+  text-align:center;
+  border-top:1px solid #1E293B;
+  padding:18px;
+}
+  
 /* MOBILE */
 @media(max-width:768px){
   h1{font-size:28px;}
@@ -205,11 +250,17 @@ p{color:#475569;}
 
 <body>
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4K2DXZK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="container nav-wrap">
-      <a href="/" style="display:flex; align-items:center;">
-  <img src="logo.png" alt="Scale with Clicks Logo" class="brand-logo">
+       <a href="/" style="display:flex; align-items:center;">
+  <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
 </a>
 
     <nav class="nav-links">
@@ -373,14 +424,69 @@ Let’s build a strategy that brings consistent traffic and leads to your busine
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="main-footer">
-  <div class="footer-links">
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="terms-conditions.html">Terms & Conditions</a>
+<footer class="footer">
+
+  <div class="footer-grid">
+
+    <div>
+      <h2 class="footer-logo">ScaleWithClicks</h2>
+      <p class="footer-text">
+        Helping businesses generate leads using Ads, SEO & tracking.
+      </p>
+    </div>
+
+    <div>
+      <h3>Services</h3>
+      <ul>
+        <li><a href="/services/google-ads-agency.html">Google Ads</a></li>
+        <li><a href="/services/meta-ads-agency.html">Meta Ads</a></li>
+        <li><a href="/services/seo-services.html">SEO</a></li>
+        <li><a href="/services/conversion-tracking.html">Conversion Tracking</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="../aboutus.html">About Us</a></li>
+        <li><a href="https://blog.scalewithclicks.com" target="_blank">Blog</a></li>
+        <li><a href="../casestudy.html">Case Studies</a></li>
+        <li><a href="../contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="../terms-conditions.html">Terms</a></li>
+        <li><a href="../disclaimer.html">Disclaimer</a></li>
+      </ul>
+    </div>
+
   </div>
-  <p>© 2026 Scale with Clicks</p>
+
+  <div class="footer-bottom">
+    © 2026 ScaleWithClicks
+  </div>
+
 </footer>
 
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+
+// CLOSE MENU AFTER CLICK (safe load)
+window.addEventListener("DOMContentLoaded", function(){
+  document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+      document.getElementById("navMenu").classList.remove("active");
+    });
+  });
+});
+</script>
+  
 </body>
 </html>
