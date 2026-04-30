@@ -66,11 +66,17 @@ body{
   font-weight:500;
 }
 
-.nav-btn{
-  background:#2563eb;
-  color:#fff;
-  padding:10px 18px;
-  border-radius:25px;
+.nav-btn {
+  background: transparent;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  padding:8px 16px;
+  border-radius:20px;
+}
+
+.nav-btn:hover {
+  background: #2563eb;
+  color: #fff;
 }
 
 /* HERO */
@@ -177,6 +183,18 @@ p{color:#475569;}
   font-weight:600;
 }
 
+.call-btn,
+.email-btn,
+.btn {
+  text-decoration: none;
+}
+
+.call-btn:hover,
+.email-btn:hover,
+.btn:hover {
+  text-decoration: none;
+}  
+
 .email-btn{
   background:#2563eb;
   color:#fff;
@@ -201,9 +219,9 @@ p{color:#475569;}
   gap:40px;
 }
 
-.footer-logo{
-  color:#fff;
-  margin-bottom:10px;
+.footer-logo {
+  color: #ffffff;
+  font-weight: 800;
 }
 
 .footer-text{
@@ -222,7 +240,7 @@ p{color:#475569;}
 }
 
 .footer ul li{
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
 .footer a{
@@ -245,6 +263,71 @@ p{color:#475569;}
   h1{font-size:28px;}
 }
 
+@media(max-width:768px){
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .footer-text{
+    margin:auto;
+  }
+}
+
+@media(max-width:768px){
+
+  .contact-buttons{
+    flex-direction:column;
+    gap:12px;
+  }
+
+}
+
+/* MOBILE NAV FIX */
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* Mobile styles */
+@media(max-width:768px){
+
+  .brand-logo{
+    height:60px;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:100%;
+    right:0;
+    background:#fff;
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+    padding:20px 0;
+    display:none;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:10px 0;
+  }
+
+  .footer-grid{
+    padding:40px 20px;
+  }
+}  
+  
 </style>
 </head>
 
@@ -263,7 +346,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
 </a>
 
-    <nav class="nav-links">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav class="nav-links" id="navMenu">
       <a href="../index.html">Home</a>
       <a href="../aboutus.html">About</a>
       <a href="../services.html">Services</a>
@@ -478,8 +563,7 @@ function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("active");
 }
 
-// CLOSE MENU AFTER CLICK (safe load)
-window.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function(){
   document.querySelectorAll("#navMenu a").forEach(link => {
     link.addEventListener("click", () => {
       document.getElementById("navMenu").classList.remove("active");
