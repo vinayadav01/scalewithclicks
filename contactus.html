@@ -344,6 +344,16 @@ form textarea{
   color:#a78bfa;
 }
 
+/* FORCE FOOTER LINK COLOR */
+.footer a{
+  color:#7c3aed !important;
+  text-decoration:none;
+}
+
+.footer a:hover{
+  color:#a78bfa !important;
+}  
+
 /* BOTTOM */
 .footer-bottom{
   text-align:center;
@@ -368,11 +378,19 @@ form textarea{
   }
 }
   
-/* FLOAT BUTTONS */
-.whatsapp{
+/* FLOAT BUTTONS FIX */
+.floating-contact{
   position:fixed;
-  left:18px;
   bottom:18px;
+  left:18px;
+  right:18px;
+  display:flex;
+  justify-content:space-between;
+  z-index:999;
+}
+
+/* WhatsApp (LEFT) */
+.whatsapp{
   width:58px;
   height:58px;
   border-radius:50%;
@@ -382,20 +400,19 @@ form textarea{
   align-items:center;
   justify-content:center;
   font-size:26px;
-  z-index:999;
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-.sticky-cta{
-  position:fixed;
-  right:18px;
-  bottom:18px;
+/* Call Button (RIGHT) */
+.call{
   background:linear-gradient(135deg,#0ea5e9,#2563eb);
   color:#fff;
   padding:14px 20px;
   border-radius:40px;
   font-weight:700;
-  z-index:999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
