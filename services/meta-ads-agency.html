@@ -199,21 +199,20 @@ a:hover{text-decoration:underline;}
 .footer{
   background:#020617;
   color:#94A3B8;
-
-  width:100vw;
-  position:relative;
-  left:50%;
-  right:50%;
-  margin-left:-50vw;
-  margin-right:-50vw;
+  width:100%;
 }
 
 /* INNER CONTENT (CENTERED) */
 .footer-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:40px;
+  max-width:1150px;   /* match container */
+  margin:auto;        /* CENTER it */
   padding:60px 20px;
+  
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:40px;
+  
+  align-items:start;
 }
   
 /* TEXT */
@@ -225,6 +224,7 @@ a:hover{text-decoration:underline;}
 .footer-text{
   color:#94A3B8;
   line-height:1.7;
+  max-width:280px;
 }
 
 .footer h3{
