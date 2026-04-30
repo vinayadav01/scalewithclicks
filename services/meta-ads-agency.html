@@ -195,7 +195,6 @@ a:hover{text-decoration:underline;}
   font-weight:600;
 }
 
-/* SIMPLE FOOTER (CLEAN + FULL WIDTH) */
 /* FULL WIDTH FOOTER (FIXED LIKE GOOGLE ADS PAGE) */
 .footer{
   background:#020617;
@@ -211,16 +210,12 @@ a:hover{text-decoration:underline;}
 
 /* INNER CONTENT (CENTERED) */
 .footer-grid{
-  align-items:start;
-  max-width:1150px;
-  margin:auto;
-  padding:60px 20px;
-
   display:grid;
-  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  grid-template-columns:repeat(4,1fr);
   gap:40px;
+  padding:60px 20px;
 }
-
+  
 /* TEXT */
 .footer-logo{
   color:#fff;
