@@ -301,6 +301,41 @@ body{
   .hero h1{font-size:32px;}
   .section h2{font-size:26px;}
 }
+
+.menu-btn{
+  display:none;
+  background:none;
+  border:none;
+  font-size:26px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* MOBILE FIX */
+@media(max-width:768px){
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav-links{
+    width:100%;
+    flex-direction:column;
+    display:none;
+    background:#0f172a;
+    padding:15px;
+  }
+
+  .nav-links a{
+    padding:10px 0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+}
+  
 </style>
 </head>
 
@@ -316,6 +351,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <a href="/" style="display:flex; align-items:center;">
   <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
 </a>
+
+ <button class="menu-btn" onclick="toggleMenu()">☰</button> 
 
   <div class="nav-links">
     <a href="https://scalewithclicks.com/">Home</a>
@@ -568,6 +605,12 @@ document.querySelectorAll('.fade').forEach(el=>{
   observer.observe(el);
 });
 </script>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+</script>  
 
 </body>
 </html>
