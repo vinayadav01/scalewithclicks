@@ -25,7 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 body{
   font-family:'Poppins',sans-serif;
   color:#0f172a;
-  background:#f8fafc;
+  background:#ffffff;
   line-height:1.6;
 }
 
@@ -167,38 +167,24 @@ p{color:#475569;}
 .call-btn{background:#10b981;color:#fff;}
 .email-btn{background:#2563eb;color:#fff;}
 
-/* ===== FOOTER FULL WIDTH FIX ===== */
+/* FULL WIDTH FOOTER (CLEAN FIX) */
 .footer{
   background:#0b1324;
   width:100%;
   padding:80px 0 40px;
 }
 
-.footer{
-  background:#0b1324;
-  padding:80px 0 40px;
-
-  /* 🔥 FORCE TRUE FULL WIDTH */
-  margin-left:calc(50% - 50vw);
-  margin-right:calc(50% - 50vw);
-}  
-
-/* REMOVE any side gap */
-body{
-  overflow-x:hidden;
-}
-
-/* CENTER CONTENT (same as homepage) */
+/* Center content inside footer */
 .footer-grid{
-  max-width:1200px;
-  margin:auto;
+  max-width:1100px;
+  margin:0 auto;
   padding:0 20px;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:40px;
 }
 
-/* BRAND */
+/* TEXT */
 .footer-logo{
   color:#fff;
   font-size:22px;
@@ -211,13 +197,11 @@ body{
   line-height:1.7;
 }
 
-/* HEADINGS */
 .footer h3{
   color:#fff;
   margin-bottom:10px;
 }
 
-/* LINKS */
 .footer ul{
   list-style:none;
 }
@@ -235,12 +219,6 @@ body{
   color:#ffffff;
 }
 
-/* REMOVE UNDERLINE */
-.footer a{
-  text-decoration:none !important;
-}
-
-/* BOTTOM */
 .footer-bottom{
   text-align:center;
   margin-top:40px;
@@ -256,6 +234,8 @@ body{
     text-align:center;
   }
 }
+  }
+  
 /* FLOAT BUTTONS */
 .floating-contact{
   position:fixed;
