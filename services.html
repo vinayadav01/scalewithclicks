@@ -17,7 +17,61 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
+<style>
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.service-card{
+  padding:30px;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between; /* KEY FIX */
+  min-height:220px; /* force equal height */
+  transition:0.3s;
+}
+
+.service-card:hover{
+  transform:translateY(-6px);
+}
+
+.card1{background:linear-gradient(135deg,#0ea5e9,#2563eb); color:#fff;}
+.card2{background:linear-gradient(135deg,#10b981,#059669); color:#fff;}
+.card3{background:linear-gradient(135deg,#8b5cf6,#7c3aed); color:#fff;}
+.card4{background:linear-gradient(135deg,#f97316,#ea580c); color:#fff;}
+
+.service-card h3{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.service-card p{
+  opacity:0.95;
+  line-height:1.6;
+}  
+.service-card a{
+  text-decoration:none;
+  color:inherit;
+  display:block;
+  height:100%;
+}
+.service-card{
+  cursor:pointer;
+}
+.service-card:hover{
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}  
+</style>
+ 
 </head>
 
 <body>
@@ -67,41 +121,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <div class="services-grid">
 
-      <a href="/services/google-ads-agency.html">
-        <div class="card">
-          <div class="icon">🎯</div>
-          <h3>Google Ads</h3>
-          <p>High-converting campaigns for leads and sales.</p>
-        </div>
-      </a>
-
-      <a href="/services/meta-ads-agency.html">
-        <div class="card">
-          <div class="icon">📣</div>
-          <h3>Meta Ads</h3>
-          <p>Facebook & Instagram growth campaigns.</p>
-        </div>
-      </a>
-
-      <a href="/services/seo-services.html">
-        <div class="card">
-          <div class="icon">🔍</div>
-          <h3>SEO Services</h3>
-          <p>Rank higher and generate organic leads.</p>
-        </div>
-      </a>
-
-      <a href="/services/conversion-tracking.html">
-        <div class="card">
-          <div class="icon">📊</div>
-          <h3>Conversion Tracking</h3>
-          <p>Accurate tracking for better decisions.</p>
-        </div>
-      </a>
-
-    </div>
-
+  <!-- CARD 1 -->
+  <div class="service-card card1">
+    <a href="/services/google-ads-agency.html">
+      <div class="icon">🎯</div>
+      <h3>Google Ads</h3>
+      <p>High-converting campaigns for leads and sales.</p>
+    </a>
   </div>
+
+  <!-- CARD 2 -->
+  <div class="service-card card2">
+    <a href="/services/meta-ads-agency.html">
+      <div class="icon">📣</div>
+      <h3>Meta Ads</h3>
+      <p>Facebook & Instagram growth campaigns.</p>
+    </a>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="service-card card3">
+    <a href="/services/seo-services.html">
+      <div class="icon">🔍</div>
+      <h3>SEO Services</h3>
+      <p>Rank higher and generate organic leads.</p>
+    </a>
+  </div>
+
+  <!-- CARD 4 -->
+  <div class="service-card card4">
+    <a href="/services/conversion-tracking.html">
+      <div class="icon">📊</div>
+      <h3>Conversion Tracking</h3>
+      <p>Accurate tracking for better decisions.</p>
+    </a>
+  </div>
+</div>
+</div>
+    
 </section>
 
 <!-- WHY -->
