@@ -12,13 +12,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-M4K2DXZK');</script>
 <!-- End Google Tag Manager -->
 
-  
 <title>Google Ads Agency | ROI-Focused PPC Management Services</title>
 <meta name="description" content="Looking for a Google Ads agency? We help businesses scale with high-converting PPC campaigns, lower CPA, and higher ROI. Book a free strategy call.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- ONLY CSS CHANGES BELOW (replace your CSS with this updated part) -->
 
 <style>
 
@@ -30,6 +27,12 @@ body{
   color:#0f172a;
   background:#f8fafc;
   line-height:1.6;
+}
+
+/* GLOBAL FIX */
+a{
+  text-decoration:none !important;
+  color:inherit;
 }
 
 /* CONTAINER */
@@ -63,12 +66,6 @@ body{
   align-items:center;
 }
 
-.nav-links a{
-  text-decoration:none;
-  color:#0f172a;
-  font-weight:500;
-}
-
 .nav-btn{
   background:#2563eb;
   color:#fff;
@@ -98,13 +95,6 @@ p{color:#475569;}
   color:#fff;
   border-radius:10px;
   font-weight:600;
-  text-decoration:none;
-  transition:.3s;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 25px rgba(37,99,235,0.3);
 }
 
 /* SECTION */
@@ -121,7 +111,7 @@ p{color:#475569;}
   box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
-/* ✅ CTA FIX (FULL WIDTH LOOK) */
+/* CTA FIX */
 .cta{
   background:linear-gradient(135deg,#0ea5e9,#2563eb);
   color:#fff;
@@ -143,8 +133,6 @@ p{color:#475569;}
 .cta .btn{
   background:#fff;
   color:#2563eb;
-  font-weight:700;
-  border-radius:12px;
 }
 
 /* CONTACT */
@@ -160,28 +148,29 @@ p{color:#475569;}
 }
 
 .contact-buttons{
-  margin-top:20px;
   display:flex;
   justify-content:center;
   gap:20px;
   flex-wrap:wrap;
+  margin-top:20px;
 }
 
-.call-btn,.email-btn{
-  text-decoration:none;
-  padding:12px 26px;
-  border-radius:30px;
+.contact-btn{
+  padding:14px 28px;
+  border-radius:40px;
   font-weight:600;
-  color:#fff;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
 }
 
-.call-btn{background:#10b981;}
-.email-btn{background:#2563eb;}
+.call-btn{background:#10b981;color:#fff;}
+.email-btn{background:#2563eb;color:#fff;}
 
-/* ✅ PERFECT FOOTER (HOMEPAGE MATCH) */
+/* ===== FOOTER EXACT MATCH ===== */
 .footer{
   background:#0b1324;
-  padding:80px 0 40px; /* remove side padding */
+  padding:80px 0 40px;
 }
 
 .footer-grid{
@@ -219,19 +208,10 @@ p{color:#475569;}
 
 .footer ul li a{
   color:#94a3b8;
-  text-decoration:none;
 }
 
 .footer ul li a:hover{
   color:#fff;
-}
-
-/* REMOVE ALL UNDERLINES */
-.footer a,
-.contact-btn,
-.call-btn,
-.email-btn{
-  text-decoration:none !important;
 }
 
 .footer-bottom{
@@ -242,7 +222,29 @@ p{color:#475569;}
   color:#94a3b8;
 }
 
-/* MOBILE */
+/* FLOAT BUTTONS */
+.floating-contact{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.float-btn{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
+
+.whatsapp{background:#25D366;}
+.call{background:linear-gradient(135deg,#0ea5e9,#2563eb);}
+
 @media(max-width:768px){
   .footer-grid{
     grid-template-columns:1fr;
@@ -258,13 +260,14 @@ p{color:#475569;}
 <!-- GTM NOSCRIPT -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4K2DXZK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  
+
 <!-- NAVBAR -->
 <header class="navbar">
 <div class="container nav-wrap">
-  <a href="/">
-  <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
+<a href="/">
+<img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
 </a>
+
 <nav class="nav-links">
 <a href="https://scalewithclicks.com/">Home</a>
 <a href="../aboutus.html">About</a>
@@ -423,6 +426,7 @@ Yes, we work with businesses across US, UK, Europe, and Australia.</p>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-grid">
 
@@ -469,6 +473,12 @@ Yes, we work with businesses across US, UK, Europe, and Australia.</p>
     © 2026 ScaleWithClicks
   </div>
 </footer>
+
+<!-- FLOAT BUTTONS -->
+<div class="floating-contact">
+  <a href="https://wa.me/919589188668" class="float-btn whatsapp">💬</a>
+  <a href="tel:+919589188668" class="float-btn call">📞</a>
+</div>  
 
 </body>
 </html>
