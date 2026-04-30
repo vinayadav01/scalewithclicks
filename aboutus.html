@@ -31,11 +31,12 @@ body{
 a{text-decoration:none;}
 
 .container{
-  max-width:1200px;
+  max-width:1150px;
   margin:auto;
   padding:0 20px;
 }
 
+/* NAVBAR */
 /* NAVBAR */
 .navbar{
   position:sticky;
@@ -43,20 +44,21 @@ a{text-decoration:none;}
   z-index:1000;
   background:#ffffff;
   box-shadow:0 4px 18px rgba(0,0,0,0.05);
+  padding:18px 0; /* 🔥 increased height */
 }
 
 .nav-wrap{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:20px;
+  gap:30px;
 }
 
-/* ✅ FIXED LOGO */
+/* LOGO FIX */
 .brand-logo{
-  height:50px;
+  height:60px; /* 🔥 bigger logo */
   width:auto;
-  max-width:150px;
+  max-width:180px;
   object-fit:contain;
   display:block;
 }
@@ -64,13 +66,14 @@ a{text-decoration:none;}
 /* NAV LINKS */
 .nav-links{
   display:flex;
-  gap:18px;
+  gap:22px; /* more spacing */
   align-items:center;
 }
 
 .nav-links a{
   color:#0f172a;
   font-weight:500;
+  font-size:16px; /* 🔥 slightly bigger */
 }
 
 .nav-links a:hover{
@@ -82,6 +85,10 @@ a{text-decoration:none;}
   color:#fff !important;
   padding:10px 16px;
   border-radius:30px;
+}
+
+  .navbar{
+  backdrop-filter: blur(10px);
 }
 
 /* HERO */
