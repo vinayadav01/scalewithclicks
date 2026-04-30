@@ -177,25 +177,18 @@ p{color:#475569;}
   background:#020617;
   color:#94A3B8;
   margin-top:60px;
-
-  width:100vw;                 /* 👈 FULL WIDTH */
-  position:relative;
-  left:50%;
-  right:50%;
-  margin-left:-50vw;           /* 👈 FORCE FULL BLEED */
-  margin-right:-50vw;
+  width:100%;              /* ✅ simple & correct */
 }
-  
-/* THIS CONTROLS CONTENT WIDTH (like homepage container) */
-.footer-inner{
-  max-width:1150px;
-  margin:auto;
+
+.footer-grid{
+  max-width:1150px;        /* ✅ same as container */
+  margin:0 auto;           /* ✅ center properly */
   padding:60px 20px;
-}
 
-.footer .container{
-  padding-left:20px;
-  padding-right:20px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+  align-items:flex-start;
 }
   
 /* GRID */
@@ -467,7 +460,7 @@ Yes, we work with businesses across US, UK, Europe, and Australia.</p>
 </section>
 
 <footer class="footer">
-   <div class="container footer-grid">
+   <div class="footer-grid">
 
     <div>
       <h2 class="footer-logo">ScaleWithClicks</h2>
