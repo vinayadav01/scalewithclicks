@@ -177,9 +177,15 @@ p{color:#475569;}
   background:#020617;
   color:#94A3B8;
   margin-top:60px;
-  width:100%;              /* ✅ simple & correct */
-}
 
+  width:100vw;                 /* 👈 FULL WIDTH */
+  position:relative;
+  left:50%;
+  right:50%;
+  margin-left:-50vw;           /* 👈 FORCE FULL BLEED */
+  margin-right:-50vw;
+}
+  
 .footer-grid{
   max-width:1150px;        /* ✅ same as container */
   margin:0 auto;           /* ✅ center properly */
