@@ -29,10 +29,6 @@ body{
   line-height:1.6;
 }
 
-body{
-  background:red;
-}  
-
 /* GLOBAL FIX */
 a{
   text-decoration:none !important;
@@ -176,9 +172,16 @@ p{color:#475569;}
   background:#020617;
   color:#94A3B8;
   margin-top:60px;
-  width:100%;
-}
 
+  /* 🔥 FORCE FULL WIDTH */
+  width:100vw;
+  position:relative;
+  left:50%;
+  right:50%;
+  margin-left:-50vw;
+  margin-right:-50vw;
+}
+  
 /* controls width (same as homepage) */
 .footer-inner{
   max-width:1150px;
