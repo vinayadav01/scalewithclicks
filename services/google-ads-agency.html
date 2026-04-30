@@ -19,9 +19,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <style>
 
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
-
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+  
 body{
   font-family:'Poppins',sans-serif;
   color:#0f172a;
@@ -168,16 +172,20 @@ p{color:#475569;}
 .call-btn{background:#10b981;color:#fff;}
 .email-btn{background:#2563eb;color:#fff;}
 
-/* FULL WIDTH FOOTER (CLEAN FIX) */
 /* FULL WIDTH BACKGROUND */
 .footer{
   background:#020617;
   color:#94A3B8;
   margin-top:60px;
-  width:100%;
-  overflow:hidden;
-}
 
+  width:100vw;                 /* 👈 FULL WIDTH */
+  position:relative;
+  left:50%;
+  right:50%;
+  margin-left:-50vw;           /* 👈 FORCE FULL BLEED */
+  margin-right:-50vw;
+}
+  
 /* THIS CONTROLS CONTENT WIDTH (like homepage container) */
 .footer-inner{
   max-width:1150px;
