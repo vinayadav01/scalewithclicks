@@ -440,15 +440,52 @@ Yes, we work with businesses across US, UK, Europe, and Australia.</p>
   </div>
 </section>
 
-<div id="footer-placeholder"></div>
+<footer class="footer">
+  <div class="container footer-grid">
 
-<script>
-fetch("/components/footer.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("footer-placeholder").innerHTML = data;
-  });
-</script>
+    <div>
+      <h2 class="footer-logo">ScaleWithClicks</h2>
+      <p class="footer-text">
+        Helping businesses generate leads using Ads, SEO & tracking.
+      </p>
+    </div>
+
+    <div>
+      <h3>Services</h3>
+      <ul>
+        <li><a href="/services/google-ads-agency.html">Google Ads</a></li>
+        <li><a href="/services/meta-ads-agency.html">Meta Ads</a></li>
+        <li><a href="/services/seo-services.html">SEO</a></li>
+        <li><a href="/services/conversion-tracking.html">Conversion Tracking</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="../aboutus.html">About Us</a></li>
+        <li><a href="https://blog.scalewithclicks.com">Blog</a></li>
+        <li><a href="../casestudy.html">Case Studies</a></li>
+        <li><a href="../contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="../terms-conditions.html">Terms</a></li>
+        <li><a href="../disclaimer.html">Disclaimer</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 ScaleWithClicks
+  </div>
+</footer>
   
 <!-- FLOAT BUTTONS -->
 <div class="floating-contact">
