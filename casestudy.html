@@ -459,7 +459,7 @@ section{
     background:#fff;
     border-top:1px solid #e2e8f0;
     flex-direction:column;
-    align-items:flex-start;
+    align-items:center;
     padding:18px 20px;
     display:none;
   }
@@ -728,5 +728,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="tel:+919589188668" class="float-btn call">📞</a>
 </div>
 
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.classList.toggle("show");
+}
+
+document.querySelectorAll("#navMenu a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navMenu").classList.remove("show");
+  });
+});
+</script>
 </body>
 </html>
