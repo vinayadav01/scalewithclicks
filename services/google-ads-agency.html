@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4K2DXZK');</script>
+<!-- End Google Tag Manager -->
+
+  
 <title>Google Ads Agency | ROI-Focused PPC Management Services</title>
 <meta name="description" content="Looking for a Google Ads agency? We help businesses scale with high-converting PPC campaigns, lower CPA, and higher ROI. Book a free strategy call.">
 
@@ -99,14 +108,45 @@ a{text-decoration:none;color:inherit;}
   box-shadow:0 8px 20px rgba(0,0,0,0.04);
 }
 
-/* CTA */
-.cta{
-  background:linear-gradient(135deg,#0ea5e9,#2563eb);
-  color:#fff;
-  text-align:center;
-  padding:40px 20px;
-  border-radius:16px;
-  margin:60px auto;
+.cta {
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 20px;
+  margin: 60px auto;
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.25);
+}
+
+/* Heading */
+.cta h2 {
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+/* Subtext (IMPORTANT FIX) */
+.cta p {
+  color: rgba(255, 255, 255, 0.85);  /* 🔥 readable now */
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+/* Button (MATCHES OTHER PAGE) */
+.cta .btn {
+  background: #ffffff;
+  color: #2563eb;
+  font-weight: 700;
+  border-radius: 12px;
+  margin-top: 25px;
+  display: inline-block;
+}
+
+/* Hover */
+.cta .btn:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
 }
 
 /* 🔥 CONTACT CTA (FIXED) */
@@ -152,36 +192,82 @@ a{text-decoration:none;color:inherit;}
   color:#fff;
 }
 
-/* FOOTER */
-.main-footer{
-  background:#0f172a;
-  color:#cbd5e1;
-  text-align:center;
-  padding:25px;
-  margin-top:60px;
+.footer {
+  background: #0b1324;
+  color: #cbd5e1;
+  padding: 60px 20px 30px;
 }
 
-.footer-links{
-  margin-bottom:10px;
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-logo {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  color: #94a3b8;
+  max-width: 250px;
+}
+
+.footer h3 {
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #38bdf8;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: #94a3b8;
 }
 
 /* MOBILE */
-@media(max-width:768px){
-  h1{font-size:30px;}
+@media(max-width: 768px){
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
 }
-
 </style>
 </head>
 
 <body>
 
+<!-- GTM NOSCRIPT -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4K2DXZK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
 <!-- NAVBAR -->
 <header class="navbar">
 <div class="container nav-wrap">
-  <a href="/" style="display:flex; align-items:center;">
-  <img src="logo.png" alt="Scale with Clicks Logo" class="brand-logo">
+  <a href="/">
+  <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
 </a>
-
 <nav class="nav-links">
 <a href="https://scalewithclicks.com/">Home</a>
 <a href="../aboutus.html">About</a>
@@ -312,19 +398,19 @@ Yes, we work with businesses across US, UK, Europe, and Australia.</p>
 </div>
 </div>
 
-<!-- CTA -->
 <div class="cta">
-<h2>Ready to Scale with Google Ads?</h2>
+  <div class="container">
+    <h2>Ready to Scale with Google Ads?</h2>
+    <p>
+      Stop wasting money on underperforming campaigns. Let’s build a strategy that actually works.
+    </p>
 
-<p>
-Stop wasting money on underperforming campaigns. Let’s build a strategy that actually works.
-</p>
-
-<a href="https://calendly.com/vinayyadav01992" class="btn">Book Free Strategy Call</a>
+    <a href="https://calendly.com/vinayyadav01992" class="btn">
+      Book Free Strategy Call
+    </a>
+  </div>
 </div>
-
-</div>
-
+  
 <!-- ✅ CONTACT FIXED -->
 <section class="contact-section">
   <div class="contact-container">
@@ -340,13 +426,51 @@ Stop wasting money on underperforming campaigns. Let’s build a strategy that a
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="main-footer">
-  <div class="footer-links">
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="terms-conditions.html">Terms & Conditions</a>
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <h2 class="footer-logo">ScaleWithClicks</h2>
+      <p class="footer-text">
+        Helping businesses generate leads using Ads, SEO & tracking.
+      </p>
+    </div>
+
+    <div>
+      <h3>Services</h3>
+      <ul>
+        <li><a href="/services/google-ads-agency.html">Google Ads</a></li>
+        <li><a href="/services/meta-ads-agency.html">Meta Ads</a></li>
+        <li><a href="/services/seo-services.html">SEO</a></li>
+        <li><a href="/services/conversion-tracking.html">Conversion Tracking</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/aboutus.html">About Us</a></li>
+        <li><a href="https://blog.scalewithclicks.com" target="_blank">Blog</a></li>
+        <li><a href="/casestudy.html">Case Studies</a></li>
+        <li><a href="/contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/terms-conditions.html">Terms</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+      </ul>
+    </div>
+
   </div>
-  <p>© 2026 Scale with Clicks</p>
+
+  <div class="footer-bottom">
+    © 2026 ScaleWithClicks
+  </div>
 </footer>
 
 </body>
