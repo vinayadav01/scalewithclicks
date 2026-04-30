@@ -318,28 +318,76 @@ section{
 /* FOOTER */
 .footer{
   background:#0f172a;
-  text-align:center;
-  padding:22px 20px;
+  color:#cbd5e1;
+  padding:60px 20px 25px;
 }
 
-.footer-links{
-  margin-bottom:10px;
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+  max-width:1200px;
+  margin:auto;
 }
 
-.footer-links a{
-  color:#38bdf8;
-  margin:0 8px;
+.footer h2,
+.footer h3{
+  color:#ffffff;
+  margin-bottom:12px;
 }
 
-.footer-links span{
+.footer-logo{
+  font-size:22px;
+  font-weight:700;
+}
+
+.footer-text{
+  font-size:14px;
+  line-height:1.7;
   color:#94a3b8;
 }
 
-.footer p{
-  color:#cbd5e1;
-  font-size:14px;
+.footer ul{
+  list-style:none;
+  padding:0;
 }
 
+.footer ul li{
+  margin-bottom:8px;
+}
+
+.footer ul li a{
+  color:#38bdf8;
+  font-size:14px;
+  transition:.3s;
+}
+
+.footer ul li a:hover{
+  color:#0ea5e9;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:40px;
+  font-size:14px;
+  color:#94a3b8;
+  border-top:1px solid rgba(255,255,255,0.08);
+  padding-top:18px;
+}
+
+/* MOBILE FIX */
+@media(max-width:992px){
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+  .footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+}
 /* FLOAT BUTTONS */
 .whatsapp{
   position:fixed;
@@ -617,7 +665,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="container footer-grid">
+  <div class="footer-grid">
 
     <div>
       <h2 class="footer-logo">ScaleWithClicks</h2>
@@ -641,7 +689,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul>
         <li><a href="https://scalewithclicks.com/">Home</a></li>
         <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="blog.scalewithclicks.com">Blog</a></li>
         <li><a href="casestudy.html">Case Studies</a></li>
         <li><a href="contactus.html">Contact Us</a></li>
       </ul>
