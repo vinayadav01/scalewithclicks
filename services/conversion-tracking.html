@@ -320,11 +320,16 @@ p{color:#475569;}
 
 .float-btn {
   text-decoration: none !important;
-  display: flex;            /* 🔥 FIX */
+  display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 0;           /* removes inline baseline gap */
-}  
+  line-height: 0;
+  font-size: 22px;          /* control emoji size */
+}
+
+.float-btn::after {
+  display: none !important;
+}
   
 </style>
 </head>
@@ -339,8 +344,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="container nav-wrap">
-      <a href="/" style="display:flex; align-items:center;">
-  <img src="logo.png" alt="Scale with Clicks Logo" class="brand-logo">
+      <a href="/">
+  <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
 </a>
 
     <nav class="nav-links">
