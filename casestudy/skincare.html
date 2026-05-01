@@ -209,20 +209,38 @@ button{
   font-weight:700;
 }
 
-/* WHATSAPP */
+/* FLOAT BUTTONS */
 .whatsapp{
   position:fixed;
+  bottom:15px;
   right:20px;
-  bottom:20px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
   background:#25D366;
   color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-decoration:none;
-  padding:14px;
-  border-radius:50%;
-  font-size:20px;
+  font-size:24px;
   z-index:999;
 }
-.back-btn{
+
+.sticky-cta{
+  position:fixed;
+  bottom:80px;
+  right:20px;
+  padding:14px 18px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#2563eb,#22c55e);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+  z-index:999;
+}
+  .back-btn{
   text-align:center;   /* centers the button */
   margin-top:40px;
 }
@@ -476,7 +494,12 @@ Book Free Call
   
 </div>
 
+<!-- FLOAT BUTTONS -->
 <a href="https://wa.me/9589188668" class="whatsapp">💬</a>
+
+<button class="sticky-cta" onclick="openPopup()">
+🚀 Get Free Leads Plan
+</button>
 
 <div class="footer">
 © 2026 Vinay Yadav | Performance Marketing Consultant
