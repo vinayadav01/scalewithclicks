@@ -50,12 +50,13 @@ body{
   -webkit-text-fill-color:transparent;
 }
 
-.nav-links{
+.nav-links a{
   display:flex;
-  flex-wrap:wrap;
-  gap:10px;
+  align-items:center;
+  height:36px;
+  padding:0 12px;
+  white-space:nowrap;
 }
-
 .nav-links a{
   text-decoration:none;
   color:#475569;
@@ -380,11 +381,10 @@ tr:hover{
 .nav-container{
   max-width:1400px;
   margin:auto;
-  padding:10px 20px; /* reduced */
+  padding:0 20px; /* reduced */
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:20px;              /* IMPORTANT */
   height:60px; /* FIX: keeps navbar tight */
 }  
 
@@ -408,16 +408,25 @@ tr:hover{
   .navbar a{
   display:flex;
   align-items:center;
+  height:100%;
+
 }
 .navbar img{
   display:block;
 }
-  .nav-links{
-   display:none;
-    overflow-x:auto;
-    white-space:nowrap;
-    width:100%;
-  }
+ .nav-links{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  flex-wrap:nowrap;          /* force single line */
+  overflow-x:auto;           /* scroll if needed */
+  scrollbar-width:none;      /* hide scrollbar (Firefox) */
+}
+
+.nav-links::-webkit-scrollbar{
+  display:none;              /* hide scrollbar (Chrome) */
+}
 }
 
 </style>
