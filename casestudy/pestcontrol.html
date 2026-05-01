@@ -32,10 +32,10 @@ body{
 
 /* NAVBAR */
 .navbar{
-  background:#0f172a;
+  background:#ffffff;
+  border-bottom:1px solid #e2e8f0;
   padding:10px 0;
- }
-
+}
 .brand-logo{
   height:36px;   /* adjust 32–40 as you like */
   width:auto;
@@ -54,14 +54,14 @@ body{
 }
 
 .nav-links a{
-  color:#fff;
+  color:#334155;
   text-decoration:none;
   font-size:14px;
   transition:0.3s;
 }
 
 .nav-links a:hover{
-  color:#38bdf8;
+  color:#2563eb;
 }
 
 /* HERO */
@@ -288,19 +288,25 @@ th{
 /* BACK BUTTON */
 .back-wrap{
   text-align:center;
-  margin:35px 0 10px;
+  margin:50px 0;
 }
 
 .back-btn{
   display:inline-block;
-  padding:12px 26px;
+  padding:14px 30px;
   background:linear-gradient(135deg,#38bdf8,#0ea5e9);
   color:#000;
   font-weight:700;
   text-decoration:none;
-  border-radius:8px;
+  border-radius:30px;
+  font-size:16px;
+  transition:0.3s;
 }
 
+.back-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(14,165,233,0.3);
+}
 /* FOOTER */
 .footer{
   background:#0f172a;
@@ -378,7 +384,7 @@ th{
     top:60px;
     left:0;
     width:100%;
-    background:#0f172a;
+    background:#ffffff;
     height:100vh;
   overflow-y:auto;
     display:none;
@@ -605,11 +611,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<!-- BACK BUTTON -->
-<div class="back-btn">
-  <a href="https://scalewithclicks.com/casestudy.html">← Back to Case Studies</a>
-</div>  
-
+<div class="back-wrap">
+  <a href="https://scalewithclicks.com/casestudy.html" class="back-btn">
+    ← Back to Case Studies
+  </a>
+</div>
+  
 <!-- FOOTER -->
 <div class="footer">
 © 2026 Vinay Yadav | Performance Marketing Consultant
