@@ -32,6 +32,8 @@ body{
   background:#f8fafc;
   color:#0f172a;
   line-height:1.6;
+  padding-top: 10px; /* pushes content down slightly */
+
 }
 
 /* NAVBAR */
@@ -42,6 +44,8 @@ body{
   background:rgba(255,255,255,0.95);
   backdrop-filter:blur(10px);
   border-bottom:1px solid #e2e8f0;
+  padding-top: env(safe-area-inset-top); /* ✅ FIX */
+
 }
 
 .nav-container{
