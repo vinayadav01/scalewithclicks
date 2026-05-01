@@ -32,13 +32,19 @@ body{
 
 /* NAVBAR */
 .navbar{
-  background:#0f172a;
+  background:#ffffff;
+  border-bottom:1px solid #e2e8f0;
   padding:15px 30px;
   position:sticky;
   top:0;
   z-index:1000;
 }
-
+.brand-logo{
+  height:36px;
+  width:auto;
+  max-width:140px;
+  object-fit:contain;
+}
 .nav-container{
   max-width:1200px;
   margin:auto;
@@ -46,9 +52,7 @@ body{
   justify-content:space-between;
   align-items:center;
   gap:20px;
-  flex-wrap:wrap;
 }
-
 .logo{
   color:#fff;
   font-size:22px;
@@ -57,6 +61,7 @@ body{
 
 .nav-links{
   display:flex;
+  color:#475569;
   flex-wrap:wrap;
   gap:14px;
 }
@@ -68,7 +73,7 @@ body{
 }
 
 .nav-links a:hover{
-  color:#38bdf8;
+  color:#2563eb;
 }
 
 /* HERO */
@@ -292,7 +297,68 @@ body{
   transform:translateY(-3px);
   box-shadow:0 10px 25px rgba(14,165,233,0.3);
 }
+.menu-toggle{
+  display:none;
+  font-size:24px;
+  background:none;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+}
 
+/* MOBILE */
+@media(max-width:768px){
+
+  .menu-toggle{
+    color:#0f172a;
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:65px;
+    left:0;
+    width:100%;
+    background:#0f172a;
+
+    display:none;
+    flex-direction:column;
+    padding:15px 20px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:10px 0;
+  }
+}
+
+@media(max-width:768px){
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .progress-card{
+    width:140px;
+    height:140px;
+  }
+
+  .progress-card svg{
+    width:140px;
+    height:140px;
+  }
+
+  .number h2{
+    font-size:18px;
+  }
+
+  .number p{
+    font-size:12px;
+  }
+}
   
 </style>
 </head>
@@ -310,7 +376,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/" style="display:flex; align-items:center;">
   <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
 </a>
-
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <div class="nav-links">
     <a href="https://scalewithclicks.com/">Home</a>
     <a href="https://scalewithclicks.com/casestudy/healthcare.html">Healthcare</a>
@@ -486,5 +552,11 @@ observer.observe(el);
 });
 </script>
 
+<script>
+function toggleMenu(){
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+</script>
+  
 </body>
 </html>
