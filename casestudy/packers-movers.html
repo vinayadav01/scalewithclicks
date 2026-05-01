@@ -42,16 +42,6 @@ body{
   border-bottom:1px solid #e2e8f0;
 }
 
-.nav-container{
-  max-width:1400px;
-  margin:auto;
-  padding:16px 24px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-}
-
 .logo{
   font-size:24px;
   font-weight:800;
@@ -379,14 +369,57 @@ tr:hover{
   border-top:1px solid #e2e8f0;
 }
 
-/* MOBILE */
+.brand-logo{
+  height:40px;        /* controls logo size */
+  width:auto;
+  max-width:140px;    /* prevents stretching */
+  object-fit:contain;
+  display:block;
+}
+
+.nav-container{
+  max-width:1400px;
+  margin:auto;
+  padding:10px 20px; /* reduced */
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;              /* IMPORTANT */
+  height:60px; /* FIX: keeps navbar tight */
+}  
+
 @media(max-width:768px){
-  .hero h1{font-size:34px;}
+
+  .brand-logo{
+    height:32px;
+    max-width:110px;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
   .nav-container{
-    flex-direction:column;
-    align-items:flex-start;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    height:55px;
+  }
+  .navbar a{
+  display:flex;
+  align-items:center;
+}
+.navbar img{
+  display:block;
+}
+  .nav-links{
+   display:none;
+    overflow-x:auto;
+    white-space:nowrap;
+    width:100%;
   }
 }
+
 </style>
 </head>
 
