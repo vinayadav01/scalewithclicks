@@ -243,7 +243,35 @@ body{
   font-weight:800;
   cursor:pointer;
 }
+/* FLOAT BUTTONS */
+.whatsapp{
+  position:fixed;
+  bottom:15px;
+  right:15px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#25D366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:24px;
+}
 
+.sticky-cta{
+  position:fixed;
+  bottom:80px;
+  right:15px;
+  padding:14px 18px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#2563eb,#22c55e);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
 /* FOOTER */
 .footer{
   text-align:center;
@@ -524,6 +552,12 @@ Book Call
 
 </div>
 
+<a href="https://wa.me/9589188668" class="whatsapp">💬</a>
+
+<button class="sticky-cta" onclick="window.open('https://calendly.com/vinayyadav01992')">
+🚀 Free Leads Plan
+</button>  
+  
 <script>
 document.querySelectorAll('.progress').forEach(el=>{
 let value=el.getAttribute('data-value');
