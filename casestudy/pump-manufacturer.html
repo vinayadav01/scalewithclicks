@@ -222,22 +222,6 @@ body{
   font-weight:600;
 }
 
-/* BACK BUTTON */
-.back-btn{
-  text-align:center;
-  margin:20px 0 50px;
-}
-
-.back-btn a{
-  display:inline-block;
-  padding:12px 25px;
-  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
-  color:#000;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:700;
-}
-
 /* FLOAT BUTTON */
 .whatsapp{
   position:fixed;
@@ -286,6 +270,30 @@ body{
     align-items:flex-start;
   }
 }
+
+.back-btn{
+  text-align:center;   /* centers the button */
+  margin-top:40px;
+}
+
+.back-btn a{
+  display:inline-block;
+  padding:14px 30px;
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  color:#000;
+  font-weight:700;
+  text-decoration:none;
+  border-radius:30px;
+  font-size:16px;
+  transition:0.3s;
+}
+
+.back-btn a:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(14,165,233,0.3);
+}
+
+  
 </style>
 </head>
 
@@ -437,9 +445,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- BACK BUTTON -->
 <div class="back-btn">
-<a href="index.html">← Back to Case Studies</a>
+  <a href="https://scalewithclicks.com/casestudy.html">← Back to Case Studies</a>
 </div>
-
+  
 <!-- FLOAT -->
 <a href="https://wa.me/9589188668" class="whatsapp">💬</a>
 
