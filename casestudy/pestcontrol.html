@@ -33,14 +33,14 @@ body{
 /* NAVBAR */
 .navbar{
   background:#0f172a;
-  padding:15px 30px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:15px;
-}
+  padding:10px 0;
+ }
 
+.brand-logo{
+  height:36px;   /* adjust 32–40 as you like */
+  width:auto;
+  max-width:130px;
+}
 .logo{
   color:#fff;
   font-size:22px;
@@ -349,6 +349,51 @@ th{
   box-shadow:0 10px 25px rgba(14,165,233,0.3);
 }
 
+.nav-container{
+  width:100%;
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}  
+
+.menu-toggle{
+  display:none;
+  font-size:24px;
+  background:none;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:60px;
+    left:0;
+    width:100%;
+    background:#0f172a;
+    height:100vh;
+  overflow-y:auto;
+    display:none;
+    flex-direction:column;
+    padding:15px 20px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:10px 0;
+  }
+}
   
 </style>
 </head>
@@ -362,10 +407,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
 <!-- NAVBAR -->
 <div class="navbar">
+  <div class="nav-container">
     <a href="/" style="display:flex; align-items:center;">
   <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
 </a>
-
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
   <div class="nav-links">
     <a href="https://scalewithclicks.com/">Home</a>
     <a href="https://scalewithclicks.com/casestudy/healthcare.html">Healthcare</a>
@@ -541,11 +587,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <button onclick="openPopup()">Book Free Strategy Call</button>
 </div>
 
-<!-- BACK BUTTON -->
-<div class="back-wrap">
-<a href="index.html" class="back-btn">← Back to Case Studies</a>
-</div>
-
 <!-- FLOAT BUTTONS -->
 <a href="https://wa.me/9589188668" class="whatsapp">💬</a>
 <button class="sticky-btn" onclick="openPopup()">🚀 Get Free Leads Plan</button>
@@ -604,5 +645,11 @@ document.querySelectorAll(".fade").forEach(el=>{
 });
 </script>
 
+<script>
+function toggleMenu(){
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+</script>
+  
 </body>
 </html>
