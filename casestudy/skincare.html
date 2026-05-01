@@ -42,7 +42,11 @@ body{
   background:#ffffff;
   border-bottom:1px solid #e2e8f0;
 }
-
+.brand-logo{
+  height:36px;
+  width:auto;
+  max-width:140px;
+}
 .nav-container{
   max-width:1200px;
   margin:auto;
@@ -208,7 +212,7 @@ button{
 /* WHATSAPP */
 .whatsapp{
   position:fixed;
-  left:20px;
+  right:20px;
   bottom:20px;
   background:#25D366;
   color:#fff;
@@ -218,7 +222,6 @@ button{
   font-size:20px;
   z-index:999;
 }
-
 .back-btn{
   text-align:center;   /* centers the button */
   margin-top:40px;
@@ -260,6 +263,57 @@ button{
   opacity:1;
   transform:translateY(0);
 }
+
+.menu-toggle{
+  display:none;
+  font-size:24px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#fff;
+    position:absolute;
+    left:0;
+    top:65px;
+    padding:15px 20px;
+    border-top:1px solid #e2e8f0;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:10px 0;
+  }
+}
+
+@media(max-width:768px){
+  h1{
+    font-size:30px;
+  }
+
+  .section-title{
+    font-size:22px;
+  }
+
+  .progress-circle{
+    width:110px;
+    height:110px;
+  }
+}
+  
 </style>
 </head>
 
@@ -277,7 +331,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      <a href="/" style="display:flex; align-items:center;">
   <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
 </a>
-
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
    <div class="nav-links">
     <a href="https://scalewithclicks.com/">Home</a>
     <a href="https://scalewithclicks.com/casestudy/healthcare.html">Healthcare</a>
@@ -466,6 +520,12 @@ entry.target.classList.add('show');
 
 sections.forEach(s=>observer.observe(s));
 </script>
+
+<script>
+function toggleMenu(){
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+</script>  
 
 </body>
 </html>
