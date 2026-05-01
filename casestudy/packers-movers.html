@@ -42,35 +42,86 @@ body{
   border-bottom:1px solid #e2e8f0;
 }
 
-.logo{
-  font-size:24px;
-  font-weight:800;
-  background:linear-gradient(90deg,#2563eb,#06b6d4);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+.nav-container{
+  max-width:1400px;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  height:60px;
+}
+
+.brand-logo{
+  height:40px;
+  max-width:140px;
+}
+
+/* DESKTOP MENU */
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
 
 .nav-links a{
-  display:flex;
-  align-items:center;
-  height:36px;
-
   text-decoration:none;
   color:#475569;
   font-size:14px;
-
-  padding:0 12px;
+  padding:8px 12px;
   border-radius:10px;
-  white-space:nowrap;
-
   transition:.3s;
+  white-space:nowrap;
 }
+
 .nav-links a:hover{
   background:#eff6ff;
   color:#2563eb;
 }
 
-/* CONTAINER */
+/* HAMBURGER */
+.menu-toggle{
+  display:none;
+  font-size:24px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:60px;
+    left:0;
+    width:100%;
+    background:#fff;
+
+    display:none;
+    flex-direction:column;
+    align-items:flex-start;
+
+    padding:15px 20px;
+    gap:10px;
+
+    border-bottom:1px solid #e2e8f0;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    width:100%;
+    padding:10px 0;
+  }
+}
+  /* CONTAINER */
 .container{
   width:92%;
   max-width:1350px;
@@ -413,27 +464,28 @@ tr:hover{
 .navbar img{
   display:block;
 }
- @media(max-width:768px){
 
-  .nav-links{
-    display:flex;              /* REQUIRED */
-    align-items:center;
-    gap:10px;
-
-    flex-wrap:nowrap;
-    overflow-x:auto;
-    white-space:nowrap;
-
-    scrollbar-width:none;
-  }
-
-  .nav-links::-webkit-scrollbar{
-    display:none;
-  }
-
-}  
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
 
+.menu-toggle{
+  display:none;
+  font-size:24px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}  
+.menu-toggle{
+  display:none;
+  font-size:24px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+  
 </style>
 </head>
 
@@ -450,7 +502,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/" style="display:flex; align-items:center;">
   <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
 </a>
-
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <div class="nav-links">
     <a href="https://scalewithclicks.com/">Home</a>
     <a href="https://scalewithclicks.com/casestudy/healthcare.html">Healthcare</a>
@@ -661,6 +713,12 @@ setTimeout(function(){
   openPopup();
 },20000);
 </script>
+
+<script>
+function toggleMenu(){
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+</script>  
 
 </body>
 </html>
