@@ -222,21 +222,35 @@ body{
   font-weight:600;
 }
 
-/* FLOAT BUTTON */
+/* FLOAT BUTTONS */
 .whatsapp{
   position:fixed;
-  bottom:20px;
+  bottom:15px;
   right:20px;
   width:55px;
   height:55px;
   border-radius:50%;
   background:#25D366;
   color:#fff;
-  text-decoration:none;
   display:flex;
   align-items:center;
   justify-content:center;
+  text-decoration:none;
   font-size:24px;
+  z-index:999;
+}
+
+.sticky-cta{
+  position:fixed;
+  bottom:80px;
+  right:20px;
+  padding:14px 18px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#2563eb,#22c55e);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
   z-index:999;
 }
 
@@ -509,9 +523,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="https://scalewithclicks.com/casestudy.html">← Back to Case Studies</a>
 </div>
   
-<!-- FLOAT -->
+<!-- FLOAT BUTTONS -->
 <a href="https://wa.me/9589188668" class="whatsapp">💬</a>
 
+<button class="sticky-cta" onclick="openPopup()">
+🚀 Get Free Leads Plan
+</button>
+  
 <!-- FOOTER -->
 <div class="footer">
 © 2026 Vinay Yadav | Performance Marketing Consultant
