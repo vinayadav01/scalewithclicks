@@ -41,16 +41,21 @@ body{
   border-bottom:1px solid #e2e8f0;
   box-shadow:0 4px 12px rgba(0,0,0,0.04);
 }
-
+.brand-logo{
+  height:40px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  width:auto;
+  max-width:140px;
+  object-fit:contain;
+}
 .nav-container{
   max-width:1200px;
   margin:auto;
-  padding:14px 20px;
+  padding:12px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  flex-wrap:wrap;
-}
+  }
 
 .nav-container b{
   font-size:18px;
@@ -251,6 +256,42 @@ button:hover{
   opacity:1;
   transform:translateY(0);
 }
+
+.menu-toggle{
+  display:none;
+  font-size:24px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:60px;
+    left:0;
+    width:100%;
+    background:#fff;
+    flex-direction:column;
+    display:none;
+    padding:15px 20px;
+    border-top:1px solid #e2e8f0;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:10px 0;
+  }
+}
+  
 </style>
 </head>
 
@@ -267,6 +308,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <a href="/" style="display:flex; align-items:center;">
   <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
 </a>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
     <div class="nav-links">
     <a href="https://scalewithclicks.com/">Home</a>
@@ -447,5 +489,11 @@ const observer = new IntersectionObserver(entries=>{
 sections.forEach(s=>observer.observe(s));
 </script>
 
+<script>
+function toggleMenu(){
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+</script>
+  
 </body>
 </html>
