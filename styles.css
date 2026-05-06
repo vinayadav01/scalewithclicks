@@ -355,3 +355,34 @@ section {
     font-size: 20px;
   }
 }
+
+.blog-section {
+  background: #f9fafb;
+  padding: 60px 20px;
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;   /* centers content */
+}
+
+.blog-section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.blog-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-section li {
+  margin-bottom: 10px;
+}
+
+.blog-section a {
+  text-decoration: none;
+  color: #0073e6;
+  font-weight: 500;
+}
