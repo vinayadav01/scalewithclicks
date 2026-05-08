@@ -278,6 +278,24 @@ section {
   font-size: 14px;
 }
 
+/* FOOTER SOCIAL ICONS */
+.footer-socials{
+  display:flex;
+  gap:22px;
+  margin-top:22px;
+}
+
+.footer-socials a{
+  color:#94A3B8;
+  font-size:28px;
+  transition:.3s ease;
+}
+
+.footer-socials a:hover{
+  color:#ffffff;
+  transform:translateY(-2px);
+}
+
 /* FLOATING BUTTONS */
 .floating-contact {
   position: fixed;
