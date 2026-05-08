@@ -333,73 +333,84 @@ p{color:#475569;}
 
 .footer-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:40px;
-  padding:60px 20px;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:60px;
+  padding:70px 20px;
+  align-items:start;
 }
 
+/* LOGO */
 .footer-logo{
-  color:#fff;
-  font-size:34px;
+  color:#ffffff;
+  font-size:42px;
   font-weight:700;
-  margin-bottom:14px;
+  line-height:1.1;
+  margin-bottom:22px;
 }
 
+/* TEXT */
 .footer-text{
-  max-width:320px;
+  max-width:340px;
   line-height:1.8;
-  font-size:15px;
+  font-size:17px;
+  color:#CBD5E1;
 }
 
 /* HEADINGS */
 .footer h3{
-  color:#fff;
+  color:#ffffff;
   font-size:18px;
-  margin-bottom:18px;
+  font-weight:700;
+  margin-bottom:22px;
+  letter-spacing:.5px;
 }
 
-/* LINKS */
+/* LISTS */
 .footer ul{
   list-style:none;
 }
 
 .footer ul li{
-  margin-bottom:12px;
+  margin-bottom:16px;
 }
 
+/* LINKS */
 .footer a{
-  color:#94A3B8;
-  transition:.3s ease;
+  color:#CBD5E1;
+  transition:.25s ease;
+  font-size:17px;
 }
 
 .footer a:hover{
   color:#ffffff;
 }
 
-/* SOCIALS */
+/* SOCIAL ICONS */
 .footer-socials{
   display:flex;
-  gap:22px;
-  margin-top:24px;
+  align-items:center;
+  gap:28px;
+  margin-top:34px;
 }
 
 .footer-socials a{
-  color:#94A3B8;
-  font-size:28px;
-  transition:.3s ease;
+  color:#CBD5E1;
+  font-size:42px;
+  transition:.25s ease;
 }
 
 .footer-socials a:hover{
   color:#ffffff;
-  transform:translateY(-2px);
+  transform:translateY(-3px);
 }
 
 /* BOTTOM */
 .footer-bottom{
+  border-top:1px solid #0F172A;
   text-align:center;
-  border-top:1px solid #1E293B;
-  padding:20px;
-  font-size:14px;
+  padding:28px 20px;
+  font-size:15px;
+  color:#64748B;
 }
 
 /* MOBILE */
@@ -407,12 +418,25 @@ p{color:#475569;}
 
   .footer-grid{
     grid-template-columns:1fr;
-    gap:35px;
-    padding:50px 20px;
+    gap:42px;
+    padding:55px 24px;
   }
 
   .footer-logo{
-    font-size:30px;
+    font-size:36px;
+  }
+
+  .footer-text{
+    max-width:100%;
+    font-size:16px;
+  }
+
+  .footer-socials{
+    gap:24px;
+  }
+
+  .footer-socials a{
+    font-size:36px;
   }
 
 }
