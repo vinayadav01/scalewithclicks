@@ -179,55 +179,39 @@ p{color:#475569;}
 .call-btn{background:#10b981;color:#fff;}
 .email-btn{background:#2563eb;color:#fff;}
 
-/* FULL WIDTH BACKGROUND */
+/* FOOTER */
 .footer{
   background:#020617;
   color:#94A3B8;
   margin-top:60px;
-
-  width:100vw;                 /* 👈 FULL WIDTH */
-  position:relative;
-  left:50%;
-  right:50%;
-  margin-left:-50vw;           /* 👈 FORCE FULL BLEED */
-  margin-right:-50vw;
 }
-  
+
 .footer-grid{
-  max-width:1150px;
-  margin:0 auto;
-  padding:60px 20px;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:40px;
-  align-items:flex-start;
+  padding:60px 20px;
 }
-/* LOGO */
+
 .footer-logo{
   color:#fff;
   font-size:22px;
-  margin:0 0 10px 0;   /* 👈 REMOVE top margin */
+  margin-bottom:10px;
 }
 
-/* TEXT FIX (your black text issue) */
 .footer-text{
-  color:#94A3B8;
+  max-width:260px;
   line-height:1.7;
-  margin:0;           /* 👈 IMPORTANT */
 }
 
-/* HEADINGS */
 .footer h3{
   color:#fff;
   font-size:18px;
   margin-bottom:15px;
 }
 
-/* LINKS */
 .footer ul{
   list-style:none;
-  padding:0;
-  margin:0;
 }
 
 .footer ul li{
@@ -242,19 +226,10 @@ p{color:#475569;}
   color:#fff;
 }
 
-/* BOTTOM */
 .footer-bottom{
   text-align:center;
   border-top:1px solid #1E293B;
   padding:18px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .footer-grid{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
 }
 
 /* FOOTER SOCIAL ICONS */
