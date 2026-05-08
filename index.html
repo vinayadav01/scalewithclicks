@@ -16,6 +16,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome Icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+  
 <style>
 
 /* RESET */
@@ -409,6 +415,24 @@ section{padding:50px 0;}
   padding:18px;
 }
 
+/* FOOTER SOCIAL ICONS */
+.footer-socials{
+  display:flex;
+  gap:22px;
+  margin-top:22px;
+}
+
+.footer-socials a{
+  color:#94A3B8;
+  font-size:28px;
+  transition:.3s ease;
+}
+
+.footer-socials a:hover{
+  color:#ffffff;
+  transform:translateY(-2px);
+}
+  
 /* FLOAT */
 .floating-contact{
   position:fixed;
@@ -692,11 +716,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container footer-grid">
 
     <div>
-      <h2 class="footer-logo">ScaleWithClicks</h2>
-      <p class="footer-text">
-        Helping businesses generate leads using Ads, SEO & tracking.
-      </p>
-    </div>
+  <h2 class="footer-logo">ScaleWithClicks</h2>
+
+  <p class="footer-text">
+    Helping businesses generate leads using Ads, SEO & tracking.
+  </p>
+
+  <!-- SOCIAL ICONS -->
+  <div class="footer-socials">
+
+    <a
+      href="https://x.com/scalewithclicks"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Twitter"
+    >
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+    <a
+      href="https://www.linkedin.com/company/scale-with-clicks/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+    >
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <a
+      href="https://www.facebook.com/scalewithclicks/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+    >
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a
+      href="mailto:info@scalewithclicks.com"
+      aria-label="Email"
+    >
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+
+  </div>
+</div>
 
     <div>
       <h3>Services</h3>
