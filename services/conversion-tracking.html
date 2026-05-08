@@ -22,6 +22,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 />
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>  
   
 <style>
 
@@ -319,6 +324,99 @@ p{color:#475569;}
   transform:translateY(-2px);
 }  
 
+/* FOOTER */
+.footer{
+  background:#020617;
+  color:#94A3B8;
+  margin-top:60px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+  padding:60px 20px;
+}
+
+.footer-logo{
+  color:#fff;
+  font-size:34px;
+  font-weight:700;
+  margin-bottom:14px;
+}
+
+.footer-text{
+  max-width:320px;
+  line-height:1.8;
+  font-size:15px;
+}
+
+/* HEADINGS */
+.footer h3{
+  color:#fff;
+  font-size:18px;
+  margin-bottom:18px;
+}
+
+/* LINKS */
+.footer ul{
+  list-style:none;
+}
+
+.footer ul li{
+  margin-bottom:12px;
+}
+
+.footer a{
+  color:#94A3B8;
+  transition:.3s ease;
+}
+
+.footer a:hover{
+  color:#ffffff;
+}
+
+/* SOCIALS */
+.footer-socials{
+  display:flex;
+  gap:22px;
+  margin-top:24px;
+}
+
+.footer-socials a{
+  color:#94A3B8;
+  font-size:28px;
+  transition:.3s ease;
+}
+
+.footer-socials a:hover{
+  color:#ffffff;
+  transform:translateY(-2px);
+}
+
+/* BOTTOM */
+.footer-bottom{
+  text-align:center;
+  border-top:1px solid #1E293B;
+  padding:20px;
+  font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+    padding:50px 20px;
+  }
+
+  .footer-logo{
+    font-size:30px;
+  }
+
+}
+  
 /* ===== FLOAT BUTTONS (HOMEPAGE STYLE) ===== */
 .floating-contact{
   position:fixed;
@@ -682,96 +780,113 @@ Stop making decisions based on wrong data. Let’s set up tracking that actually
   </div>
 </section>
 
-<!-- FOOTER (HOMEPAGE STYLE) -->
+<!-- FOOTER -->
 <footer class="footer">
 
-  <div class="footer-grid">
+  <div class="container footer-grid">
 
+    <!-- BRAND -->
     <div>
-  <h2 class="footer-logo">ScaleWithClicks</h2>
+      <h2 class="footer-logo">ScaleWithClicks</h2>
 
-  <p class="footer-text">
-    Helping businesses generate leads using Ads, SEO & tracking.
-  </p>
+      <p class="footer-text">
+        Helping businesses generate consistent leads through
+        performance marketing, SEO, and advanced tracking systems.
+      </p>
 
-  <!-- SOCIAL ICONS -->
-  <div class="footer-socials">
+      <!-- SOCIAL ICONS -->
+      <div class="footer-socials">
 
-    <!-- X / Twitter -->
-    <a
-      href="https://x.com/scalewithclicks"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="X"
-    >
-      <i class="fa-brands fa-x-twitter"></i>
-    </a>
+        <!-- X -->
+        <a
+          href="https://x.com/scalewithclicks"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X"
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
 
-    <!-- LinkedIn -->
-    <a
-      href="https://www.linkedin.com/company/scale-with-clicks/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="LinkedIn"
-    >
-      <i class="fa-brands fa-linkedin-in"></i>
-    </a>
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/company/scale-with-clicks/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
 
-    <!-- Facebook -->
-    <a
-      href="https://www.facebook.com/scalewithclicks/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Facebook"
-    >
-      <i class="fa-brands fa-facebook-f"></i>
-    </a>
+        <!-- Facebook -->
+        <a
+          href="https://www.facebook.com/scalewithclicks/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
 
-    <!-- Email -->
-    <a
-      href="mailto:info@scalewithclicks.com"
-      aria-label="Email"
-    >
-      <i class="fa-solid fa-envelope"></i>
-    </a>
+        <!-- Email -->
+        <a
+          href="mailto:info@scalewithclicks.com"
+          aria-label="Email"
+        >
+          <i class="fa-solid fa-envelope"></i>
+        </a>
 
-  </div>
-</div>
+      </div>
+    </div>
 
+    <!-- SERVICES -->
     <div>
       <h3>Services</h3>
+
       <ul>
         <li><a href="/services/google-ads-agency.html">Google Ads</a></li>
         <li><a href="/services/meta-ads-agency.html">Meta Ads</a></li>
-        <li><a href="/services/seo-services.html">SEO</a></li>
+        <li><a href="/services/seo-services.html">SEO Services</a></li>
         <li><a href="/services/conversion-tracking.html">Conversion Tracking</a></li>
       </ul>
     </div>
 
+    <!-- RESOURCES -->
     <div>
       <h3>Resources</h3>
+
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="../aboutus.html">About Us</a></li>
-        <li><a href="https://blog.scalewithclicks.com" target="_blank">Blog</a></li>
-        <li><a href="../casestudy.html">Case Studies</a></li>
-        <li><a href="../contactus.html">Contact Us</a></li>
+        <li><a href="/aboutus.html">About Us</a></li>
+        <li>
+          <a
+            href="https://blog.scalewithclicks.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Blog
+          </a>
+        </li>
+        <li><a href="/casestudy.html">Case Studies</a></li>
+        <li><a href="/contactus.html">Contact Us</a></li>
       </ul>
     </div>
 
+    <!-- LEGAL -->
     <div>
       <h3>Legal</h3>
+
       <ul>
-        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="../terms-conditions.html">Terms</a></li>
-        <li><a href="../disclaimer.html">Disclaimer</a></li>
+        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/terms-conditions.html">Terms & Conditions</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
       </ul>
     </div>
 
   </div>
 
+  <!-- BOTTOM -->
   <div class="footer-bottom">
-    © 2026 ScaleWithClicks
+    © 2026 ScaleWithClicks. All rights reserved.
   </div>
 
 </footer>
