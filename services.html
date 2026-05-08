@@ -70,6 +70,195 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   transform:translateY(-6px) scale(1.02);
   box-shadow:0 20px 40px rgba(0,0,0,0.12);
 }  
+
+/* ========================= */
+/* PREMIUM NAVBAR */
+/* ========================= */
+
+.navbar{
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #eee;
+  z-index:1000;
+}
+
+.nav-wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 0;
+  position:relative;
+}
+
+/* LOGO */
+.brand-logo{
+  height:82px;
+  width:auto;
+}
+
+/* DESKTOP NAV */
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.nav-links a{
+  font-weight:500;
+  color:#0f172a;
+  transition:.25s;
+}
+
+.nav-links a:hover{
+  color:#2563eb;
+}
+
+/* CONTACT BUTTON */
+.nav-btn{
+  background:#2563eb;
+  color:#fff !important;
+  padding:10px 18px;
+  border-radius:999px;
+}
+
+.nav-btn:hover{
+  background:#1d4ed8;
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle{
+  width:46px;
+  height:46px;
+  border-radius:12px;
+  border:1px solid #e2e8f0;
+  background:#fff;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:.3s;
+  position:relative;
+  z-index:1002;
+}
+
+.menu-toggle:hover{
+  background:#f8fafc;
+}
+
+/* HAMBURGER ICON */
+.hamburger{
+  width:22px;
+  height:16px;
+  position:relative;
+}
+
+.hamburger span{
+  position:absolute;
+  width:100%;
+  height:2px;
+  background:#0f172a;
+  left:0;
+  transition:.3s;
+  border-radius:20px;
+}
+
+.hamburger span:nth-child(1){
+  top:0;
+}
+
+.hamburger span:nth-child(2){
+  top:7px;
+}
+
+.hamburger span:nth-child(3){
+  bottom:0;
+}
+
+/* ACTIVE ANIMATION */
+.menu-toggle.active .hamburger span:nth-child(1){
+  transform:rotate(45deg);
+  top:7px;
+}
+
+.menu-toggle.active .hamburger span:nth-child(2){
+  opacity:0;
+}
+
+.menu-toggle.active .hamburger span:nth-child(3){
+  transform:rotate(-45deg);
+  bottom:7px;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+  .brand-logo{
+    height:58px;
+  }
+
+  .menu-toggle{
+    display:flex;
+  }
+
+  .nav-links{
+    position:fixed;
+
+    top:82px;
+    left:16px;
+    right:16px;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:22px;
+
+    border:1px solid #f1f5f9;
+
+    box-shadow:
+      0 10px 40px rgba(0,0,0,0.08);
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(-10px);
+
+    transition:.3s ease;
+
+    z-index:1001;
+  }
+
+  .nav-links.active{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+  }
+
+  .nav-links a{
+    width:100%;
+    font-size:17px;
+    padding-bottom:10px;
+    border-bottom:1px solid #f1f5f9;
+  }
+
+  .nav-btn{
+    width:100%;
+    text-align:center;
+    border:none !important;
+    padding:14px 20px;
+  }
+}
+  
 </style>
  
 </head>
@@ -85,22 +274,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- NAVBAR -->
 <header class="navbar">
+
   <div class="container nav-wrap">
-      <a href="/" style="display:flex; align-items:center;">
-  <img src="logo.png" alt="Scale with Clicks Logo" class="brand-logo">
-</a>
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <!-- LOGO -->
+    <a href="/" style="display:flex; align-items:center;">
+      <img src="logo.png" alt="Scale with Clicks Logo" class="brand-logo">
+    </a>
 
+    <!-- HAMBURGER -->
+    <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+
+    <!-- NAVIGATION -->
     <nav class="nav-links" id="navMenu">
+
       <a href="https://scalewithclicks.com/">Home</a>
+
       <a href="aboutus.html">About</a>
+
       <a href="services.html">Services</a>
+
       <a href="casestudy.html">Case Studies</a>
+
       <a href="https://blog.scalewithclicks.com">Blog</a>
-      <a href="contactus.html" class="nav-btn">Contact</a>
+
+      <a href="contactus.html" class="nav-btn">
+        Contact
+      </a>
+
     </nav>
+
   </div>
+
 </header>
 
 <!-- HERO -->
@@ -277,18 +490,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 <script>
+
+const navMenu = document.getElementById("navMenu");
+const menuToggle = document.getElementById("menuToggle");
+
 function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("active");
+
+  navMenu.classList.toggle("active");
+
+  menuToggle.classList.toggle("active");
 }
 
-// CLOSE MENU AFTER CLICK (safe load)
-window.addEventListener("DOMContentLoaded", function(){
-  document.querySelectorAll("#navMenu a").forEach(link => {
-    link.addEventListener("click", () => {
-      document.getElementById("navMenu").classList.remove("active");
-    });
+/* CLOSE MENU ON LINK CLICK */
+document.querySelectorAll("#navMenu a").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    navMenu.classList.remove("active");
+
+    menuToggle.classList.remove("active");
+
   });
+
 });
+
+/* CLOSE MENU ON OUTSIDE CLICK */
+document.addEventListener("click", function(e){
+
+  if(
+    !navMenu.contains(e.target) &&
+    !menuToggle.contains(e.target)
+  ){
+
+    navMenu.classList.remove("active");
+
+    menuToggle.classList.remove("active");
+
+  }
+
+});
+
 </script>
   
 </body>
