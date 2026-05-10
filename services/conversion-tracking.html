@@ -1,762 +1,1005 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M4K2DXZK');</script>
+<script>
+(function(w,d,s,l,i){
+w[l]=w[l]||[];
+w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),
+dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4K2DXZK');
+</script>
 <!-- End Google Tag Manager -->
-  
+
 <title>Conversion Tracking Setup | GA4, GTM & Ads Tracking Services</title>
-<meta name="description" content="Get accurate conversion tracking with GA4, Google Tag Manager, and Meta Pixel setup. Measure leads, sales, and ROI correctly. Book a free strategy call.">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta
+  name="description"
+  content="Get accurate conversion tracking with GA4, Google Tag Manager, and Meta Pixel setup. Measure leads, sales, and ROI correctly. Book a free strategy call."
+/>
 
-<!-- Font Awesome Icons -->
 <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
   rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 />
 
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>  
-  
+/>
+
 <style>
 
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
+/* =========================
+   RESET
+========================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   font-family:'Poppins',sans-serif;
+  background:
+  radial-gradient(circle at top left,#dbeafe 0%,transparent 30%),
+  radial-gradient(circle at top right,#ede9fe 0%,transparent 30%),
+  linear-gradient(to bottom,#f8fbff,#ffffff);
   color:#0f172a;
-  background:#f8fafc;
-  line-height:1.6;
+  line-height:1.7;
+  overflow-x:hidden;
 }
 
-/* CONTAINER */
+/* =========================
+   CONTAINER
+========================= */
 .container{
-  max-width:1100px;
+  max-width:1180px;
   margin:auto;
-  padding:20px;
+  padding:0 20px;
 }
 
-@media(max-width:768px){
-  .container{
-    padding:15px;
-  }
-}  
-
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 .navbar{
   position:sticky;
   top:0;
-  background:#fff;
-  border-bottom:1px solid #eee;
   z-index:1000;
+  backdrop-filter:blur(14px);
+  background:rgba(255,255,255,0.88);
+  border-bottom:1px solid rgba(148,163,184,0.15);
 }
 
 .nav-wrap{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:14px 0;
+  min-height:90px;
 }
 
-.brand-logo{height:88px;}
+.brand-logo{
+  height:88px;
+}
 
 .nav-links{
   display:flex;
-  gap:20px;
   align-items:center;
+  gap:28px;
 }
 
 .nav-links a{
   text-decoration:none;
   color:#0f172a;
-  font-weight:500;
+  font-size:15px;
+  font-weight:600;
+  transition:.3s ease;
+}
+
+.nav-links a:hover{
+  color:#2563eb;
 }
 
 .nav-btn{
-  background:#2563eb;
-  color:#fff;
-  padding:10px 18px;
-  border-radius:25px;
+  padding:12px 22px;
+  border-radius:50px;
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  color:#fff !important;
+  box-shadow:0 10px 25px rgba(37,99,235,0.25);
 }
 
-/* HERO */
-.hero{
-  background:linear-gradient(135deg,#eef6ff,#ffffff);
-  padding:60px 20px;
-  border-radius:16px;
-  margin-top:20px;
-}
-
-/* TYPO */
-h1{font-size:42px;margin-bottom:15px;}
-h2{margin-top:50px;font-size:28px;}
-p{color:#475569;}
-
-.highlight{
-  color:#2563eb;
-  font-weight:600;
-}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:14px 24px;
-  background:#2563eb;
-  color:#fff;
-  border-radius:10px;
-  font-weight:600;
-  text-decoration:none;
-  transition:.3s;
-}
-
-.btn:hover{
+.nav-btn:hover{
   transform:translateY(-2px);
-  box-shadow:0 10px 25px rgba(37,99,235,0.3);
-}
-
-/* SECTION */
-.section{
-  margin-top:60px;
-}
-
-/* BOX */
-.box{
-  background:#fff;
-  padding:22px;
-  border-radius:14px;
-  margin-top:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
-
-.cta {
-  background: linear-gradient(135deg, #0ea5e9, #2563eb);
-  color: #ffffff;
-  text-align: center;
-  padding: 45px 20px;
-  border-radius: 18px;
-  margin-top: 60px;
-}
-
-.cta h2 {
-  color: #ffffff;
-}
-
-.cta p {
-  color: rgba(255, 255, 255, 0.85);  /* softer white */
-}
-
-.cta .btn {
-  background: #ffffff;
-  color: #2563eb;
-  font-weight: 700;
-  border-radius: 12px;
-}
-
-.cta .btn:hover {
-  background: #f1f5f9;
-}
-  
-/* CONTACT (CENTER FIXED) */
-.contact-section{
-  width:100%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:60px 20px;
-}
-
-.contact-box{
-  width:100%;
-  max-width:800px;
-  background:#f1f5f9;
-  padding:50px 20px;
-  border-radius:20px;
-  text-align:center;
-}
-
-.contact-box h2{
-  font-size:32px;
-  margin-bottom:10px;
-}
-
-.contact-buttons{
-  margin-top:20px;
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-.call-btn{
-  background:#10b981;
-  color:#fff;
-  padding:12px 26px;
-  border-radius:30px;
-  font-weight:600;
-}
-
-.email-btn{
-  background:#2563eb;
-  color:#fff;
-  padding:12px 26px;
-  border-radius:30px;
-  font-weight:600;
-}
-
-/* ===== HOMEPAGE FOOTER STYLE ===== */
-.footer{
-  background:#0b1324;
-  padding:80px 20px 50px;
-}
-
-.footer-grid{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:40px;
-}
-
-/* BRAND */
-.footer-logo{
-  font-size:22px;
-  font-weight:700;
-  color:#ffffff;
-  margin-bottom:10px;
-}
-
-.footer-text{
-  color:#cbd5e1;
-  font-size:14px;
-  line-height:1.7;
-}
-
-/* HEADINGS */
-.footer h3{
-  color:#94a3b8;
-  font-size:14px;
-  margin-bottom:10px;
-  text-transform:uppercase;
-  letter-spacing:.5px;
-}
-
-/* LINKS */
-.footer ul{
-  list-style:none;
-  padding:0;
-}
-
-.footer ul li{
-  margin-bottom:8px;
-}
-
-.footer ul li a{
-  color:#94a3b8;
-  font-size:15px;
-  transition:.25s;
-}
-
-.footer ul li a:hover{
-  color:#ffffff;
-}
-
-/* REMOVE UNDERLINE FROM FOOTER LINKS */
-.footer a{
-  text-decoration: none !important;
-}
-
-/* OPTIONAL: clean hover style */
-.footer a:hover{
-  text-decoration: none;
-}  
-
-/* BOTTOM */
-.footer-bottom{
-  text-align:center;
-  margin-top:50px;
-  font-size:13px;
-  color:#64748b;
-  border-top:1px solid rgba(255,255,255,0.08);
-  padding-top:20px;
-}
-
-/* MOBILE */
-@media(max-width:992px){
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
-}
-
-@media(max-width:600px){
-  .footer-grid{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-}
-
-/* FOOTER SOCIAL ICONS */
-.footer-socials{
-  display:flex;
-  gap:22px;
-  margin-top:22px;
-}
-
-.footer-socials a{
-  color:#94A3B8;
-  font-size:28px;
-  transition:.3s ease;
-}
-
-.footer-socials a:hover{
-  color:#ffffff;
-  transform:translateY(-2px);
-}  
-
-/* FOOTER */
-.footer{
-  background:#020617;
-  color:#94A3B8;
-  margin-top:60px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:40px;
-  padding:60px 20px;
-}
-
-.footer-logo{
-  color:#fff;
-  font-size:22px;
-  margin-bottom:10px;
-}
-
-.footer-text{
-  max-width:260px;
-  line-height:1.7;
-}
-
-.footer h3{
-  color:#fff;
-  font-size:18px;
-  margin-bottom:15px;
-}
-
-.footer ul{
-  list-style:none;
-}
-
-.footer ul li{
-  margin-bottom:10px;
-}
-
-.footer a{
-  color:#94A3B8;
-}
-
-.footer a:hover{
-  color:#fff;
-}
-
-.footer-bottom{
-  text-align:center;
-  border-top:1px solid #1E293B;
-  padding:18px;
-}
-
-/* FOOTER SOCIAL ICONS */
-.footer-socials{
-  display:flex;
-  gap:22px;
-  margin-top:22px;
-}
-
-.footer-socials a{
-  color:#94A3B8;
-  font-size:28px;
-  transition:.3s ease;
-}
-
-.footer-socials a:hover{
-  color:#ffffff;
-  transform:translateY(-2px);
-}
-
-  
-/* ===== FLOAT BUTTONS (HOMEPAGE STYLE) ===== */
-.floating-contact{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  z-index:999;
-}
-
-.whatsapp{
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#25D366;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:24px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-.call{
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:linear-gradient(135deg,#0ea5e9,#2563eb);
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:22px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-.floating-contact a,
-.whatsapp,
-.call {
-  text-decoration: none !important;
-  line-height: 1;
-}
-
-.floating-contact a::after {
-  display: none !important;
-}
-  
-.call-btn,
-.email-btn {
-  text-decoration: none !important;
-}  
-
-.float-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none !important;
-  line-height: 1;
-  font-size: 22px;
-  border: none;
-}
-.float-btn::after {
-  display: none !important;
 }
 
 .menu-toggle{
   display:none;
-  font-size:26px;
+  font-size:28px;
   cursor:pointer;
 }
 
-/* MOBILE FIX */
-@media(max-width:768px){
+/* =========================
+   HERO
+========================= */
+.hero{
+  position:relative;
+  overflow:hidden;
+  margin-top:30px;
+  padding:90px 50px;
+  border-radius:32px;
+  background:
+  linear-gradient(135deg,
+  rgba(37,99,235,0.95),
+  rgba(124,58,237,0.92),
+  rgba(14,165,233,0.9));
+  box-shadow:
+  0 30px 60px rgba(37,99,235,0.18);
+}
 
-  /* LOGO */
-  .brand-logo{
-    height:48px;
+.hero::before{
+  content:"";
+  position:absolute;
+  width:350px;
+  height:350px;
+  background:rgba(255,255,255,0.12);
+  border-radius:50%;
+  top:-120px;
+  right:-100px;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:260px;
+  height:260px;
+  background:rgba(255,255,255,0.08);
+  border-radius:50%;
+  bottom:-100px;
+  left:-80px;
+}
+
+.hero h1{
+  position:relative;
+  z-index:2;
+  color:#fff;
+  font-size:56px;
+  line-height:1.2;
+  max-width:760px;
+  margin-bottom:22px;
+}
+
+.hero p{
+  position:relative;
+  z-index:2;
+  max-width:720px;
+  color:rgba(255,255,255,0.92);
+  font-size:18px;
+}
+
+.highlight{
+  color:#facc15;
+  font-weight:700;
+}
+
+.btn{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-top:32px;
+  padding:16px 28px;
+  border-radius:16px;
+  text-decoration:none;
+  font-weight:700;
+  background:#ffffff;
+  color:#2563eb;
+  transition:.3s ease;
+  box-shadow:0 18px 40px rgba(0,0,0,0.15);
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+/* =========================
+   SECTION
+========================= */
+.section{
+  margin-top:85px;
+}
+
+.section h2{
+  font-size:40px;
+  line-height:1.3;
+  margin-bottom:20px;
+  color:#0f172a;
+}
+
+.section p{
+  color:#475569;
+  font-size:16px;
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+.box{
+  margin-top:25px;
+  padding:35px;
+  border-radius:28px;
+  background:
+  linear-gradient(
+  145deg,
+  rgba(255,255,255,0.9),
+  rgba(255,255,255,0.75));
+  border:1px solid rgba(255,255,255,0.4);
+  backdrop-filter:blur(18px);
+  box-shadow:
+  0 20px 45px rgba(15,23,42,0.06);
+}
+
+.box p{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+  font-size:17px;
+  font-weight:500;
+}
+
+.box p:last-child{
+  margin-bottom:0;
+}
+
+/* =========================
+   PROCESS TIMELINE
+========================= */
+.section strong{
+  color:#111827;
+  font-size:18px;
+}
+
+/* =========================
+   BLOG CARD
+========================= */
+.blog-mini-card{
+  position:relative;
+  overflow:hidden;
+  margin-top:60px;
+  padding:35px;
+  border-radius:28px;
+  background:
+  linear-gradient(135deg,#ffffff,#eff6ff);
+  border:1px solid #dbeafe;
+  box-shadow:0 18px 40px rgba(37,99,235,0.08);
+}
+
+.blog-mini-card::before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  background:rgba(37,99,235,0.08);
+  border-radius:50%;
+  right:-70px;
+  top:-60px;
+}
+
+.blog-mini-card h4{
+  position:relative;
+  z-index:2;
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.blog-mini-card p{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+}
+
+.blog-mini-card a{
+  position:relative;
+  z-index:2;
+  display:inline-block;
+  margin-top:20px;
+  color:#2563eb;
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* =========================
+   RELATED LINKS
+========================= */
+.section a{
+  color:#2563eb;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.section a:hover{
+  text-decoration:underline;
+}
+
+/* =========================
+   CTA
+========================= */
+.cta{
+  position:relative;
+  overflow:hidden;
+  margin-top:90px;
+  border-radius:32px;
+  padding:70px 40px;
+  text-align:center;
+  background:
+  linear-gradient(
+  135deg,
+  #0f172a,
+  #1e3a8a,
+  #2563eb);
+  box-shadow:
+  0 25px 55px rgba(15,23,42,0.25);
+}
+
+.cta::before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:rgba(255,255,255,0.06);
+  border-radius:50%;
+  top:-120px;
+  right:-80px;
+}
+
+.cta h2{
+  position:relative;
+  z-index:2;
+  color:#fff;
+  margin-bottom:16px;
+}
+
+.cta p{
+  position:relative;
+  z-index:2;
+  color:rgba(255,255,255,0.85);
+  max-width:720px;
+  margin:auto;
+}
+
+.cta .btn{
+  background:#fff;
+  color:#2563eb;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact-section{
+  padding:90px 20px 20px;
+}
+
+.contact-box{
+  max-width:950px;
+  margin:auto;
+  padding:60px 30px;
+  text-align:center;
+  border-radius:32px;
+  background:
+  linear-gradient(145deg,#ffffff,#eef6ff);
+  box-shadow:
+  0 25px 50px rgba(15,23,42,0.08);
+  border:1px solid #e2e8f0;
+}
+
+.contact-box h2{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.contact-buttons{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.call-btn,
+.email-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px 28px;
+  border-radius:50px;
+  text-decoration:none !important;
+  font-weight:700;
+  transition:.3s ease;
+}
+
+.call-btn{
+  background:linear-gradient(135deg,#10b981,#059669);
+  color:#fff;
+  box-shadow:0 12px 25px rgba(16,185,129,0.28);
+}
+
+.email-btn{
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  color:#fff;
+  box-shadow:0 12px 25px rgba(37,99,235,0.25);
+}
+
+.call-btn:hover,
+.email-btn:hover{
+  transform:translateY(-3px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer{
+  margin-top:90px;
+  background:
+  linear-gradient(135deg,#020617,#0f172a);
+  color:#94A3B8;
+  position:relative;
+  overflow:hidden;
+}
+
+.footer::before{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:rgba(37,99,235,0.08);
+  border-radius:50%;
+  top:-160px;
+  left:-120px;
+}
+
+.footer-grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:50px;
+  padding:80px 20px 50px;
+}
+
+.footer-logo{
+  color:#fff;
+  font-size:28px;
+  margin-bottom:16px;
+}
+
+.footer-text{
+  line-height:1.8;
+  max-width:280px;
+}
+
+.footer h3{
+  color:#fff;
+  margin-bottom:20px;
+  font-size:18px;
+}
+
+.footer ul{
+  list-style:none;
+}
+
+.footer ul li{
+  margin-bottom:12px;
+}
+
+.footer a{
+  color:#94A3B8;
+  text-decoration:none !important;
+  transition:.3s ease;
+}
+
+.footer a:hover{
+  color:#ffffff;
+}
+
+.footer-socials{
+  display:flex;
+  gap:18px;
+  margin-top:24px;
+}
+
+.footer-socials a{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,0.08);
+  font-size:18px;
+  transition:.3s ease;
+}
+
+.footer-socials a:hover{
+  transform:translateY(-4px);
+  background:#2563eb;
+}
+
+.footer-bottom{
+  position:relative;
+  z-index:2;
+  border-top:1px solid rgba(255,255,255,0.08);
+  padding:22px;
+  text-align:center;
+  color:#64748b;
+  font-size:14px;
+}
+
+/* =========================
+   FLOATING BUTTONS
+========================= */
+.floating-contact{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  z-index:999;
+}
+
+.whatsapp,
+.call{
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none !important;
+  font-size:24px;
+  color:#fff;
+  transition:.3s ease;
+  box-shadow:0 15px 35px rgba(0,0,0,0.18);
+}
+
+.whatsapp{
+  background:#25D366;
+}
+
+.call{
+  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+}
+
+.whatsapp:hover,
+.call:hover{
+  transform:translateY(-4px);
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:992px){
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
   }
 
-  /* SHOW MENU ICON */
+  .hero h1{
+    font-size:44px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .brand-logo{
+    height:52px;
+  }
+
   .menu-toggle{
     display:block;
   }
 
-  /* NAV DROPDOWN */
   .nav-links{
     position:absolute;
     top:100%;
-    right:0;
+    left:0;
     width:100%;
     background:#fff;
     flex-direction:column;
-    align-items:center;
-    padding:20px 0;
+    padding:25px 0;
     display:none;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
   }
 
   .nav-links.active{
     display:flex;
   }
 
-  .nav-links a{
-    padding:12px 0;
+  .hero{
+    padding:60px 25px;
+    border-radius:24px;
   }
 
-  /* TYPOGRAPHY */
-  h1{font-size:28px;}
-  h2{font-size:22px;}
-  p{font-size:15px;}
-
-  /* BUTTONS FULL WIDTH */
-  .btn{
-    width:100%;
-    max-width:280px;
-    text-align:center;
+  .hero h1{
+    font-size:34px;
   }
 
-  /* CONTACT BUTTONS */
-  .contact-buttons{
-    flex-direction:column;
-    gap:12px;
+  .hero p{
+    font-size:16px;
   }
 
-  .call-btn, .email-btn{
-    width:100%;
-    max-width:260px;
+  .section{
+    margin-top:65px;
   }
 
-  /* CTA REDUCE HEIGHT */
-  .cta{
-    padding:40px 20px;
+  .section h2{
+    font-size:30px;
   }
 
-  /* FOOTER STACK */
+  .box{
+    padding:25px;
+  }
+
+  .contact-box{
+    padding:45px 22px;
+  }
+
+  .contact-box h2{
+    font-size:30px;
+  }
+
   .footer-grid{
     grid-template-columns:1fr;
     text-align:center;
   }
 
-  /* FLOAT BUTTON SIZE */
+  .footer-text{
+    max-width:100%;
+  }
+
+  .footer-socials{
+    justify-content:center;
+  }
+
+  .btn{
+    width:100%;
+    justify-content:center;
+  }
+
+  .call-btn,
+  .email-btn{
+    width:100%;
+    max-width:300px;
+  }
+
   .whatsapp,
   .call{
-    width:52px;
-    height:52px;
+    width:56px;
+    height:56px;
   }
+
 }
 
-/* TAP FEEDBACK */
-.btn:active,
-.call-btn:active,
-.email-btn:active{
-  transform:scale(0.97);
-}
-
-.blog-mini-card {
-  margin-top: 25px;
-  padding: 20px;
-  border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  border: 1px solid #e2e8f0;
-}
-
-.blog-mini-card h4 {
-  margin-bottom: 8px;
-}
-
-.blog-mini-card a {
-  font-weight: 600;
-  color: #2563eb;
-  text-decoration: none;
-}
-  
 </style>
 </head>
 
 <body>
 
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4K2DXZK"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->  
+<noscript>
+<iframe
+src="https://www.googletagmanager.com/ns.html?id=GTM-M4K2DXZK"
+height="0"
+width="0"
+style="display:none;visibility:hidden">
+</iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- NAVBAR -->
 <header class="navbar">
+
   <div class="container nav-wrap">
-      <a href="/">
-  <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
-</a>
 
- <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <a href="/">
+      <img
+        src="/logo.png"
+        alt="Scale with Clicks Logo"
+        class="brand-logo"
+      />
+    </a>
 
-<nav class="nav-links" id="navMenu">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav class="nav-links" id="navMenu">
+
       <a href="../index.html">Home</a>
       <a href="../aboutus.html">About</a>
       <a href="../services.html">Services</a>
       <a href="../casestudy.html">Case Studies</a>
       <a href="https://blog.scalewithclicks.com">Blog</a>
       <a href="../contactus.html" class="nav-btn">Contact</a>
+
     </nav>
+
   </div>
+
 </header>
 
 <div class="container">
 
 <!-- HERO -->
-<div class="hero">
+<section class="hero">
 
-<h1>Conversion Tracking Setup That Gives You Real Data</h1>
+  <h1>
+    Conversion Tracking Setup That Gives You Real Data
+  </h1>
 
-<p>
-We help businesses set up accurate 
-<span class="highlight">conversion tracking</span> using GA4, Google Tag Manager, and Meta Pixel so you can measure leads, sales, and ROI with confidence.
-</p>
+  <p>
+    We help businesses set up accurate
+    <span class="highlight">conversion tracking</span>
+    using GA4, Google Tag Manager, and Meta Pixel so you can measure leads,
+    sales, and ROI with confidence.
+  </p>
 
-<a href="https://calendly.com/vinayyadav01992" class="btn">Book Free Strategy Call</a>
+  <a
+    href="https://calendly.com/vinayyadav01992"
+    class="btn"
+  >
+    Book Free Strategy Call
+  </a>
 
-</div>
+</section>
 
 <!-- PROBLEM -->
-<div class="section">
-<h2>Why Most Businesses Have Broken Tracking</h2>
+<section class="section">
 
-<div class="box">
-<p>❌ Missing or incorrect conversion tracking</p>
-<p>❌ Duplicate or inaccurate data</p>
-<p>❌ No attribution across platforms</p>
-<p>❌ Decisions based on wrong data</p>
-</div>
+  <h2>Why Most Businesses Have Broken Tracking</h2>
 
-<p>
-If your tracking is broken, your marketing decisions are based on guesswork — and that leads to wasted budget.
-</p>
-</div>
+  <div class="box">
+    <p>❌ Missing or incorrect conversion tracking</p>
+    <p>❌ Duplicate or inaccurate data</p>
+    <p>❌ No attribution across platforms</p>
+    <p>❌ Decisions based on wrong data</p>
+  </div>
+
+  <p style="margin-top:24px;">
+    If your tracking is broken, your marketing decisions are based on
+    guesswork — and that leads to wasted budget.
+  </p>
+
+</section>
 
 <!-- SERVICES -->
-<div class="section">
-<h2>Our Conversion Tracking Services</h2>
+<section class="section">
 
-<p>We set up complete tracking systems across platforms:</p>
+  <h2>Our Conversion Tracking Services</h2>
 
-<div class="box">
-<p>✔ Google Analytics 4 (GA4) Setup</p>
-<p>✔ Google Tag Manager (GTM) Configuration</p>
-<p>✔ Google Ads Conversion Tracking</p>
-<p>✔ Meta Pixel & Conversion API Setup</p>
-<p>✔ Event Tracking (Forms, Calls, Purchases)</p>
-<p>✔ Cross-Domain & Funnel Tracking</p>
-</div>
-</div>
+  <p>
+    We set up complete tracking systems across platforms:
+  </p>
 
+  <div class="box">
+
+    <p>✔ Google Analytics 4 (GA4) Setup</p>
+    <p>✔ Google Tag Manager (GTM) Configuration</p>
+    <p>✔ Google Ads Conversion Tracking</p>
+    <p>✔ Meta Pixel & Conversion API Setup</p>
+    <p>✔ Event Tracking (Forms, Calls, Purchases)</p>
+    <p>✔ Cross-Domain & Funnel Tracking</p>
+
+  </div>
+
+</section>
+
+<!-- BLOG CARD -->
 <div class="blog-mini-card">
+
   <h4>Struggling with Conversions?</h4>
-  <p>Fix your Google Ads performance with proven strategies.</p>
+
+  <p>
+    Fix your Google Ads performance with proven strategies.
+  </p>
 
   <a href="https://blog.scalewithclicks.com/blog/google-ads-not-converting">
     Read Full Guide →
   </a>
+
 </div>
-  
+
 <!-- STRATEGY -->
-<div class="section">
-<h2>Our Tracking Setup Process</h2>
+<section class="section">
 
-<p><strong>1. Audit Existing Setup</strong><br>
-We review your current tracking and identify gaps.</p>
+  <h2>Our Tracking Setup Process</h2>
 
-<p><strong>2. Tracking Implementation</strong><br>
-We configure GA4, GTM, and ad platforms correctly.</p>
+  <p>
+    <strong>1. Audit Existing Setup</strong><br>
+    We review your current tracking and identify gaps.
+  </p>
 
-<p><strong>3. Event & Conversion Setup</strong><br>
-We track key actions like leads, purchases, and calls.</p>
+  <br>
 
-<p><strong>4. Testing & Validation</strong><br>
-We verify data accuracy to ensure reliable reporting.</p>
-</div>
+  <p>
+    <strong>2. Tracking Implementation</strong><br>
+    We configure GA4, GTM, and ad platforms correctly.
+  </p>
+
+  <br>
+
+  <p>
+    <strong>3. Event & Conversion Setup</strong><br>
+    We track key actions like leads, purchases, and calls.
+  </p>
+
+  <br>
+
+  <p>
+    <strong>4. Testing & Validation</strong><br>
+    We verify data accuracy to ensure reliable reporting.
+  </p>
+
+</section>
 
 <!-- RESULTS -->
-<div class="section">
-<h2>What You Get</h2>
+<section class="section">
 
-<div class="box">
-<p>✔ Accurate conversion data</p>
-<p>✔ Better campaign optimization</p>
-<p>✔ Clear ROI measurement</p>
-<p>✔ Improved decision making</p>
-</div>
-</div>
+  <h2>What You Get</h2>
+
+  <div class="box">
+
+    <p>✔ Accurate conversion data</p>
+    <p>✔ Better campaign optimization</p>
+    <p>✔ Clear ROI measurement</p>
+    <p>✔ Improved decision making</p>
+
+  </div>
+
+</section>
 
 <!-- WHO WE HELP -->
-<div class="section">
-<h2>Who Needs Conversion Tracking?</h2>
+<section class="section">
 
-<div class="box">
-<p>✔ Businesses running Google Ads or Meta Ads</p>
-<p>✔ eCommerce stores tracking purchases</p>
-<p>✔ Service businesses tracking leads</p>
-<p>✔ Agencies needing accurate reporting</p>
-</div>
-</div>
+  <h2>Who Needs Conversion Tracking?</h2>
 
-<!-- INTERNAL LINKS -->
-<div class="section">
-<h2>Related Services</h2>
+  <div class="box">
 
-<p>
-Boost your marketing performance with:
-</p>
+    <p>✔ Businesses running Google Ads or Meta Ads</p>
+    <p>✔ eCommerce stores tracking purchases</p>
+    <p>✔ Service businesses tracking leads</p>
+    <p>✔ Agencies needing accurate reporting</p>
 
-<p>
-<a href="/services/google-ads-agency.html">Google Ads Management</a><br>
-<a href="/services/meta-ads-agency.html">Meta Ads Services</a><br>
-<a href="/services/seo-services.html">SEO Services</a>
-</p>
-</div>
+  </div>
+
+</section>
+
+<!-- RELATED -->
+<section class="section">
+
+  <h2>Related Services</h2>
+
+  <p>
+    Boost your marketing performance with:
+  </p>
+
+  <br>
+
+  <p>
+    <a href="/services/google-ads-agency.html">
+      Google Ads Management
+    </a>
+    <br><br>
+
+    <a href="/services/meta-ads-agency.html">
+      Meta Ads Services
+    </a>
+    <br><br>
+
+    <a href="/services/seo-services.html">
+      SEO Services
+    </a>
+  </p>
+
+</section>
 
 <!-- FAQ -->
-<div class="section">
-<h2>Frequently Asked Questions</h2>
+<section class="section">
 
-<div class="box">
-<p><strong>Why is conversion tracking important?</strong><br>
-Without tracking, you can’t measure which campaigns are generating results.</p>
+  <h2>Frequently Asked Questions</h2>
 
-<p><strong>Do you set up GA4 and GTM?</strong><br>
-Yes, we handle complete setup and configuration.</p>
+  <div class="box">
 
-<p><strong>Can you fix existing tracking issues?</strong><br>
-Yes, we audit and fix broken or inaccurate tracking setups.</p>
+    <p>
+      <strong>Why is conversion tracking important?</strong><br>
+      Without tracking, you can’t measure which campaigns are generating results.
+    </p>
 
-<p><strong>Do you work with international clients?</strong><br>
-Yes, we work with businesses across US, UK, Europe, and Australia.</p>
-</div>
-</div>
+    <br>
+
+    <p>
+      <strong>Do you set up GA4 and GTM?</strong><br>
+      Yes, we handle complete setup and configuration.
+    </p>
+
+    <br>
+
+    <p>
+      <strong>Can you fix existing tracking issues?</strong><br>
+      Yes, we audit and fix broken or inaccurate tracking setups.
+    </p>
+
+    <br>
+
+    <p>
+      <strong>Do you work with international clients?</strong><br>
+      Yes, we work with businesses across US, UK, Europe, and Australia.
+    </p>
+
+  </div>
+
+</section>
 
 <!-- CTA -->
-<div class="cta">
-<h2>Ready to Fix Your Tracking?</h2>
+<section class="cta">
 
-<p>
-Stop making decisions based on wrong data. Let’s set up tracking that actually works.
-</p>
+  <h2>
+    Ready to Fix Your Tracking?
+  </h2>
 
-<a href="https://calendly.com/vinayyadav01992" class="btn">Book Free Strategy Call</a>
-</div>
+  <p>
+    Stop making decisions based on wrong data.
+    Let’s set up tracking that actually works.
+  </p>
+
+  <a
+    href="https://calendly.com/vinayyadav01992"
+    class="btn"
+  >
+    Book Free Strategy Call
+  </a>
+
+</section>
 
 </div>
 
 <!-- CONTACT -->
 <section class="contact-section">
+
   <div class="contact-box">
+
     <h2>Get in Touch</h2>
-    <p>Ready to grow your business? Contact us today.</p>
+
+    <p>
+      Ready to grow your business? Contact us today.
+    </p>
 
     <div class="contact-buttons">
-      <a href="tel:+919589188668" class="call-btn">📞 Call Now</a>
-      <a href="mailto:info@scalewithclicks.com" class="email-btn">📧 Email Us</a>
+
+      <a href="tel:+919589188668" class="call-btn">
+        📞 Call Now
+      </a>
+
+      <a href="mailto:info@scalewithclicks.com" class="email-btn">
+        📧 Email Us
+      </a>
+
     </div>
+
   </div>
+
 </section>
 
 <!-- FOOTER -->
@@ -766,14 +1009,16 @@ Stop making decisions based on wrong data. Let’s set up tracking that actually
 
     <!-- BRAND -->
     <div>
-      <h2 class="footer-logo">ScaleWithClicks</h2>
+
+      <h2 class="footer-logo">
+        ScaleWithClicks
+      </h2>
 
       <p class="footer-text">
         Helping businesses generate consistent leads through
         performance marketing, SEO, and advanced tracking systems.
       </p>
 
-      <!-- SOCIAL ICONS -->
       <div class="footer-socials">
 
         <!-- X -->
@@ -815,27 +1060,59 @@ Stop making decisions based on wrong data. Let’s set up tracking that actually
         </a>
 
       </div>
+
     </div>
 
     <!-- SERVICES -->
     <div>
+
       <h3>Services</h3>
 
       <ul>
-        <li><a href="/services/google-ads-agency.html">Google Ads</a></li>
-        <li><a href="/services/meta-ads-agency.html">Meta Ads</a></li>
-        <li><a href="/services/seo-services.html">SEO Services</a></li>
-        <li><a href="/services/conversion-tracking.html">Conversion Tracking</a></li>
+
+        <li>
+          <a href="/services/google-ads-agency.html">
+            Google Ads
+          </a>
+        </li>
+
+        <li>
+          <a href="/services/meta-ads-agency.html">
+            Meta Ads
+          </a>
+        </li>
+
+        <li>
+          <a href="/services/seo-services.html">
+            SEO Services
+          </a>
+        </li>
+
+        <li>
+          <a href="/services/conversion-tracking.html">
+            Conversion Tracking
+          </a>
+        </li>
+
       </ul>
+
     </div>
 
     <!-- RESOURCES -->
     <div>
+
       <h3>Resources</h3>
 
       <ul>
+
         <li><a href="/">Home</a></li>
-        <li><a href="/aboutus.html">About Us</a></li>
+
+        <li>
+          <a href="/aboutus.html">
+            About Us
+          </a>
+        </li>
+
         <li>
           <a
             href="https://blog.scalewithclicks.com"
@@ -845,20 +1122,50 @@ Stop making decisions based on wrong data. Let’s set up tracking that actually
             Blog
           </a>
         </li>
-        <li><a href="/casestudy.html">Case Studies</a></li>
-        <li><a href="/contactus.html">Contact Us</a></li>
+
+        <li>
+          <a href="/casestudy.html">
+            Case Studies
+          </a>
+        </li>
+
+        <li>
+          <a href="/contactus.html">
+            Contact Us
+          </a>
+        </li>
+
       </ul>
+
     </div>
 
     <!-- LEGAL -->
     <div>
+
       <h3>Legal</h3>
 
       <ul>
-        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="/terms-conditions.html">Terms & Conditions</a></li>
-        <li><a href="/disclaimer.html">Disclaimer</a></li>
+
+        <li>
+          <a href="/privacy-policy.html">
+            Privacy Policy
+          </a>
+        </li>
+
+        <li>
+          <a href="/terms-conditions.html">
+            Terms & Conditions
+          </a>
+        </li>
+
+        <li>
+          <a href="/disclaimer.html">
+            Disclaimer
+          </a>
+        </li>
+
       </ul>
+
     </div>
 
   </div>
@@ -870,16 +1177,33 @@ Stop making decisions based on wrong data. Let’s set up tracking that actually
 
 </footer>
 
+<!-- FLOATING CONTACT -->
 <div class="floating-contact">
-  <a href="https://wa.me/919589188668" target="_blank" class="whatsapp">💬</a>
-  <a href="tel:+919589188668" class="call">📞</a>
-</div>  
+
+  <a
+    href="https://wa.me/919589188668"
+    target="_blank"
+    class="whatsapp"
+  >
+    💬
+  </a>
+
+  <a
+    href="tel:+919589188668"
+    class="call"
+  >
+    📞
+  </a>
+
+</div>
 
 <script>
+
 function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("active");
 }
+
 </script>
-  
+
 </body>
 </html>
