@@ -216,9 +216,10 @@ body{
   border-radius:24px;
   margin-top:28px;
   backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,0.3);
+  border:1px solid rgba(255,255,255,0.2);
   box-shadow:0 20px 45px rgba(15,23,42,0.08);
   transition:.35s ease;
+  color:#ffffff;
 }
 
 .box:hover{
@@ -229,17 +230,20 @@ body{
   content:'';
   position:absolute;
   inset:0;
-  opacity:.95;
   z-index:0;
+  opacity:1;
 }
 
-.box p{
+/* ALL TEXT INSIDE BOX */
+.box p,
+.box strong,
+.box li,
+.box h3,
+.box h4,
+.box span{
   position:relative;
   z-index:2;
-  color:#ffffff;
-  font-size:16px;
-  margin-bottom:14px;
-  font-weight:500;
+  color:#ffffff !important;
 }
 
 /* DIFFERENT COLORFUL BOXES */
