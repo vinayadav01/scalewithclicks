@@ -101,19 +101,27 @@ a{
 }
 
 
-/* SAME HERO STYLE AS CONVERSION TRACKING PAGE */
+/* HERO CONTAINER STYLE */
 .hero{
   position:relative;
   overflow:hidden;
-  background:linear-gradient(135deg,#0f172a 0%,#1d4ed8 55%,#0ea5e9 100%);
+
+  background:linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1d4ed8 55%,
+    #0ea5e9 100%
+  );
+
   padding:90px 40px;
   border-radius:28px;
   margin-top:28px;
   color:#ffffff;
+
   box-shadow:0 25px 60px rgba(15,23,42,0.18);
 }
 
-/* FLOATING GLOW CIRCLES */
+/* FLOATING CIRCLES */
 .hero::before{
   content:'';
   position:absolute;
@@ -156,26 +164,9 @@ a{
   line-height:1.8;
 }
 
-/* BUTTON */
 .hero .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  margin-top:28px;
-  padding:15px 28px;
-  background:#ffffff;
-  color:#2563eb;
-  border-radius:14px;
-  font-weight:700;
-  text-decoration:none;
-  transition:.3s;
   position:relative;
   z-index:2;
-  box-shadow:0 10px 25px rgba(255,255,255,0.15);
-}
-
-.hero .btn:hover{
-  transform:translateY(-3px);
 }
 
 /* MOBILE */
@@ -194,6 +185,7 @@ a{
   }
 
 }
+  
 /* TYPO */
 h1{font-size:42px;margin-bottom:15px;}
 h2{margin-top:50px;font-size:28px;}
@@ -771,20 +763,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <!-- HERO -->
-<section class="hero">
 <div class="container">
 
-<h1>Google Ads Agency That Delivers Real ROI</h1>
+  <section class="hero">
 
-<p>
-We help businesses scale with high-performing Google Ads campaigns designed to generate leads, sales, and measurable growth. 
-Our approach focuses on reducing cost per acquisition while maximizing return on ad spend.
-</p>
+    <h1>Google Ads Agency That Delivers Real ROI</h1>
 
-<a href="https://calendly.com/vinayyadav01992" class="btn">Book Free Strategy Call</a>
+    <p>
+      We help businesses scale with high-performing Google Ads campaigns designed 
+      to generate leads, sales, and measurable growth. Our approach focuses on 
+      reducing cost per acquisition while maximizing return on ad spend.
+    </p>
+
+    <a href="https://calendly.com/vinayyadav01992" class="btn">
+      Book Free Strategy Call
+    </a>
+
+  </section>
 
 </div>
-</section>
 
 <div class="container">
 
