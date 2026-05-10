@@ -87,10 +87,60 @@ body{
 
 /* HERO */
 .hero{
-  background:linear-gradient(135deg,#eef6ff,#ffffff);
-  padding:60px 20px;
-  border-radius:16px;
-  margin-top:20px;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#0f172a 0%,#1d4ed8 55%,#0ea5e9 100%);
+  padding:90px 40px;
+  border-radius:28px;
+  margin-top:28px;
+  color:#fff;
+  box-shadow:0 25px 60px rgba(15,23,42,0.18);
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  top:-120px;
+  right:-80px;
+}
+
+.hero::after{
+  content:'';
+  position:absolute;
+  width:240px;
+  height:240px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.06);
+  bottom:-100px;
+  left:-80px;
+}
+
+.hero h1{
+  position:relative;
+  z-index:2;
+  font-size:52px;
+  line-height:1.2;
+  margin-bottom:18px;
+  max-width:780px;
+  color:#ffffff;
+}
+
+.hero p{
+  position:relative;
+  z-index:2;
+  color:rgba(255,255,255,0.88) !important;
+  font-size:18px;
+  max-width:760px;
+  line-height:1.8;
+}
+
+.hero .btn{
+  position:relative;
+  z-index:2;
 }
 
 /* TYPO */
@@ -147,8 +197,6 @@ p{color:#475569;}
   inset:0;
   opacity:0.95;
   z-index:0;
-
-  background:linear-gradient(135deg,#2563eb,#0ea5e9);
 }
 
 .box:hover{
@@ -169,6 +217,74 @@ p{color:#475569;}
   background:radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent 60%);
   z-index:1;
 }
+
+/* DIFFERENT COLORS */
+.box:nth-of-type(1)::before{
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+.box:nth-of-type(2)::before{
+  background:linear-gradient(135deg,#2563eb,#0ea5e9);
+}
+
+.box:nth-of-type(3)::before{
+  background:linear-gradient(135deg,#10b981,#14b8a6);
+}
+
+.box:nth-of-type(4)::before{
+  background:linear-gradient(135deg,#8b5cf6,#ec4899);
+}
+
+/* FAQ GRID */
+.faq-grid{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  margin-top:25px;
+}
+
+/* FAQ CARD */
+.faq-item{
+  display:flex;
+  gap:18px;
+  padding:22px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 15px 35px rgba(0,0,0,0.25);
+  transition:.3s ease;
+}
+
+.faq-item:hover{
+  transform:translateY(-4px);
+  border-color:rgba(37,99,235,0.4);
+}
+
+.faq-number{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  color:#fff;
+  background:linear-gradient(135deg,#2563eb,#0ea5e9);
+  flex-shrink:0;
+  box-shadow:0 10px 20px rgba(37,99,235,0.25);
+}
+
+.faq-content h3{
+  margin-bottom:6px;
+  font-size:18px;
+  color:#ffffff;
+}
+
+.faq-content p{
+  color:#cbd5e1;
+  font-size:15px;
+  line-height:1.6;
+}  
 
 /* CTA */
 .cta{
@@ -454,7 +570,7 @@ We help businesses grow with data-driven
 <div class="section">
 <h2>Why Most SEO Campaigns Fail</h2>
 
-<div class="box">
+<div class="box danger">
 <p>❌ Targeting the wrong keywords</p>
 <p>❌ Weak content with no real value</p>
 <p>❌ Poor technical SEO setup</p>
@@ -472,7 +588,7 @@ SEO is not just about rankings — it’s about generating revenue. Most strateg
 
 <p>We provide complete SEO solutions:</p>
 
-<div class="box">
+<div class="box blue">
 <p>✔ Keyword Research & Strategy</p>
 <p>✔ On-Page SEO Optimization</p>
 <p>✔ Technical SEO (site speed, indexing, structure)</p>
@@ -506,7 +622,7 @@ We monitor rankings and improve performance consistently.</p>
 <div class="section">
 <h2>Results You Can Expect</h2>
 
-<div class="box">
+<div class="box green">
 <p>✔ Higher rankings for target keywords</p>
 <p>✔ Consistent organic traffic growth</p>
 <p>✔ More qualified leads and sales</p>
@@ -517,7 +633,7 @@ We monitor rankings and improve performance consistently.</p>
 <div class="section">
 <h2>Who We Work With</h2>
 
-<div class="box">
+<div class="box purple">
 <p>✔ SaaS Companies</p>
 <p>✔ eCommerce Brands</p>
 <p>✔ Agencies & Startups</p>
@@ -544,18 +660,48 @@ Improve your marketing performance with:
 <div class="section">
 <h2>Frequently Asked Questions</h2>
 
-<div class="box">
-<p><strong>How long does SEO take?</strong><br>
-SEO typically takes 3–6 months to see significant results, depending on competition.</p>
+<div class="faq-grid">
 
-<p><strong>Do you guarantee rankings?</strong><br>
-No agency can guarantee rankings, but we focus on strategies that deliver long-term growth.</p>
+  <div class="faq-item">
+    <div class="faq-number">01</div>
+    <div class="faq-content">
+      <h3>How long does SEO take?</h3>
+      <p>
+        SEO typically takes 3–6 months to see significant results, depending on competition and website authority.
+      </p>
+    </div>
+  </div>
 
-<p><strong>Do you work with international clients?</strong><br>
-Yes, we work with clients across US, UK, Europe, and Australia.</p>
+  <div class="faq-item">
+    <div class="faq-number">02</div>
+    <div class="faq-content">
+      <h3>Do you guarantee rankings?</h3>
+      <p>
+        No agency can guarantee rankings, but we focus on proven strategies that drive long-term organic growth.
+      </p>
+    </div>
+  </div>
 
-<p><strong>Is SEO better than paid ads?</strong><br>
-SEO and paid ads work best together — SEO builds long-term traffic while ads generate immediate results.</p>
+  <div class="faq-item">
+    <div class="faq-number">03</div>
+    <div class="faq-content">
+      <h3>Do you work with international clients?</h3>
+      <p>
+        Yes, we work with clients across the US, UK, Europe, Australia, and other international markets.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-number">04</div>
+    <div class="faq-content">
+      <h3>Is SEO better than paid ads?</h3>
+      <p>
+        SEO and paid ads work best together — SEO builds long-term visibility while paid ads generate faster results.
+      </p>
+    </div>
+  </div>
+
 </div>
 </div>
 
@@ -589,59 +735,55 @@ Let’s build a strategy that brings consistent traffic and leads to your busine
 
   <div class="footer-grid">
 
-    <div>
-  <div class="footer-brand">
+    <!-- COLUMN 1 -->
+    <div class="footer-brand">
 
-  <h2 class="footer-logo">ScaleWithClicks</h2>
+      <h2 class="footer-logo">ScaleWithClicks</h2>
 
-  <p class="footer-text">
-    Helping businesses generate leads using Ads, SEO & tracking.
-  </p>
+      <p class="footer-text">
+        Helping businesses generate leads using Ads, SEO & tracking.
+      </p>
 
-  <!-- SOCIAL ICONS -->
-  <div class="footer-socials">
+      <div class="footer-socials">
 
-    <!-- X / Twitter -->
-    <a
-      href="https://x.com/scalewithclicks"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="X"
-    >
-      <i class="fa-brands fa-x-twitter"></i>
-    </a>
+        <a
+          href="https://x.com/scalewithclicks"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X"
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
 
-    <!-- LinkedIn -->
-    <a
-      href="https://www.linkedin.com/company/scale-with-clicks/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="LinkedIn"
-    >
-      <i class="fa-brands fa-linkedin-in"></i>
-    </a>
+        <a
+          href="https://www.linkedin.com/company/scale-with-clicks/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
 
-    <!-- Facebook -->
-    <a
-      href="https://www.facebook.com/scalewithclicks/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Facebook"
-    >
-      <i class="fa-brands fa-facebook-f"></i>
-    </a>
+        <a
+          href="https://www.facebook.com/scalewithclicks/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
 
-    <!-- Email -->
-    <a
-      href="mailto:info@scalewithclicks.com"
-      aria-label="Email"
-    >
-      <i class="fa-solid fa-envelope"></i>
-    </a>
+        <a
+          href="mailto:info@scalewithclicks.com"
+          aria-label="Email"
+        >
+          <i class="fa-solid fa-envelope"></i>
+        </a>
 
-  </div>
-</div>
+      </div>
+    </div>
 
+    <!-- COLUMN 2 -->
     <div>
       <h3>Services</h3>
       <ul>
@@ -652,6 +794,7 @@ Let’s build a strategy that brings consistent traffic and leads to your busine
       </ul>
     </div>
 
+    <!-- COLUMN 3 -->
     <div>
       <h3>Resources</h3>
       <ul>
@@ -663,6 +806,7 @@ Let’s build a strategy that brings consistent traffic and leads to your busine
       </ul>
     </div>
 
+    <!-- COLUMN 4 -->
     <div>
       <h3>Legal</h3>
       <ul>
