@@ -100,12 +100,40 @@ a{
   border-radius:25px;
 }
 
-/* HERO */
+
+/* SAME HERO STYLE AS CONVERSION TRACKING PAGE */
 .hero{
-  background:linear-gradient(135deg,#eef6ff,#ffffff);
-  padding:60px 20px;
-  border-radius:16px;
-  margin-top:20px;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#0f172a 0%,#1d4ed8 55%,#0ea5e9 100%);
+  padding:90px 40px;
+  border-radius:28px;
+  margin-top:28px;
+  color:#fff;
+  box-shadow:0 25px 60px rgba(15,23,42,0.18);
+}
+
+/* floating circles */
+.hero::before{
+  content:'';
+  position:absolute;
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  top:-120px;
+  right:-80px;
+}
+
+.hero::after{
+  content:'';
+  position:absolute;
+  width:240px;
+  height:240px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.06);
+  bottom:-100px;
+  left:-80px;
 }
 
 /* TYPO */
@@ -510,8 +538,9 @@ footer{
 
 
 
+
 /* =========================
-   SAAS BOX COMPONENT SYSTEM
+   SCALEWITHCLICKS SAAS BOX SYSTEM
    (MATCHES CONVERSION TRACKING PAGE)
 ========================= */
 
@@ -520,25 +549,24 @@ footer{
   overflow:hidden;
   padding:32px;
   border-radius:26px;
-  margin-top:22px;
+  margin-top:28px;
 
-  /* GLASS BASE */
-  background:rgba(255,255,255,0.06);
+  background:rgba(255,255,255,0.08);
   backdrop-filter:blur(16px);
   -webkit-backdrop-filter:blur(16px);
 
-  border:1px solid rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.18);
 
   box-shadow:0 20px 60px rgba(0,0,0,0.25);
 
-  transition:.35s ease;
+  transition:all .35s ease;
 
   color:#fff;
 }
 
 /* HOVER */
 .box:hover{
-  transform:translateY(-8px);
+  transform:translateY(-10px) scale(1.01);
   box-shadow:0 30px 80px rgba(37,99,235,0.25);
 }
 
@@ -558,56 +586,44 @@ footer{
   content:'';
   position:absolute;
   inset:0;
-  background:radial-gradient(circle at top left, rgba(255,255,255,0.08), transparent 60%);
+  opacity:0.9;
   z-index:0;
 }
 
+/* INNER LIGHT */
+.box::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent 60%);
+  z-index:1;
+}
+
 /* =========================
-   COLOR VARIANTS (IMPORTANT)
-   USE THESE CLASSES IN HTML
+   COLOR VARIANTS (SAME AS YOUR SYSTEM)
 ========================= */
 
-.box.red{
-  background:linear-gradient(135deg,#0b1220,#111827);
-  border:1px solid rgba(239,68,68,0.25);
-}
-
 .box.red::before{
-  background:radial-gradient(circle at top left, rgba(239,68,68,0.25), transparent 60%);
-}
-
-.box.blue{
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-  border:1px solid rgba(37,99,235,0.25);
+  background:linear-gradient(135deg,#ef4444,#f97316);
 }
 
 .box.blue::before{
-  background:radial-gradient(circle at top left, rgba(37,99,235,0.25), transparent 60%);
-}
-
-.box.green{
-  background:linear-gradient(135deg,#052e16,#064e3b);
-  border:1px solid rgba(16,185,129,0.3);
+  background:linear-gradient(135deg,#2563eb,#0ea5e9);
 }
 
 .box.green::before{
-  background:radial-gradient(circle at top left, rgba(16,185,129,0.25), transparent 60%);
-}
-
-.box.purple{
-  background:linear-gradient(135deg,#1e1b4b,#312e81);
-  border:1px solid rgba(139,92,246,0.25);
+  background:linear-gradient(135deg,#10b981,#14b8a6);
 }
 
 .box.purple::before{
-  background:radial-gradient(circle at top left, rgba(139,92,246,0.25), transparent 60%);
+  background:linear-gradient(135deg,#8b5cf6,#ec4899);
 }
 
-/* OPTIONAL: WARNING BOX */
+/* PROBLEM BOX (dark + red glow option) */
 .box.danger{
-  background:linear-gradient(135deg,#0b1220,#0f172a);
-  border:1px solid rgba(239,68,68,0.3);
-}  
+  background:linear-gradient(135deg,#0b1220,#111827);
+  border:1px solid rgba(239,68,68,0.25);
+} 
 
 
 /* FAQ GRID */
