@@ -272,59 +272,65 @@ p{color:#475569;}
 .call-btn{background:#10b981;color:#fff;}
 .email-btn{background:#2563eb;color:#fff;}
 
-/* FULL WIDTH BACKGROUND */
+/* =========================
+   FOOTER
+========================= */
+
 .footer{
   background:#020617;
   color:#94A3B8;
   margin-top:60px;
 
-  width:100vw;                 /* 👈 FULL WIDTH */
-  position:relative;
-  left:50%;
-  right:50%;
-  margin-left:-50vw;           /* 👈 FORCE FULL BLEED */
-  margin-right:-50vw;
+  width:100%;
 }
-  
+
+/* GRID */
 .footer-grid{
   max-width:1150px;
   margin:0 auto;
-  padding:60px 20px;
+
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
   gap:40px;
+
+  padding:55px 20px 40px;
+
   align-items:flex-start;
 }
 
-.footer-grid > div:first-child{
-  padding-top:4px;
-}
-
+/* LEFT COLUMN ALIGNMENT */
 .footer-brand{
   display:flex;
   flex-direction:column;
+  align-items:flex-start;
   justify-content:flex-start;
-}  
-  
+}
+
 /* LOGO */
 .footer-logo{
   color:#fff;
-  font-size:22px;
-  margin:0 0 10px 0;   /* 👈 REMOVE top margin */
+  font-size:32px;
+  font-weight:700;
+  line-height:1.1;
+  margin:0 0 14px 0;
 }
 
-/* TEXT FIX (your black text issue) */
+/* TEXT */
 .footer-text{
-  color:#94A3B8;
+  max-width:320px;
   line-height:1.7;
-  margin:0;           /* 👈 IMPORTANT */
+  font-size:15px;
+  color:#CBD5E1;
+  margin:0;
 }
 
-/* HEADINGS */
+/* COLUMN TITLES */
 .footer h3{
   color:#fff;
-  font-size:18px;
-  margin-bottom:15px;
+  font-size:17px;
+  font-weight:700;
+  margin-bottom:18px;
+  margin-top:0;
 }
 
 /* LINKS */
@@ -332,97 +338,6 @@ p{color:#475569;}
   list-style:none;
   padding:0;
   margin:0;
-}
-
-.footer ul li{
-  margin-bottom:10px;
-}
-
-.footer a{
-  color:#94A3B8;
-}
-
-.footer a:hover{
-  color:#fff;
-}
-
-/* BOTTOM */
-.footer-bottom{
-  text-align:center;
-  border-top:1px solid #1E293B;
-  padding:18px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .footer-grid{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-}
-
-/* FOOTER SOCIAL ICONS */
-.footer-socials{
-  display:flex;
-  gap:22px;
-  margin-top:22px;
-}
-
-.footer-socials a{
-  color:#94A3B8;
-  font-size:28px;
-  transition:.3s ease;
-}
-
-.footer-socials a:hover{
-  color:#ffffff;
-  transform:translateY(-2px);
-} 
-
-/* FOOTER */
-.footer{
-  background:#020617;
-  color:#94A3B8;
-  margin-top:60px;
-}
-
-/* GRID */
-.footer-grid{
-  display:grid;
-  grid-template-columns:1.5fr 1fr 1fr 1fr;
-  gap:40px;
-  padding:50px 20px 40px;
-  align-items:flex-start;
-}
-
-/* LEFT SECTION */
-.footer-logo{
-  color:#fff;
-  font-size:34px;
-  font-weight:700;
-  margin-bottom:16px;
-  line-height:1.1;
-}
-
-.footer-text{
-  max-width:340px;
-  line-height:1.7;
-  font-size:15px;
-  color:#CBD5E1;
-}
-
-/* COLUMN HEADINGS */
-.footer h3{
-  color:#fff;
-  font-size:16px;
-  font-weight:700;
-  margin-bottom:18px;
-}
-
-/* LINKS */
-.footer ul{
-  list-style:none;
-  padding:0;
 }
 
 .footer ul li{
@@ -444,7 +359,7 @@ p{color:#475569;}
   display:flex;
   align-items:center;
   gap:20px;
-  margin-top:24px;
+  margin-top:22px;
 }
 
 .footer-socials a{
@@ -472,16 +387,20 @@ p{color:#475569;}
 
   .footer-grid{
     grid-template-columns:1fr;
-    gap:30px;
-    padding:45px 20px 30px;
+    gap:32px;
+    text-align:center;
   }
 
-  .footer-logo{
-    font-size:30px;
+  .footer-brand{
+    align-items:center;
   }
 
   .footer-text{
     max-width:100%;
+  }
+
+  .footer-socials{
+    justify-content:center;
   }
 
 }  
@@ -965,7 +884,7 @@ We scale winning campaigns and continuously improve performance.</p>
 <footer class="footer">
    <div class="footer-grid">
 
-    <div>
+  <div>
   <div class="footer-brand">
 
     <h2 class="footer-logo">ScaleWithClicks</h2>
@@ -974,10 +893,8 @@ We scale winning campaigns and continuously improve performance.</p>
       Helping businesses generate leads using Ads, SEO & tracking.
     </p>
 
-    <!-- SOCIAL ICONS -->
     <div class="footer-socials">
 
-      <!-- X / Twitter -->
       <a
         href="https://x.com/scalewithclicks"
         target="_blank"
@@ -987,7 +904,6 @@ We scale winning campaigns and continuously improve performance.</p>
         <i class="fa-brands fa-x-twitter"></i>
       </a>
 
-      <!-- LinkedIn -->
       <a
         href="https://www.linkedin.com/company/scale-with-clicks/"
         target="_blank"
@@ -997,7 +913,6 @@ We scale winning campaigns and continuously improve performance.</p>
         <i class="fa-brands fa-linkedin-in"></i>
       </a>
 
-      <!-- Facebook -->
       <a
         href="https://www.facebook.com/scalewithclicks/"
         target="_blank"
@@ -1007,7 +922,6 @@ We scale winning campaigns and continuously improve performance.</p>
         <i class="fa-brands fa-facebook-f"></i>
       </a>
 
-      <!-- Email -->
       <a
         href="mailto:info@scalewithclicks.com"
         aria-label="Email"
