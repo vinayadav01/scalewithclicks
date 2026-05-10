@@ -208,70 +208,82 @@ body{
   color:#475569;
 }
 
-/* COLORFUL CARDS */
+
+/* PREMIUM SAAS CARDS */
 .box{
   position:relative;
   overflow:hidden;
-  padding:30px;
-  border-radius:24px;
+  padding:32px;
+  border-radius:26px;
   margin-top:28px;
-  border:1px solid rgba(255,255,255,0.15);
-  box-shadow:0 20px 45px rgba(15,23,42,0.08);
-  transition:.35s ease;
+
+  /* GLASS EFFECT */
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+
+  border:1px solid rgba(255,255,255,0.18);
+
+  /* GLOW */
+  box-shadow:0 20px 60px rgba(0,0,0,0.25);
+
+  transition:all .35s ease;
+  color:#fff;
 }
 
-/* CARD HOVER */
-.box:hover{
-  transform:translateY(-6px);
-}
-
-/* BACKGROUND LAYER */
+/* GLOW LAYER */
 .box::before{
   content:'';
   position:absolute;
   inset:0;
+  opacity:0.9;
   z-index:0;
-  opacity:1;
 }
 
-/* MAKE ALL TEXT VISIBLE */
-.box p,
-.box h1,
-.box h2,
-.box h3,
-.box h4,
-.box h5,
-.box h6,
-.box span,
-.box strong,
-.box a,
-.box li{
+/* HOVER PREMIUM LIFT */
+.box:hover{
+  transform:translateY(-10px) scale(1.01);
+  box-shadow:0 30px 80px rgba(37,99,235,0.25);
+}
+
+/* TEXT ALWAYS ABOVE */
+.box > *{
   position:relative;
   z-index:2;
   color:#ffffff !important;
 }
 
-/* DIFFERENT COLORFUL BOXES */
-.section:nth-of-type(1) .box::before{
+/* ICON STYLE (auto emoji or icon support) */
+.box p::first-letter{
+  font-size:inherit;
+}
+
+/* PREMIUM COLOR VARIANTS */
+.box.red::before{
   background:linear-gradient(135deg,#ef4444,#f97316);
 }
 
-.section:nth-of-type(2) .box::before{
-  background:linear-gradient(135deg,#0f172a,#334155);
+.box.blue::before{
+  background:linear-gradient(135deg,#2563eb,#0ea5e9);
 }
 
-.section:nth-of-type(4) .box::before{
-  background:linear-gradient(135deg,#ef4444,#f97316);
+.box.green::before{
+  background:linear-gradient(135deg,#10b981,#14b8a6);
 }
 
-.section:nth-of-type(5) .box::before{
-  background:linear-gradient(135deg,#0f172a,#334155);
+.box.purple::before{
+  background:linear-gradient(135deg,#8b5cf6,#ec4899);
 }
 
-.section:nth-of-type(7) .box::before{
-  background:linear-gradient(135deg,#0f172a,#334155);
+/* SOFT INNER LIGHT */
+.box::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent 60%);
+  z-index:1;
 }
-
+  
 /* MINI BLOG CARD */
 .blog-mini-card{
   margin-top:40px;
