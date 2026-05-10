@@ -215,17 +215,17 @@ body{
   padding:30px;
   border-radius:24px;
   margin-top:28px;
-  backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,0.2);
+  border:1px solid rgba(255,255,255,0.15);
   box-shadow:0 20px 45px rgba(15,23,42,0.08);
   transition:.35s ease;
-  color:#ffffff;
 }
 
+/* CARD HOVER */
 .box:hover{
   transform:translateY(-6px);
 }
 
+/* BACKGROUND LAYER */
 .box::before{
   content:'';
   position:absolute;
@@ -234,13 +234,18 @@ body{
   opacity:1;
 }
 
-/* ALL TEXT INSIDE BOX */
+/* MAKE ALL TEXT VISIBLE */
 .box p,
-.box strong,
-.box li,
+.box h1,
+.box h2,
 .box h3,
 .box h4,
-.box span{
+.box h5,
+.box h6,
+.box span,
+.box strong,
+.box a,
+.box li{
   position:relative;
   z-index:2;
   color:#ffffff !important;
