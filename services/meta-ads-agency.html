@@ -417,27 +417,49 @@ a:hover{text-decoration:underline;}
 
 /* INNER CONTENT (CENTERED) */
 .footer-grid{
-  max-width:1150px;   /* match container */
-  margin:auto;        /* CENTER it */
-  padding:60px 20px;
-  
+  max-width:1150px;
+  margin:auto;
+  padding:70px 20px;
+
   display:grid;
-  grid-template-columns:1.5fr 1fr 1fr 1fr;
-  gap:40px;
-  
-  align-items:start;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:50px;
+
+  align-items:flex-start;
 }
   
-/* TEXT */
-.footer-logo{
-  color:#fff;
-  margin-bottom:10px;
+/* FOOTER BRAND COLUMN */
+.footer-brand{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-start;
+  padding-top:2px;
 }
 
+/* LOGO */
+.footer-logo{
+  color:#fff;
+  font-size:30px;
+  font-weight:700;
+  margin:0 0 14px 0;
+  line-height:1.1;
+}
+
+/* TEXT */
 .footer-text{
   color:#94A3B8;
-  line-height:1.7;
-  max-width:280px;
+  line-height:1.8;
+  max-width:320px;
+  margin:0;
+}
+
+/* SOCIALS */
+.footer-socials{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-top:22px;
 }
 
 .footer h3{
@@ -817,7 +839,8 @@ Stop wasting money on ads that don’t convert. Let’s build a strategy that dr
 
   <div class="footer-grid">
 
-    <div>
+    <<div class="footer-brand">
+
   <h2 class="footer-logo">ScaleWithClicks</h2>
 
   <p class="footer-text">
