@@ -643,6 +643,95 @@ body{
   transform:scale(0.97);
 }
 
+
+/* PROBLEM / WARNING BOX (SAAS STYLE) */
+.box.danger{
+  background:linear-gradient(135deg,#0b1220,#111827);
+  border:1px solid rgba(239,68,68,0.25);
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+}
+
+/* RED GLOW OVERLAY */
+.box.danger::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at top left, rgba(239,68,68,0.25), transparent 60%);
+  z-index:0;
+}
+
+/* SOFT DARK BLUE DEPTH */
+.box.danger::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at bottom right, rgba(59,130,246,0.12), transparent 55%);
+  z-index:0;
+}
+
+/* KEEP TEXT ABOVE */
+.box.danger > *{
+  position:relative;
+  z-index:2;
+  color:#ffffff !important;
+}  
+
+
+/* FAQ GRID */
+.faq-grid{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  margin-top:25px;
+}
+
+/* FAQ CARD */
+.faq-item{
+  display:flex;
+  gap:18px;
+  padding:22px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 15px 35px rgba(0,0,0,0.25);
+  transition:.3s ease;
+}
+
+.faq-item:hover{
+  transform:translateY(-4px);
+  border-color:rgba(37,99,235,0.4);
+}
+
+/* NUMBER BADGE */
+.faq-number{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  color:#fff;
+  background:linear-gradient(135deg,#2563eb,#0ea5e9);
+  flex-shrink:0;
+  box-shadow:0 10px 20px rgba(37,99,235,0.25);
+}
+
+/* CONTENT */
+.faq-content h3{
+  margin-bottom:6px;
+  font-size:18px;
+  color:#ffffff;
+}
+
+.faq-content p{
+  color:#cbd5e1;
+  font-size:15px;
+  line-height:1.6;
+}  
+
 </style>
 </head>
 
@@ -699,7 +788,7 @@ Book Free Strategy Call
 
 <h2>Why Most Businesses Have Broken Tracking</h2>
 
-<div class="box orange">
+<div class="box danger">
 <p>❌ Missing or incorrect conversion tracking</p>
 <p>❌ Duplicate or inaccurate data</p>
 <p>❌ No attribution across platforms</p>
@@ -813,32 +902,43 @@ We verify data accuracy to ensure reliable reporting.</p>
 
 </div>
 
-<!-- FAQ -->
 <div class="section">
 
 <h2>Frequently Asked Questions</h2>
 
-<div class="box blue">
+<div class="faq-grid">
 
-<p>
-<strong>Why is conversion tracking important?</strong><br>
-Without tracking, you can’t measure which campaigns are generating results.
-</p>
+  <div class="faq-item">
+    <div class="faq-number">01</div>
+    <div class="faq-content">
+      <h3>Why is conversion tracking important?</h3>
+      <p>Without tracking, you can’t measure which campaigns are generating results.</p>
+    </div>
+  </div>
 
-<p>
-<strong>Do you set up GA4 and GTM?</strong><br>
-Yes, we handle complete setup and configuration.
-</p>
+  <div class="faq-item">
+    <div class="faq-number">02</div>
+    <div class="faq-content">
+      <h3>Do you set up GA4 and GTM?</h3>
+      <p>Yes, we handle complete setup and configuration.</p>
+    </div>
+  </div>
 
-<p>
-<strong>Can you fix existing tracking issues?</strong><br>
-Yes, we audit and fix broken or inaccurate tracking setups.
-</p>
+  <div class="faq-item">
+    <div class="faq-number">03</div>
+    <div class="faq-content">
+      <h3>Can you fix existing tracking issues?</h3>
+      <p>Yes, we audit and fix broken or inaccurate tracking setups.</p>
+    </div>
+  </div>
 
-<p>
-<strong>Do you work with international clients?</strong><br>
-Yes, we work with businesses across US, UK, Europe, and Australia.
-</p>
+  <div class="faq-item">
+    <div class="faq-number">04</div>
+    <div class="faq-content">
+      <h3>Do you work with international clients?</h3>
+      <p>Yes, we work with businesses across US, UK, Europe, and Australia.</p>
+    </div>
+  </div>
 
 </div>
 
