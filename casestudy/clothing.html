@@ -303,26 +303,30 @@ body{
 }  
 
 .back-wrap{
+  width:100%;
   display:flex;
   justify-content:center;
+  align-items:center;
   margin:50px 0 30px;
 }
 
-.back-btn{
+.back-wrap a{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:14px 30px;
+  width:auto;
+  max-width:max-content;
+  padding:14px 28px;
   background:linear-gradient(135deg,#38bdf8,#0ea5e9);
   color:#000;
+  font-size:16px;
   font-weight:700;
   text-decoration:none;
   border-radius:30px;
-  font-size:16px;
-  transition:0.3s;
+  transition:0.3s ease;
 }
 
-.back-btn:hover{
+.back-wrap a:hover{
   transform:translateY(-3px);
   box-shadow:0 10px 25px rgba(14,165,233,0.3);
 }
@@ -585,9 +589,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- BACK BUTTON -->
 <div class="back-wrap">
-  <a href="https://scalewithclicks.com/casestudy" class="back-btn">
+  <a href="https://scalewithclicks.com/casestudy">
     ← Back to Case Studies
   </a>
+</div>
 
 <!-- FOOTER PLACEHOLDER -->
 <div id="footer-placeholder"></div>
