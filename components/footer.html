@@ -1,52 +1,280 @@
+<!-- =========================
+     FOOTER
+========================= -->
+
+<style>
+
+/* FOOTER */
+.footer{
+  width:100%;
+  background:#000;
+  color:#fff;
+
+  margin-top:80px;
+  padding:70px 0 0;
+}
+
+/* INNER */
+.footer-inner{
+  width:100%;
+  max-width:1280px;
+
+  margin:0 auto;
+  padding:0 24px;
+}
+
+/* GRID */
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:60px;
+}
+
+/* LOGO */
+.footer-logo{
+  font-size:34px;
+  font-weight:800;
+  line-height:1.1;
+
+  margin-bottom:18px;
+}
+
+/* TEXT */
+.footer-text{
+  color:#cbd5e1;
+
+  font-size:15px;
+  line-height:1.8;
+
+  max-width:320px;
+}
+
+/* HEADINGS */
+.footer h3{
+  font-size:18px;
+  font-weight:700;
+
+  margin-bottom:18px;
+}
+
+/* LIST */
+.footer ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.footer ul li{
+  margin-bottom:12px;
+}
+
+/* LINKS */
+.footer ul li a{
+  color:#cbd5e1;
+
+  text-decoration:none;
+  font-size:15px;
+
+  transition:0.25s ease;
+}
+
+.footer ul li a:hover{
+  color:#38bdf8;
+}
+
+/* BOTTOM */
+.footer-bottom{
+  margin-top:50px;
+
+  border-top:1px solid rgba(255,255,255,0.08);
+
+  padding:22px 24px;
+
+  text-align:center;
+
+  color:#94a3b8;
+  font-size:14px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:992px){
+
+  .footer-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .footer{
+    padding-top:55px;
+  }
+
+  .footer-inner{
+    padding:0 20px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .footer-logo{
+    font-size:28px;
+  }
+
+  .footer h3{
+    font-size:17px;
+  }
+
+  .footer-text,
+  .footer ul li a{
+    font-size:14px;
+  }
+
+  .footer-bottom{
+    margin-top:35px;
+    padding:18px 20px;
+  }
+
+}
+
+</style>
+
 <footer class="footer">
 
   <div class="footer-inner">
 
     <div class="footer-grid">
 
+      <!-- BRAND -->
       <div>
-        <h2 class="footer-logo">ScaleWithClicks</h2>
+
+        <h2 class="footer-logo">
+          ScaleWithClicks
+        </h2>
+
         <p class="footer-text">
-          Helping businesses generate leads using Ads, SEO & tracking.
+          Helping businesses generate leads using Ads, SEO & conversion tracking.
         </p>
+
       </div>
 
+      <!-- SERVICES -->
       <div>
+
         <h3>Services</h3>
+
         <ul>
-          <li><a href="/services/google-ads-agency.html">Google Ads</a></li>
-          <li><a href="/services/meta-ads-agency.html">Meta Ads</a></li>
-          <li><a href="/services/seo-services.html">SEO</a></li>
-          <li><a href="/services/conversion-tracking.html">Conversion Tracking</a></li>
+          <li>
+            <a href="/services/google-ads-agency">
+              Google Ads
+            </a>
+          </li>
+
+          <li>
+            <a href="/services/meta-ads-agency">
+              Meta Ads
+            </a>
+          </li>
+
+          <li>
+            <a href="/services/seo-services">
+              SEO
+            </a>
+          </li>
+
+          <li>
+            <a href="/services/conversion-tracking">
+              Conversion Tracking
+            </a>
+          </li>
         </ul>
+
       </div>
 
+      <!-- RESOURCES -->
       <div>
+
         <h3>Resources</h3>
+
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/aboutus.html">About Us</a></li>
-          <li><a href="https://blog.scalewithclicks.com" target="_blank">Blog</a></li>
-          <li><a href="/casestudy.html">Case Studies</a></li>
-          <li><a href="/contactus.html">Contact Us</a></li>
+          <li>
+            <a href="/">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="/aboutus">
+              About Us
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://blog.scalewithclicks.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Blog
+            </a>
+          </li>
+
+          <li>
+            <a href="/casestudy">
+              Case Studies
+            </a>
+          </li>
+
+          <li>
+            <a href="/contactus">
+              Contact Us
+            </a>
+          </li>
         </ul>
+
       </div>
 
+      <!-- LEGAL -->
       <div>
+
         <h3>Legal</h3>
+
         <ul>
-          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="/terms-conditions.html">Terms</a></li>
-          <li><a href="/disclaimer.html">Disclaimer</a></li>
+          <li>
+            <a href="/privacy-policy">
+              Privacy Policy
+            </a>
+          </li>
+
+          <li>
+            <a href="/terms-conditions">
+              Terms & Conditions
+            </a>
+          </li>
+
+          <li>
+            <a href="/disclaimer">
+              Disclaimer
+            </a>
+          </li>
         </ul>
+
       </div>
 
     </div>
 
   </div>
 
+  <!-- BOTTOM -->
   <div class="footer-bottom">
-    © 2026 ScaleWithClicks
+    © 2026 ScaleWithClicks. All Rights Reserved.
   </div>
 
 </footer>
