@@ -36,63 +36,6 @@ body{
 
 }
 
-/* NAVBAR */
-.navbar{
-  position:sticky;
-  top:10px;
-  z-index:1000;
-  background:rgba(255,255,255,0.95);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid #e2e8f0;
-  }
-
-.nav-container{
-  max-width:1280px;
-  margin:auto;
-  padding:14px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  height:60px;   /* fixed navbar height */
-
-}
-
-.brand{
-  font-size:24px;
-  font-weight:800;
-}
-
-.brand span{
-  color:#2563eb;
-}
-
-.nav-links{
-  display:flex;
-  gap:12px;
-  overflow-x:auto;
-  white-space:nowrap;
-  scrollbar-width:none;
-}
-
-.nav-links::-webkit-scrollbar{
-  display:none;
-}
-.nav-links a{
-  text-decoration:none;
-  color:#334155;
-  font-size:14px;
-  font-weight:600;
-  padding:8px 10px;
-  border-radius:10px;
-  transition:.3s;
-}
-
-.nav-links a:hover{
-  background:#eff6ff;
-  color:#2563eb;
-}
-
 /* CONTAINER */
 .container{
   width:100%;
@@ -324,27 +267,33 @@ body{
   }
 }
   
-.back-btn{
-  text-align:center;   /* centers the button */
-  margin-top:40px;
+.back-wrap{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:50px 0 30px;
 }
 
-.back-btn a{
-  display:inline-block;
-  padding:14px 30px;
+.back-wrap a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 28px;
   background:linear-gradient(135deg,#38bdf8,#0ea5e9);
   color:#000;
+  font-size:16px;
   font-weight:700;
   text-decoration:none;
   border-radius:30px;
-  font-size:16px;
-  transition:0.3s;
+  transition:.3s ease;
 }
 
-.back-btn a:hover{
+.back-wrap a:hover{
   transform:translateY(-3px);
   box-shadow:0 10px 25px rgba(14,165,233,0.3);
 }
+  
 .brand-logo{
   height:40px;
   width:auto;
@@ -352,36 +301,6 @@ body{
   object-fit:contain;
   display:block;
 }
-
-.menu-toggle{
-  display:none;
-  font-size:22px;
-  background:none;
-  border:none;
-  cursor:pointer;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-  .menu-toggle{
-    display:block;
-  }
-
-  .nav-links{
-    position:absolute;
-    top:60px;
-    left:0;
-    width:100%;
-    background:#fff;
-    flex-direction:column;
-    padding:15px 20px;
-    display:none;
-  }
-  .nav-links.active{
-    display:flex;
-  }
-}  
   
 </style>
 </head>
@@ -393,30 +312,8 @@ body{
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   
-<!-- NAVBAR -->
-<div class="navbar">
-  <div class="nav-container">
-
-   <a href="/" style="display:flex; align-items:center;">
-  <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
-</a>
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <div class="nav-links">
-    <a href="https://scalewithclicks.com/">Home</a>
-    <a href="https://scalewithclicks.com/casestudy/healthcare.html">Healthcare</a>
-    <a href="https://scalewithclicks.com/casestudy/lawyer.html">Lawyer</a>
-    <a href="https://scalewithclicks.com/casestudy/packers-movers.html">Packers & Movers</a>
-    <a href="https://scalewithclicks.com/casestudy/pestcontrol.html">Pest Control</a>
-    <a href="https://scalewithclicks.com/casestudy/badges.html">Military Patches</a>
-    <a href="https://scalewithclicks.com/casestudy/wool-e-commerce.html">Yarn Store</a>
-    <a href="https://scalewithclicks.com/casestudy/skincare.html">Skincare</a>
-    <a href="https://scalewithclicks.com/casestudy/pump-manufacturer.html">Pump Manufacturer</a>
-    <a href="https://scalewithclicks.com/casestudy/construction.html">Construction Industry</a>
-    <a href="https://scalewithclicks.com/casestudy/clothing.html">Clothing</a>  
-  </div>
-    
-  </div>
-</div>
+<!-- HEADER PLACEHOLDER -->
+<div id="header-placeholder"></div>
 
 <div class="container">
 
@@ -543,15 +440,15 @@ Book Call
 </div>
 
 <!-- BACK BUTTON -->
-<div class="back-btn">
-  <a href="https://scalewithclicks.com/casestudy.html">← Back to Case Studies</a>
+<div class="back-wrap">
+  <a href="https://scalewithclicks.com/casestudy">
+    ← Back to Case Studies
+  </a>
 </div>
   
-<!-- FOOTER -->
-<div class="footer">
-© 2026 Vinay Yadav | Performance Marketing Consultant
-</div>
-
+<!-- FOOTER PLACEHOLDER -->
+<div id="footer-placeholder"></div>
+  
 </div>
 
 <a href="https://wa.me/9589188668" class="whatsapp">💬</a>
@@ -561,37 +458,25 @@ Book Call
 </button>  
   
 <script>
-document.querySelectorAll('.progress').forEach(el=>{
-let value=el.getAttribute('data-value');
-let circle=el.querySelector('.meter');
-let r=70;
-let c=2*Math.PI*r;
+async function loadComponent(id, file) {
+  try {
+    const response = await fetch(file);
 
-circle.style.strokeDasharray=c;
+    if (!response.ok) {
+      throw new Error("Component not found: " + file);
+    }
 
-let offset=c-(value/100)*c;
+    const html = await response.text();
+    document.getElementById(id).innerHTML = html;
 
-setTimeout(()=>{
-circle.style.strokeDashoffset=offset;
-},300);
-});
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
+  } catch (error) {
+    console.error(error);
+  }
 }
-});
-});
 
-document.querySelectorAll('.fade').forEach(el=>{
-observer.observe(el);
-});
+loadComponent("header-placeholder", "/components/header.html");
+loadComponent("footer-placeholder", "/components/footer.html");
 </script>
-<script>
-function toggleMenu(){
-  document.querySelector(".nav-links").classList.toggle("active");
-}
-</script>
+
 </body>
 </html>
