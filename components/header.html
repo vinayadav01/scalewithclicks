@@ -1,18 +1,238 @@
+<!-- =========================
+     HEADER / NAVBAR
+========================= -->
+
+<style>
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  width:100%;
+  background:rgba(255,255,255,0.96);
+
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #e2e8f0;
+}
+
+/* CONTAINER */
+.nav-container{
+  width:100%;
+  max-width:1280px;
+
+  margin:0 auto;
+  padding:14px 24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* LOGO */
+.logo-wrap{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+}
+
+.brand-logo{
+  height:44px;
+  width:auto;
+  display:block;
+}
+
+/* NAVIGATION */
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#334155;
+
+  font-size:14px;
+  font-weight:600;
+
+  padding:10px 14px;
+  border-radius:10px;
+
+  transition:0.25s ease;
+}
+
+.nav-links a:hover{
+  background:#eff6ff;
+  color:#2563eb;
+}
+
+/* CTA BUTTON */
+.nav-btn{
+  background:#2563eb;
+  color:#fff !important;
+}
+
+.nav-btn:hover{
+  background:#1d4ed8 !important;
+  color:#fff !important;
+}
+
+/* MOBILE BUTTON */
+.menu-btn{
+  display:none;
+
+  background:none;
+  border:none;
+
+  font-size:28px;
+  cursor:pointer;
+
+  color:#0f172a;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .nav-container{
+    padding:12px 18px;
+  }
+
+  .brand-logo{
+    height:38px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+
+    top:100%;
+    left:0;
+
+    width:100%;
+
+    background:#fff;
+
+    border-bottom:1px solid #e2e8f0;
+
+    padding:18px;
+
+    display:none;
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:6px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    width:100%;
+  }
+
+}
+
+</style>
+
 <header class="navbar">
-  <div class="container nav-wrap">
 
-    <img src="/logo.png" class="brand-logo">
+  <div class="nav-container">
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <!-- LOGO -->
+    <a href="https://scalewithclicks.com/" class="logo-wrap">
 
+      <img
+        src="/logo.png"
+        alt="ScaleWithClicks Logo"
+        class="brand-logo"
+      >
+
+    </a>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button
+      class="menu-btn"
+      onclick="toggleMenu()"
+      aria-label="Toggle Menu"
+    >
+      ☰
+    </button>
+
+    <!-- NAVIGATION -->
     <nav class="nav-links" id="navMenu">
-      <a href="https://scalewithclicks.com/">Home</a>
-      <a href="/aboutus">About</a>
-      <a href="/services">Services</a>
-      <a href="/casestudy">Case Studies</a>
-      <li><a href="https://blog.scalewithclicks.com">Blog</a></li>
-      <a href="/contactus" class="nav-btn">Contact</a>
+
+      <a href="https://scalewithclicks.com/">
+        Home
+      </a>
+
+      <a href="/aboutus">
+        About
+      </a>
+
+      <a href="/services">
+        Services
+      </a>
+
+      <a href="/casestudy">
+        Case Studies
+      </a>
+
+      <a
+        href="https://blog.scalewithclicks.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Blog
+      </a>
+
+      <a href="/contactus" class="nav-btn">
+        Contact
+      </a>
+
     </nav>
 
   </div>
+
 </header>
+
+<!-- MOBILE MENU SCRIPT -->
+<script>
+
+function toggleMenu(){
+
+  document
+    .getElementById("navMenu")
+    .classList.toggle("active");
+
+}
+
+document.addEventListener("click", function(e){
+
+  const menu = document.getElementById("navMenu");
+  const btn = document.querySelector(".menu-btn");
+
+  if(
+    menu &&
+    btn &&
+    !menu.contains(e.target) &&
+    !btn.contains(e.target)
+  ){
+    menu.classList.remove("active");
+  }
+
+});
+
+</script>
