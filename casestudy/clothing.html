@@ -744,167 +744,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="https://scalewithclicks.com/casestudy">← Back to Case Studies</a>
 </div>
   
-<!-- FOOTER -->
-<footer class="footer">
-
-  <div class="footer-inner">
-
-    <div class="footer-grid">
-
-      <!-- BRAND -->
-      <div>
-        <h2 class="footer-logo">ScaleWithClicks</h2>
-
-        <p class="footer-text">
-          Helping businesses generate leads using Ads, SEO & conversion tracking.
-        </p>
-      </div>
-
-      <!-- SERVICES -->
-      <div>
-        <h3>Services</h3>
-
-        <ul>
-          <li><a href="/services/google-ads-agency">Google Ads</a></li>
-          <li><a href="/services/meta-ads-agency">Meta Ads</a></li>
-          <li><a href="/services/seo-services">SEO</a></li>
-          <li><a href="/services/conversion-tracking">Conversion Tracking</a></li>
-        </ul>
-      </div>
-
-      <!-- RESOURCES -->
-      <div>
-        <h3>Resources</h3>
-
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/aboutus">About Us</a></li>
-          <li><a href="https://blog.scalewithclicks.com">Blog</a></li>
-          <li><a href="/casestudy">Case Studies</a></li>
-          <li><a href="/contactus">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- LEGAL -->
-      <div>
-        <h3>Legal</h3>
-
-        <ul>
-          <li><a href="/privacy-policy">Privacy Policy</a></li>
-          <li><a href="/terms-conditions">Terms & Conditions</a></li>
-          <li><a href="/disclaimer">Disclaimer</a></li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      © 2026 ScaleWithClicks. All Rights Reserved.
-    </div>
-
-  </div>
-
-</footer>
-
-<!-- FLOATING BUTTONS -->
-<a
-  href="https://wa.me/9589188668"
-  class="whatsapp"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  💬
-</a>
+<!-- FLOAT BUTTONS -->
+<a href="https://wa.me/9589188668" class="whatsapp">💬</a>
 
 <button class="sticky-cta" onclick="openPopup()">
-  🚀 Get Free Leads Plan
+🚀 Get Free Leads Plan
 </button>
 
-<!-- PROGRESS ANIMATION -->
+<div class="footer">
+© 2026 Vinay Yadav | Performance Marketing Consultant
+</div>
+
 <script>
-document.querySelectorAll(".progress-circle").forEach((el) => {
-
+document.querySelectorAll('.progress-circle').forEach(el=>{
   const percent = parseFloat(el.dataset.percent);
-  const label = el.dataset.number;
+  const text = el.querySelector('.progress-text');
+  const target = parseFloat(text.dataset.target);
 
-  const circle = el.querySelector(".progress");
-  const text = el.querySelector(".progress-text");
+  const circle = el.querySelector('.progress');
+  const circumference = 314;
+  const offset = circumference - (percent / 100) * circumference;
 
-  const radius = 50;
-  const circumference = 2 * Math.PI * radius;
-
-  circle.style.strokeDasharray = circumference;
-  circle.style.strokeDashoffset = circumference;
-
-  const offset =
-    circumference - (percent / 100) * circumference;
-
-  setTimeout(() => {
+  setTimeout(()=>{
     circle.style.strokeDashoffset = offset;
-  }, 300);
+  },500);
 
   let count = 0;
-  const target = parseFloat(label);
-  const step = target / 50;
+  const step = target / 60;
 
-  const timer = setInterval(() => {
-
+  const counter = setInterval(()=>{
     count += step;
-
-    if (count >= target) {
+    if(count >= target){
       count = target;
-      clearInterval(timer);
+      clearInterval(counter);
     }
-
-    text.innerText = count.toFixed(1) + "%";
-
-  }, 20);
+    text.innerText = Math.round(count) + "%";
+  },20);
 });
-</script>
 
-<!-- SCROLL ANIMATION -->
-<script>
-const observer = new IntersectionObserver((entries) => {
-
-  entries.forEach((entry) => {
-
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+/* scroll animation */
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
     }
-
   });
+},{threshold:0.15});
 
-});
-
-document.querySelectorAll(".fade").forEach((el) => {
-  observer.observe(el);
-});
+sections.forEach(s=>observer.observe(s));
 </script>
 
-<!-- MOBILE MENU -->
 <script>
-function toggleMenu() {
-  document
-    .getElementById("navMenu")
-    .classList.toggle("active");
+function toggleMenu(){
+  document.querySelector(".nav-links").classList.toggle("active");
 }
-
-document.addEventListener("click", function (e) {
-
-  const menu = document.getElementById("navMenu");
-  const btn = document.querySelector(".menu-btn");
-
-  if (
-    menu &&
-    btn &&
-    !menu.contains(e.target) &&
-    !btn.contains(e.target)
-  ) {
-    menu.classList.remove("active");
-  }
-
-});
 </script>
-
+  
 </body>
 </html>
