@@ -495,30 +495,8 @@ tr:hover{
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   
-<!-- NAVBAR -->
-<div class="navbar">
-  <div class="nav-container">
-      <a href="/" style="display:flex; align-items:center;">
-  <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
-</a>
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <div class="nav-links">
-    <a href="https://scalewithclicks.com/">Home</a>
-    <a href="https://scalewithclicks.com/casestudy/healthcare.html">Healthcare</a>
-    <a href="https://scalewithclicks.com/casestudy/lawyer.html">Lawyer</a>
-    <a href="https://scalewithclicks.com/casestudy/packers-movers.html">Packers & Movers</a>
-    <a href="https://scalewithclicks.com/casestudy/pestcontrol.html">Pest Control</a>
-    <a href="https://scalewithclicks.com/casestudy/badges.html">Military Patches</a>
-    <a href="https://scalewithclicks.com/casestudy/wool-e-commerce.html">Yarn Store</a>
-    <a href="https://scalewithclicks.com/casestudy/skincare.html">Skincare</a>
-    <a href="https://scalewithclicks.com/casestudy/pump-manufacturer.html">Pump Manufacturer</a>
-    <a href="https://scalewithclicks.com/casestudy/construction.html">Construction Industry</a>
-    <a href="https://scalewithclicks.com/casestudy/clothing.html">Clothing</a>  
-  </div>
-    
-  </div>
-</div>
-
+<div id="header"></div>
+  
 <div class="container">
 
 <!-- HERO -->
@@ -666,13 +644,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="back-btn">
   <a href="https://scalewithclicks.com/casestudy.html">← Back to Case Studies</a>
 </div>
-
+</div>
+  
 <!-- FOOTER -->
-<div class="footer">
-  © 2026 Vinay Yadav | Performance Marketing Consultant
-</div>
-
-</div>
+<div id="footer"></div>
 
 <!-- FLOAT BUTTONS -->
 <a href="https://wa.me/9589188668" class="whatsapp">💬</a>
@@ -696,28 +671,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script>
-function openPopup(){
-  document.getElementById("leadPopup").style.display="flex";
+async function loadComponent(id, file) {
+  const res = await fetch(file);
+  const html = await res.text();
+  document.getElementById(id).innerHTML = html;
 }
 
-function closePopup(){
-  document.getElementById("leadPopup").style.display="none";
-}
-
-function openCalendly(){
-  window.open("https://calendly.com/vinayyadav01992","_blank");
-}
-
-setTimeout(function(){
-  openPopup();
-},20000);
-</script>
-
-<script>
-function toggleMenu(){
-  document.querySelector(".nav-links").classList.toggle("active");
-}
-</script>  
+loadComponent("header", "/components/header.html");
+loadComponent("footer", "/components/footer.html");
+</script> 
 
 </body>
 </html>
