@@ -95,11 +95,13 @@ body{
 }
 
 .meter{
+  fill:none;
   stroke:#2563eb;
+  stroke-width:10;
   stroke-linecap:round;
-  stroke-dasharray:440;
-  stroke-dashoffset:440;
-  transition:1.5s ease;
+  stroke-dasharray:439.82;
+  stroke-dashoffset:439.82;
+  transition:stroke-dashoffset 1.8s ease;
 }
 
 .number{
@@ -478,24 +480,31 @@ Book Call
 </button>  
   
 <script>
-async function loadComponent(id, file) {
-  try {
-    const response = await fetch(file);
+window.addEventListener("load", () => {
 
-    if (!response.ok) {
-      throw new Error("Component not found: " + file);
-    }
+  document.querySelectorAll(".progress").forEach((el) => {
 
-    const html = await response.text();
-    document.getElementById(id).innerHTML = html;
+    const value = parseInt(el.getAttribute("data-value"));
+    const circle = el.querySelector(".meter");
 
-  } catch (error) {
-    console.error(error);
-  }
-}
+    const radius = 70;
+    const circumference = 2 * Math.PI * radius;
 
-loadComponent("header-placeholder", "/components/header.html");
-loadComponent("footer-placeholder", "/components/footer.html");
+    circle.style.strokeDasharray = circumference;
+    circle.style.strokeDashoffset = circumference;
+
+    /* force repaint */
+    circle.getBoundingClientRect();
+
+    const offset = circumference - (value / 100) * circumference;
+
+    setTimeout(() => {
+      circle.style.strokeDashoffset = offset;
+    }, 300);
+
+  });
+
+});
 </script>
 
 </body>
