@@ -31,55 +31,6 @@ body{
   overflow-x:hidden;
 }
 
-/* NAVBAR */
-.navbar{
-  width:100%;
-  background:rgba(255,255,255,.92);
-  backdrop-filter:blur(12px);
-  position:sticky;
-  top:0;
-  z-index:999;
-  border-bottom:1px solid rgba(15,23,42,.08);
-}
-
-.nav-container{
-  max-width:1400px;
-  margin:auto;
-  padding:16px 24px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-}
-
-.logo{
-  font-size:22px;
-  font-weight:800;
-  background:linear-gradient(90deg,#2563eb,#22c55e);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.nav-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-.nav-links a{
-  text-decoration:none;
-  color:#334155;
-  font-size:14px;
-  padding:8px 12px;
-  border-radius:10px;
-  transition:.3s;
-}
-
-.nav-links a:hover{
-  background:#e2e8f0;
-  color:#0f172a;
-}
-
 /* CONTAINER */
 .container{
   width:92%;
@@ -285,36 +236,11 @@ td{
   cursor:pointer;
   z-index:999;
 }
-/* FOOTER */
-.footer{
-  text-align:center;
-  margin-top:70px;
-  padding:25px;
-  color:#64748b;
-  border-top:1px solid #e2e8f0;
-}
 
 @media(max-width:768px){
   .hero h1{
     font-size:34px;
   }
-
-  .nav-container{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .nav-links{
-    max-height:220px;
-    overflow:auto;
-  }
-.nav-links{
-  display:flex;
-  flex-wrap:nowrap;
-  overflow-x:auto;
-  gap:12px;
-  -webkit-overflow-scrolling:touch;
-}
 
 }
 
@@ -347,6 +273,22 @@ td{
   transform:translateY(-3px);
   box-shadow:0 10px 25px rgba(14,165,233,0.3);
 }  
+
+#header-placeholder,
+#footer-placeholder{
+  width:100%;
+  display:block;
+}
+
+#footer-placeholder{
+  margin-top:60px;
+}
+
+.container{
+  position:relative;
+  z-index:1;
+}
+  
 </style>
 </head>
 
@@ -357,32 +299,9 @@ td{
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   
-<!-- NAVBAR -->
-<div class="navbar">
-<div class="nav-container">
-
-  <a href="/" style="display:flex; align-items:center;">
-  <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
-</a>
-
-<div class="nav-links">
-    <a href="https://scalewithclicks.com/">Home</a>
-    <a href="https://scalewithclicks.com/casestudy/healthcare.html">Healthcare</a>
-    <a href="https://scalewithclicks.com/casestudy/lawyer.html">Lawyer</a>
-    <a href="https://scalewithclicks.com/casestudy/packers-movers.html">Packers & Movers</a>
-    <a href="https://scalewithclicks.com/casestudy/pestcontrol.html">Pest Control</a>
-    <a href="https://scalewithclicks.com/casestudy/badges.html">Military Patches</a>
-    <a href="https://scalewithclicks.com/casestudy/wool-e-commerce.html">Yarn Store</a>
-    <a href="https://scalewithclicks.com/casestudy/skincare.html">Skincare</a>
-    <a href="https://scalewithclicks.com/casestudy/pump-manufacturer.html">Pump Manufacturer</a>
-    <a href="https://scalewithclicks.com/casestudy/construction.html">Construction Industry</a>
-    <a href="https://scalewithclicks.com/casestudy/clothing.html">Clothing</a>
-
-</div>
-
-</div>
-</div>
-
+<!-- HEADER PLACEHOLDER -->
+<div id="header-placeholder"></div>
+  
 <div class="container">
 
 <!-- HERO -->
@@ -587,11 +506,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="https://scalewithclicks.com/casestudy.html">← Back to Case Studies</a>
 </div>
   
-<!-- FOOTER -->
-<div class="footer">
-© 2026 Vinay Yadav | Performance Marketing Consultant
-</div>
-
+<!-- FOOTER PLACEHOLDER -->
+<div id="footer-placeholder"></div>
+  
 </div>
 
 <a href="https://wa.me/9589188668" class="whatsapp">💬</a>
@@ -599,6 +516,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <button class="sticky-cta" onclick="window.open('https://calendly.com/vinayyadav01992')">
 🚀 Get Free Leads Plan
 </button>
+
+<script>
+async function loadComponent(id, file) {
+  try {
+    const response = await fetch(file);
+
+    if (!response.ok) {
+      throw new Error(`Failed to load ${file}`);
+    }
+
+    const html = await response.text();
+    document.getElementById(id).innerHTML = html;
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  loadComponent("header-placeholder", "/components/header.html");
+  loadComponent("footer-placeholder", "/components/footer.html");
+});
+</script>  
 
 </body>
 </html>
