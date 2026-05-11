@@ -583,14 +583,95 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- LOAD HEADER + FOOTER -->
 <script>
 async function loadComponent(id, file) {
-  const response = await fetch(file);
-  const html = await response.text();
-  document.getElementById(id).innerHTML = html;
+  try {
+    const response = await fetch(file);
+
+    if (!response.ok) {
+      throw new Error("Component not found: " + file);
+    }
+
+    const html = await response.text();
+    document.getElementById(id).innerHTML = html;
+
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 loadComponent("header-placeholder", "/components/header.html");
 loadComponent("footer-placeholder", "/components/footer.html");
 </script>
-  
+
+<!-- MOBILE MENU -->
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+
+document.addEventListener("click", function(e){
+  const menu = document.getElementById("navMenu");
+  const btn = document.querySelector(".menu-btn");
+
+  if(menu && btn && !menu.contains(e.target) && !btn.contains(e.target)){
+    menu.classList.remove("active");
+  }
+});
+</script>
+
+<!-- PROGRESS ANIMATION -->
+<script>
+document.querySelectorAll('.progress-circle').forEach(el=>{
+
+  const percent = parseFloat(el.dataset.percent);
+  const label = el.dataset.number;
+
+  const circle = el.querySelector('.progress');
+  const text = el.querySelector('.progress-text');
+
+  const radius = 50;
+  const circumference = 2 * Math.PI * radius;
+
+  circle.style.strokeDasharray = circumference;
+  circle.style.strokeDashoffset = circumference;
+
+  const offset = circumference - (percent / 100) * circumference;
+
+  setTimeout(()=>{
+    circle.style.strokeDashoffset = offset;
+  },300);
+
+  let count = 0;
+  const target = parseFloat(label);
+  const step = target / 50;
+
+  const timer = setInterval(()=>{
+    count += step;
+
+    if(count >= target){
+      count = target;
+      clearInterval(timer);
+    }
+
+    text.innerText = count.toFixed(1) + "%";
+  },20);
+
+});
+</script>
+
+<!-- SCROLL ANIMATION -->
+<script>
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.fade').forEach(el=>{
+  observer.observe(el);
+});
+</script>
+
 </body>
 </html>
