@@ -324,6 +324,23 @@ body{
   width:100vw;
   margin-left:calc(50% - 50vw);
 }
+
+/* HEADER + FOOTER FIX */
+
+#header-placeholder,
+#footer-placeholder{
+  width:100%;
+  display:block;
+}
+
+#footer-placeholder{
+  margin-top:60px;
+}
+
+.container{
+  position:relative;
+  z-index:1;
+}  
   
 </style>
 </head>
@@ -335,7 +352,7 @@ body{
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   
-<!-- HEADER PLACEHOLDER -->
+<!-- HEADER -->
 <div id="header-placeholder"></div>
 
 <div class="container">
@@ -473,11 +490,37 @@ Book Call
 <!-- FOOTER PLACEHOLDER -->
 <div id="footer-placeholder"></div>
 
+<!-- FLOATING BUTTONS -->
 <a href="https://wa.me/9589188668" class="whatsapp">💬</a>
 
 <button class="sticky-cta" onclick="window.open('https://calendly.com/vinayyadav01992')">
 🚀 Get Free Leads Plan
 </button>  
+
+<!-- LOAD COMPONENTS -->
+<script>
+async function loadComponent(id, file) {
+  try {
+    const response = await fetch(file);
+
+    if (!response.ok) {
+      throw new Error(`Failed to load ${file}`);
+    }
+
+    const html = await response.text();
+
+    document.getElementById(id).innerHTML = html;
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  loadComponent("header-placeholder", "/components/header.html");
+  loadComponent("footer-placeholder", "/components/footer.html");
+});
+</script>
   
 <script>
 window.addEventListener("load", () => {
