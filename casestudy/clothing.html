@@ -302,13 +302,16 @@ body{
   cursor:pointer;
 }  
 
-.back-btn{
-  text-align:center;   /* centers the button */
-  margin-top:40px;
+.back-wrap{
+  display:flex;
+  justify-content:center;
+  margin:50px 0 30px;
 }
 
-.back-btn a{
-  display:inline-block;
+.back-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   padding:14px 30px;
   background:linear-gradient(135deg,#38bdf8,#0ea5e9);
   color:#000;
@@ -319,7 +322,7 @@ body{
   transition:0.3s;
 }
 
-.back-btn a:hover{
+.back-btn:hover{
   transform:translateY(-3px);
   box-shadow:0 10px 25px rgba(14,165,233,0.3);
 }
