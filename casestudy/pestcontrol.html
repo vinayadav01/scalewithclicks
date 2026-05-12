@@ -63,9 +63,11 @@ body{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:25px;
-  margin-top:20px;
-  position: relative;
-  z-index: 5;
+
+  margin-top:20px !important;  /* REMOVE negative margin */
+
+  position:relative;
+  z-index:10;
 }
 
 .stat-card{
@@ -387,6 +389,18 @@ body{
   width:100vw;
   margin-left:calc(50% - 50vw);
 }
+
+.sticky-btn{
+  position: fixed !important;
+  bottom: 80px !important;
+  right: 20px !important;
+  left: auto !important;
+  z-index: 99999 !important;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}  
   
 </style>
 </head>
