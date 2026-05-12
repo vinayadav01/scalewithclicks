@@ -32,54 +32,6 @@ body{
   line-height:1.6;
 }
 
-/* NAVBAR (UNIFIED STYLE) */
-.navbar{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#ffffff;
-  border-bottom:1px solid #e2e8f0;
-  box-shadow:0 4px 12px rgba(0,0,0,0.04);
-}
-.brand-logo{
-  height:40px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-  width:auto;
-  max-width:140px;
-  object-fit:contain;
-}
-.nav-container{
-  max-width:1200px;
-  margin:auto;
-  padding:12px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  }
-
-.nav-container b{
-  font-size:18px;
-  color:#0f172a;
-}
-
-.nav-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-}
-
-.nav-links a{
-  text-decoration:none;
-  color:#475569;
-  font-size:14px;
-  font-weight:600;
-  transition:0.3s;
-}
-
-.nav-links a:hover{
-  color:#2563eb;
-}
-
 /* CONTAINER */
 .container{
   max-width:1200px;
@@ -320,28 +272,7 @@ button:hover{
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   
-<!-- NAVBAR -->
-<div class="navbar">
-  <div class="nav-container">
-   <a href="/" style="display:flex; align-items:center;">
-  <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
-</a>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-    <div class="nav-links">
-    <a href="https://scalewithclicks.com/">Home</a>
-    <a href="https://scalewithclicks.com/casestudy/healthcare.html">Healthcare</a>
-    <a href="https://scalewithclicks.com/casestudy/lawyer.html">Lawyer</a>
-    <a href="https://scalewithclicks.com/casestudy/packers-movers.html">Packers & Movers</a>
-    <a href="https://scalewithclicks.com/casestudy/pestcontrol.html">Pest Control</a>
-    <a href="https://scalewithclicks.com/casestudy/badges.html">Military Patches</a>
-    <a href="https://scalewithclicks.com/casestudy/wool-e-commerce.html">Yarn Store</a>
-    <a href="https://scalewithclicks.com/casestudy/skincare.html">Skincare</a>
-    <a href="https://scalewithclicks.com/casestudy/pump-manufacturer.html">Pump Manufacturer</a>
-    <a href="https://scalewithclicks.com/casestudy/construction.html">Construction Industry</a>
-  </div>
-  </div>
-</div>
+<div id="header"></div>
 
 <div class="container">
 
@@ -468,9 +399,7 @@ Book Strategy Call
 🚀 Get Free Leads Plan
 </button>
 
-<div class="footer">
-© 2026 Vinay Yadav | Performance Marketing Consultant
-</div>
+<div id="footer"></div>
 
 <script>
 document.querySelectorAll('.progress-circle').forEach(el=>{
@@ -513,9 +442,14 @@ sections.forEach(s=>observer.observe(s));
 </script>
 
 <script>
-function toggleMenu(){
-  document.querySelector(".nav-links").classList.toggle("active");
+async function loadComponent(id, file) {
+  const res = await fetch(file);
+  const html = await res.text();
+  document.getElementById(id).innerHTML = html;
 }
+
+loadComponent("header", "/components/header.html");
+loadComponent("footer", "/components/footer.html");
 </script>
   
 </body>
