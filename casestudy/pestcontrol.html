@@ -41,6 +41,16 @@ body{
   padding:100px 20px 80px;
 }
 
+.hero{
+  position: relative;
+  z-index: 1;
+}
+
+  .container{
+  position: relative;
+  z-index: 2;
+}
+
 .hero h1{
   font-size:42px;
   margin-bottom:10px;
@@ -395,12 +405,29 @@ body{
   bottom: 80px !important;
   right: 20px !important;
   left: auto !important;
-  z-index: 99999 !important;
 
-  display: inline-flex;
+  z-index: 999999 !important;
+
+  display: flex !important;
   align-items: center;
   justify-content: center;
+
+  pointer-events: auto;
 }  
+
+.kpi-grid{
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+  gap: 25px !important;
+
+  margin-top: 20px !important;
+
+  position: relative !important;
+  z-index: 999 !important;
+
+  visibility: visible !important;
+  opacity: 1 !important;
+}
   
 </style>
 </head>
