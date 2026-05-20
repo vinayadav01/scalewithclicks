@@ -505,6 +505,77 @@ section{padding:50px 0;}
   .footer-grid{grid-template-columns:1fr;}
 }
 
+/* FAQ Section */
+.faq-section {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* FAQ Heading */
+.faq-section h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #0b163f;
+    margin-bottom: 40px;
+}
+
+/* FAQ Item */
+.faq-item {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* Question */
+.faq-item h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0b163f;
+    margin-bottom: 12px;
+}
+
+/* Answer */
+.faq-item p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #444;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 15px;
+    }
+
+    .faq-section h2 {
+        font-size: 32px;
+    }
+
+    .faq-item {
+        padding: 20px;
+    }
+
+    .faq-item h3 {
+        font-size: 22px;
+    }
+
+    .faq-item p {
+        font-size: 18px;
+    }
+}  
+
 </style>
 </head>
 
@@ -734,28 +805,22 @@ Performance Marketing Agency for Google Ads, Meta Ads & SEO
 </section>
 
 <section class="faq-section">
-  <h2>Frequently Asked Questions</h2>
+    <h2>Frequently Asked Questions</h2>
 
-  <div class="faq-item">
-    <h3>What services does Scale With Clicks provide?</h3>
-    <p>
-      We provide Google Ads, Meta Ads, SEO, GA4, and conversion tracking services.
-    </p>
-  </div>
+    <div class="faq-item">
+        <h3>What services does Scale With Clicks provide?</h3>
+        <p>We provide Google Ads, Meta Ads, SEO, GA4, and conversion tracking services.</p>
+    </div>
 
-  <div class="faq-item">
-    <h3>Do you provide ecommerce tracking setup?</h3>
-    <p>
-      Yes, we provide GA4 ecommerce tracking, Meta Pixel setup, and GTM implementation.
-    </p>
-  </div>
+    <div class="faq-item">
+        <h3>Do you provide ecommerce tracking setup?</h3>
+        <p>Yes, we provide GA4 ecommerce tracking, Meta Pixel setup, and GTM implementation.</p>
+    </div>
 
-  <div class="faq-item">
-    <h3>Do you work with businesses outside India?</h3>
-    <p>
-      Yes, we provide digital marketing services globally.
-    </p>
-  </div>
+    <div class="faq-item">
+        <h3>Do you work with businesses outside India?</h3>
+        <p>Yes, we provide digital marketing services globally.</p>
+    </div>
 </section>  
   
 <!-- CTA -->
