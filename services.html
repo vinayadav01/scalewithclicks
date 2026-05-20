@@ -346,44 +346,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 }
 
-/* FOOTER - HOMEPAGE MATCH */
+/* FOOTER */
 .footer{
-  background:#0b1324;
-  padding:80px 20px 50px;
+  background:#0f172a;
+  color:#cbd5e1;
+  padding:60px 20px 25px;
 }
 
 .footer-grid{
-  max-width:1100px;
-  margin:auto;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:40px;
+  max-width:1200px;
+  margin:auto;
 }
 
-/* BRAND */
+.footer h2,
+.footer h3{
+  color:#ffffff;
+  margin-bottom:12px;
+}
+
 .footer-logo{
   font-size:22px;
   font-weight:700;
-  color:#ffffff;
-  margin-bottom:10px;
 }
 
 .footer-text{
-  color:#cbd5e1;
   font-size:14px;
   line-height:1.7;
-}
-
-/* HEADINGS */
-.footer h3{
   color:#94a3b8;
-  font-size:14px;
-  margin-bottom:10px;
-  text-transform:uppercase;
-  letter-spacing:.5px;
 }
 
-/* LINKS */
 .footer ul{
   list-style:none;
   padding:0;
@@ -394,17 +388,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 .footer ul li a{
-  color:#7c3aed;
-  font-size:15px;
-  transition:.25s;
-}
-
-.footer ul li a:hover{
-  color:#a78bfa;
-}
-
-/* FOOTER LINKS - HOMEPAGE COLOR */
-.footer ul li a{
   color:#94a3b8;
   font-size:15px;
   transition:.25s;
@@ -414,17 +397,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   color:#ffffff;
 }
   
-/* BOTTOM */
 .footer-bottom{
   text-align:center;
-  margin-top:50px;
-  font-size:13px;
-  color:#64748b;
+  margin-top:40px;
+  font-size:14px;
+  color:#94a3b8;
   border-top:1px solid rgba(255,255,255,0.08);
-  padding-top:20px;
+  padding-top:18px;
 }
 
-/* RESPONSIVE */
+/* MOBILE FIX */
 @media(max-width:992px){
   .footer-grid{
     grid-template-columns:1fr 1fr;
