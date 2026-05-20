@@ -546,7 +546,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="hero">
 <div class="container">
 
-<h1>Scale Revenue with <span>Performance Marketing</span></h1>
+<h1>
+Performance Marketing Agency for Google Ads, Meta Ads & SEO
+</h1>
 
 <p>We help businesses grow with Google Ads, Meta Ads, SEO and conversion tracking to drive measurable ROI.</p>
 
@@ -730,6 +732,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 </section>
+
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <h3>What services does Scale With Clicks provide?</h3>
+    <p>
+      We provide Google Ads, Meta Ads, SEO, GA4, and conversion tracking services.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Do you provide ecommerce tracking setup?</h3>
+    <p>
+      Yes, we provide GA4 ecommerce tracking, Meta Pixel setup, and GTM implementation.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Do you work with businesses outside India?</h3>
+    <p>
+      Yes, we provide digital marketing services globally.
+    </p>
+  </div>
+</section>  
   
 <!-- CTA -->
 <section class="cta">
@@ -889,7 +916,11 @@ document.addEventListener("click", function(e){
   "@type": "Organization",
   "name": "Scale With Clicks",
   "url": "https://scalewithclicks.com",
-  "logo": "https://scalewithclicks.com/logo.png",
+  "logo": {
+  "@type": "ImageObject",
+  "url": "https://scalewithclicks.com/logo.png"
+  "@id": "https://scalewithclicks.com/#organization",
+},
   "sameAs": [
     "https://www.facebook.com/scalewithclicks/",
     "https://www.instagram.com/scalewithclick",
@@ -904,6 +935,19 @@ document.addEventListener("click", function(e){
   }
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://scalewithclicks.com/#website",
+  "url": "https://scalewithclicks.com",
+  "name": "Scale With Clicks",
+  "publisher": {
+    "@id": "https://scalewithclicks.com/#organization"
+  }
+}
+</script>  
 
 <script type="application/ld+json">
 {
@@ -937,6 +981,39 @@ document.addEventListener("click", function(e){
   ]
 }
 </script> 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does Scale With Clicks provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Scale With Clicks provides Google Ads, Meta Ads, SEO, GA4, and conversion tracking services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide ecommerce tracking setup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Scale With Clicks provides GA4 ecommerce tracking, Meta Pixel setup, and GTM implementation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with businesses outside India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Scale With Clicks provides digital marketing services globally."
+      }
+    }
+  ]
+}
+</script>  
 
 </body>
 </html>
