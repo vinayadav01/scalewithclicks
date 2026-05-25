@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /components/
 
 Sitemap: https://scalewithclicks.com/sitemap.xml
