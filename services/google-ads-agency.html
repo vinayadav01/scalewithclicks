@@ -95,6 +95,16 @@ body{
   padding-bottom:0;
 }
 
+*, *::before, *::after{
+  box-sizing:border-box;
+}
+
+#universal-footer{
+  width:100%;
+  margin:0;
+  padding:0;
+}  
+
 /* GLOBAL FIX */
 a{
   text-decoration:none !important;
@@ -319,8 +329,9 @@ p{color:#475569;}
   background:#020617;
   color:#94A3B8;
   margin-top:60px;
-  width:100vw;
+  width:100%;
   position:relative;
+  box-sizing:border-box;
 }
 
 /* GRID */
