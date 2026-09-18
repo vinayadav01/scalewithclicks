@@ -1,110 +1,170 @@
 document.addEventListener("DOMContentLoaded", async function () {
 
+  /* =========================================
+     UNIVERSAL HEADER
+  ========================================= */
+
   const headerPlaceholder =
     document.getElementById("universal-header");
 
-  if (!headerPlaceholder) {
-    return;
-  }
+  if (headerPlaceholder) {
 
-  try {
+    try {
 
-    const response = await fetch("/components/header.html");
+      const response =
+        await fetch("/components/header.html");
 
-    if (!response.ok) {
-      throw new Error("Could not load universal header.");
-    }
+      if (!response.ok) {
+        throw new Error(
+          "Could not load universal header."
+        );
+      }
 
-    const headerHTML = await response.text();
+      const headerHTML =
+        await response.text();
 
-    headerPlaceholder.innerHTML = headerHTML;
-
-
-    /* =========================================
-       MOBILE MENU
-    ========================================= */
-
-    const menuButton =
-      document.getElementById("scwMenuBtn");
-
-    const navigation =
-      document.getElementById("scwNav");
-
-    if (!menuButton || !navigation) {
-      console.error("Universal header menu elements not found.");
-      return;
-    }
+      headerPlaceholder.innerHTML =
+        headerHTML;
 
 
-    /* Open / Close menu */
+      /* =========================================
+         MOBILE MENU
+      ========================================= */
 
-    menuButton.addEventListener("click", function (event) {
+      const menuButton =
+        document.getElementById("scwMenuBtn");
 
-      event.stopPropagation();
+      const navigation =
+        document.getElementById("scwNav");
 
-      navigation.classList.toggle("active");
-      menuButton.classList.toggle("active");
+      if (menuButton && navigation) {
 
-      const isOpen =
-        navigation.classList.contains("active");
+        /* Open / Close menu */
 
-      menuButton.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-      );
+        menuButton.addEventListener(
+          "click",
+          function (event) {
 
-    });
+            event.stopPropagation();
 
+            navigation.classList.toggle("active");
 
-    /* Close menu after clicking a link */
+            menuButton.classList.toggle("active");
 
-    navigation
-      .querySelectorAll("a")
-      .forEach(function (link) {
+            const isOpen =
+              navigation.classList.contains("active");
 
-        link.addEventListener("click", function () {
+            menuButton.setAttribute(
+              "aria-expanded",
+              isOpen ? "true" : "false"
+            );
 
-          navigation.classList.remove("active");
-          menuButton.classList.remove("active");
-
-          menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-
-        });
-
-      });
+          }
+        );
 
 
-    /* Close menu when clicking outside */
+        /* Close after clicking a link */
 
-    document.addEventListener("click", function (event) {
+        navigation
+          .querySelectorAll("a")
+          .forEach(function (link) {
 
-      if (
-        !navigation.contains(event.target) &&
-        !menuButton.contains(event.target)
-      ) {
+            link.addEventListener(
+              "click",
+              function () {
 
-        navigation.classList.remove("active");
-        menuButton.classList.remove("active");
+                navigation.classList.remove("active");
 
-        menuButton.setAttribute(
-          "aria-expanded",
-          "false"
+                menuButton.classList.remove("active");
+
+                menuButton.setAttribute(
+                  "aria-expanded",
+                  "false"
+                );
+
+              }
+            );
+
+          });
+
+
+        /* Close when clicking outside */
+
+        document.addEventListener(
+          "click",
+          function (event) {
+
+            if (
+              !navigation.contains(event.target) &&
+              !menuButton.contains(event.target)
+            ) {
+
+              navigation.classList.remove("active");
+
+              menuButton.classList.remove("active");
+
+              menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+            }
+
+          }
         );
 
       }
 
-    });
+    } catch (error) {
+
+      console.error(
+        "Universal header error:",
+        error
+      );
+
+    }
+
+  }
 
 
-  } catch (error) {
+  /* =========================================
+     UNIVERSAL FLOATING CONTACT
+  ========================================= */
 
-    console.error(
-      "Universal header error:",
-      error
+  const floatingPlaceholder =
+    document.getElementById(
+      "universal-floating-contact"
     );
+
+  if (floatingPlaceholder) {
+
+    try {
+
+      const response =
+        await fetch(
+          "/components/floating-contact.html"
+        );
+
+      if (!response.ok) {
+        throw new Error(
+          "Could not load floating contact buttons."
+        );
+      }
+
+      const floatingHTML =
+        await response.text();
+
+      floatingPlaceholder.innerHTML =
+        floatingHTML;
+
+    } catch (error) {
+
+      console.error(
+        "Universal floating contact error:",
+        error
+      );
+
+    }
 
   }
 
