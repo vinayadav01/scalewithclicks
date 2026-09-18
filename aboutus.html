@@ -115,24 +115,6 @@ a{text-decoration:none;}
   padding:0 20px;
 }
 
-/* NAVBAR */
-/* NAVBAR */
-.navbar{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#ffffff;
-  box-shadow:0 4px 18px rgba(0,0,0,0.05);
-  padding:18px 0; /* 🔥 increased height */
-}
-
-.nav-wrap{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:30px;
-}
-
 /* LOGO FIX */
 .brand-logo{
   height:60px; /* 🔥 bigger logo */
@@ -454,24 +436,9 @@ a{text-decoration:none;}
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- NAVBAR -->
-<header class="navbar">
-  <div class="container nav-wrap">
-      <a href="/" style="display:flex; align-items:center;">
-  <img src="logo.png" alt="Scale with Clicks Logo" class="brand-logo">
-</a>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="https://scalewithclicks.com/">Home</a>
-      <a href="aboutus">About Us</a>
-      <a href="services">Services</a>
-      <a href="casestudy">Case Studies</a>
-      <a href="https://blog.scalewithclicks.com">Blog</a>
-      <a href="contactus" class="nav-btn">Contact Us</a>
-    </nav>
-  </div>
-</header>
-
+  
+<div id="universal-header"></div>
+  
 <!-- HERO -->
 <section class="hero">
   <h1>About Scale with Clicks</h1>
@@ -658,5 +625,7 @@ document.querySelectorAll("#navLinks a").forEach(link => {
 });
 </script>
 
+<script src="/js/load-components.js"></script>
+  
 </body>
 </html>
