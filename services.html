@@ -159,25 +159,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }  
 
 /* ========================= */
-/* PREMIUM NAVBAR */
-/* ========================= */
-
-.navbar{
-  position:sticky;
-  top:0;
-  background:rgba(255,255,255,0.92);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid #eee;
-  z-index:1000;
-}
-
-.nav-wrap{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 0;
-  position:relative;
-}
 
 /* LOGO */
 .brand-logo{
@@ -452,49 +433,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager (noscript) --> 
 
 <!-- NAVBAR -->
-<header class="navbar">
 
-  <div class="container nav-wrap">
-
-    <!-- LOGO -->
-<a href="https://scalewithclicks.com/" style="display:flex; align-items:center;">
-  <img src="https://scalewithclicks.com/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
-</a>
-
-    <!-- HAMBURGER -->
-    <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
-
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-    </div>
-
-    <!-- NAVIGATION -->
-    <nav class="nav-links" id="navMenu">
-
-      <a href="https://scalewithclicks.com/">Home</a>
-
-      <a href="https://scalewithclicks.com/aboutus">About</a>
-
-      <a href="https://scalewithclicks.com/services">Services</a>
-
-      <a href="https://scalewithclicks.com/casestudy">Case Studies</a>
-
-      <a href="https://blog.scalewithclicks.com">Blog</a>
-
-      <a href="https://scalewithclicks.com/contactus" class="nav-btn">
-        Contact
-      </a>
-
-    </nav>
-
-  </div>
-
-</header>
-
+<div id="universal-header"></div>
+  
 <!-- HERO -->
 <section class="hero">
   <div class="container">
@@ -754,6 +695,8 @@ document.addEventListener("click", function(e){
 });
 
 </script>
+
+<script src="/js/load-components.js"></script>  
   
 </body>
 </html>
