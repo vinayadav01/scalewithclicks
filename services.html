@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" href="/css/floating-contact.css">  
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -647,23 +649,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </footer>
 
-<!-- FLOAT -->
-<div class="floating-contact">
-<a href="https://wa.me/919589188668" target="_blank" class="float-btn whatsapp">💬</a>
-<a href="tel:+919589188668" class="float-btn call">📞</a>
-</div>
-
-<script>
-
-const navMenu = document.getElementById("navMenu");
-const menuToggle = document.getElementById("menuToggle");
-
-function toggleMenu(){
-
-  navMenu.classList.toggle("active");
-
-  menuToggle.classList.toggle("active");
-}
+<div id="universal-floating-contact"></div>
 
 /* CLOSE MENU ON LINK CLICK */
 document.querySelectorAll("#navMenu a").forEach(link => {
