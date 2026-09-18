@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" href="/css/universal-header.css">
+<link rel="stylesheet" href="/css/universal-footer.css">
+<link rel="stylesheet" href="/css/floating-contact.css">
+  
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -569,53 +573,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
 </div>
 
-<!-- FOOTER PLACEHOLDER -->
-<div id="footer-placeholder"></div>
+<!-- FOOTER -->
 
-<!-- FLOAT BUTTONS -->
-<a href="https://wa.me/9589188668" class="whatsapp">💬</a>
+<div id="universal-footer"></div>  
+
+<!-- FLOAT -->
+
+<div id="universal-floating-contact"></div>  
+  
+<script src="/js/load-components.js"></script>
 
 <button class="sticky-cta">
   🚀 Get Free Leads Plan
 </button>
-
-<!-- LOAD HEADER + FOOTER -->
-<script>
-async function loadComponent(id, file) {
-  try {
-    const response = await fetch(file);
-
-    if (!response.ok) {
-      throw new Error("Component not found: " + file);
-    }
-
-    const html = await response.text();
-    document.getElementById(id).innerHTML = html;
-
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-loadComponent("header-placeholder", "/components/header.html");
-loadComponent("footer-placeholder", "/components/footer.html");
-</script>
-
-<!-- MOBILE MENU -->
-<script>
-function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("active");
-}
-
-document.addEventListener("click", function(e){
-  const menu = document.getElementById("navMenu");
-  const btn = document.querySelector(".menu-btn");
-
-  if(menu && btn && !menu.contains(e.target) && !btn.contains(e.target)){
-    menu.classList.remove("active");
-  }
-});
-</script>
 
 <!-- PROGRESS ANIMATION -->
 <script>
