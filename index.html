@@ -728,29 +728,6 @@ Performance Marketing Agency - Scale With Clicks
 
 <div id="universal-floating-contact"></div>  
 
-/* CLOSE MENU ON LINK CLICK */
-document.querySelectorAll("#navLinks a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-    menuToggle.classList.remove("active");
-  });
-});
-
-/* CLOSE MENU ON OUTSIDE CLICK */
-document.addEventListener("click", function(e){
-
-  if(
-    !navLinks.contains(e.target) &&
-    !menuToggle.contains(e.target)
-  ){
-    navLinks.classList.remove("active");
-    menuToggle.classList.remove("active");
-  }
-
-});
-
-</script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
