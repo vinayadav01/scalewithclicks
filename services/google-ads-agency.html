@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" href="/css/floating-contact.css">  
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -430,36 +432,6 @@ p{color:#475569;}
 
 }  
   
-/* FLOAT BUTTONS */
-.floating-contact{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  z-index:999;
-}
-
-/* prevent overlap but no layout shift */
-footer{
-  position:relative;
-  z-index:1;
-}  
-
-.float-btn{
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-}
-
-.whatsapp{background:#25D366;}
-.call{background:linear-gradient(135deg,#0ea5e9,#2563eb);}
-
 @media(max-width:768px){
   .footer-grid{
     grid-template-columns:1fr;
@@ -981,10 +953,8 @@ We scale winning campaigns and continuously improve performance.</p>
 </footer>
   
 <!-- FLOAT BUTTONS -->
-<div class="floating-contact">
-  <a href="https://wa.me/919589188668" class="float-btn whatsapp">💬</a>
-  <a href="tel:+919589188668" class="float-btn call">📞</a>
-</div>  
+
+<div id="universal-floating-contact"></div>  
 
 <script>
 function toggleMenu(){
