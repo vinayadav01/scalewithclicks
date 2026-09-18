@@ -132,23 +132,6 @@ a{
   padding:0 20px;
 }
 
-/* NAVBAR */
-.navbar{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(255,255,255,0.96);
-  backdrop-filter:blur(12px);
-  box-shadow:0 4px 18px rgba(0,0,0,0.05);
-}
-
-.nav-wrap{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  min-height:90px;
-}
-
 .brand-logo{
   height:88px;
   width:auto;
@@ -608,25 +591,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   
 <!-- NAVBAR -->
-<header class="navbar">
-  <div class="container nav-wrap">
 
-   <a href="/" style="display:flex; align-items:center;">
-  <img src="logo.png" alt="Scale with Clicks Logo" class="brand-logo">
-</a>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-    <nav class="nav-links" id="navMenu">
-      <a href="https://scalewithclicks.com/">Home</a>
-      <a href="aboutus">About Us</a>
-      <a href="services">Services</a>
-      <a href="casestudy">Case Studies</a>
-      <a href="https://blog.scalewithclicks.com">Blog</a>
-      <a href="contactus" class="nav-btn">Contact Us</a>
-    </nav>
-
-  </div>
-</header>
+<div id="universal-header"></div>  
 
 <!-- HERO -->
 <section class="hero">
@@ -889,5 +855,8 @@ document.querySelectorAll("#navMenu a").forEach(link => {
   });
 });
 </script>
+
+<script src="/js/load-components.js"></script>
+  
 </body>
 </html>
