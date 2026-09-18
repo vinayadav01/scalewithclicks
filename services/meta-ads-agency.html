@@ -107,22 +107,6 @@ body{
   padding:16px;
 }
 
-/* NAVBAR */
-.navbar{
-  position:sticky;
-  top:0;
-  background:#fff;
-  border-bottom:1px solid #eee;
-  z-index:1000;
-}
-
-.nav-wrap{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 0;
-}
-
 /* ✅ FIXED LOGO PATH */
 .brand-logo{height:88px;}
 
@@ -709,26 +693,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   
 <!-- NAVBAR -->
-<header class="navbar">
-  <div class="container nav-wrap">
-    
-    <!-- ✅ FIX LOGO PATH -->
-       <a href="/">
-  <img src="/logo.png" alt="Scale with Clicks Logo" class="brand-logo">
-</a>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    
-   <nav class="nav-links" id="navMenu">
-      <a href="https://scalewithclicks.com/">Home</a>
-      <a href="/aboutus">About</a>
-      <a href="/services">Services</a>
-      <a href="/casestudy">Case Studies</a>
-      <a href="https://blog.scalewithclicks.com">Blog</a>
-      <a href="/contactus" class="nav-btn">Contact</a>
-    </nav>
-  </div>
-</header>
-
+  
+<div id="universal-header"></div>
+  
 <div class="container">
 
 <!-- HERO -->
@@ -1085,6 +1052,8 @@ document.addEventListener("DOMContentLoaded", function(){
   ]
 }
 </script>  
+
+<script src="/js/load-components.js"></script>  
   
 </body>
 </html>
