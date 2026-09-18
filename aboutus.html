@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="/css/universal-header.css">
+  <link rel="stylesheet" href="/css/floating-contact.css">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -421,31 +422,6 @@ a{text-decoration:none;}
   transform:translateY(-2px);
 }  
 
-/* FLOAT */
-.floating-contact{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  z-index:9999;
-}
-
-.float-btn{
-  width:55px;
-  height:55px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  color:#fff;
-  font-size:22px;
-}
-
-.whatsapp{background:#25D366;}
-.call{background:#2563eb;}
-
 </style>
 </head>
 
@@ -631,13 +607,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <!-- FLOAT -->
-<div class="floating-contact">
-<a href="https://wa.me/919589188668" target="_blank" class="float-btn whatsapp">💬</a>
-<a href="tel:+919589188668" class="float-btn call">📞</a>
-</div>
 
-
-
+<div id="universal-floating-contact"></div>
 
   <script src="/js/load-components.js"></script>
 </body>
