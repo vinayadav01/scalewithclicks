@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="/css/universal-header.css">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -115,6 +117,24 @@ a{text-decoration:none;}
   padding:0 20px;
 }
 
+/* NAVBAR */
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#ffffff;
+  box-shadow:0 4px 18px rgba(0,0,0,0.05);
+  padding:18px 0; /* 🔥 increased height */
+}
+
+.nav-wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
 /* LOGO FIX */
 .brand-logo{
   height:60px; /* 🔥 bigger logo */
@@ -122,6 +142,34 @@ a{text-decoration:none;}
   max-width:180px;
   object-fit:contain;
   display:block;
+}
+
+/* NAV LINKS */
+.nav-links{
+  display:flex;
+  gap:22px; /* more spacing */
+  align-items:center;
+}
+
+.nav-links a{
+  color:#0f172a;
+  font-weight:500;
+  font-size:16px; /* 🔥 slightly bigger */
+}
+
+.nav-links a:hover{
+  color:#0ea5e9;
+}
+
+.nav-btn{
+  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+  color:#fff !important;
+  padding:10px 16px;
+  border-radius:30px;
+}
+
+  .navbar{
+  backdrop-filter: blur(10px);
 }
 
 /* HERO */
@@ -300,6 +348,39 @@ a{text-decoration:none;}
   padding:18px;
 }
 
+/* MOBILE NAV */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:768px){
+
+  .menu-toggle{display:block;}
+
+  .brand-logo{
+    height:45px;
+    max-width:140px;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#fff;
+    flex-direction:column;
+    display:none;
+    padding:20px 0;
+  }
+
   .nav-links.active{display:flex;}
 
   .grid{grid-template-columns:1fr;}
@@ -370,14 +451,17 @@ a{text-decoration:none;}
 
 <body>
 
+  <!-- Universal header -->
+  <div id="universal-header"></div>
+
+
 <!-- GTM NOSCRIPT -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4K2DXZK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- NAVBAR -->
-  
-<div id="universal-header"></div>
-  
+
+
 <!-- HERO -->
 <section class="hero">
   <h1>About Scale with Clicks</h1>
@@ -552,7 +636,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="tel:+919589188668" class="float-btn call">📞</a>
 </div>
 
-<script src="/js/load-components.js"></script>
-  
+
+
+
+  <script src="/js/load-components.js"></script>
 </body>
 </html>
