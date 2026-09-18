@@ -5,16 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M4K2DXZK');</script>
+<script>
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4K2DXZK');
+</script>
 <!-- End Google Tag Manager -->
-  
-  <title>E-commerce Case Study - Yarn Store</title>
+
+<title>E-commerce Case Study - Yarn Store | Scale With Clicks</title>
+
+<meta
+  name="description"
+  content="E-commerce Google Ads case study for a premium yarn store showing revenue growth, ROAS improvement and scalable online sales."
+>
+
+<!-- Google Font -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+>
+
+<!-- Font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+>
+
+<!-- Universal Components -->
+<link rel="stylesheet" href="/css/universal-header.css">
+<link rel="stylesheet" href="/css/universal-footer.css">
+<link rel="stylesheet" href="/css/floating-contact.css">
 
 <style>
+
 *{
   margin:0;
   padding:0;
@@ -30,80 +62,139 @@ body{
   background:#f1f5f9;
   color:#0f172a;
   line-height:1.6;
+  overflow-x:hidden;
 }
 
-/* CONTAINER */
+/* =========================================================
+   CONTAINER
+========================================================= */
+
 .container{
   max-width:1200px;
   margin:auto;
   padding:60px 20px;
 }
 
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
 h1{
   font-size:42px;
   text-align:center;
   margin-bottom:10px;
+  line-height:1.2;
 }
 
 .subtitle{
   text-align:center;
   color:#64748b;
   margin-bottom:40px;
+  font-size:18px;
 }
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
 
 h2{
   text-align:center;
   margin-top:60px;
   margin-bottom:10px;
+  line-height:1.3;
 }
 
-/* DIVIDER */
+/* =========================================================
+   DIVIDER
+========================================================= */
+
 .divider{
   width:90px;
   height:4px;
   margin:18px auto 40px;
   border-radius:20px;
-  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+
+  background:
+    linear-gradient(
+      135deg,
+      #0ea5e9,
+      #2563eb
+    );
 }
 
-/* GRID */
+/* =========================================================
+   GRID
+========================================================= */
+
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(240px,1fr));
+
   gap:22px;
 }
 
-/* CARD (UNIFIED) */
+/* =========================================================
+   CARD
+========================================================= */
+
 .card{
   background:#ffffff;
+
   border-radius:18px;
+
   padding:22px;
+
   text-align:center;
+
   border:1px solid #e2e8f0;
-  box-shadow:0 10px 25px rgba(0,0,0,0.04);
-  transition:0.35s ease;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.04);
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
 }
 
 .card:hover{
   transform:translateY(-8px);
-  box-shadow:0 18px 40px rgba(0,0,0,0.08);
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.08);
 }
 
-/* PROGRESS */
+.card h3{
+  margin-bottom:8px;
+}
+
+/* =========================================================
+   PROGRESS CIRCLE
+========================================================= */
+
 .progress-circle{
   width:130px;
   height:130px;
+
   margin:18px auto;
+
   position:relative;
 }
 
 .progress-circle svg{
+  width:130px;
+  height:130px;
+
   transform:rotate(-90deg);
 }
 
 .progress-circle circle{
   fill:none;
+
   stroke-width:10;
+
+  stroke-linecap:round;
 }
 
 .bg{
@@ -112,345 +203,1136 @@ h2{
 
 .progress{
   stroke:#2563eb;
+
   stroke-dasharray:314;
+
   stroke-dashoffset:314;
-  transition:2s ease;
+
+  transition:
+    stroke-dashoffset 2s ease;
 }
 
 .progress-text{
   position:absolute;
+
   top:50%;
   left:50%;
-  transform:translate(-50%,-50%);
+
+  transform:
+    translate(-50%,-50%);
+
   font-weight:700;
+
   color:#2563eb;
+
+  white-space:nowrap;
 }
 
-/* CTA */
+/* =========================================================
+   CTA
+========================================================= */
+
 .cta{
   text-align:center;
+
   margin-top:90px;
+
   background:#ffffff;
+
   border:1px solid #e2e8f0;
+
   border-radius:20px;
+
   padding:40px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.05);
 }
 
-button{
+.cta h2{
+  margin-top:0;
+  margin-bottom:10px;
+}
+
+.cta button{
   margin-top:15px;
-  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+
+  background:
+    linear-gradient(
+      135deg,
+      #0ea5e9,
+      #2563eb
+    );
+
   padding:14px 28px;
+
   border:none;
+
   border-radius:10px;
+
   color:#fff;
+
   font-weight:700;
+
   cursor:pointer;
-  transition:0.3s;
+
+  transition:.3s;
+
+  font-family:'Inter',sans-serif;
 }
 
-button:hover{
+.cta button:hover{
   transform:scale(1.05);
+
+  box-shadow:
+    0 10px 25px rgba(37,99,235,.25);
 }
 
-/* FLOAT BUTTONS */
-.whatsapp{
-  position:fixed;
-  bottom:15px;
-  right:20px;
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  background:#25D366;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  font-size:24px;
-  z-index:999;
-}
+/* =========================================================
+   STICKY CTA
+========================================================= */
 
 .sticky-cta{
   position:fixed;
+
   bottom:80px;
   right:20px;
+
   padding:14px 18px;
+
   border:none;
+
   border-radius:30px;
-  background:linear-gradient(135deg,#2563eb,#22c55e);
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #22c55e
+    );
+
   color:#fff;
+
   font-weight:700;
+
   cursor:pointer;
-  z-index:999;
+
+  z-index:9998;
+
+  font-family:'Inter',sans-serif;
+
+  box-shadow:
+    0 8px 20px rgba(37,99,235,.25);
+
+  transition:.3s;
 }
-  /* BACK BUTTON */
+
+.sticky-cta:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(37,99,235,.35);
+}
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
 .back-btn{
-  text-align:center;   /* centers the button */
+  text-align:center;
+
   margin-top:40px;
+
+  margin-bottom:30px;
 }
 
 .back-btn a{
   display:inline-block;
+
   padding:14px 30px;
-  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+
+  background:
+    linear-gradient(
+      135deg,
+      #38bdf8,
+      #0ea5e9
+    );
+
   color:#000;
+
   font-weight:700;
+
   text-decoration:none;
+
   border-radius:30px;
+
   font-size:16px;
+
   transition:0.3s;
 }
 
 .back-btn a:hover{
   transform:translateY(-3px);
-  box-shadow:0 10px 25px rgba(14,165,233,0.3);
+
+  box-shadow:
+    0 10px 25px rgba(14,165,233,0.3);
 }
 
-/* FOOTER */
-.footer{
-  text-align:center;
-  padding:30px;
-  color:#64748b;
-  margin-top:40px;
-}
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
 
-/* ANIMATION */
 .section{
   opacity:0;
+
   transform:translateY(20px);
-  transition:0.6s ease;
+
+  transition:
+    opacity .6s ease,
+    transform .6s ease;
 }
 
 .section.show{
   opacity:1;
+
   transform:translateY(0);
 }
 
-.menu-toggle{
+/* =========================================================
+   LEAD POPUP
+========================================================= */
+
+.lead-popup{
+  position:fixed;
+
+  inset:0;
+
+  background:
+    rgba(15,23,42,.70);
+
   display:none;
-  font-size:24px;
-  background:none;
+
+  align-items:center;
+  justify-content:center;
+
+  padding:20px;
+
+  z-index:10000;
+}
+
+.lead-popup-content{
+  width:100%;
+
+  max-width:500px;
+
+  background:#fff;
+
+  border-radius:18px;
+
+  padding:35px;
+
+  position:relative;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.25);
+}
+
+.lead-popup-content h2{
+  text-align:left;
+
+  margin-top:0;
+
+  margin-bottom:10px;
+
+  font-size:26px;
+}
+
+.lead-popup-content p{
+  color:#64748b;
+
+  margin-bottom:20px;
+}
+
+.lead-popup-content input{
+  width:100%;
+
+  padding:13px 15px;
+
+  border:
+    1px solid #dbe3ec;
+
+  border-radius:8px;
+
+  margin-bottom:12px;
+
+  font-family:'Inter',sans-serif;
+
+  outline:none;
+}
+
+.lead-popup-content input:focus{
+  border-color:#2563eb;
+}
+
+.popup-submit{
+  width:100%;
+
+  padding:14px;
+
   border:none;
+
+  border-radius:8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #0ea5e9
+    );
+
+  color:#fff;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  font-family:'Inter',sans-serif;
+}
+
+.popup-close{
+  position:absolute;
+
+  top:12px;
+  right:15px;
+
+  border:none;
+
+  background:none;
+
+  font-size:26px;
+
+  color:#64748b;
+
   cursor:pointer;
 }
 
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media(max-width:768px){
 
-  .menu-toggle{
-    display:block;
+  .container{
+    padding:45px 15px;
   }
 
-  .nav-links{
-    position:absolute;
-    top:60px;
-    left:0;
-    width:100%;
-    background:#fff;
-    flex-direction:column;
-    display:none;
-    padding:15px 20px;
-    border-top:1px solid #e2e8f0;
+  h1{
+    font-size:30px;
   }
 
-  .nav-links.active{
-    display:flex;
+  .subtitle{
+    font-size:16px;
+    margin-bottom:30px;
   }
 
-  .nav-links a{
-    padding:10px 0;
+  h2{
+    font-size:24px;
+    margin-top:50px;
   }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .progress-circle{
+    width:110px;
+    height:110px;
+  }
+
+  .progress-circle svg{
+    width:110px;
+    height:110px;
+  }
+
+  .card{
+    padding:22px 18px;
+  }
+
+  .cta{
+    margin-top:60px;
+    padding:35px 20px;
+  }
+
+  .sticky-cta{
+    right:15px;
+
+    bottom:75px;
+
+    padding:12px 15px;
+
+    font-size:13px;
+  }
+
+  .lead-popup-content{
+    padding:28px 20px;
+  }
+
 }
-  
+
 </style>
 </head>
 
 <body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4K2DXZK"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  
-<div id="header"></div>
+<!-- =========================================================
+     GOOGLE TAG MANAGER NOSCRIPT
+========================================================= -->
+
+<noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-M4K2DXZK"
+    height="0"
+    width="0"
+    style="display:none;visibility:hidden">
+  </iframe>
+</noscript>
+
+
+<!-- =========================================================
+     UNIVERSAL HEADER
+========================================================= -->
+
+<div id="universal-header"></div>
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
 
 <div class="container">
 
-<h1>🧶 E-commerce Case Study</h1>
-<p class="subtitle">Scaling Revenue for Premium Yarn Store (Shopify)</p>
+  <h1>
+    🧶 E-commerce Case Study
+  </h1>
 
-<h2>📊 Results Overview</h2>
-<div class="divider"></div>
+  <p class="subtitle">
+    Scaling Revenue for Premium Yarn Store (Shopify)
+  </p>
 
-<div class="grid section">
 
-  <div class="card">
-    <h3>Conversions</h3>
-    <div class="progress-circle" data-percent="38">
-      <svg width="130" height="130">
-        <circle class="bg" cx="65" cy="65" r="50"/>
-        <circle class="progress" cx="65" cy="65" r="50"/>
-      </svg>
-      <div class="progress-text" data-target="38">0%</div>
+  <!-- =======================================================
+       RESULTS OVERVIEW
+  ======================================================== -->
+
+  <h2>
+    📊 Results Overview
+  </h2>
+
+  <div class="divider"></div>
+
+
+  <div class="grid section">
+
+
+    <!-- CONVERSIONS -->
+
+    <div class="card">
+
+      <h3>
+        Conversions
+      </h3>
+
+      <div
+        class="progress-circle"
+        data-percent="38">
+
+        <svg
+          width="130"
+          height="130"
+          aria-hidden="true">
+
+          <circle
+            class="bg"
+            cx="65"
+            cy="65"
+            r="50">
+          </circle>
+
+          <circle
+            class="progress"
+            cx="65"
+            cy="65"
+            r="50">
+          </circle>
+
+        </svg>
+
+        <div
+          class="progress-text"
+          data-target="38">
+
+          0%
+
+        </div>
+
+      </div>
+
+      <p>
+        420 → 580
+      </p>
+
     </div>
-    <p>420 → 580</p>
+
+
+    <!-- REVENUE -->
+
+    <div class="card">
+
+      <h3>
+        Revenue
+      </h3>
+
+      <div
+        class="progress-circle"
+        data-percent="100">
+
+        <svg
+          width="130"
+          height="130"
+          aria-hidden="true">
+
+          <circle
+            class="bg"
+            cx="65"
+            cy="65"
+            r="50">
+          </circle>
+
+          <circle
+            class="progress"
+            cx="65"
+            cy="65"
+            r="50">
+          </circle>
+
+        </svg>
+
+        <div
+          class="progress-text"
+          data-target="210">
+
+          0%
+
+        </div>
+
+      </div>
+
+      <p>
+        $18,000 → $56,000
+      </p>
+
+    </div>
+
+
+    <!-- ROAS -->
+
+    <div class="card">
+
+      <h3>
+        ROAS
+      </h3>
+
+      <div
+        class="progress-circle"
+        data-percent="100">
+
+        <svg
+          width="130"
+          height="130"
+          aria-hidden="true">
+
+          <circle
+            class="bg"
+            cx="65"
+            cy="65"
+            r="50">
+          </circle>
+
+          <circle
+            class="progress"
+            cx="65"
+            cy="65"
+            r="50">
+          </circle>
+
+        </svg>
+
+        <div
+          class="progress-text"
+          data-target="442">
+
+          0%
+
+        </div>
+
+      </div>
+
+      <p>
+        2.8X → 15.2X
+      </p>
+
+    </div>
+
+
+    <!-- TRAFFIC -->
+
+    <div class="card">
+
+      <h3>
+        Traffic
+      </h3>
+
+      <div
+        class="progress-circle"
+        data-percent="60">
+
+        <svg
+          width="130"
+          height="130"
+          aria-hidden="true">
+
+          <circle
+            class="bg"
+            cx="65"
+            cy="65"
+            r="50">
+          </circle>
+
+          <circle
+            class="progress"
+            cx="65"
+            cy="65"
+            r="50">
+          </circle>
+
+        </svg>
+
+        <div
+          class="progress-text"
+          data-target="60">
+
+          0%
+
+        </div>
+
+      </div>
+
+      <p>
+        9,500 → 15,200
+      </p>
+
+    </div>
+
   </div>
 
-  <div class="card">
-    <h3>Revenue</h3>
-    <div class="progress-circle" data-percent="210">
-      <svg width="130" height="130">
-        <circle class="bg" cx="65" cy="65" r="50"/>
-        <circle class="progress" cx="65" cy="65" r="50"/>
-      </svg>
-      <div class="progress-text" data-target="210">0%</div>
+
+  <!-- =======================================================
+       OBJECTIVES
+  ======================================================== -->
+
+  <div class="section">
+
+    <h2>
+      🎯 Objectives
+    </h2>
+
+    <div class="grid">
+
+      <div class="card">
+        Increase online sales
+      </div>
+
+      <div class="card">
+        Improve ROAS
+      </div>
+
+      <div class="card">
+        Drive high-intent buyers
+      </div>
+
+      <div class="card">
+        Scale global traffic
+      </div>
+
     </div>
-    <p>$18,000 → $56,000</p>
+
   </div>
 
-  <div class="card">
-    <h3>ROAS</h3>
-    <div class="progress-circle" data-percent="442">
-      <svg width="130" height="130">
-        <circle class="bg" cx="65" cy="65" r="50"/>
-        <circle class="progress" cx="65" cy="65" r="50"/>
-      </svg>
-      <div class="progress-text" data-target="442">0%</div>
+
+  <!-- =======================================================
+       STRATEGY
+  ======================================================== -->
+
+  <div class="section">
+
+    <h2>
+      🧠 Strategy
+    </h2>
+
+    <div class="grid">
+
+      <div class="card">
+        Shopping + PMax campaigns
+      </div>
+
+      <div class="card">
+        High-intent keyword targeting
+      </div>
+
+      <div class="card">
+        Feed optimization
+      </div>
+
+      <div class="card">
+        Remarketing funnels
+      </div>
+
     </div>
-    <p>2.8X → 15.2X</p>
+
   </div>
 
-  <div class="card">
-    <h3>Traffic</h3>
-    <div class="progress-circle" data-percent="60">
-      <svg width="130" height="130">
-        <circle class="bg" cx="65" cy="65" r="50"/>
-        <circle class="progress" cx="65" cy="65" r="50"/>
-      </svg>
-      <div class="progress-text" data-target="60">0%</div>
+
+  <!-- =======================================================
+       CHALLENGES
+  ======================================================== -->
+
+  <div class="section">
+
+    <h2>
+      ⚠️ Challenges
+    </h2>
+
+    <div class="grid">
+
+      <div class="card">
+        Niche audience
+      </div>
+
+      <div class="card">
+        High CPC markets
+      </div>
+
+      <div class="card">
+        Low brand awareness
+      </div>
+
+      <div class="card">
+        Data limitations
+      </div>
+
     </div>
-    <p>9,500 → 15,200</p>
+
+  </div>
+
+
+  <!-- =======================================================
+       FINAL OUTCOME
+  ======================================================== -->
+
+  <div class="section">
+
+    <h2>
+      🏆 Final Outcome
+    </h2>
+
+    <div class="grid">
+
+      <div class="card">
+        210% revenue growth
+      </div>
+
+      <div class="card">
+        Higher ROAS achieved
+      </div>
+
+      <div class="card">
+        Consistent sales scaling
+      </div>
+
+      <div class="card">
+        Strong repeat customers
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =======================================================
+       CTA
+  ======================================================== -->
+
+  <div class="cta section">
+
+    <h2>
+      💬 Want Similar Results?
+    </h2>
+
+    <button
+      type="button"
+      onclick="openCalendly()">
+
+      Book Strategy Call
+
+    </button>
+
+  </div>
+
+
+  <!-- =======================================================
+       BACK BUTTON
+  ======================================================== -->
+
+  <div class="back-btn">
+
+    <a href="https://scalewithclicks.com/casestudy">
+      ← Back to Case Studies
+    </a>
+
   </div>
 
 </div>
 
-<!-- OBJECTIVES -->
-<div class="section">
-<h2>🎯 Objectives</h2>
-<div class="grid">
-  <div class="card">Increase online sales</div>
-  <div class="card">Improve ROAS</div>
-  <div class="card">Drive high-intent buyers</div>
-  <div class="card">Scale global traffic</div>
-</div>
-</div>
 
-<!-- STRATEGY -->
-<div class="section">
-<h2>🧠 Strategy</h2>
-<div class="grid">
-  <div class="card">Shopping + PMax campaigns</div>
-  <div class="card">High-intent keyword targeting</div>
-  <div class="card">Feed optimization</div>
-  <div class="card">Remarketing funnels</div>
-</div>
-</div>
+<!-- =========================================================
+     UNIVERSAL FLOATING CONTACT
+========================================================= -->
 
-<!-- CHALLENGES -->
-<div class="section">
-<h2>⚠️ Challenges</h2>
-<div class="grid">
-  <div class="card">Niche audience</div>
-  <div class="card">High CPC markets</div>
-  <div class="card">Low brand awareness</div>
-  <div class="card">Data limitations</div>
-</div>
-</div>
+<div id="universal-floating-contact"></div>
 
-<!-- FINAL OUTCOME -->
-<div class="section">
-<h2>🏆 Final Outcome</h2>
-<div class="grid">
-  <div class="card">210% revenue growth</div>
-  <div class="card">Higher ROAS achieved</div>
-  <div class="card">Consistent sales scaling</div>
-  <div class="card">Strong repeat customers</div>
-</div>
-</div>
 
-<div class="cta section">
-<h2>💬 Want Similar Results?</h2>
-<button onclick="window.open('https://calendly.com/vinayyadav01992')">
-Book Strategy Call
+<!-- =========================================================
+     STICKY CTA
+========================================================= -->
+
+<button
+  type="button"
+  class="sticky-cta"
+  onclick="openPopup()">
+
+  🚀 Get Free Leads Plan
+
 </button>
+
+
+<!-- =========================================================
+     LEAD POPUP
+========================================================= -->
+
+<div
+  class="lead-popup"
+  id="leadPopup"
+  aria-hidden="true">
+
+  <div class="lead-popup-content">
+
+    <button
+      type="button"
+      class="popup-close"
+      onclick="closePopup()"
+      aria-label="Close popup">
+
+      &times;
+
+    </button>
+
+    <h2>
+      Get Your Free Leads Plan
+    </h2>
+
+    <p>
+      Let's discuss how Google Ads can help scale your e-commerce sales.
+    </p>
+
+    <input
+      type="text"
+      id="leadName"
+      placeholder="Your Name"
+      autocomplete="name">
+
+    <input
+      type="email"
+      id="leadEmail"
+      placeholder="Your Email"
+      autocomplete="email">
+
+    <input
+      type="tel"
+      id="leadPhone"
+      placeholder="Phone Number"
+      autocomplete="tel">
+
+    <button
+      type="button"
+      class="popup-submit"
+      onclick="openCalendly()">
+
+      Book Free Strategy Call
+
+    </button>
+
+  </div>
+
 </div>
 
-<!-- BACK BUTTON -->
-<div class="back-btn">
-  <a href="https://scalewithclicks.com/casestudy">← Back to Case Studies</a>
-</div>
-  
-</div>
 
-<!-- FLOAT BUTTONS -->
-<a href="https://wa.me/9589188668" class="whatsapp">💬</a>
+<!-- =========================================================
+     UNIVERSAL FOOTER
+========================================================= -->
 
-<button class="sticky-cta" onclick="openPopup()">
-🚀 Get Free Leads Plan
-</button>
+<div id="universal-footer"></div>
 
-<div id="footer"></div>
+
+<!-- =========================================================
+     PAGE JAVASCRIPT
+========================================================= -->
 
 <script>
-document.querySelectorAll('.progress-circle').forEach(el=>{
-  const percent = parseFloat(el.dataset.percent);
-  const text = el.querySelector('.progress-text');
-  const target = parseFloat(text.dataset.target);
 
-  const circle = el.querySelector('.progress');
-  const circumference = 314;
-  const offset = circumference - (percent / 100) * circumference;
+/* =========================================================
+   PROGRESS CIRCLES + COUNTERS
+========================================================= */
 
-  setTimeout(()=>{
-    circle.style.strokeDashoffset = offset;
+document.querySelectorAll('.progress-circle').forEach(function(el){
+
+  const percent =
+    parseFloat(el.dataset.percent);
+
+  const text =
+    el.querySelector('.progress-text');
+
+  const target =
+    parseFloat(text.dataset.target);
+
+  const circle =
+    el.querySelector('.progress');
+
+  const radius = 50;
+
+  const circumference =
+    2 * Math.PI * radius;
+
+  /*
+    Visual circle progress is capped at 100%.
+    This prevents values such as 210% or 442%
+    from creating invalid SVG circle calculations.
+  */
+
+  const visualPercent =
+    Math.min(percent,100);
+
+  circle.style.strokeDasharray =
+    circumference;
+
+  circle.style.strokeDashoffset =
+    circumference;
+
+  const offset =
+    circumference -
+    (visualPercent / 100) *
+    circumference;
+
+  setTimeout(function(){
+
+    circle.style.strokeDashoffset =
+      offset;
+
   },500);
 
-  let count = 0;
-  const step = target / 60;
 
-  const counter = setInterval(()=>{
-    count += step;
-    if(count >= target){
-      count = target;
-      clearInterval(counter);
-    }
-    text.innerText = Math.round(count) + "%";
-  },20);
+  /* Counter */
+
+  let count = 0;
+
+  const step =
+    target / 60;
+
+  const counter =
+    setInterval(function(){
+
+      count += step;
+
+      if(count >= target){
+
+        count = target;
+
+        clearInterval(counter);
+
+      }
+
+      text.innerText =
+        Math.round(count) + "%";
+
+    },20);
+
 });
 
-/* scroll animation */
-const sections = document.querySelectorAll('.section');
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
+
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
+
+const sections =
+  document.querySelectorAll('.section');
+
+if('IntersectionObserver' in window){
+
+  const observer =
+    new IntersectionObserver(
+      function(entries, observer){
+
+        entries.forEach(function(entry){
+
+          if(entry.isIntersecting){
+
+            entry.target.classList.add('show');
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold:0.15
+      }
+    );
+
+  sections.forEach(function(section){
+
+    observer.observe(section);
+
   });
-},{threshold:0.15});
 
-sections.forEach(s=>observer.observe(s));
-</script>
+}else{
 
-<script>
-async function loadComponent(id, file) {
-  const res = await fetch(file);
-  const html = await res.text();
-  document.getElementById(id).innerHTML = html;
+  sections.forEach(function(section){
+
+    section.classList.add('show');
+
+  });
+
 }
 
-loadComponent("header", "/components/header.html");
-loadComponent("footer", "/components/footer.html");
+
+/* =========================================================
+   OPEN POPUP
+========================================================= */
+
+function openPopup(){
+
+  const popup =
+    document.getElementById('leadPopup');
+
+  if(!popup) return;
+
+  popup.style.display = 'flex';
+
+  popup.setAttribute(
+    'aria-hidden',
+    'false'
+  );
+
+}
+
+
+/* =========================================================
+   CLOSE POPUP
+========================================================= */
+
+function closePopup(){
+
+  const popup =
+    document.getElementById('leadPopup');
+
+  if(!popup) return;
+
+  popup.style.display = 'none';
+
+  popup.setAttribute(
+    'aria-hidden',
+    'true'
+  );
+
+}
+
+
+/* =========================================================
+   CLOSE POPUP OUTSIDE
+========================================================= */
+
+document.addEventListener(
+  'click',
+  function(event){
+
+    const popup =
+      document.getElementById('leadPopup');
+
+    if(!popup) return;
+
+    if(event.target === popup){
+
+      closePopup();
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   ESCAPE KEY
+========================================================= */
+
+document.addEventListener(
+  'keydown',
+  function(event){
+
+    if(event.key === 'Escape'){
+
+      closePopup();
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   CALENDLY
+========================================================= */
+
+function openCalendly(){
+
+  window.open(
+    'https://calendly.com/vinayyadav01992',
+    '_blank',
+    'noopener,noreferrer'
+  );
+
+}
+
 </script>
-  
+
+
+<!-- =========================================================
+     UNIVERSAL COMPONENT LOADER
+========================================================= -->
+
+<script src="/js/load-components.js"></script>
+
 </body>
 </html>
