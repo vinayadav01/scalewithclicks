@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" href="/css/floating-contact.css">
+  
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -463,29 +465,6 @@ section{padding:50px 0;}
   transform:translateY(-2px);
 }
   
-/* FLOAT */
-.floating-contact{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.float-btn{
-  width:55px;
-  height:55px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  color:#fff;
-}
-
-.whatsapp{background:#25D366;}
-.call{background:#2563eb;}
-
 /* MOBILE */
 @media(max-width:900px){
   .grid-3{grid-template-columns:1fr;}
@@ -903,20 +882,8 @@ Performance Marketing Agency - Scale With Clicks
 </footer>
 
 <!-- FLOAT -->
-<div class="floating-contact">
-<a href="https://wa.me/919589188668" target="_blank" class="float-btn whatsapp">💬</a>
-<a href="tel:+919589188668" class="float-btn call">📞</a>
-</div>
 
-<script>
-
-const navLinks = document.getElementById("navLinks");
-const menuToggle = document.getElementById("menuToggle");
-
-function toggleMenu(){
-  navLinks.classList.toggle("active");
-  menuToggle.classList.toggle("active");
-}
+<div id="universal-floating-contact"></div>  
 
 /* CLOSE MENU ON LINK CLICK */
 document.querySelectorAll("#navLinks a").forEach(link => {
