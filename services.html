@@ -651,37 +651,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <div id="universal-floating-contact"></div>
 
-/* CLOSE MENU ON LINK CLICK */
-document.querySelectorAll("#navMenu a").forEach(link => {
-
-  link.addEventListener("click", () => {
-
-    navMenu.classList.remove("active");
-
-    menuToggle.classList.remove("active");
-
-  });
-
-});
-
-/* CLOSE MENU ON OUTSIDE CLICK */
-document.addEventListener("click", function(e){
-
-  if(
-    !navMenu.contains(e.target) &&
-    !menuToggle.contains(e.target)
-  ){
-
-    navMenu.classList.remove("active");
-
-    menuToggle.classList.remove("active");
-
-  }
-
-});
-
-</script>
-
 <script src="/js/load-components.js"></script>  
   
 </body>
