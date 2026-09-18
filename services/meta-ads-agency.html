@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" href="/css/floating-contact.css">  
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -669,18 +671,6 @@ p{
     width:100%;
     max-width:260px;
   }
-
-  /* Floating buttons adjust */
-  .floating-contact{
-    right:12px;
-    bottom:12px;
-  }
-
-  .floating-contact a{
-    width:52px;
-    height:52px;
-  }
-}
   
 </style>
 </head>
@@ -957,24 +947,7 @@ Stop wasting money on ads that don’t convert. Let’s build a strategy that dr
 
 </footer>
 
-<div class="floating-contact">
-  <a href="https://wa.me/919589188668" target="_blank" class="whatsapp">💬</a>
-  <a href="tel:+919589188668" class="call">📞</a>
-</div>  
-
-<script>
-function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("active");
-}
-
-document.addEventListener("DOMContentLoaded", function(){
-  document.querySelectorAll("#navMenu a").forEach(link => {
-    link.addEventListener("click", () => {
-      document.getElementById("navMenu").classList.remove("active");
-    });
-  });
-});
-</script>
+<div id="universal-floating-contact"></div>
 
 <script type="application/ld+json">
 {
