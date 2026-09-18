@@ -39,8 +39,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       if (menuButton && navigation) {
 
-        /* Open / Close menu */
-
         menuButton.addEventListener(
           "click",
           function (event) {
@@ -48,7 +46,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             event.stopPropagation();
 
             navigation.classList.toggle("active");
-
             menuButton.classList.toggle("active");
 
             const isOpen =
@@ -74,7 +71,6 @@ document.addEventListener("DOMContentLoaded", async function () {
               function () {
 
                 navigation.classList.remove("active");
-
                 menuButton.classList.remove("active");
 
                 menuButton.setAttribute(
@@ -100,7 +96,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             ) {
 
               navigation.classList.remove("active");
-
               menuButton.classList.remove("active");
 
               menuButton.setAttribute(
@@ -161,6 +156,48 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       console.error(
         "Universal floating contact error:",
+        error
+      );
+
+    }
+
+  }
+
+
+  /* =========================================
+     UNIVERSAL FOOTER
+  ========================================= */
+
+  const footerPlaceholder =
+    document.getElementById(
+      "universal-footer"
+    );
+
+  if (footerPlaceholder) {
+
+    try {
+
+      const response =
+        await fetch(
+          "/components/footer.html"
+        );
+
+      if (!response.ok) {
+        throw new Error(
+          "Could not load universal footer."
+        );
+      }
+
+      const footerHTML =
+        await response.text();
+
+      footerPlaceholder.innerHTML =
+        footerHTML;
+
+    } catch (error) {
+
+      console.error(
+        "Universal footer error:",
         error
       );
 
